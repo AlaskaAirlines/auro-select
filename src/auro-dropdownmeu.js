@@ -16,19 +16,28 @@ import "focus-visible/dist/focus-visible.min.js";
 import styleCss from "./style-css.js";
 import styleCssFixed from './style-fixed-css.js';
 
+import '@aurolabs/auro-dropdown';
+
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
  * The auro-dropdownmeu element provides users a way to ... (it would be great if you fill this out).
  *
  * @attr {Boolean} fixed - Uses fixed pixel values for element shape
- * @attr {String} cssClass - Applies designated CSS class to demo element - you want to delete me!
  */
 
 // build the component class
 class AuroDropdownmeu extends LitElement {
-  // constructor() {
-  //   super();
-  // }
+  constructor() {
+    super();
+
+    this.placeholder = 'Select an option';
+    this.expanded = false;
+    this.dropdownWidth = 'auto';
+
+    this.addEventListener('dropdownToggled', (event) => {
+      this.expanded = event.detail.expanded;
+    });
+  }
 
   // This function is to define props used within the scope of this component
   // Be sure to review  https://lit-element.polymer-project.org/guide/properties#reflected-attributes
@@ -38,7 +47,12 @@ class AuroDropdownmeu extends LitElement {
       // ...super.properties,
 
       // this property is DEMO ONLY! Please delete.
-      cssClass:   { type: String }
+      value: {
+        type: String,
+        reflect: true
+      },
+      placeholder: { type: String },
+      dropdownWidth: { type: String }
     };
   }
 
@@ -49,16 +63,40 @@ class AuroDropdownmeu extends LitElement {
     ];
   }
 
+  firstUpdated() {
+    if (!this.value) {
+      this.value = this.placeholder;
+    }
+
+    this.addEventListener('optionSelected', (evt) => {
+      this.shadowRoot.querySelector('auro-dropdown').hide();
+
+      this.value = evt.detail.value;
+      // this.displayText = evt.detail.displayText;
+      // this.indexSelectedOption = parseInt(evt.detail.index, 10);
+
+      this.querySelector('auro-menu').setAttribute('indexSelectedOption', evt.detail.index);
+    });
+  }
+
   // When using auroElement, use the following attribute and function when hiding content from screen readers.
   // aria-hidden="${this.hideAudible(this.hiddenAudible)}"
 
   // function that renders the HTML and CSS into  the scope of the component
   render() {
     return html`
-
-      <!-- this is demo code, DO NOT USE IN YOUR ELEMENT -->
-      <div class=${this.cssClass} tabindex="0">
-        <slot></slot>
+      <div style="width: ${this.dropdownWidth}; display: inline-block;">
+        <input value=${this.value} />
+        <auro-dropdown for="dropdownMenu" toggle bordered rounded fixedWidth="100%">
+          <button slot="trigger" id="dropdownMenu">
+            <span>
+              ${this.value}
+            </span>
+            <auro-icon expanded category="interface" name="chevron-up" onDark></auro-icon>
+            <!-- <auro-icon collapsed category="interface" name="chevron-down" onDark></auro-icon> -->
+          </button>
+          <slot name="menu"></slot>
+        </auro-dropdown>
       </div>
     `;
   }

@@ -12,47 +12,54 @@ The `auro-dropdownmeu` element should be used in situations where users may:
 * quis euismod felis mollis
 * consectetur ipsum risus sed tortor
 
-> Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam fermentum libero ipsum, ac tempor sapien blandit in. Nam tincidunt non felis molestie varius.
-
-|convallis|tristique|nisl dignissim|eleifend|
-|---|---|---|---|
-|√|√|||
-|||√|√|
-
 <div class="exampleWrapper">
-  <auro-dropdownmeu cssClass="testClass">Hello World!</auro-dropdownmeu>
-  <auro-dropdownmeu cssClass="testClass" fixed>Hello World!</auro-dropdownmeu>
+  <auro-dropdownmeu dropdownWidth="500px" indexselectedoption="0">
+    <auro-menu slot="menu">
+      <auro-menu-option slot="listOfOptions" data-value="Stops">Stops</auro-menu-option>
+      <auro-menu-option slot="listOfOptions" data-value="Price">Price</auro-menu-option>
+      <auro-menu-option slot="listOfOptions" data-value="Duration">Duration</auro-menu-option>
+      <auro-menu-option slot="listOfOptions" data-value="Departure">Departure</auro-menu-option>
+      <auro-menu-option slot="listOfOptions" data-value="Arrival">Arrival</auro-menu-option>
+      <auro-menu-option slot="listOfOptions" data-value="Prefer Alaska">Prefer Alaska</auro-menu-option>
+    </auro-menu>
+  </auro-dropdownmeu>
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<br />
+
+<div class="exampleWrapper">
+  <auro-dropdownmeu placeholder="Custom placeholder string"  dropdownWidth="800px">
+    <auro-menu slot="menu" indexselectedoption="0">
+      <auro-menu-option slot="listOfOptions" data-value="Stops">Stops</auro-menu-option>
+      <auro-menu-option slot="listOfOptions" data-value="Price">Price</auro-menu-option>
+      <auro-menu-option slot="listOfOptions" data-value="Duration">Duration</auro-menu-option>
+      <auro-menu-option slot="listOfOptions" data-value="Departure">Departure</auro-menu-option>
+      <auro-menu-option slot="listOfOptions" data-value="Arrival">Arrival</auro-menu-option>
+      <auro-menu-option slot="listOfOptions" data-value="Prefer Alaska">Prefer Alaska</auro-menu-option>
+    </auro-menu>
+  </auro-dropdownmeu>
+</div>
+
+<br />
+
+<div class="exampleWrapper">
+  <auro-dropdownmeu placeholder="Custom placeholder string">
+    <auro-menu slot="menu" indexselectedoption="0">
+      <auro-menu-option slot="listOfOptions" data-value="Stops">Stops</auro-menu-option>
+      <auro-menu-option slot="listOfOptions" data-value="Price">Price</auro-menu-option>
+      <auro-menu-option slot="listOfOptions" data-value="Duration">Duration</auro-menu-option>
+      <auro-menu-option slot="listOfOptions" data-value="Departure">Departure</auro-menu-option>
+      <auro-menu-option slot="listOfOptions" data-value="Arrival">Arrival</auro-menu-option>
+      <auro-menu-option slot="listOfOptions" data-value="Prefer Alaska">Prefer Alaska</auro-menu-option>
+    </auro-menu>
+  </auro-dropdownmeu>
+</div>
+
+<!-- <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
 
   ```html
-  <auro-dropdownmeu cssClass="testClass">Hello World!</auro-dropdownmeu>
-  <auro-dropdownmeu cssClass="testClass" fixed>Hello World!</auro-dropdownmeu>
+  <auro-dropdownmeu>Hello World!</auro-dropdownmeu>
   ```
 
-</auro-accordion>
-
-## Then there is more
-
-Aenean at blandit lorem. Fusce imperdiet mi nec gravida maximus. Quisque nisl libero, condimentum in nisi a, imperdiet lacinia arcu.
-
-```javascript
-toggleDialog = (elName) => {
-  let dialog = document.querySelector(elName);
-  const html = document.querySelector('html');
-
-  html.style.overflow = 'hidden';
-  dialog.removeAttribute("open");
-  dialog.setAttribute("open", true);
-}
-
-toggleDialogClose = (elName) => {
-  let dialog = document.querySelector(elName);
-  const html = document.querySelector('html');
-
-  html.style.overflow = '';
-  dialog.removeAttribute("open");
-}
-```
+</auro-accordion> -->

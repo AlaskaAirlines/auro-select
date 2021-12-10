@@ -17,12 +17,13 @@ import styleCss from "./style-css.js";
 import styleCssFixed from './style-fixed-css.js';
 
 import '@aurolabs/auro-dropdown';
+import '@aurolabs/auro-menu';
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
- * The auro-dropdownmenu element provides users a way to ... (it would be great if you fill this out).
+ * The auro-dropdownmenu element is a wrapper for auro-dropdown and auro-menu to create a dropdown menu control.
  *
- * @attr {Boolean} fixed - Uses fixed pixel values for element shape
+ * @prop {String} placeholder - Define placeholder text to display before a value is manually selected.
  */
 
 // build the component class
@@ -32,7 +33,6 @@ class AuroDropdownmenu extends LitElement {
 
     this.placeholder = 'Select an option';
     this.expanded = false;
-    this.dropdownWidth = 'auto';
 
     this.addEventListener('dropdownToggled', (event) => {
       this.expanded = event.detail.expanded;
@@ -45,14 +45,18 @@ class AuroDropdownmenu extends LitElement {
   static get properties() {
     return {
       // ...super.properties,
-
-      // this property is DEMO ONLY! Please delete.
+      /**
+       * @private
+       */
+      expanded: { Boolean },
+      /**
+       * @private
+       */
       value: {
         type: String,
         reflect: true
       },
-      placeholder: { type: String },
-      dropdownWidth: { type: String }
+      placeholder: { type: String }
     };
   }
 
@@ -85,17 +89,14 @@ class AuroDropdownmenu extends LitElement {
   // function that renders the HTML and CSS into  the scope of the component
   render() {
     return html`
-      <div style="width: ${this.dropdownWidth}; display: inline-block;">
-        <input value=${this.value} />
-        <auro-dropdown for="dropdownMenu" toggle bordered rounded fixedWidth="100%">
-          <button slot="trigger" id="dropdownMenu">
-            <span>
-              ${this.value}
-            </span>
-            <auro-icon expanded category="interface" name="chevron-up" onDark></auro-icon>
-            <!-- <auro-icon collapsed category="interface" name="chevron-down" onDark></auro-icon> -->
+      <div>
+        <auro-dropdown for="dropdownMenu" toggle inset bordered rounded chevron>
+          <button slot="trigger" tabindex="0">
+            ${this.value}
           </button>
           <slot name="menu"></slot>
+          <slot name="label" slot="label"></slot>
+          <slot name="helperText" slot="helperText"></slot>
         </auro-dropdown>
       </div>
     `;

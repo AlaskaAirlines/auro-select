@@ -1,5 +1,5 @@
 const fs = require('fs');
-const bundle = 'auro-dropdownmeu__bundled.js';
+const bundle = 'auro-dropdownmenu__bundled.js';
 const indexFile = './build/index.html';
 
 // File destination.txt will be created or overwritten by default.
@@ -7,11 +7,6 @@ let copyFiles = async function() {
   fs.copyFile(`./dist/${bundle}`, `./build/${bundle}`, (err) => {
     if (err) throw err;
     console.log(`${bundle} was copied to ./build dir`);
-  });
-
-  fs.copyFile(`./demo/style.css`, `./build/style.css`, (err) => {
-    if (err) throw err;
-    console.log(`CSS was copied to ./build dir`);
   });
 }
 
@@ -23,7 +18,7 @@ fs.readFile(indexFile, 'utf8', function (err,data) {
     return console.log(err);
   }
 
-  const element = data.replace(`../src/auro-dropdownmeu.js`, `auro-dropdownmeu__bundled.js`);
+  const element = data.replace(`../src/auro-dropdownmenu.js`, `auro-dropdownmenu__bundled.js`);
 
   fs.writeFile(indexFile, element, 'utf8', function (err) {
      if (err) return console.log(err);

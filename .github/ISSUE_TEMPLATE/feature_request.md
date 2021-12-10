@@ -1,8 +1,8 @@
 ---
 name: Feature request
 about: Suggest an idea for this project
-title: 'auro-dropdownmeu: [feature summary]'
-labels: 'Type: Feature, not-reviewed'
+title: '[feature summary]'
+labels: 'auro-dropdownmenu, Type: Feature, not-reviewed'
 assignees: blackfalcon
 ---
 

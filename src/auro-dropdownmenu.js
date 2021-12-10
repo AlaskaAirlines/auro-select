@@ -20,13 +20,13 @@ import '@aurolabs/auro-dropdown';
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
- * The auro-dropdownmeu element provides users a way to ... (it would be great if you fill this out).
+ * The auro-dropdownmenu element provides users a way to ... (it would be great if you fill this out).
  *
  * @attr {Boolean} fixed - Uses fixed pixel values for element shape
  */
 
 // build the component class
-class AuroDropdownmeu extends LitElement {
+class AuroDropdownmenu extends LitElement {
   constructor() {
     super();
 
@@ -103,6 +103,6 @@ class AuroDropdownmeu extends LitElement {
 }
 
 // define the name of the custom component
-if (!customElements.get("auro-dropdownmeu")) {
-  customElements.define("auro-dropdownmeu", AuroDropdownmeu);
+if (!customElements.get("auro-dropdownmenu")) {
+  customElements.define("auro-dropdownmenu", AuroDropdownmenu);
 }

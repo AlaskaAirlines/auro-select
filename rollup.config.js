@@ -27,7 +27,7 @@ const getSharedPlugins = (isLegacy) => [
 
 const modernConfig = {
   input: {
-    ['auro-dropdownmeu__bundled']: './src/auro-dropdownmeu.js',
+    ['auro-dropdownmenu__bundled']: './src/auro-dropdownmenu.js',
   },
   output: {
     format: 'esm',
@@ -53,13 +53,13 @@ const modernConfig = {
   ]
 };
 
-const auroDropdownmeuConfig = {
+const auroDropdownmenuConfig = {
   input: 'src/es5.js',
   output: {
     format: 'iife',
-    file: 'dist/auro-dropdownmeu__bundled.es5.js'
+    file: 'dist/auro-dropdownmenu__bundled.es5.js'
   },
   plugins: getSharedPlugins(true)
 };
 
-export default [modernConfig, auroDropdownmeuConfig];
+export default [modernConfig, auroDropdownmenuConfig];

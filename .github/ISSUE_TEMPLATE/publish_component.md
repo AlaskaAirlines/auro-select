@@ -1,8 +1,8 @@
 ---
 name: Publish Component
 about: Create a ticket to drive compliance before publishing a new component to Auro Design System
-title: 'auro-dropdownmeu; publish to Auro Design System'
-labels: 'Status: Review Needed, not-reviewed'
+title: 'Publish to Auro Design System'
+labels: 'auro-dropdownmenu, not-reviewed'
 ---
 
 # Publish Component
@@ -53,7 +53,7 @@ labels: 'Status: Review Needed, not-reviewed'
     - [ ] All work is reviewed by Auro team
 1. __Publishing__
     - [ ] Removed all references to `auroLabs` from the repository
-    - [ ] Component properly named,  e.g. `auro-dropdownmeu`
+    - [ ] Component properly named,  e.g. `auro-dropdownmenu`
     - [ ] GitHub Repository properly named
     - Updated `readme.md`
       - [ ] Install information updated to published namespace

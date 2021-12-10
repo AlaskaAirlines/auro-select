@@ -4,16 +4,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis in tel
 
 Nulla at augue facilisis `odio lobortis` molestie vitae a nulla.
 
-## auro-dropdownmeu use cases
+## auro-dropdownmenu use cases
 
-The `auro-dropdownmeu` element should be used in situations where users may:
+The `auro-dropdownmenu` element should be used in situations where users may:
 
 * egestas bibendum mauris cursus
 * quis euismod felis mollis
 * consectetur ipsum risus sed tortor
 
 <div class="exampleWrapper">
-  <auro-dropdownmeu dropdownWidth="500px" indexselectedoption="0">
+  <auro-dropdownmenu dropdownWidth="500px" indexselectedoption="0">
     <auro-menu slot="menu">
       <auro-menu-option slot="listOfOptions" data-value="Stops">Stops</auro-menu-option>
       <auro-menu-option slot="listOfOptions" data-value="Price">Price</auro-menu-option>
@@ -22,13 +22,13 @@ The `auro-dropdownmeu` element should be used in situations where users may:
       <auro-menu-option slot="listOfOptions" data-value="Arrival">Arrival</auro-menu-option>
       <auro-menu-option slot="listOfOptions" data-value="Prefer Alaska">Prefer Alaska</auro-menu-option>
     </auro-menu>
-  </auro-dropdownmeu>
+  </auro-dropdownmenu>
 </div>
 
 <br />
 
 <div class="exampleWrapper">
-  <auro-dropdownmeu placeholder="Custom placeholder string"  dropdownWidth="800px">
+  <auro-dropdownmenu placeholder="Custom placeholder string"  dropdownWidth="800px">
     <auro-menu slot="menu" indexselectedoption="0">
       <auro-menu-option slot="listOfOptions" data-value="Stops">Stops</auro-menu-option>
       <auro-menu-option slot="listOfOptions" data-value="Price">Price</auro-menu-option>
@@ -37,13 +37,13 @@ The `auro-dropdownmeu` element should be used in situations where users may:
       <auro-menu-option slot="listOfOptions" data-value="Arrival">Arrival</auro-menu-option>
       <auro-menu-option slot="listOfOptions" data-value="Prefer Alaska">Prefer Alaska</auro-menu-option>
     </auro-menu>
-  </auro-dropdownmeu>
+  </auro-dropdownmenu>
 </div>
 
 <br />
 
 <div class="exampleWrapper">
-  <auro-dropdownmeu placeholder="Custom placeholder string">
+  <auro-dropdownmenu placeholder="Custom placeholder string">
     <auro-menu slot="menu" indexselectedoption="0">
       <auro-menu-option slot="listOfOptions" data-value="Stops">Stops</auro-menu-option>
       <auro-menu-option slot="listOfOptions" data-value="Price">Price</auro-menu-option>
@@ -52,14 +52,14 @@ The `auro-dropdownmeu` element should be used in situations where users may:
       <auro-menu-option slot="listOfOptions" data-value="Arrival">Arrival</auro-menu-option>
       <auro-menu-option slot="listOfOptions" data-value="Prefer Alaska">Prefer Alaska</auro-menu-option>
     </auro-menu>
-  </auro-dropdownmeu>
+  </auro-dropdownmenu>
 </div>
 
 <!-- <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
 
   ```html
-  <auro-dropdownmeu>Hello World!</auro-dropdownmeu>
+  <auro-dropdownmenu>Hello World!</auro-dropdownmenu>
   ```
 
 </auro-accordion> -->

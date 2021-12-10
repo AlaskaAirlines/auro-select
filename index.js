@@ -1,1 +1,1 @@
-export * from './dist/auro-dropdownmeu';
+export * from './dist/auro-dropdownmenu';

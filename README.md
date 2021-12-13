@@ -1,6 +1,6 @@
 # Dropdownmenu
 
-`<auro-dropdownmeu>` is an experimental [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) only available as a PRE RELEASE. Users of this element understand the risks of using a pre-released version of this element.
+`<auro-dropdownmeu>` is a combination [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) that consists of a pre-defined trigger element and a menu option for the panel content. See the API docs for additional information. 
 
 ## UI development browser support
 

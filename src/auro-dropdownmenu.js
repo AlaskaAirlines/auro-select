@@ -24,6 +24,7 @@ import '@aurolabs/auro-menu';
  * The auro-dropdownmenu element is a wrapper for auro-dropdown and auro-menu to create a dropdown menu control.
  *
  * @prop {String} placeholder - Define placeholder text to display before a value is manually selected.
+ * @prop {String} value - Value selected for the dropdown menu.
  */
 
 // build the component class
@@ -49,9 +50,6 @@ class AuroDropdownmenu extends LitElement {
        * @private
        */
       expanded: { Boolean },
-      /**
-       * @private
-       */
       value: {
         type: String,
         reflect: true

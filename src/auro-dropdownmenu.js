@@ -94,7 +94,9 @@ class AuroDropdownmenu extends LitElement {
           <button slot="trigger" tabindex="0">
             ${this.value}
           </button>
-          <slot name="menu"></slot>
+          <div class="menuWrapper">
+            <slot name="menu"></slot>
+          </div>
           <slot name="label" slot="label"></slot>
           <slot name="helperText" slot="helperText"></slot>
         </auro-dropdown>

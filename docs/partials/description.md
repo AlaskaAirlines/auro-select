@@ -1,0 +1,1 @@
+`<auro-dropdownmenu>` is a combination [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) that consists of a pre-defined trigger element and a menu option for the panel content. See the API docs for additional information.

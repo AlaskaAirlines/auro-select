@@ -3,13 +3,13 @@ repository:
   # See https://github.com/apps/settings for app settings
 
   # A short description of the repository that will show up on GitHub
-  description: Combo custom element containing pre-defined trigger options with menu in the dropdown panel 
+  description: Combo custom element containing pre-defined trigger options with menu in the dropdown panel
 
   # A URL with more information about the repository
   homepage: https://auro.alaskaair.com/components/auro/dropdownmenu
 
   # A comma-separated list of topics to set on the repository
-  topics: auro, design-system, custom-element, generator-v3-11-2
+  topics: auro, design-system, custom-element, generator-v3-15-0
 
   # Either `true` to enable issues for this repository, `false` to disable them.
   has_issues: true

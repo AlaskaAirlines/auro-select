@@ -16,7 +16,6 @@ import "focus-visible/dist/focus-visible.min.js";
 import styleCss from "./style-css.js";
 import styleCssFixed from './style-fixed-css.js';
 
-import '@aurolabs/auro-dropdown';
 import '@aurolabs/auro-menu';
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
@@ -71,7 +70,11 @@ class AuroDropdownmenu extends LitElement {
     }
 
     this.addEventListener('optionSelected', (evt) => {
-      this.shadowRoot.querySelector('auro-dropdown').hide();
+      try {
+        this.shadowRoot.querySelector('auro-dropdown').hide();
+      } catch (err) {
+        // ignore errors
+      }
 
       this.value = evt.detail.value;
       // this.displayText = evt.detail.displayText;

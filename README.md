@@ -1,6 +1,27 @@
+<!--
+The README.md file is a compiled document. No edits should be made directly to this file.
+
+README.md is created by running `npm run build:markdownDocs`.
+
+This file is generated based on a template fetched from
+`https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/componentDocs/README.md`
+and copied to `./componentDocs/README.md` each time the the docs are compiled.
+
+The following sections are editable by making changes to the following files:
+
+| SECTION                | DESCRIPTION                                       | FILE LOCATION                       |
+|------------------------|---------------------------------------------------|-------------------------------------|
+| Description            | Description of the component                      | `./docs/partials/description.md`    |
+| Use Cases              | Examples for when to use this component           | `./docs/partials/useCases.md`       |
+| Additional Information | For use to add any component specific information | `./docs/partials/readmeAddlInfo.md` |
+| Component Example Code | HTML sample code of the components use            | `./apiExamples/basic.html`          |
+-->
+
 # Dropdownmenu
 
-`<auro-dropdownmeu>` is a combination [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) that consists of a pre-defined trigger element and a menu option for the panel content. See the API docs for additional information. 
+`<auro-dropdownmenu>` is an experimental [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) only available as a PRE RELEASE. Users of this element understand the risks of using a pre-released version of this element.
+
+`<auro-dropdownmenu>` is a combination [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) that consists of a pre-defined trigger element and a menu option for the panel content. See the API docs for additional information.
 
 ## UI development browser support
 
@@ -32,13 +53,26 @@ Any update to the Auro Design Tokens will be immediately reflected with browsers
 
 Defining the component dependency within each component that is using the `<auro-dropdownmenu>` component.
 
-```javascript
+```js
 import "@aurolabs/auro-dropdownmenu";
 ```
 
 **Reference component in HTML**
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./apiExamples/basic.html) -->
-<!-- AURO-GENERATED-CONTENT:END -->
+
+```html
+<auro-dropdownmenu>
+  <span slot="label">Label</span>
+  <span slot="helperText">Helper Text</span>
+  <auro-menu slot="menu" checkmark>
+    <auro-menu-option slot="listOfOptions" data-value="Stops">Stops</auro-menu-option>
+    <auro-menu-option slot="listOfOptions" data-value="Price">Price</auro-menu-option>
+    <auro-menu-option slot="listOfOptions" data-value="Duration">Duration</auro-menu-option>
+    <auro-menu-option slot="listOfOptions" data-value="Departure">Departure</auro-menu-option>
+    <auro-menu-option slot="listOfOptions" data-value="Arrival">Arrival</auro-menu-option>
+    <auro-menu-option slot="listOfOptions" data-value="Prefer Alaska">Prefer Alaska</auro-menu-option>
+  </auro-menu>
+</auro-dropdownmenu>
+```
 
 ## Install bundled assets from CDN
 
@@ -48,12 +82,10 @@ Since the legacy bundle includes many polyfills that are not needed by modern br
 
 ### Bundle example code
 
-**NOTE:** Be sure to replace `@latest` in the URL with the version of the asset you want. @latest is NOT aware of any MAJOR releases, use at your own risk.
-
 ```html
+<!-- **NOTE:** Be sure to replace `@latest` in the URL with the version of the asset you want. @latest is NOT aware of any MAJOR releases, use at your own risk. -->
 <link rel="stylesheet" href="https://unpkg.com/@alaskaairux/design-tokens@latest/dist/tokens/CSSCustomProperties.css" />
 <link rel="stylesheet" href="https://unpkg.com/@alaskaairux/webcorestylesheets@latest/dist/bundled/essentials.css" />
-
 <script src="https://unpkg.com/@aurolabs/auro-dropdownmenu@latest/dist/auro-dropdownmenu__bundled.js" type="module"></script>
 <script src="https://unpkg.com/@aurolabs/auro-dropdownmenu@latest/dist/auro-dropdownmenu__bundled.es5.js" nomodule></script>
 ```
@@ -62,16 +94,26 @@ Since the legacy bundle includes many polyfills that are not needed by modern br
 
 The `<auro-dropdownmenu>` element should be used in situations where users may:
 
-* ...
-* ...
-* ...
+* Make a selection from a predefined list of options
 
 ## API Code Examples
 
-Default auro-dropdownmenu
+### Default auro-dropdownmenu
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./apiExamples/basic.html) -->
-<!-- AURO-GENERATED-CONTENT:END -->
+```html
+<auro-dropdownmenu>
+  <span slot="label">Label</span>
+  <span slot="helperText">Helper Text</span>
+  <auro-menu slot="menu" checkmark>
+    <auro-menu-option slot="listOfOptions" data-value="Stops">Stops</auro-menu-option>
+    <auro-menu-option slot="listOfOptions" data-value="Price">Price</auro-menu-option>
+    <auro-menu-option slot="listOfOptions" data-value="Duration">Duration</auro-menu-option>
+    <auro-menu-option slot="listOfOptions" data-value="Departure">Departure</auro-menu-option>
+    <auro-menu-option slot="listOfOptions" data-value="Arrival">Arrival</auro-menu-option>
+    <auro-menu-option slot="listOfOptions" data-value="Prefer Alaska">Prefer Alaska</auro-menu-option>
+  </auro-menu>
+</auro-dropdownmenu>
+```
 
 ## Development
 
@@ -113,4 +155,3 @@ Bundled assets are only generated in the remote and not merged back to this repo
 
 To deploy a demo version of the component for review, run `npm run build:demo` to create a `./build` directory that can be pushed to any static server.
 
-<small>Built from WC-Generator v3.11.2</small>

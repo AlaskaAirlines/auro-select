@@ -24,6 +24,9 @@ import '@aurolabs/auro-menu';
  *
  * @prop {String} placeholder - Define placeholder text to display before a value is manually selected.
  * @prop {String} value - Value selected for the dropdown menu.
+ * @slot - Default slot for the menu content.
+ * @slot label - Defines the content of the label.
+ * @slot helperText - Defines the content of the helperText.
  */
 
 // build the component class
@@ -96,7 +99,7 @@ class AuroDropdownmenu extends LitElement {
             ${this.value}
           </button>
           <div class="menuWrapper">
-            <slot name="menu"></slot>
+            <slot></slot>
           </div>
           <slot name="label" slot="label"></slot>
           <slot name="helperText" slot="helperText"></slot>

@@ -12,9 +12,9 @@ The `<auro-dropdownmenu>` element should be used in situations where users may:
 
 <div class="exampleWrapper">
   <auro-dropdownmenu>
-    <span slot="label">Label</span>
-    <span slot="helperText">Helper Text</span>
-    <auro-menu slot="menu" checkmark>
+    <!-- <span slot="label">Label</span>
+    <span slot="helperText">Helper Text</span> -->
+    <auro-menu checkmark>
       <auro-menu-option slot="listOfOptions" data-value="Stops">Stops</auro-menu-option>
       <auro-menu-option slot="listOfOptions" data-value="Price">Price</auro-menu-option>
       <auro-menu-option slot="listOfOptions" data-value="Duration">Duration</auro-menu-option>
@@ -29,9 +29,9 @@ The `<auro-dropdownmenu>` element should be used in situations where users may:
 
 ```html
 <auro-dropdownmenu>
-  <span slot="label">Label</span>
-  <span slot="helperText">Helper Text</span>
-  <auro-menu slot="menu" checkmark>
+  <!-- <span slot="label">Label</span>
+  <span slot="helperText">Helper Text</span> -->
+  <auro-menu checkmark>
     <auro-menu-option slot="listOfOptions" data-value="Stops">Stops</auro-menu-option>
     <auro-menu-option slot="listOfOptions" data-value="Price">Price</auro-menu-option>
     <auro-menu-option slot="listOfOptions" data-value="Duration">Duration</auro-menu-option>
@@ -48,7 +48,7 @@ The `<auro-dropdownmenu>` element should be used in situations where users may:
 
 <div class="exampleWrapper">
   <auro-dropdownmenu placeholder="Custom placeholder text">
-    <auro-menu slot="menu">
+    <auro-menu>
       <auro-menu-option slot="listOfOptions" data-value="Stops">Stops</auro-menu-option>
       <auro-menu-option slot="listOfOptions" data-value="Price">Price</auro-menu-option>
       <auro-menu-option slot="listOfOptions" data-value="Duration">Duration</auro-menu-option>
@@ -63,7 +63,7 @@ The `<auro-dropdownmenu>` element should be used in situations where users may:
 
 ```html
 <auro-dropdownmenu placeholder="Custom placeholder text">
-  <auro-menu slot="menu">
+  <auro-menu>
     <auro-menu-option slot="listOfOptions" data-value="Stops">Stops</auro-menu-option>
     <auro-menu-option slot="listOfOptions" data-value="Price">Price</auro-menu-option>
     <auro-menu-option slot="listOfOptions" data-value="Duration">Duration</auro-menu-option>
@@ -80,7 +80,7 @@ The `<auro-dropdownmenu>` element should be used in situations where users may:
 
 <div class="exampleWrapper">
   <auro-dropdownmenu>
-    <auro-menu slot="menu" checkmark>
+    <auro-menu checkmark>
       <auro-menu-option slot="listOfOptions" data-value="Seattle Area (All Airports)">Seattle Area (All Airports)</auro-menu-option>
       <auro-sub-menu slot="listOfOptions">
         <auro-menu-option data-value="Everett, WA (PAE-Paine Field)">Everett, WA (PAE-Paine Field)</auro-menu-option>
@@ -103,7 +103,7 @@ The `<auro-dropdownmenu>` element should be used in situations where users may:
 
 ```html
 <auro-dropdownmenu>
-  <auro-menu slot="menu" checkmark>
+  <auro-menu checkmark>
     <auro-menu-option slot="listOfOptions" data-value="Seattle Area (All Airports)">Seattle Area (All Airports)</auro-menu-option>
     <auro-sub-menu slot="listOfOptions">
       <auro-menu-option data-value="Everett, WA (PAE-Paine Field)">Everett, WA (PAE-Paine Field)</auro-menu-option>
@@ -130,7 +130,7 @@ The `<auro-dropdownmenu>` element should be used in situations where users may:
   <auro-dropdownmenu indexSelectedOption="4">
     <span slot="label">Label</span>
     <span slot="helperText">Helper Text</span>
-    <auro-menu slot="menu" checkmark>
+    <auro-menu checkmark>
       <auro-menu-option slot="listOfOptions" data-value="Stops">Stops</auro-menu-option>
       <auro-menu-option slot="listOfOptions" data-value="Price">Price</auro-menu-option>
       <auro-menu-option slot="listOfOptions" data-value="Duration">Duration</auro-menu-option>
@@ -147,7 +147,7 @@ The `<auro-dropdownmenu>` element should be used in situations where users may:
 <auro-dropdownmenu indexSelectedOption="4">
   <span slot="label">Label</span>
   <span slot="helperText">Helper Text</span>
-  <auro-menu slot="menu" checkmark>
+  <auro-menu checkmark>
     <auro-menu-option slot="listOfOptions" data-value="Stops">Stops</auro-menu-option>
     <auro-menu-option slot="listOfOptions" data-value="Price">Price</auro-menu-option>
     <auro-menu-option slot="listOfOptions" data-value="Duration">Duration</auro-menu-option>

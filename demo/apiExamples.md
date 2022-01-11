@@ -11,6 +11,14 @@ The auro-dropdownmenu element is a wrapper for auro-dropdown and auro-menu to cr
 | [placeholder](#placeholder) | `placeholder` | `String` | "Select an option" | Define placeholder text to display before a value is manually selected. |
 | [value](#value)       | `value`       | `String` |                    | Value selected for the dropdown menu.            |
 
+## Slots
+
+| Name         | Description                            |
+|--------------|----------------------------------------|
+|              | Default slot for the menu content.     |
+| [helperText](#helperText) | Defines the content of the helperText. |
+| [label](#label)      | Defines the content of the label.      |
+
 ## API Examples
 
 ### Basic
@@ -19,9 +27,9 @@ The auro-dropdownmenu element is a wrapper for auro-dropdown and auro-menu to cr
   <div>
     <div class="exampleWrapper">
       <auro-dropdownmenu>
-        <span slot="label">Label</span>
-        <span slot="helperText">Helper Text</span>
-        <auro-menu slot="menu" checkmark>
+        <!-- <span slot="label">Label</span>
+        <span slot="helperText">Helper Text</span> -->
+        <auro-menu checkmark>
           <auro-menu-option slot="listOfOptions" data-value="Stops">Stops</auro-menu-option>
           <auro-menu-option slot="listOfOptions" data-value="Price">Price</auro-menu-option>
           <auro-menu-option slot="listOfOptions" data-value="Duration">Duration</auro-menu-option>
@@ -36,48 +44,9 @@ The auro-dropdownmenu element is a wrapper for auro-dropdown and auro-menu to cr
 
 ```html
 <auro-dropdownmenu>
-  <span slot="label">Label</span>
-  <span slot="helperText">Helper Text</span>
-  <auro-menu slot="menu" checkmark>
-    <auro-menu-option slot="listOfOptions" data-value="Stops">Stops</auro-menu-option>
-    <auro-menu-option slot="listOfOptions" data-value="Price">Price</auro-menu-option>
-    <auro-menu-option slot="listOfOptions" data-value="Duration">Duration</auro-menu-option>
-    <auro-menu-option slot="listOfOptions" data-value="Departure">Departure</auro-menu-option>
-    <auro-menu-option slot="listOfOptions" data-value="Arrival">Arrival</auro-menu-option>
-    <auro-menu-option slot="listOfOptions" data-value="Prefer Alaska">Prefer Alaska</auro-menu-option>
-  </auro-menu>
-</auro-dropdownmenu>
-```
-
-</auro-accordion>
-
-### Attribute Examples
-
-#### <a name="attributeName"></a>`attributeName`<a href="#auro-dropdownmenu" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
-Explanation and use description.
-
-<div class="exampleWrapper">
-  <auro-dropdownmenu>
-    <span slot="label">Label</span>
-    <span slot="helperText">Helper Text</span>
-    <auro-menu slot="menu" checkmark>
-      <auro-menu-option slot="listOfOptions" data-value="Stops">Stops</auro-menu-option>
-      <auro-menu-option slot="listOfOptions" data-value="Price">Price</auro-menu-option>
-      <auro-menu-option slot="listOfOptions" data-value="Duration">Duration</auro-menu-option>
-      <auro-menu-option slot="listOfOptions" data-value="Departure">Departure</auro-menu-option>
-      <auro-menu-option slot="listOfOptions" data-value="Arrival">Arrival</auro-menu-option>
-      <auro-menu-option slot="listOfOptions" data-value="Prefer Alaska">Prefer Alaska</auro-menu-option>
-    </auro-menu>
-  </auro-dropdownmenu>
-</div>
-<auro-accordion lowProfile justifyRight>
-  <span slot="trigger">See code</span>
-
-```html
-<auro-dropdownmenu>
-  <span slot="label">Label</span>
-  <span slot="helperText">Helper Text</span>
-  <auro-menu slot="menu" checkmark>
+  <!-- <span slot="label">Label</span>
+  <span slot="helperText">Helper Text</span> -->
+  <auro-menu checkmark>
     <auro-menu-option slot="listOfOptions" data-value="Stops">Stops</auro-menu-option>
     <auro-menu-option slot="listOfOptions" data-value="Price">Price</auro-menu-option>
     <auro-menu-option slot="listOfOptions" data-value="Duration">Duration</auro-menu-option>
@@ -92,14 +61,12 @@ Explanation and use description.
 
 ### Property Examples
 
-#### <a name="propertyName"></a>`propertyName`<a href="#auro-dropdownmenu" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+#### <a name="placeholder"></a>`placeholder`<a href="#auro-dropdownmenu" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
 Explanation and use description.
 
 <div class="exampleWrapper">
-  <auro-dropdownmenu>
-    <span slot="label">Label</span>
-    <span slot="helperText">Helper Text</span>
-    <auro-menu slot="menu" checkmark>
+  <auro-dropdownmenu placeholder="Custom placeholder text">
+    <auro-menu>
       <auro-menu-option slot="listOfOptions" data-value="Stops">Stops</auro-menu-option>
       <auro-menu-option slot="listOfOptions" data-value="Price">Price</auro-menu-option>
       <auro-menu-option slot="listOfOptions" data-value="Duration">Duration</auro-menu-option>
@@ -113,10 +80,8 @@ Explanation and use description.
   <span slot="trigger">See code</span>
 
 ```html
-<auro-dropdownmenu>
-  <span slot="label">Label</span>
-  <span slot="helperText">Helper Text</span>
-  <auro-menu slot="menu" checkmark>
+<auro-dropdownmenu placeholder="Custom placeholder text">
+  <auro-menu>
     <auro-menu-option slot="listOfOptions" data-value="Stops">Stops</auro-menu-option>
     <auro-menu-option slot="listOfOptions" data-value="Price">Price</auro-menu-option>
     <auro-menu-option slot="listOfOptions" data-value="Duration">Duration</auro-menu-option>
@@ -129,16 +94,14 @@ Explanation and use description.
 
 </auro-accordion>
 
-### Method Examples
-
-#### <a name="methodName"></a>`methodName`<a href="#auro-dropdownmenu" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
-Explanation and use description.
+#### <a name="value"></a>`value`<a href="#auro-dropdownmenu" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+TODO: This needs a new example showing some actual use case of extracting the value.
 
 <div class="exampleWrapper">
-  <auro-dropdownmenu>
+  <auro-dropdownmenu indexSelectedOption="4">
     <span slot="label">Label</span>
     <span slot="helperText">Helper Text</span>
-    <auro-menu slot="menu" checkmark>
+    <auro-menu checkmark>
       <auro-menu-option slot="listOfOptions" data-value="Stops">Stops</auro-menu-option>
       <auro-menu-option slot="listOfOptions" data-value="Price">Price</auro-menu-option>
       <auro-menu-option slot="listOfOptions" data-value="Duration">Duration</auro-menu-option>
@@ -152,49 +115,10 @@ Explanation and use description.
   <span slot="trigger">See code</span>
 
 ```html
-<auro-dropdownmenu>
+<auro-dropdownmenu indexSelectedOption="4">
   <span slot="label">Label</span>
   <span slot="helperText">Helper Text</span>
-  <auro-menu slot="menu" checkmark>
-    <auro-menu-option slot="listOfOptions" data-value="Stops">Stops</auro-menu-option>
-    <auro-menu-option slot="listOfOptions" data-value="Price">Price</auro-menu-option>
-    <auro-menu-option slot="listOfOptions" data-value="Duration">Duration</auro-menu-option>
-    <auro-menu-option slot="listOfOptions" data-value="Departure">Departure</auro-menu-option>
-    <auro-menu-option slot="listOfOptions" data-value="Arrival">Arrival</auro-menu-option>
-    <auro-menu-option slot="listOfOptions" data-value="Prefer Alaska">Prefer Alaska</auro-menu-option>
-  </auro-menu>
-</auro-dropdownmenu>
-```
-
-</auro-accordion>
-
-### Event Examples
-
-#### <a name="eventName"></a>`eventName`<a href="#auro-dropdownmenu" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
-Explanation and use description.
-
-<div class="exampleWrapper">
-  <auro-dropdownmenu>
-    <span slot="label">Label</span>
-    <span slot="helperText">Helper Text</span>
-    <auro-menu slot="menu" checkmark>
-      <auro-menu-option slot="listOfOptions" data-value="Stops">Stops</auro-menu-option>
-      <auro-menu-option slot="listOfOptions" data-value="Price">Price</auro-menu-option>
-      <auro-menu-option slot="listOfOptions" data-value="Duration">Duration</auro-menu-option>
-      <auro-menu-option slot="listOfOptions" data-value="Departure">Departure</auro-menu-option>
-      <auro-menu-option slot="listOfOptions" data-value="Arrival">Arrival</auro-menu-option>
-      <auro-menu-option slot="listOfOptions" data-value="Prefer Alaska">Prefer Alaska</auro-menu-option>
-    </auro-menu>
-  </auro-dropdownmenu>
-</div>
-<auro-accordion lowProfile justifyRight>
-  <span slot="trigger">See code</span>
-
-```html
-<auro-dropdownmenu>
-  <span slot="label">Label</span>
-  <span slot="helperText">Helper Text</span>
-  <auro-menu slot="menu" checkmark>
+  <auro-menu checkmark>
     <auro-menu-option slot="listOfOptions" data-value="Stops">Stops</auro-menu-option>
     <auro-menu-option slot="listOfOptions" data-value="Price">Price</auro-menu-option>
     <auro-menu-option slot="listOfOptions" data-value="Duration">Duration</auro-menu-option>
@@ -209,14 +133,86 @@ Explanation and use description.
 
 ### Slot Examples
 
-#### <a name="slotName"></a>`slotName`<a href="#auro-dropdownmenu" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+#### default
+
+All examples on this page show default slot content.
+
+<div class="exampleWrapper">
+  <auro-dropdownmenu>
+    <!-- <span slot="label">Label</span>
+    <span slot="helperText">Helper Text</span> -->
+    <auro-menu checkmark>
+      <auro-menu-option slot="listOfOptions" data-value="Stops">Stops</auro-menu-option>
+      <auro-menu-option slot="listOfOptions" data-value="Price">Price</auro-menu-option>
+      <auro-menu-option slot="listOfOptions" data-value="Duration">Duration</auro-menu-option>
+      <auro-menu-option slot="listOfOptions" data-value="Departure">Departure</auro-menu-option>
+      <auro-menu-option slot="listOfOptions" data-value="Arrival">Arrival</auro-menu-option>
+      <auro-menu-option slot="listOfOptions" data-value="Prefer Alaska">Prefer Alaska</auro-menu-option>
+    </auro-menu>
+  </auro-dropdownmenu>
+</div>
+<auro-accordion lowProfile justifyRight>
+  <span slot="trigger">See code</span>
+
+```html
+<auro-dropdownmenu>
+  <!-- <span slot="label">Label</span>
+  <span slot="helperText">Helper Text</span> -->
+  <auro-menu checkmark>
+    <auro-menu-option slot="listOfOptions" data-value="Stops">Stops</auro-menu-option>
+    <auro-menu-option slot="listOfOptions" data-value="Price">Price</auro-menu-option>
+    <auro-menu-option slot="listOfOptions" data-value="Duration">Duration</auro-menu-option>
+    <auro-menu-option slot="listOfOptions" data-value="Departure">Departure</auro-menu-option>
+    <auro-menu-option slot="listOfOptions" data-value="Arrival">Arrival</auro-menu-option>
+    <auro-menu-option slot="listOfOptions" data-value="Prefer Alaska">Prefer Alaska</auro-menu-option>
+  </auro-menu>
+</auro-dropdownmenu>
+```
+
+</auro-accordion>
+
+#### <a name="helperText"></a>`helperText`<a href="#auro-dropdownmenu" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+Explanation and use description.
+
+<div class="exampleWrapper">
+  <auro-dropdownmenu>
+    <span slot="helperText">Helper Text</span>
+    <auro-menu checkmark>
+      <auro-menu-option slot="listOfOptions" data-value="Stops">Stops</auro-menu-option>
+      <auro-menu-option slot="listOfOptions" data-value="Price">Price</auro-menu-option>
+      <auro-menu-option slot="listOfOptions" data-value="Duration">Duration</auro-menu-option>
+      <auro-menu-option slot="listOfOptions" data-value="Departure">Departure</auro-menu-option>
+      <auro-menu-option slot="listOfOptions" data-value="Arrival">Arrival</auro-menu-option>
+      <auro-menu-option slot="listOfOptions" data-value="Prefer Alaska">Prefer Alaska</auro-menu-option>
+    </auro-menu>
+  </auro-dropdownmenu>
+</div>
+<auro-accordion lowProfile justifyRight>
+  <span slot="trigger">See code</span>
+
+```html
+<auro-dropdownmenu>
+  <span slot="helperText">Helper Text</span>
+  <auro-menu checkmark>
+    <auro-menu-option slot="listOfOptions" data-value="Stops">Stops</auro-menu-option>
+    <auro-menu-option slot="listOfOptions" data-value="Price">Price</auro-menu-option>
+    <auro-menu-option slot="listOfOptions" data-value="Duration">Duration</auro-menu-option>
+    <auro-menu-option slot="listOfOptions" data-value="Departure">Departure</auro-menu-option>
+    <auro-menu-option slot="listOfOptions" data-value="Arrival">Arrival</auro-menu-option>
+    <auro-menu-option slot="listOfOptions" data-value="Prefer Alaska">Prefer Alaska</auro-menu-option>
+  </auro-menu>
+</auro-dropdownmenu>
+```
+
+</auro-accordion>
+
+#### <a name="label"></a>`label`<a href="#auro-dropdownmenu" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
 Explanation and use description.
 
 <div class="exampleWrapper">
   <auro-dropdownmenu>
     <span slot="label">Label</span>
-    <span slot="helperText">Helper Text</span>
-    <auro-menu slot="menu" checkmark>
+    <auro-menu checkmark>
       <auro-menu-option slot="listOfOptions" data-value="Stops">Stops</auro-menu-option>
       <auro-menu-option slot="listOfOptions" data-value="Price">Price</auro-menu-option>
       <auro-menu-option slot="listOfOptions" data-value="Duration">Duration</auro-menu-option>
@@ -232,8 +228,7 @@ Explanation and use description.
 ```html
 <auro-dropdownmenu>
   <span slot="label">Label</span>
-  <span slot="helperText">Helper Text</span>
-  <auro-menu slot="menu" checkmark>
+  <auro-menu checkmark>
     <auro-menu-option slot="listOfOptions" data-value="Stops">Stops</auro-menu-option>
     <auro-menu-option slot="listOfOptions" data-value="Price">Price</auro-menu-option>
     <auro-menu-option slot="listOfOptions" data-value="Duration">Duration</auro-menu-option>

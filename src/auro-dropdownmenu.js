@@ -74,6 +74,20 @@ class AuroDropdownmenu extends LitElement {
   }
 
   firstUpdated() {
+    this.addEventListener('click', () => {
+      const menuItems = this.querySelectorAll('auro-menuoption');
+
+      let focusIndex = 0;
+
+      for (let optionsIndex = 0; optionsIndex < menuItems.length; optionsIndex += 1) {
+        if (menuItems[optionsIndex].hasAttribute('selected')) {
+          focusIndex = optionsIndex;
+        }
+      }
+
+      menuItems[focusIndex].focus();
+    });
+
     this.addEventListener('optionSelected', (evt) => {
       try {
         this.shadowRoot.querySelector('auro-dropdown').hide();

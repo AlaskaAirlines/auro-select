@@ -12,15 +12,13 @@ The `<auro-dropdownmenu>` element should be used in situations where users may:
 
 <div class="exampleWrapper">
   <auro-dropdownmenu>
-    <!-- <span slot="label">Label</span>
-    <span slot="helperText">Helper Text</span> -->
     <auro-menu checkmark>
-      <auro-menu-option slot="listOfOptions" data-value="Stops">Stops</auro-menu-option>
-      <auro-menu-option slot="listOfOptions" data-value="Price">Price</auro-menu-option>
-      <auro-menu-option slot="listOfOptions" data-value="Duration">Duration</auro-menu-option>
-      <auro-menu-option slot="listOfOptions" data-value="Departure">Departure</auro-menu-option>
-      <auro-menu-option slot="listOfOptions" data-value="Arrival">Arrival</auro-menu-option>
-      <auro-menu-option slot="listOfOptions" data-value="Prefer Alaska">Prefer Alaska</auro-menu-option>
+      <auro-menuoption data-value="Stops">Stops</auro-menuoption>
+      <auro-menuoption data-value="Price">Price</auro-menuoption>
+      <auro-menuoption data-value="Duration">Duration</auro-menuoption>
+      <auro-menuoption data-value="Departure">Departure</auro-menuoption>
+      <auro-menuoption data-value="Arrival">Arrival</auro-menuoption>
+      <auro-menuoption data-value="Prefer Alaska">Prefer Alaska</auro-menuoption>
     </auro-menu>
   </auro-dropdownmenu>
 </div>
@@ -29,15 +27,13 @@ The `<auro-dropdownmenu>` element should be used in situations where users may:
 
 ```html
 <auro-dropdownmenu>
-  <!-- <span slot="label">Label</span>
-  <span slot="helperText">Helper Text</span> -->
   <auro-menu checkmark>
-    <auro-menu-option slot="listOfOptions" data-value="Stops">Stops</auro-menu-option>
-    <auro-menu-option slot="listOfOptions" data-value="Price">Price</auro-menu-option>
-    <auro-menu-option slot="listOfOptions" data-value="Duration">Duration</auro-menu-option>
-    <auro-menu-option slot="listOfOptions" data-value="Departure">Departure</auro-menu-option>
-    <auro-menu-option slot="listOfOptions" data-value="Arrival">Arrival</auro-menu-option>
-    <auro-menu-option slot="listOfOptions" data-value="Prefer Alaska">Prefer Alaska</auro-menu-option>
+    <auro-menuoption data-value="Stops">Stops</auro-menuoption>
+    <auro-menuoption data-value="Price">Price</auro-menuoption>
+    <auro-menuoption data-value="Duration">Duration</auro-menuoption>
+    <auro-menuoption data-value="Departure">Departure</auro-menuoption>
+    <auro-menuoption data-value="Arrival">Arrival</auro-menuoption>
+    <auro-menuoption data-value="Prefer Alaska">Prefer Alaska</auro-menuoption>
   </auro-menu>
 </auro-dropdownmenu>
 ```
@@ -49,12 +45,12 @@ The `<auro-dropdownmenu>` element should be used in situations where users may:
 <div class="exampleWrapper">
   <auro-dropdownmenu placeholder="Custom placeholder text">
     <auro-menu>
-      <auro-menu-option slot="listOfOptions" data-value="Stops">Stops</auro-menu-option>
-      <auro-menu-option slot="listOfOptions" data-value="Price">Price</auro-menu-option>
-      <auro-menu-option slot="listOfOptions" data-value="Duration">Duration</auro-menu-option>
-      <auro-menu-option slot="listOfOptions" data-value="Departure">Departure</auro-menu-option>
-      <auro-menu-option slot="listOfOptions" data-value="Arrival">Arrival</auro-menu-option>
-      <auro-menu-option slot="listOfOptions" data-value="Prefer Alaska">Prefer Alaska</auro-menu-option>
+      <auro-menuoption data-value="Stops">Stops</auro-menuoption>
+      <auro-menuoption data-value="Price">Price</auro-menuoption>
+      <auro-menuoption data-value="Duration">Duration</auro-menuoption>
+      <auro-menuoption data-value="Departure">Departure</auro-menuoption>
+      <auro-menuoption data-value="Arrival">Arrival</auro-menuoption>
+      <auro-menuoption data-value="Prefer Alaska">Prefer Alaska</auro-menuoption>
     </auro-menu>
   </auro-dropdownmenu>
 </div>
@@ -64,12 +60,12 @@ The `<auro-dropdownmenu>` element should be used in situations where users may:
 ```html
 <auro-dropdownmenu placeholder="Custom placeholder text">
   <auro-menu>
-    <auro-menu-option slot="listOfOptions" data-value="Stops">Stops</auro-menu-option>
-    <auro-menu-option slot="listOfOptions" data-value="Price">Price</auro-menu-option>
-    <auro-menu-option slot="listOfOptions" data-value="Duration">Duration</auro-menu-option>
-    <auro-menu-option slot="listOfOptions" data-value="Departure">Departure</auro-menu-option>
-    <auro-menu-option slot="listOfOptions" data-value="Arrival">Arrival</auro-menu-option>
-    <auro-menu-option slot="listOfOptions" data-value="Prefer Alaska">Prefer Alaska</auro-menu-option>
+    <auro-menuoption data-value="Stops">Stops</auro-menuoption>
+    <auro-menuoption data-value="Price">Price</auro-menuoption>
+    <auro-menuoption data-value="Duration">Duration</auro-menuoption>
+    <auro-menuoption data-value="Departure">Departure</auro-menuoption>
+    <auro-menuoption data-value="Arrival">Arrival</auro-menuoption>
+    <auro-menuoption data-value="Prefer Alaska">Prefer Alaska</auro-menuoption>
   </auro-menu>
 </auro-dropdownmenu>
 ```
@@ -81,19 +77,19 @@ The `<auro-dropdownmenu>` element should be used in situations where users may:
 <div class="exampleWrapper">
   <auro-dropdownmenu>
     <auro-menu checkmark>
-      <auro-menu-option slot="listOfOptions" data-value="Seattle Area (All Airports)">Seattle Area (All Airports)</auro-menu-option>
+      <auro-menuoption data-value="Seattle Area (All Airports)">Seattle Area (All Airports)</auro-menuoption>
       <auro-sub-menu slot="listOfOptions">
-        <auro-menu-option data-value="Everett, WA (PAE-Paine Field)">Everett, WA (PAE-Paine Field)</auro-menu-option>
-        <auro-menu-option data-value="Seattle, WA (SEA-Seattle/Tacoma Intl.)">Seattle, WA (SEA-Seattle/Tacoma Intl.)</auro-menu-option>
+        <auro-menuoption data-value="Everett, WA (PAE-Paine Field)">Everett, WA (PAE-Paine Field)</auro-menuoption>
+        <auro-menuoption data-value="Seattle, WA (SEA-Seattle/Tacoma Intl.)">Seattle, WA (SEA-Seattle/Tacoma Intl.)</auro-menuoption>
       </auro-sub-menu>
-      <auro-menu-option slot="listOfOptions" data-value="Belgrade, Serbia (BEG-Belgrade)">Belgrade, Serbia (BEG-Belgrade)</auro-menu-option>
-      <auro-menu-option slot="listOfOptions" data-value="Mahe Island, Seychelles (SEZ-Mahe Island)">Mahe Island, Seychelles (SEZ-Mahe Island)</auro-menu-option>
-      <auro-menu-option slot="listOfOptions" data-value="Sendair, Japan (SDJ-Sendai)">Sendair, Japan (SDJ-Sendai)</auro-menu-option>
-      <auro-menu-option slot="listOfOptions" data-value="Sacramento, CA (SMF-Sacramento Intl.)">Sacramento, CA (SMF-Sacramento Intl.)</auro-menu-option>
-      <auro-menu-option slot="listOfOptions" data-value="Seoul, Korea, Republic of (All Airports)">Seoul, Korea, Republic of (All Airports)</auro-menu-option>
+      <auro-menuoption data-value="Belgrade, Serbia (BEG-Belgrade)">Belgrade, Serbia (BEG-Belgrade)</auro-menuoption>
+      <auro-menuoption data-value="Mahe Island, Seychelles (SEZ-Mahe Island)">Mahe Island, Seychelles (SEZ-Mahe Island)</auro-menuoption>
+      <auro-menuoption data-value="Sendair, Japan (SDJ-Sendai)">Sendair, Japan (SDJ-Sendai)</auro-menuoption>
+      <auro-menuoption data-value="Sacramento, CA (SMF-Sacramento Intl.)">Sacramento, CA (SMF-Sacramento Intl.)</auro-menuoption>
+      <auro-menuoption data-value="Seoul, Korea, Republic of (All Airports)">Seoul, Korea, Republic of (All Airports)</auro-menuoption>
       <auro-sub-menu slot="listOfOptions">
-        <auro-menu-option data-value="Seoul, Korea, Republic of (GMP-Seoul Gimpo In..)">Seoul, Korea, Republic of (GMP-Seoul Gimpo In..)</auro-menu-option>
-        <auro-menu-option data-value="Seoul, Korea, Republic of (ICN-Seoul Incheon In..)">Seoul, Korea, Republic of (ICN-Seoul Incheon In..)</auro-menu-option>
+        <auro-menuoption data-value="Seoul, Korea, Republic of (GMP-Seoul Gimpo In..)">Seoul, Korea, Republic of (GMP-Seoul Gimpo In..)</auro-menuoption>
+        <auro-menuoption data-value="Seoul, Korea, Republic of (ICN-Seoul Incheon In..)">Seoul, Korea, Republic of (ICN-Seoul Incheon In..)</auro-menuoption>
       </auro-sub-menu>
     </auro-menu>
   </auro-dropdownmenu>
@@ -104,19 +100,19 @@ The `<auro-dropdownmenu>` element should be used in situations where users may:
 ```html
 <auro-dropdownmenu>
   <auro-menu checkmark>
-    <auro-menu-option slot="listOfOptions" data-value="Seattle Area (All Airports)">Seattle Area (All Airports)</auro-menu-option>
+    <auro-menuoption data-value="Seattle Area (All Airports)">Seattle Area (All Airports)</auro-menuoption>
     <auro-sub-menu slot="listOfOptions">
-      <auro-menu-option data-value="Everett, WA (PAE-Paine Field)">Everett, WA (PAE-Paine Field)</auro-menu-option>
-      <auro-menu-option data-value="Seattle, WA (SEA-Seattle/Tacoma Intl.)">Seattle, WA (SEA-Seattle/Tacoma Intl.)</auro-menu-option>
+      <auro-menuoption data-value="Everett, WA (PAE-Paine Field)">Everett, WA (PAE-Paine Field)</auro-menuoption>
+      <auro-menuoption data-value="Seattle, WA (SEA-Seattle/Tacoma Intl.)">Seattle, WA (SEA-Seattle/Tacoma Intl.)</auro-menuoption>
     </auro-sub-menu>
-    <auro-menu-option slot="listOfOptions" data-value="Belgrade, Serbia (BEG-Belgrade)">Belgrade, Serbia (BEG-Belgrade)</auro-menu-option>
-    <auro-menu-option slot="listOfOptions" data-value="Mahe Island, Seychelles (SEZ-Mahe Island)">Mahe Island, Seychelles (SEZ-Mahe Island)</auro-menu-option>
-    <auro-menu-option slot="listOfOptions" data-value="Sendair, Japan (SDJ-Sendai)">Sendair, Japan (SDJ-Sendai)</auro-menu-option>
-    <auro-menu-option slot="listOfOptions" data-value="Sacramento, CA (SMF-Sacramento Intl.)">Sacramento, CA (SMF-Sacramento Intl.)</auro-menu-option>
-    <auro-menu-option slot="listOfOptions" data-value="Seoul, Korea, Republic of (All Airports)">Seoul, Korea, Republic of (All Airports)</auro-menu-option>
+    <auro-menuoption data-value="Belgrade, Serbia (BEG-Belgrade)">Belgrade, Serbia (BEG-Belgrade)</auro-menuoption>
+    <auro-menuoption data-value="Mahe Island, Seychelles (SEZ-Mahe Island)">Mahe Island, Seychelles (SEZ-Mahe Island)</auro-menuoption>
+    <auro-menuoption data-value="Sendair, Japan (SDJ-Sendai)">Sendair, Japan (SDJ-Sendai)</auro-menuoption>
+    <auro-menuoption data-value="Sacramento, CA (SMF-Sacramento Intl.)">Sacramento, CA (SMF-Sacramento Intl.)</auro-menuoption>
+    <auro-menuoption data-value="Seoul, Korea, Republic of (All Airports)">Seoul, Korea, Republic of (All Airports)</auro-menuoption>
     <auro-sub-menu slot="listOfOptions">
-      <auro-menu-option data-value="Seoul, Korea, Republic of (GMP-Seoul Gimpo In..)">Seoul, Korea, Republic of (GMP-Seoul Gimpo In..)</auro-menu-option>
-      <auro-menu-option data-value="Seoul, Korea, Republic of (ICN-Seoul Incheon In..)">Seoul, Korea, Republic of (ICN-Seoul Incheon In..)</auro-menu-option>
+      <auro-menuoption data-value="Seoul, Korea, Republic of (GMP-Seoul Gimpo In..)">Seoul, Korea, Republic of (GMP-Seoul Gimpo In..)</auro-menuoption>
+      <auro-menuoption data-value="Seoul, Korea, Republic of (ICN-Seoul Incheon In..)">Seoul, Korea, Republic of (ICN-Seoul Incheon In..)</auro-menuoption>
     </auro-sub-menu>
   </auro-menu>
 </auro-dropdownmenu>
@@ -131,12 +127,12 @@ The `<auro-dropdownmenu>` element should be used in situations where users may:
     <span slot="label">Label</span>
     <span slot="helperText">Helper Text</span>
     <auro-menu checkmark>
-      <auro-menu-option slot="listOfOptions" data-value="Stops">Stops</auro-menu-option>
-      <auro-menu-option slot="listOfOptions" data-value="Price">Price</auro-menu-option>
-      <auro-menu-option slot="listOfOptions" data-value="Duration">Duration</auro-menu-option>
-      <auro-menu-option slot="listOfOptions" data-value="Departure">Departure</auro-menu-option>
-      <auro-menu-option slot="listOfOptions" data-value="Arrival">Arrival</auro-menu-option>
-      <auro-menu-option slot="listOfOptions" data-value="Prefer Alaska">Prefer Alaska</auro-menu-option>
+      <auro-menuoption data-value="Stops">Stops</auro-menuoption>
+      <auro-menuoption data-value="Price">Price</auro-menuoption>
+      <auro-menuoption data-value="Duration">Duration</auro-menuoption>
+      <auro-menuoption data-value="Departure">Departure</auro-menuoption>
+      <auro-menuoption data-value="Arrival">Arrival</auro-menuoption>
+      <auro-menuoption data-value="Prefer Alaska">Prefer Alaska</auro-menuoption>
     </auro-menu>
   </auro-dropdownmenu>
 </div>
@@ -148,12 +144,12 @@ The `<auro-dropdownmenu>` element should be used in situations where users may:
   <span slot="label">Label</span>
   <span slot="helperText">Helper Text</span>
   <auro-menu checkmark>
-    <auro-menu-option slot="listOfOptions" data-value="Stops">Stops</auro-menu-option>
-    <auro-menu-option slot="listOfOptions" data-value="Price">Price</auro-menu-option>
-    <auro-menu-option slot="listOfOptions" data-value="Duration">Duration</auro-menu-option>
-    <auro-menu-option slot="listOfOptions" data-value="Departure">Departure</auro-menu-option>
-    <auro-menu-option slot="listOfOptions" data-value="Arrival">Arrival</auro-menu-option>
-    <auro-menu-option slot="listOfOptions" data-value="Prefer Alaska">Prefer Alaska</auro-menu-option>
+    <auro-menuoption data-value="Stops">Stops</auro-menuoption>
+    <auro-menuoption data-value="Price">Price</auro-menuoption>
+    <auro-menuoption data-value="Duration">Duration</auro-menuoption>
+    <auro-menuoption data-value="Departure">Departure</auro-menuoption>
+    <auro-menuoption data-value="Arrival">Arrival</auro-menuoption>
+    <auro-menuoption data-value="Prefer Alaska">Prefer Alaska</auro-menuoption>
   </auro-menu>
 </auro-dropdownmenu>
 ```

@@ -16,7 +16,7 @@ import "focus-visible/dist/focus-visible.min.js";
 import styleCss from "./style-css.js";
 import styleCssFixed from './style-fixed-css.js';
 
-import '@aurolabs/auro-menu';
+import '@aurodesignsystem/auro-menu';
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
@@ -36,6 +36,7 @@ class AuroDropdownmenu extends LitElement {
 
     this.placeholder = 'Select an option';
     this.expanded = false;
+    this.displayValue = null;
 
     this.addEventListener('dropdownToggled', (event) => {
       this.expanded = event.detail.expanded;
@@ -52,6 +53,11 @@ class AuroDropdownmenu extends LitElement {
        * @private
        */
       expanded: { Boolean },
+
+      /**
+       * @private
+       */
+      displayValue: { type: String },
       value: {
         type: String,
         reflect: true
@@ -69,7 +75,7 @@ class AuroDropdownmenu extends LitElement {
 
   firstUpdated() {
     if (!this.value) {
-      this.value = this.placeholder;
+      this.displayValue = this.placeholder;
     }
 
     this.addEventListener('optionSelected', (evt) => {
@@ -80,8 +86,7 @@ class AuroDropdownmenu extends LitElement {
       }
 
       this.value = evt.detail.value;
-      // this.displayText = evt.detail.displayText;
-      // this.indexSelectedOption = parseInt(evt.detail.index, 10);
+      this.displayValue = evt.detail.displayValue;
 
       this.querySelector('auro-menu').setAttribute('indexSelectedOption', evt.detail.index);
     });
@@ -96,7 +101,7 @@ class AuroDropdownmenu extends LitElement {
       <div>
         <auro-dropdown for="dropdownMenu" toggle inset bordered rounded chevron>
           <button slot="trigger" tabindex="0">
-            ${this.value}
+            ${this.displayValue}
           </button>
           <div class="menuWrapper">
             <slot></slot>

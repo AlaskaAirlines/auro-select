@@ -74,9 +74,25 @@ class AuroDropdownmenu extends LitElement {
   }
 
   firstUpdated() {
-    this.addEventListener('click', () => {
-      const menuItems = this.querySelectorAll('auro-menuoption');
+    const menuItems = this.querySelectorAll('auro-menuoption');
+    const firstMenuItem = menuItems[0]; /* eslint-disable-line prefer-destructuring */
+    const lastMenuItem = menuItems[menuItems.length - 1];
 
+    this.addEventListener('keydown', function(evt) {
+      if (this.expanded) {
+        if (evt.key === 'Escape') {
+          this.shadowRoot.querySelector('auro-dropdown').hide();
+        } else if (evt.shiftKey && evt.key === 'Tab' && document.activeElement === firstMenuItem) {
+          lastMenuItem.focus();
+          evt.preventDefault();
+        } else if (evt.key === 'Tab' && document.activeElement === lastMenuItem) {
+          firstMenuItem.focus();
+          evt.preventDefault();
+        }
+      }
+    });
+
+    this.addEventListener('click', () => {
       let focusIndex = 0;
 
       for (let optionsIndex = 0; optionsIndex < menuItems.length; optionsIndex += 1) {

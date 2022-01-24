@@ -97,7 +97,7 @@ class AuroDropdownmenu extends LitElement {
       <div>
         <auro-dropdown for="dropdownMenu" toggle inset bordered rounded chevron>
           <button slot="trigger" tabindex="0">
-            ${this.displayValue ? this.displayValue : html`<span class="placeholder">${this.placeholder}</span>` }
+            ${this.displayValue ? this.displayValue : html`<span class="placeholder">${this.placeholder}</span>`}
           </button>
           <div class="menuWrapper">
             <slot></slot>

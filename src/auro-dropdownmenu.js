@@ -35,6 +35,7 @@ class AuroDropdownmenu extends LitElement {
     this.placeholder = 'Select an option';
     this.expanded = false;
     this.displayValue = null;
+    this.value = null;
 
     this.addEventListener('dropdownToggled', (event) => {
       this.expanded = event.detail.expanded;

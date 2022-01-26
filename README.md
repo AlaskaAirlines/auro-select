@@ -61,7 +61,7 @@ import "@aurolabs/auro-dropdownmenu";
 
 ```html
 <auro-dropdownmenu>
-  <auro-menu checkmark>
+  <auro-menu>
     <auro-menuoption data-value="Stops">Stops</auro-menuoption>
     <auro-menuoption data-value="Price">Price</auro-menuoption>
     <auro-menuoption data-value="Duration">Duration</auro-menuoption>
@@ -100,7 +100,7 @@ The `<auro-dropdownmenu>` element should be used in situations where users may:
 
 ```html
 <auro-dropdownmenu>
-  <auro-menu checkmark>
+  <auro-menu>
     <auro-menuoption data-value="Stops">Stops</auro-menuoption>
     <auro-menuoption data-value="Price">Price</auro-menuoption>
     <auro-menuoption data-value="Duration">Duration</auro-menuoption>

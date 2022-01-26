@@ -27,7 +27,7 @@ The auro-dropdownmenu element is a wrapper for auro-dropdown and auro-menu to cr
   <div>
     <div class="exampleWrapper">
       <auro-dropdownmenu>
-        <auro-menu checkmark>
+        <auro-menu>
           <auro-menuoption data-value="Stops">Stops</auro-menuoption>
           <auro-menuoption data-value="Price">Price</auro-menuoption>
           <auro-menuoption data-value="Duration">Duration</auro-menuoption>
@@ -42,7 +42,7 @@ The auro-dropdownmenu element is a wrapper for auro-dropdown and auro-menu to cr
 
 ```html
 <auro-dropdownmenu>
-  <auro-menu checkmark>
+  <auro-menu>
     <auro-menuoption data-value="Stops">Stops</auro-menuoption>
     <auro-menuoption data-value="Price">Price</auro-menuoption>
     <auro-menuoption data-value="Duration">Duration</auro-menuoption>
@@ -94,10 +94,10 @@ Explanation and use description.
 TODO: This needs a new example showing some actual use case of extracting the value.
 
 <div class="exampleWrapper">
-  <auro-dropdownmenu indexSelectedOption="4">
+  <auro-dropdownmenu selectOption="2">
     <span slot="label">Label</span>
     <span slot="helperText">Helper Text</span>
-    <auro-menu checkmark>
+    <auro-menu>
       <auro-menuoption data-value="Stops">Stops</auro-menuoption>
       <auro-menuoption data-value="Price">Price</auro-menuoption>
       <auro-menuoption data-value="Duration">Duration</auro-menuoption>
@@ -111,10 +111,10 @@ TODO: This needs a new example showing some actual use case of extracting the va
   <span slot="trigger">See code</span>
 
 ```html
-<auro-dropdownmenu indexSelectedOption="4">
+<auro-dropdownmenu selectOption="2">
   <span slot="label">Label</span>
   <span slot="helperText">Helper Text</span>
-  <auro-menu checkmark>
+  <auro-menu>
     <auro-menuoption data-value="Stops">Stops</auro-menuoption>
     <auro-menuoption data-value="Price">Price</auro-menuoption>
     <auro-menuoption data-value="Duration">Duration</auro-menuoption>
@@ -135,7 +135,7 @@ All examples on this page show default slot content.
 
 <div class="exampleWrapper">
   <auro-dropdownmenu>
-    <auro-menu checkmark>
+    <auro-menu>
       <auro-menuoption data-value="Stops">Stops</auro-menuoption>
       <auro-menuoption data-value="Price">Price</auro-menuoption>
       <auro-menuoption data-value="Duration">Duration</auro-menuoption>
@@ -150,7 +150,7 @@ All examples on this page show default slot content.
 
 ```html
 <auro-dropdownmenu>
-  <auro-menu checkmark>
+  <auro-menu>
     <auro-menuoption data-value="Stops">Stops</auro-menuoption>
     <auro-menuoption data-value="Price">Price</auro-menuoption>
     <auro-menuoption data-value="Duration">Duration</auro-menuoption>
@@ -169,7 +169,7 @@ Explanation and use description.
 <div class="exampleWrapper">
   <auro-dropdownmenu>
     <span slot="helperText">Helper Text</span>
-    <auro-menu checkmark>
+    <auro-menu>
       <auro-menuoption data-value="Stops">Stops</auro-menuoption>
       <auro-menuoption data-value="Price">Price</auro-menuoption>
       <auro-menuoption data-value="Duration">Duration</auro-menuoption>
@@ -185,7 +185,7 @@ Explanation and use description.
 ```html
 <auro-dropdownmenu>
   <span slot="helperText">Helper Text</span>
-  <auro-menu checkmark>
+  <auro-menu>
     <auro-menuoption data-value="Stops">Stops</auro-menuoption>
     <auro-menuoption data-value="Price">Price</auro-menuoption>
     <auro-menuoption data-value="Duration">Duration</auro-menuoption>
@@ -204,7 +204,7 @@ Explanation and use description.
 <div class="exampleWrapper">
   <auro-dropdownmenu>
     <span slot="label">Label</span>
-    <auro-menu checkmark>
+    <auro-menu>
       <auro-menuoption data-value="Stops">Stops</auro-menuoption>
       <auro-menuoption data-value="Price">Price</auro-menuoption>
       <auro-menuoption data-value="Duration">Duration</auro-menuoption>
@@ -220,7 +220,7 @@ Explanation and use description.
 ```html
 <auro-dropdownmenu>
   <span slot="label">Label</span>
-  <auro-menu checkmark>
+  <auro-menu>
     <auro-menuoption data-value="Stops">Stops</auro-menuoption>
     <auro-menuoption data-value="Price">Price</auro-menuoption>
     <auro-menuoption data-value="Duration">Duration</auro-menuoption>

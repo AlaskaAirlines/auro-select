@@ -57,7 +57,8 @@ The auro-dropdownmenu element is a wrapper for auro-dropdown and auro-menu to cr
 
 ### Property Examples
 
-#### <a name="placeholder"></a>`placeholder`<a href="#auro-dropdownmenu" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+#### <a name="placeholder"></a>`placeholder`
+
 Explanation and use description.
 
 <div class="exampleWrapper">
@@ -90,7 +91,8 @@ Explanation and use description.
 
 </auro-accordion>
 
-#### <a name="value"></a>`value`<a href="#auro-dropdownmenu" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+#### <a name="value"></a>`value`
+
 TODO: This needs a new example showing some actual use case of extracting the value.
 
 <div class="exampleWrapper">
@@ -163,7 +165,8 @@ All examples on this page show default slot content.
 
 </auro-accordion>
 
-#### <a name="helperText"></a>`helperText`<a href="#auro-dropdownmenu" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+#### <a name="helperText"></a>`helperText`
+
 Explanation and use description.
 
 <div class="exampleWrapper">
@@ -198,7 +201,8 @@ Explanation and use description.
 
 </auro-accordion>
 
-#### <a name="label"></a>`label`<a href="#auro-dropdownmenu" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+#### <a name="label"></a>`label`
+
 Explanation and use description.
 
 <div class="exampleWrapper">
@@ -220,6 +224,49 @@ Explanation and use description.
 ```html
 <auro-dropdownmenu>
   <span slot="label">Label</span>
+  <auro-menu>
+    <auro-menuoption data-value="Stops">Stops</auro-menuoption>
+    <auro-menuoption data-value="Price">Price</auro-menuoption>
+    <auro-menuoption data-value="Duration">Duration</auro-menuoption>
+    <auro-menuoption data-value="Departure">Departure</auro-menuoption>
+    <auro-menuoption data-value="Arrival">Arrival</auro-menuoption>
+    <auro-menuoption data-value="Prefer Alaska">Prefer Alaska</auro-menuoption>
+  </auro-menu>
+</auro-dropdownmenu>
+```
+
+</auro-accordion>
+
+## Functional Examples
+
+### Watch for value changes
+
+This example demonstrates using JavaScript to watch for a value change.
+
+<div class="exampleWrapper">
+  <auro-dropdownmenu id="valueAlert">
+    <auro-menu>
+      <auro-menuoption data-value="Stops">Stops</auro-menuoption>
+      <auro-menuoption data-value="Price">Price</auro-menuoption>
+      <auro-menuoption data-value="Duration">Duration</auro-menuoption>
+      <auro-menuoption data-value="Departure">Departure</auro-menuoption>
+      <auro-menuoption data-value="Arrival">Arrival</auro-menuoption>
+      <auro-menuoption data-value="Prefer Alaska">Prefer Alaska</auro-menuoption>
+    </auro-menu>
+  </auro-dropdownmenu>
+</div>
+<auro-accordion lowProfile justifyRight>
+  <span slot="trigger">See code</span>
+
+```js
+document.querySelector('#valueAlert').addEventListener('optionSelected', (e) => {
+  console.warn(e.detail);
+  alert(JSON.stringify(e.detail));
+});
+```
+
+```html
+<auro-dropdownmenu id="valueAlert">
   <auro-menu>
     <auro-menuoption data-value="Stops">Stops</auro-menuoption>
     <auro-menuoption data-value="Price">Price</auro-menuoption>

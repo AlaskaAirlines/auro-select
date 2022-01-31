@@ -103,3 +103,25 @@ Explanation and use description.
 
 </auro-accordion>
 
+## Functional Examples
+
+### Watch for value changes
+
+This example demonstrates using JavaScript to watch for a value change.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/valueAlert.html) -->
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+
+<auro-accordion lowProfile justifyRight>
+  <span slot="trigger">See code</span>
+
+
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../demo/alertValue.js) -->
+<!-- AURO-GENERATED-CONTENT:END -->
+
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/valueAlert.html) -->
+<!-- AURO-GENERATED-CONTENT:END -->
+
+</auro-accordion>

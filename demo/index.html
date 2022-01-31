@@ -32,8 +32,7 @@
     <script type="module">
       import 'https://unpkg.com/marked@3.0.8/marked.min.js';
       import 'https://unpkg.com/prismjs@latest/prism.js';
-      // fetch('/demo/demo.md')
-      fetch('/demo/apiExamples.md')
+      fetch('/demo/demo.md')
         .then((response) => response.text())
         .then((text) => {
           const rawHtml = marked(text);
@@ -43,8 +42,11 @@
     </script>
     <script src="https://unpkg.com/@alaskaairux/auro-accordion@latest/dist/auro-accordion__bundled.js" type="module"></script>
     <script src="https://unpkg.com/@alaskaairux/auro-icon@latest/dist/auro-icon__bundled.js" type="module"></script>
+    <script src="https://unpkg.com/@alaskaairux/auro-button@latest/dist/auro-button__bundled.js" type="module"></script>
     <script src="https://unpkg.com/@aurodesignsystem/auro-dropdown@latest/dist/auro-dropdown__bundled.js" type="module"></script>
     <script type="module" src="../src/auro-dropdownmenu.js"></script>
+    <!-- These should be included only when running the apiExamples.md page
     <script type="module" src="./alertValue.js"></script>
+    <script src="./extractValue.js"></script> -->
   </body>
 </html>

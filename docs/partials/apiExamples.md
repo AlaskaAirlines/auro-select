@@ -125,3 +125,24 @@ This example demonstrates using JavaScript to watch for a value change.
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
+
+### Extract value
+
+This example demonstrates using JavaScript to extract the current value.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/valueExtraction.html) -->
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+
+<auro-accordion lowProfile justifyRight>
+  <span slot="trigger">See code</span>
+
+
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../demo/extractValue.js) -->
+<!-- AURO-GENERATED-CONTENT:END -->
+
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/valueExtraction.html) -->
+<!-- AURO-GENERATED-CONTENT:END -->
+
+</auro-accordion>

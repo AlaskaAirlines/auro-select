@@ -279,3 +279,51 @@ document.querySelector('#valueAlert').addEventListener('optionSelected', (e) => 
 ```
 
 </auro-accordion>
+
+### Extract value
+
+This example demonstrates using JavaScript to extract the current value.
+
+<div class="exampleWrapper">
+  <auro-dropdownmenu id="valueExtraction">
+    <auro-menu>
+      <auro-menuoption data-value="Stops">Stops</auro-menuoption>
+      <auro-menuoption data-value="Price">Price</auro-menuoption>
+      <auro-menuoption data-value="Duration">Duration</auro-menuoption>
+      <auro-menuoption data-value="Departure">Departure</auro-menuoption>
+      <auro-menuoption data-value="Arrival">Arrival</auro-menuoption>
+      <auro-menuoption data-value="Prefer Alaska">Prefer Alaska</auro-menuoption>
+    </auro-menu>
+  </auro-dropdownmenu>
+  <auro-button onclick="getValue('#valueExtraction');">Get current value</auro-button>
+</div>
+<auro-accordion lowProfile justifyRight>
+  <span slot="trigger">See code</span>
+
+```js
+/**
+ * @param {string} Selector for the dropdownmenu element to retrieve the value from.
+ */
+const getValue = (selector) => {
+  const el = document.querySelector(selector);
+
+  console.warn(el.value);
+  alert(el.value);
+}
+```
+
+```html
+<auro-dropdownmenu id="valueExtraction">
+  <auro-menu>
+    <auro-menuoption data-value="Stops">Stops</auro-menuoption>
+    <auro-menuoption data-value="Price">Price</auro-menuoption>
+    <auro-menuoption data-value="Duration">Duration</auro-menuoption>
+    <auro-menuoption data-value="Departure">Departure</auro-menuoption>
+    <auro-menuoption data-value="Arrival">Arrival</auro-menuoption>
+    <auro-menuoption data-value="Prefer Alaska">Prefer Alaska</auro-menuoption>
+  </auro-menu>
+</auro-dropdownmenu>
+<auro-button onclick="getValue('#valueExtraction');">Get current value</auro-button>
+```
+
+</auro-accordion>

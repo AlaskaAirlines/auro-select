@@ -259,10 +259,12 @@ This example demonstrates using JavaScript to watch for a value change.
   <span slot="trigger">See code</span>
 
 ```js
-document.querySelector('#valueAlert').addEventListener('optionSelected', (e) => {
-  console.warn(e.detail);
-  alert(JSON.stringify(e.detail));
-});
+setTimeout(() => {
+  document.querySelector('#valueAlert').addEventListener('optionSelected', (e) => {
+    console.warn(e.detail);
+    alert(JSON.stringify(e.detail));
+  });
+}, 500);
 ```
 
 ```html

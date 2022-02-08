@@ -4,10 +4,13 @@ The auro-dropdownmenu element is a wrapper for auro-dropdown and auro-menu to cr
 
 ## Properties
 
-| Property      | Attribute     | Type     | Default            | Description                                      |
-|---------------|---------------|----------|--------------------|--------------------------------------------------|
-| `placeholder` | `placeholder` | `String` | "Select an option" | Define placeholder text to display before a value is manually selected. |
-| `value`       | `value`       | `String` | null               | Value selected for the dropdown menu.            |
+| Property      | Attribute     | Type      | Default                | Description                                      |
+|---------------|---------------|-----------|------------------------|--------------------------------------------------|
+| `autoselect`  | `autoselect`  | `Boolean` |                        | Use attribute select first option with first interaction. |
+| `disabled`    | `disabled`    | `Boolean` |                        | When attribute is present element shows disabled state. |
+| `error`       | `error`       | `Boolean` |                        | When attribute is present element shows error state. |
+| `placeholder` | `placeholder` | `String`  | "Please select option" | Define placeholder text to display before a value is manually selected. |
+| `value`       | `value`       | `String`  |                        | Value selected for the dropdown menu.            |
 
 ## Slots
 

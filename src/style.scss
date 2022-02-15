@@ -13,6 +13,13 @@
   text-align: left;
 }
 
+:host([disabled]) {
+  * {
+    opacity: .7;
+    user-select: none;
+  }
+}
+
 .menuWrapper {
   padding: var(--auro-size-xxs) 0;
 }

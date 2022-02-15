@@ -8,9 +8,9 @@ This file is generated based on a template fetched from `./docs/partials/apiExam
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../api.md) -->
 <!-- The below content is automatically added from ./../api.md -->
 
-# auro-dropdownmenu
+# auro-select
 
-The auro-dropdownmenu element is a wrapper for auro-dropdown and auro-menu to create a dropdown menu control.
+The auro-select element is a wrapper for auro-dropdown and auro-menu to create a dropdown menu control.
 
 ## Properties
 
@@ -42,7 +42,7 @@ A baseline `<auro-select>` using `<auro-menu>` and `<auro-menuoption>` elements.
     <div class="exampleWrapper">
       <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
       <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-      <auro-dropdownmenu>
+      <auro-select>
         <auro-menu>
           <auro-menuoption value="stops">Stops</auro-menuoption>
           <auro-menuoption value="price">Price</auro-menuoption>
@@ -51,7 +51,7 @@ A baseline `<auro-select>` using `<auro-menu>` and `<auro-menuoption>` elements.
           <auro-menuoption value="arrival">Arrival</auro-menuoption>
           <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
         </auro-menu>
-      </auro-dropdownmenu>
+      </auro-select>
       <!-- AURO-GENERATED-CONTENT:END -->
     </div>
 <auro-accordion lowProfile justifyRight>
@@ -60,7 +60,7 @@ A baseline `<auro-select>` using `<auro-menu>` and `<auro-menuoption>` elements.
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
 
 ```html
-<auro-dropdownmenu>
+<auro-select>
   <auro-menu>
     <auro-menuoption value="stops">Stops</auro-menuoption>
     <auro-menuoption value="price">Price</auro-menuoption>
@@ -69,7 +69,7 @@ A baseline `<auro-select>` using `<auro-menu>` and `<auro-menuoption>` elements.
     <auro-menuoption value="arrival">Arrival</auro-menuoption>
     <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
   </auro-menu>
-</auro-dropdownmenu>
+</auro-select>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
@@ -83,7 +83,7 @@ Use the `placeholder` string attribute to inject a custom placeholder option wit
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/customPlaceholder.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/customPlaceholder.html -->
-  <auro-dropdownmenu placeholder="Please select your preferred option">
+  <auro-select placeholder="Please select your preferred option">
     <auro-menu>
       <auro-menuoption value="stops">Stops</auro-menuoption>
       <auro-menuoption value="price">Price</auro-menuoption>
@@ -92,7 +92,7 @@ Use the `placeholder` string attribute to inject a custom placeholder option wit
       <auro-menuoption value="arrival">Arrival</auro-menuoption>
       <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
     </auro-menu>
-  </auro-dropdownmenu>
+  </auro-select>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion lowProfile justifyRight>
@@ -101,7 +101,7 @@ Use the `placeholder` string attribute to inject a custom placeholder option wit
 <!-- The below code snippet is automatically added from ./../../apiExamples/customPlaceholder.html -->
 
 ```html
-<auro-dropdownmenu placeholder="Please select your preferred option">
+<auro-select placeholder="Please select your preferred option">
   <auro-menu>
     <auro-menuoption value="stops">Stops</auro-menuoption>
     <auro-menuoption value="price">Price</auro-menuoption>
@@ -110,7 +110,7 @@ Use the `placeholder` string attribute to inject a custom placeholder option wit
     <auro-menuoption value="arrival">Arrival</auro-menuoption>
     <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
   </auro-menu>
-</auro-dropdownmenu>
+</auro-select>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
@@ -122,7 +122,7 @@ Use the `autoselect` boolean attribute to select the first option in the select 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/autoselect.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/autoselect.html -->
-  <auro-dropdownmenu autoselect>
+  <auro-select autoselect>
     <auro-menu>
       <auro-menuoption value="stops">Stops</auro-menuoption>
       <auro-menuoption value="price">Price</auro-menuoption>
@@ -131,7 +131,7 @@ Use the `autoselect` boolean attribute to select the first option in the select 
       <auro-menuoption value="arrival">Arrival</auro-menuoption>
       <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
     </auro-menu>
-  </auro-dropdownmenu>
+  </auro-select>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion lowProfile justifyRight>
@@ -140,7 +140,7 @@ Use the `autoselect` boolean attribute to select the first option in the select 
 <!-- The below code snippet is automatically added from ./../../apiExamples/autoselect.html -->
 
 ```html
-<auro-dropdownmenu autoselect>
+<auro-select autoselect>
   <auro-menu>
     <auro-menuoption value="stops">Stops</auro-menuoption>
     <auro-menuoption value="price">Price</auro-menuoption>
@@ -149,7 +149,7 @@ Use the `autoselect` boolean attribute to select the first option in the select 
     <auro-menuoption value="arrival">Arrival</auro-menuoption>
     <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
   </auro-menu>
-</auro-dropdownmenu>
+</auro-select>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
@@ -161,7 +161,7 @@ Use the `error` boolean attribute to toggle the error UI.
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/error.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/error.html -->
-  <auro-dropdownmenu error>
+  <auro-select error>
     <auro-menu>
       <auro-menuoption value="stops">Stops</auro-menuoption>
       <auro-menuoption value="price">Price</auro-menuoption>
@@ -170,7 +170,7 @@ Use the `error` boolean attribute to toggle the error UI.
       <auro-menuoption value="arrival">Arrival</auro-menuoption>
       <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
     </auro-menu>
-  </auro-dropdownmenu>
+  </auro-select>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion lowProfile justifyRight>
@@ -179,7 +179,7 @@ Use the `error` boolean attribute to toggle the error UI.
 <!-- The below code snippet is automatically added from ./../../apiExamples/error.html -->
 
 ```html
-<auro-dropdownmenu error>
+<auro-select error>
   <auro-menu>
     <auro-menuoption value="stops">Stops</auro-menuoption>
     <auro-menuoption value="price">Price</auro-menuoption>
@@ -188,7 +188,7 @@ Use the `error` boolean attribute to toggle the error UI.
     <auro-menuoption value="arrival">Arrival</auro-menuoption>
     <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
   </auro-menu>
-</auro-dropdownmenu>
+</auro-select>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
@@ -200,7 +200,7 @@ Use the `disabled` boolean attribute to toggle the disabled UI.
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/disabled.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/disabled.html -->
-  <auro-dropdownmenu disabled>
+  <auro-select disabled>
     <auro-menu>
       <auro-menuoption value="stops">Stops</auro-menuoption>
       <auro-menuoption value="price">Price</auro-menuoption>
@@ -209,7 +209,7 @@ Use the `disabled` boolean attribute to toggle the disabled UI.
       <auro-menuoption value="arrival">Arrival</auro-menuoption>
       <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
     </auro-menu>
-  </auro-dropdownmenu>
+  </auro-select>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion lowProfile justifyRight>
@@ -218,7 +218,7 @@ Use the `disabled` boolean attribute to toggle the disabled UI.
 <!-- The below code snippet is automatically added from ./../../apiExamples/disabled.html -->
 
 ```html
-<auro-dropdownmenu disabled>
+<auro-select disabled>
   <auro-menu>
     <auro-menuoption value="stops">Stops</auro-menuoption>
     <auro-menuoption value="price">Price</auro-menuoption>
@@ -227,7 +227,7 @@ Use the `disabled` boolean attribute to toggle the disabled UI.
     <auro-menuoption value="arrival">Arrival</auro-menuoption>
     <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
   </auro-menu>
-</auro-dropdownmenu>
+</auro-select>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
@@ -241,7 +241,7 @@ Use the `label` slot to give your users contextual information about their selec
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/label.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/label.html -->
-  <auro-dropdownmenu>
+  <auro-select>
     <span slot="label">Please select a preference</span>
     <auro-menu>
       <auro-menuoption value="stops">Stops</auro-menuoption>
@@ -251,7 +251,7 @@ Use the `label` slot to give your users contextual information about their selec
       <auro-menuoption value="arrival">Arrival</auro-menuoption>
       <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
     </auro-menu>
-  </auro-dropdownmenu>
+  </auro-select>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion lowProfile justifyRight>
@@ -260,7 +260,7 @@ Use the `label` slot to give your users contextual information about their selec
 <!-- The below code snippet is automatically added from ./../../apiExamples/label.html -->
 
 ```html
-<auro-dropdownmenu>
+<auro-select>
   <span slot="label">Please select a preference</span>
   <auro-menu>
     <auro-menuoption value="stops">Stops</auro-menuoption>
@@ -270,7 +270,7 @@ Use the `label` slot to give your users contextual information about their selec
     <auro-menuoption value="arrival">Arrival</auro-menuoption>
     <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
   </auro-menu>
-</auro-dropdownmenu>
+</auro-select>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
@@ -282,7 +282,7 @@ Use the `helptext` slot to provide additional information back to your user abou
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/helperText.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/helperText.html -->
-  <auro-dropdownmenu>
+  <auro-select>
     <span slot="helperText">Please select an option</span>
     <auro-menu>
       <auro-menuoption value="stops">Stops</auro-menuoption>
@@ -292,7 +292,7 @@ Use the `helptext` slot to provide additional information back to your user abou
       <auro-menuoption value="arrival">Arrival</auro-menuoption>
       <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
     </auro-menu>
-  </auro-dropdownmenu>
+  </auro-select>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion lowProfile justifyRight>
@@ -301,7 +301,7 @@ Use the `helptext` slot to provide additional information back to your user abou
 <!-- The below code snippet is automatically added from ./../../apiExamples/helperText.html -->
 
 ```html
-<auro-dropdownmenu>
+<auro-select>
   <span slot="helperText">Please select an option</span>
   <auro-menu>
     <auro-menuoption value="stops">Stops</auro-menuoption>
@@ -311,7 +311,7 @@ Use the `helptext` slot to provide additional information back to your user abou
     <auro-menuoption value="arrival">Arrival</auro-menuoption>
     <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
   </auro-menu>
-</auro-dropdownmenu>
+</auro-select>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
@@ -325,7 +325,7 @@ Use the `selected` attribute on the `auro-menuoption` element to pre-select an o
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/presetValue.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/presetValue.html -->
-  <auro-dropdownmenu>
+  <auro-select>
     <auro-menu>
       <auro-menuoption value="stops">Stops</auro-menuoption>
       <auro-menuoption value="price" selected>Price</auro-menuoption>
@@ -334,7 +334,7 @@ Use the `selected` attribute on the `auro-menuoption` element to pre-select an o
       <auro-menuoption value="arrival">Arrival</auro-menuoption>
       <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
     </auro-menu>
-  </auro-dropdownmenu>
+  </auro-select>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion lowProfile justifyRight>
@@ -343,7 +343,7 @@ Use the `selected` attribute on the `auro-menuoption` element to pre-select an o
 <!-- The below code snippet is automatically added from ./../../apiExamples/presetValue.html -->
 
 ```html
-<auro-dropdownmenu>
+<auro-select>
   <auro-menu>
     <auro-menuoption value="stops">Stops</auro-menuoption>
     <auro-menuoption value="price" selected>Price</auro-menuoption>
@@ -352,7 +352,7 @@ Use the `selected` attribute on the `auro-menuoption` element to pre-select an o
     <auro-menuoption value="arrival">Arrival</auro-menuoption>
     <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
   </auro-menu>
-</auro-dropdownmenu>
+</auro-select>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
@@ -364,7 +364,7 @@ In some cases, where selection of content is optional, you can use a `<auro-menu
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/presetOption.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/presetOption.html -->
-  <auro-dropdownmenu autoselect>
+  <auro-select autoselect>
     <auro-menu>
       <auro-menuoption value="Please select an option" selected>Please select an option</auro-menuoption>
       <hr>
@@ -375,7 +375,7 @@ In some cases, where selection of content is optional, you can use a `<auro-menu
       <auro-menuoption value="arrival">Arrival</auro-menuoption>
       <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
     </auro-menu>
-  </auro-dropdownmenu>
+  </auro-select>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion lowProfile justifyRight>
@@ -384,7 +384,7 @@ In some cases, where selection of content is optional, you can use a `<auro-menu
 <!-- The below code snippet is automatically added from ./../../apiExamples/presetOption.html -->
 
 ```html
-<auro-dropdownmenu autoselect>
+<auro-select autoselect>
   <auro-menu>
     <auro-menuoption value="Please select an option" selected>Please select an option</auro-menuoption>
     <hr>
@@ -395,7 +395,7 @@ In some cases, where selection of content is optional, you can use a `<auro-menu
     <auro-menuoption value="arrival">Arrival</auro-menuoption>
     <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
   </auro-menu>
-</auro-dropdownmenu>
+</auro-select>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
@@ -407,7 +407,7 @@ The following example listens for the `selectOption` custom event from the `<aur
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/valueAlert.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/valueAlert.html -->
-  <auro-dropdownmenu id="valueAlert">
+  <auro-select id="valueAlert">
     <auro-menu>
       <auro-menuoption value="stops">Stops</auro-menuoption>
       <auro-menuoption value="price">Price</auro-menuoption>
@@ -416,7 +416,7 @@ The following example listens for the `selectOption` custom event from the `<aur
       <auro-menuoption value="arrival">Arrival</auro-menuoption>
       <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
     </auro-menu>
-  </auro-dropdownmenu>
+  </auro-select>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion lowProfile justifyRight>
@@ -437,7 +437,7 @@ setTimeout(() => {
 <!-- The below code snippet is automatically added from ./../../apiExamples/valueAlert.html -->
 
 ```html
-<auro-dropdownmenu id="valueAlert">
+<auro-select id="valueAlert">
   <auro-menu>
     <auro-menuoption value="stops">Stops</auro-menuoption>
     <auro-menuoption value="price">Price</auro-menuoption>
@@ -446,7 +446,7 @@ setTimeout(() => {
     <auro-menuoption value="arrival">Arrival</auro-menuoption>
     <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
   </auro-menu>
-</auro-dropdownmenu>
+</auro-select>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
@@ -458,7 +458,7 @@ The following example illustrates how a user may query the `.value` of the `auro
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/valueExtraction.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/valueExtraction.html -->
-  <auro-dropdownmenu id="valueExtraction">
+  <auro-select id="valueExtraction">
     <auro-menu>
       <auro-menuoption value="stops">Stops</auro-menuoption>
       <auro-menuoption value="price">Price</auro-menuoption>
@@ -467,7 +467,7 @@ The following example illustrates how a user may query the `.value` of the `auro
       <auro-menuoption value="arrival">Arrival</auro-menuoption>
       <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
     </auro-menu>
-  </auro-dropdownmenu>
+  </auro-select>
   <auro-button onclick="getValue('#valueExtraction');">Get current value</auro-button>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
@@ -478,7 +478,7 @@ The following example illustrates how a user may query the `.value` of the `auro
 
 ```js
 /**
- * @param {string} Selector for the dropdownmenu element to retrieve the value from.
+ * @param {string} Selector for auro-select to retrieve the value from.
  */
 const getValue = (selector) => {
   const el = document.querySelector(selector);
@@ -492,7 +492,7 @@ const getValue = (selector) => {
 <!-- The below code snippet is automatically added from ./../../apiExamples/valueExtraction.html -->
 
 ```html
-<auro-dropdownmenu id="valueExtraction">
+<auro-select id="valueExtraction">
   <auro-menu>
     <auro-menuoption value="stops">Stops</auro-menuoption>
     <auro-menuoption value="price">Price</auro-menuoption>
@@ -501,7 +501,7 @@ const getValue = (selector) => {
     <auro-menuoption value="arrival">Arrival</auro-menuoption>
     <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
   </auro-menu>
-</auro-dropdownmenu>
+</auro-select>
 <auro-button onclick="getValue('#valueExtraction');">Get current value</auro-button>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->

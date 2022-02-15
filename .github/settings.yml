@@ -6,7 +6,7 @@ repository:
   description: Combo custom element containing pre-defined trigger options with menu in the dropdown panel
 
   # A URL with more information about the repository
-  homepage: https://auro.alaskaair.com/components/auro/dropdownmenu
+  homepage: https://auro.alaskaair.com/components/auro/select
 
   # A comma-separated list of topics to set on the repository
   topics: auro, design-system, custom-element, generator-v3-15-0
@@ -69,7 +69,7 @@ branches:
 
 # Labels: define labels for Issues and Pull Requests
 labels:
-  - name: auro-dropdownmenu
+  - name: auro-select
     cat: default
     color: fa23e4
     description:

@@ -17,15 +17,15 @@ The following sections are editable by making changes to the following files:
 | Component Example Code | HTML sample code of the components use            | `./apiExamples/basic.html`          |
 -->
 
-# Dropdownmenu
+# Select
 
 <!-- AUROLABS-GENERATED-CONTENT:START (REMOTE:url=https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/componentDocs/partials/labsDisclaimer.md) -->
-`<auro-dropdownmenu>` is an experimental [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) only available as a PRE RELEASE. Users of this element understand the risks of using a pre-released version of this element.
+`<auro-select>` is an experimental [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) only available as a PRE RELEASE. Users of this element understand the risks of using a pre-released version of this element.
 
 <!-- AUROLABS-GENERATED-CONTENT:END -->
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/partials/description.md) -->
 <!-- The below content is automatically added from ./../docs/partials/description.md -->
-`<auro-dropdownmenu>` is a combination [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) that consists of a pre-defined trigger element, `<auro-menu>` for the panel content. See the <auro-hyperlink href="https://auro.alaskaair.com/components/auro/menu/api">auro-menu API docs</auro-hyperlink> for additional information.
+`<auro-select>` is a combination [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) that consists of a pre-defined trigger element, `<auro-menu>` for the panel content. See the <auro-hyperlink href="https://auro.alaskaair.com/components/auro/menu/api">auro-menu API docs</auro-hyperlink> for additional information.
 
 ## About auro-select
 
@@ -46,12 +46,12 @@ For the most up to date information on [UI development browser support](https://
 ## Install
 
 <!-- AURO-GENERATED-CONTENT:START (REMOTE:url=https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/componentDocs/partials/usage/componentInstall.md) -->
-[![Build Status](https://img.shields.io/github/workflow/status/AlaskaAirlines/auro-dropdownmenu/Test%20and%20publish?branch=master&style=for-the-badge)](https://github.com/AlaskaAirlines/auro-dropdownmenu/actions?query=workflow%3A%22test+and+publish%22)
-[![See it on NPM!](https://img.shields.io/npm/v/@aurolabs/auro-dropdownmenu?style=for-the-badge&color=orange)](https://www.npmjs.com/package/@aurolabs/auro-dropdownmenu)
-[![License](https://img.shields.io/npm/l/@aurolabs/auro-dropdownmenu?color=blue&style=for-the-badge)](https://www.apache.org/licenses/LICENSE-2.0)
+[![Build Status](https://img.shields.io/github/workflow/status/AlaskaAirlines/auro-select/Test%20and%20publish?branch=master&style=for-the-badge)](https://github.com/AlaskaAirlines/auro-select/actions?query=workflow%3A%22test+and+publish%22)
+[![See it on NPM!](https://img.shields.io/npm/v/@aurolabs/auro-select?style=for-the-badge&color=orange)](https://www.npmjs.com/package/@aurolabs/auro-select)
+[![License](https://img.shields.io/npm/l/@aurolabs/auro-select?color=blue&style=for-the-badge)](https://www.apache.org/licenses/LICENSE-2.0)
 
 ```shell
-$ npm i @aurolabs/auro-dropdownmenu
+$ npm i @aurolabs/auro-select
 ```
 
 Installing as a direct, dev or peer dependency is up to the user installing the package. If you are unsure as to what type of dependency you should use, consider reading this [stack overflow](https://stackoverflow.com/questions/18875674/whats-the-difference-between-dependencies-devdependencies-and-peerdependencies) answer.
@@ -77,13 +77,13 @@ Any update to the Auro Design Tokens will be immediately reflected with browsers
 ### Define dependency in project component
 
 <!-- AURO-GENERATED-CONTENT:START (REMOTE:url=https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/componentDocs/partials/usage/componentImportDescription.md) -->
-Defining the component dependency within each component that is using the `<auro-dropdownmenu>` component.
+Defining the component dependency within each component that is using the `<auro-select>` component.
 
 <!-- AURO-GENERATED-CONTENT:END -->
 <!-- AURO-GENERATED-CONTENT:START (REMOTE:url=https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/componentDocs/partials/usage/componentImport.md) -->
 
 ```js
-import "@aurolabs/auro-dropdownmenu";
+import "@aurolabs/auro-select";
 ```
 
 <!-- AURO-GENERATED-CONTENT:END -->
@@ -92,7 +92,7 @@ import "@aurolabs/auro-dropdownmenu";
 <!-- The below code snippet is automatically added from ./../apiExamples/basic.html -->
 
 ```html
-<auro-dropdownmenu>
+<auro-select>
   <auro-menu>
     <auro-menuoption value="stops">Stops</auro-menuoption>
     <auro-menuoption value="price">Price</auro-menuoption>
@@ -101,14 +101,14 @@ import "@aurolabs/auro-dropdownmenu";
     <auro-menuoption value="arrival">Arrival</auro-menuoption>
     <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
   </auro-menu>
-</auro-dropdownmenu>
+</auro-select>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 
 ## Install bundled assets from CDN
 
 <!-- AURO-GENERATED-CONTENT:START (REMOTE:url=https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/componentDocs/partials/usage/bundleInstallDescription.md) -->
-In cases where the project is not able to process JS assets, there are pre-processed assets available for use. Two bundles are available -- `auro-dropdownmenu__bundled.js` for modern browsers and `auro-dropdownmenu__bundled.es5.js` for legacy browsers (including IE11).
+In cases where the project is not able to process JS assets, there are pre-processed assets available for use. Two bundles are available -- `auro-select__bundled.js` for modern browsers and `auro-select__bundled.es5.js` for legacy browsers (including IE11).
 
 Since the legacy bundle includes many polyfills that are not needed by modern browsers, we recommend you load these bundles using [differential serving](https://philipwalton.com/articles/deploying-es2015-code-in-production-today/) so that the browser only loads the bundle it needs. To accomplish this, the script tag for the modern bundle should have `type="module"` and the script tag for the legacy bundle should have the `nomodule` attribute. See the example below.
 
@@ -122,13 +122,13 @@ Since the legacy bundle includes many polyfills that are not needed by modern br
 <!-- **NOTE:** Be sure to replace `@latest` in the URL with the version of the asset you want. @latest is NOT aware of any MAJOR releases, use at your own risk. -->
 <link rel="stylesheet" href="https://unpkg.com/@alaskaairux/design-tokens@latest/dist/tokens/CSSCustomProperties.css" />
 <link rel="stylesheet" href="https://unpkg.com/@alaskaairux/webcorestylesheets@latest/dist/bundled/essentials.css" />
-<script src="https://unpkg.com/@aurolabs/auro-dropdownmenu@latest/dist/auro-dropdownmenu__bundled.js" type="module"></script>
-<script src="https://unpkg.com/@aurolabs/auro-dropdownmenu@latest/dist/auro-dropdownmenu__bundled.es5.js" nomodule></script>
+<script src="https://unpkg.com/@aurolabs/auro-select@latest/dist/auro-select__bundled.js" type="module"></script>
+<script src="https://unpkg.com/@aurolabs/auro-select@latest/dist/auro-select__bundled.es5.js" nomodule></script>
 ```
 
 <!-- AURO-GENERATED-CONTENT:END -->
 
-## auro-dropdownmenu use cases
+## auro-select use cases
 
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/partials/useCases.md) -->
 <!-- The below content is automatically added from ./../docs/partials/useCases.md -->
@@ -137,13 +137,13 @@ See description.
 
 ## API Code Examples
 
-### Default auro-dropdownmenu
+### Default auro-select
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/basic.html) -->
 <!-- The below code snippet is automatically added from ./../apiExamples/basic.html -->
 
 ```html
-<auro-dropdownmenu>
+<auro-select>
   <auro-menu>
     <auro-menuoption value="stops">Stops</auro-menuoption>
     <auro-menuoption value="price">Price</auro-menuoption>
@@ -152,7 +152,7 @@ See description.
     <auro-menuoption value="arrival">Arrival</auro-menuoption>
     <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
   </auro-menu>
-</auro-dropdownmenu>
+</auro-select>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 
@@ -196,7 +196,7 @@ The custom element API file is generated in the build and committed back to the 
 ### Testing
 
 <!-- AURO-GENERATED-CONTENT:START (REMOTE:url=https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/componentDocs/partials/development/testing.md) -->
-Automated tests are required for every Auro component. See `.\test\auro-dropdownmenu.test.js` for the tests for this component. Run `npm test` to run the tests and check code coverage. Tests must pass and meet a certain coverage threshold to commit. See [the testing documentation](https://auro.alaskaair.com/support/tests) for more details.
+Automated tests are required for every Auro component. See `.\test\auro-select.test.js` for the tests for this component. Run `npm test` to run the tests and check code coverage. Tests must pass and meet a certain coverage threshold to commit. See [the testing documentation](https://auro.alaskaair.com/support/tests) for more details.
 
 <!-- AURO-GENERATED-CONTENT:END -->
 

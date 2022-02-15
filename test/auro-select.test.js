@@ -1,15 +1,15 @@
 import { fixture, html, expect } from '@open-wc/testing';
-import '../src/auro-dropdownmenu.js';
+import '../src/auro-select.js';
 
-describe('auro-dropdownmenu', () => {
-  it('auro-dropdownmenu is accessible', async () => {
+describe('auro-select', () => {
+  it('auro-select is accessible', async () => {
     const el = await defaultFixture();
 
     await expect(el).to.be.accessible();
   });
 
-  it('auro-dropdownmenu custom element is defined', async () => {
-    const el = await !!customElements.get("auro-dropdownmenu");
+  it('auro-select custom element is defined', async () => {
+    const el = await !!customElements.get("auro-select");
 
     await expect(el).to.be.true;
   });
@@ -21,7 +21,7 @@ describe('auro-dropdownmenu', () => {
   // });
 
   // it('selecting a menuoption sets the value', async () => {
-  //   // This test needs to be fixed once the work is done to extract value from the dropdownmenu
+  //   // This test needs to be fixed once the work is done to extract value from the select
   //   const el = await defaultFixture();
 
   //   const trigger = el.shadowRoot.querySelector('auro-dropdown');
@@ -38,7 +38,7 @@ describe('auro-dropdownmenu', () => {
 
 async function defaultFixture() {
   return await fixture(html`
-  <auro-dropdownmenu>
+  <auro-select>
     <auro-menu>
       <auro-menuoption value="Please select an option" selected>Please select an option</auro-menuoption>
       <hr>
@@ -49,6 +49,6 @@ async function defaultFixture() {
       <auro-menuoption value="arrival">Arrival</auro-menuoption>
       <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
     </auro-menu>
-  </auro-dropdownmenu>
+  </auro-select>
   `);
 }

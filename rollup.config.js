@@ -18,7 +18,7 @@ const getSharedPlugins = () => [
 
 const modernConfig = {
   input: {
-    ['auro-dropdownmenu__bundled']: './src/auro-dropdownmenu.js',
+    ['auro-select__bundled']: './src/auro-select.js',
   },
   output: {
     format: 'esm',

@@ -2,7 +2,7 @@
 name: Feature request
 about: Suggest an idea for this project
 title: '[feature summary]'
-labels: 'auro-dropdownmenu, Type: Feature, not-reviewed'
+labels: 'auro-select, Type: Feature, not-reviewed'
 assignees: blackfalcon
 ---
 

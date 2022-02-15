@@ -6,7 +6,7 @@
 // If using litElement base class
 import { LitElement, html } from "lit-element";
 
-import '@aurodesignsystem/auro-menu';
+// import '@aurodesignsystem/auro-menu';
 
 // If using auroElement base class
 // See instructions for importing auroElement base class https://git.io/JULq4
@@ -24,6 +24,9 @@ import styleCssFixed from './style-fixed-css.js';
  *
  * @prop {String} placeholder - Define placeholder text to display before a value is manually selected.
  * @prop {String} value - Value selected for the dropdown menu.
+ * @prop {Boolean} error - When attribute is present element shows error state.
+ * @prop {Boolean} disabled - When attribute is present element shows disabled state.
+ * @prop {Boolean} autoselect - Use attribute select first option with first interaction.
  * @slot - Default slot for the menu content.
  * @slot label - Defines the content of the label.
  * @slot helperText - Defines the content of the helperText.
@@ -34,14 +37,8 @@ class AuroDropdownmenu extends LitElement {
   constructor() {
     super();
 
-    this.placeholder = 'Select an option';
-    this.expanded = false;
-    this.displayValue = null;
-    this.value = null;
-
-    this.addEventListener('dropdownToggled', (event) => {
-      this.expanded = event.detail.expanded;
-    });
+    this.placeholder = 'Please select option';
+    this.items = Array.from(this.querySelectorAll('auro-menuoption'));
   }
 
   // This function is to define props used within the scope of this component
@@ -53,16 +50,21 @@ class AuroDropdownmenu extends LitElement {
       /**
        * @private
        */
-      expanded: { Boolean },
+      items: { type: Array },
 
-      /**
-       * @private
-       */
-      displayValue: { type: String },
       value: {
         type: String,
         reflect: true
       },
+      error: {
+        type: Boolean,
+        reflect: true
+      },
+      disabled: {
+        type: Boolean,
+        reflect: true
+      },
+      autoselect: { type: Boolean },
       placeholder: { type: String }
     };
   }
@@ -74,48 +76,93 @@ class AuroDropdownmenu extends LitElement {
     ];
   }
 
-  firstUpdated() {
-    const menuItems = this.querySelectorAll('auro-menuoption');
-    const firstMenuItem = menuItems[0]; /* eslint-disable-line prefer-destructuring */
-    const lastMenuItem = menuItems[menuItems.length - 1];
+  /**
+   * @private
+   */
+  performUpdate() {
+    super.performUpdate();
 
-    this.addEventListener('keydown', function(evt) {
-      if (this.expanded) {
-        if (evt.key === 'Escape') {
-          this.shadowRoot.querySelector('auro-dropdown').hide();
-        } else if (evt.shiftKey && evt.key === 'Tab' && document.activeElement === firstMenuItem) {
-          lastMenuItem.focus();
-          evt.preventDefault();
-        } else if (evt.key === 'Tab' && document.activeElement === lastMenuItem) {
-          firstMenuItem.focus();
-          evt.preventDefault();
+    if (this.error) {
+      this.shadowRoot.querySelector('auro-dropdown').setAttribute('error', '');
+    } else if (!this.error) {
+      this.shadowRoot.querySelector('auro-dropdown').removeAttribute('error');
+    }
+
+    if (this.disabled) {
+      this.shadowRoot.querySelector('auro-dropdown').setAttribute('disabled', '');
+    } else if (!this.disabled) {
+      this.shadowRoot.querySelector('auro-dropdown').removeAttribute('disabled');
+    }
+
+    if (this.required && this.value) {
+      this.shadowRoot.querySelector('auro-dropdown').removeAttribute('error');
+    }
+  }
+
+  // lifecycle runs only after the element's DOM has been updated the first time
+  firstUpdated() {
+    this.items = this.querySelectorAll('auro-menuoption');
+
+    this.addEventListener('keydown', (evt) => {
+      this.index = this.items.findIndex((item) => item.hasAttribute('selected'));
+
+      if (evt.key === 'Escape' || evt.key === 'Enter') {
+        this.shadowRoot.querySelector('auro-dropdown').hide();
+      }
+
+      if (evt.key === 'Enter') {
+        if (this.index >= 0) {
+          this.displayValue = this.items[this.index].innerText;
         }
+
+        this.value = this.querySelector('auro-menu').value;
       }
     });
 
-    this.addEventListener('click', () => {
+
+    // event listener fires with both pointerType 'mouse' and keypress events
+    this.addEventListener('click', (evt) => {
       let focusIndex = 0;
 
-      for (let optionsIndex = 0; optionsIndex < menuItems.length; optionsIndex += 1) {
-        if (menuItems[optionsIndex].hasAttribute('selected')) {
+      // Run .hide() if selection by mouse click
+      if (evt.pointerType === 'mouse' && evt.target.selected) {
+        this.shadowRoot.querySelector('auro-dropdown').hide();
+      }
+
+      // set tab focus on selected menuoption element
+      for (let optionsIndex = 0; optionsIndex < this.items.length; optionsIndex += 1) {
+        if (this.items[optionsIndex].hasAttribute('selected')) {
           focusIndex = optionsIndex;
         }
       }
 
-      menuItems[focusIndex].focus();
+      const currentFocus = this.items[focusIndex];
+
+      currentFocus.focus();
+
+      // Being consistent with a HTML select menu,
+      // wth the first interaction, the fist option
+      // is auto selected
+      if (this.autoselect) {
+        currentFocus.setAttribute('selected', '');
+        this.value = currentFocus.value;
+        this.displayValue = currentFocus.innerText;
+      }
     });
 
-    this.addEventListener('optionSelected', (evt) => {
-      try {
-        this.shadowRoot.querySelector('auro-dropdown').hide();
-      } catch (err) {
-        // ignore errors
+    // custom event listener from auro-menu fires with both 'click' and keypress events
+    this.addEventListener('selectedOption', (evt) => {
+
+      // eval index of option to set display value, placeholder has negative index and no display value
+      this.items = Array.from(this.querySelectorAll('auro-menuoption'));
+      this.index = this.items.findIndex((item) => item.hasAttribute('selected'));
+
+      if (this.index >= 0) {
+        this.displayValue = this.items[this.index].innerText;
       }
 
+      // set this.value to detail.value from custom event from auro-menu
       this.value = evt.detail.value;
-      this.displayValue = evt.detail.displayValue;
-
-      this.querySelector('auro-menu').setAttribute('indexSelectedOption', evt.detail.index);
     });
   }
 
@@ -126,9 +173,15 @@ class AuroDropdownmenu extends LitElement {
   render() {
     return html`
       <div>
-        <auro-dropdown for="dropdownMenu" toggle inset bordered rounded chevron>
-          <button slot="trigger" tabindex="0">
-            ${this.displayValue ? this.displayValue : html`<span class="placeholder">${this.placeholder}</span>`}
+        <auro-dropdown
+          for="dropdownMenu"
+          toggle
+          inset
+          bordered
+          rounded
+          chevron>
+          <button slot="trigger" aria-haspopup="true">
+            ${this.value ? this.displayValue : html`<span class="placeholder">${this.placeholder}</span>`}
           </button>
           <div class="menuWrapper">
             <slot></slot>

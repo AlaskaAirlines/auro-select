@@ -6,8 +6,6 @@
 // If using litElement base class
 import { LitElement, html } from "lit-element";
 
-// import '@aurodesignsystem/auro-menu';
-
 // If using auroElement base class
 // See instructions for importing auroElement base class https://git.io/JULq4
 // import { html, css } from "lit-element";
@@ -20,7 +18,7 @@ import styleCssFixed from './style-fixed-css.js';
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
- * The auro-dropdownmenu element is a wrapper for auro-dropdown and auro-menu to create a dropdown menu control.
+ * The auro-select element is a wrapper for auro-dropdown and auro-menu to create a dropdown menu control.
  *
  * @prop {String} placeholder - Define placeholder text to display before a value is manually selected.
  * @prop {String} value - Value selected for the dropdown menu.
@@ -33,7 +31,7 @@ import styleCssFixed from './style-fixed-css.js';
  */
 
 // build the component class
-class AuroDropdownmenu extends LitElement {
+class AuroSelect extends LitElement {
   constructor() {
     super();
 
@@ -174,7 +172,7 @@ class AuroDropdownmenu extends LitElement {
     return html`
       <div>
         <auro-dropdown
-          for="dropdownMenu"
+          for="selectmenu"
           toggle
           inset
           bordered
@@ -195,6 +193,6 @@ class AuroDropdownmenu extends LitElement {
 }
 
 // define the name of the custom component
-if (!customElements.get("auro-dropdownmenu")) {
-  customElements.define("auro-dropdownmenu", AuroDropdownmenu);
+if (!customElements.get("auro-select")) {
+  customElements.define("auro-select", AuroSelect);
 }

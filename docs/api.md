@@ -1,6 +1,6 @@
-# auro-dropdownmenu
+# auro-select
 
-The auro-dropdownmenu element is a wrapper for auro-dropdown and auro-menu to create a dropdown menu control.
+The auro-select element is a wrapper for auro-dropdown and auro-menu to create a dropdown menu control.
 
 ## Properties
 

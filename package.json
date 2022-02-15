@@ -6,12 +6,12 @@
     "  2. Go to http://localhost:8000",
     "================================================================================"
   ],
-  "name": "@aurolabs/auro-dropdownmenu",
+  "name": "@aurolabs/auro-select",
   "version": "0.0.0",
-  "description": "auro-dropdownmenu HTML custom element",
+  "description": "auro-select HTML custom element",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AlaskaAirlines/auro-dropdownmenu"
+    "url": "https://github.com/AlaskaAirlines/auro-select"
   },
   "main": "index.js",
   "license": "Apache-2.0",

@@ -114,6 +114,7 @@ class AuroSelect extends LitElement {
         }
 
         this.value = this.querySelector('auro-menu').value;
+        this.shadowRoot.querySelector('#triggerFocus').focus();
       }
     });
 
@@ -178,7 +179,7 @@ class AuroSelect extends LitElement {
           bordered
           rounded
           chevron>
-          <button slot="trigger" aria-haspopup="true">
+          <button slot="trigger" aria-haspopup="true" id="triggerFocus">
             ${this.value ? this.displayValue : html`<span class="placeholder">${this.placeholder}</span>`}
           </button>
           <div class="menuWrapper">

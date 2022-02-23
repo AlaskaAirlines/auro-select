@@ -7,7 +7,7 @@
     "================================================================================"
   ],
   "name": "@aurolabs/auro-select",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "auro-select HTML custom element",
   "repository": {
     "type": "git",

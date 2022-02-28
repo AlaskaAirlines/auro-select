@@ -20,8 +20,6 @@ The following sections are editable by making changes to the following files:
 # Select
 
 <!-- AUROLABS-GENERATED-CONTENT:START (REMOTE:url=https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/componentDocs/partials/labsDisclaimer.md) -->
-`<auro-select>` is an experimental [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) only available as a PRE RELEASE. Users of this element understand the risks of using a pre-released version of this element.
-
 <!-- AUROLABS-GENERATED-CONTENT:END -->
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/partials/description.md) -->
 <!-- The below content is automatically added from ./../docs/partials/description.md -->
@@ -47,11 +45,11 @@ For the most up to date information on [UI development browser support](https://
 
 <!-- AURO-GENERATED-CONTENT:START (REMOTE:url=https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/componentDocs/partials/usage/componentInstall.md) -->
 [![Build Status](https://img.shields.io/github/workflow/status/AlaskaAirlines/auro-select/Test%20and%20publish?branch=master&style=for-the-badge)](https://github.com/AlaskaAirlines/auro-select/actions?query=workflow%3A%22test+and+publish%22)
-[![See it on NPM!](https://img.shields.io/npm/v/@aurolabs/auro-select?style=for-the-badge&color=orange)](https://www.npmjs.com/package/@aurolabs/auro-select)
-[![License](https://img.shields.io/npm/l/@aurolabs/auro-select?color=blue&style=for-the-badge)](https://www.apache.org/licenses/LICENSE-2.0)
+[![See it on NPM!](https://img.shields.io/npm/v/@aurodesignsystem/auro-select?style=for-the-badge&color=orange)](https://www.npmjs.com/package/@aurodesignsystem/auro-select)
+[![License](https://img.shields.io/npm/l/@aurodesignsystem/auro-select?color=blue&style=for-the-badge)](https://www.apache.org/licenses/LICENSE-2.0)
 
 ```shell
-$ npm i @aurolabs/auro-select
+$ npm i @aurodesignsystem/auro-select
 ```
 
 Installing as a direct, dev or peer dependency is up to the user installing the package. If you are unsure as to what type of dependency you should use, consider reading this [stack overflow](https://stackoverflow.com/questions/18875674/whats-the-difference-between-dependencies-devdependencies-and-peerdependencies) answer.
@@ -83,7 +81,7 @@ Defining the component dependency within each component that is using the `<auro
 <!-- AURO-GENERATED-CONTENT:START (REMOTE:url=https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/componentDocs/partials/usage/componentImport.md) -->
 
 ```js
-import "@aurolabs/auro-select";
+import "@aurodesignsystem/auro-select";
 ```
 
 <!-- AURO-GENERATED-CONTENT:END -->
@@ -122,8 +120,8 @@ Since the legacy bundle includes many polyfills that are not needed by modern br
 <!-- **NOTE:** Be sure to replace `@latest` in the URL with the version of the asset you want. @latest is NOT aware of any MAJOR releases, use at your own risk. -->
 <link rel="stylesheet" href="https://unpkg.com/@alaskaairux/design-tokens@latest/dist/tokens/CSSCustomProperties.css" />
 <link rel="stylesheet" href="https://unpkg.com/@alaskaairux/webcorestylesheets@latest/dist/bundled/essentials.css" />
-<script src="https://unpkg.com/@aurolabs/auro-select@latest/dist/auro-select__bundled.js" type="module"></script>
-<script src="https://unpkg.com/@aurolabs/auro-select@latest/dist/auro-select__bundled.es5.js" nomodule></script>
+<script src="https://unpkg.com/@aurodesignsystem/auro-select@latest/dist/auro-select__bundled.js" type="module"></script>
+<script src="https://unpkg.com/@aurodesignsystem/auro-select@latest/dist/auro-select__bundled.es5.js" nomodule></script>
 ```
 
 <!-- AURO-GENERATED-CONTENT:END -->

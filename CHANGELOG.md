@@ -1,5 +1,23 @@
 # Semantic Release Automated Changelog
 
+# [2.0.0](https://github.com/AlaskaAirlines/auro-select/compare/v1.0.0...v2.0.0) (2022-03-01)
+
+
+### chore
+
+* **deps:** update to aurodesignsystem name space; update dependencies ([6093b1d](https://github.com/AlaskaAirlines/auro-select/commit/6093b1d83f44f6ccc12de23073a12d997daa1438))
+
+
+### BREAKING CHANGES
+
+* **deps:** This commit will update the npm namespace from auroLabs
+to aurodesignsystem for release.
+
+Changes to be committed:
+modified:   README.md
+modified:   package-lock.json
+modified:   package.json
+
 # 1.0.0 (2022-02-23)
 
 

@@ -27,7 +27,7 @@ import styleCssFixed from './style-fixed-css.js';
  * @prop {Boolean} autoselect - Use attribute select first option with first interaction.
  * @slot - Default slot for the menu content.
  * @slot label - Defines the content of the label.
- * @slot helperText - Defines the content of the helperText.
+ * @slot helpText - Defines the content of the helpText.
  */
 
 // build the component class
@@ -186,7 +186,7 @@ class AuroSelect extends LitElement {
             <slot></slot>
           </div>
           <slot name="label" slot="label"></slot>
-          <slot name="helperText" slot="helperText"></slot>
+          <slot name="helpText" slot="helpText"></slot>
         </auro-dropdown>
       </div>
     `;

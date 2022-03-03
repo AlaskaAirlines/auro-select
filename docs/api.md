@@ -14,8 +14,8 @@ The auro-select element is a wrapper for auro-dropdown and auro-menu to create a
 
 ## Slots
 
-| Name         | Description                            |
-|--------------|----------------------------------------|
-|              | Default slot for the menu content.     |
-| `helperText` | Defines the content of the helperText. |
-| `label`      | Defines the content of the label.      |
+| Name       | Description                          |
+|------------|--------------------------------------|
+|            | Default slot for the menu content.   |
+| `helpText` | Defines the content of the helpText. |
+| `label`    | Defines the content of the label.    |

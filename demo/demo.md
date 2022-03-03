@@ -65,7 +65,7 @@ The following example illustrates the use of the `label` and `helptext` slots fo
   <!-- The below content is automatically added from ./../../apiExamples/slots.html -->
   <auro-select>
     <span slot="label">Please choose a preference</span>
-    <span slot="helperText">Preferences are maintained for future use</span>
+    <span slot="helpText">Preferences are maintained for future use</span>
     <auro-menu>
       <auro-menuoption value="stops">Stops</auro-menuoption>
       <auro-menuoption value="price">Price</auro-menuoption>
@@ -85,7 +85,7 @@ The following example illustrates the use of the `label` and `helptext` slots fo
 ```html
 <auro-select>
   <span slot="label">Please choose a preference</span>
-  <span slot="helperText">Preferences are maintained for future use</span>
+  <span slot="helpText">Preferences are maintained for future use</span>
   <auro-menu>
     <auro-menuoption value="stops">Stops</auro-menuoption>
     <auro-menuoption value="price">Price</auro-menuoption>

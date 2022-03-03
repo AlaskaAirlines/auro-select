@@ -28,6 +28,17 @@ The following sections are editable by making changes to the following files:
 ## About auro-select
 
 The `<auro-select>` element presents a menu of options. The options within the menu are represented by `<auro-menu>` and `<auro-menuoption>` elements. You can pre-select options for the user with the `selected` attribute as part of the `<auro-menuoption>` API.
+
+## Install instructions
+
+The `<auro-select>` custom element is a combo-element using independent primitives for the most flexibility. To allow consumers the most control over the versioning their dependencies, `<auro-select>` requires the following peer dependencies along with `<auro-select>`.
+
+```shell
+$ npm i @aurodesignsystem/auro-select
+
+$ npm i @aurodesignsystem/auro-dropdown
+$ npm i @aurodesignsystem/auro-menu
+```
 <!-- AURO-GENERATED-CONTENT:END -->
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/partials/readmeAddlInfo.md) -->
 <!-- The below content is automatically added from ./../docs/partials/readmeAddlInfo.md -->

@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.0.1](https://github.com/AlaskaAirlines/auro-select/compare/v2.0.0...v2.0.1) (2022-03-03)
+
+
+### Bug Fixes
+
+* **slot:** update helptext reference [#37](https://github.com/AlaskaAirlines/auro-select/issues/37) ([bd892f8](https://github.com/AlaskaAirlines/auro-select/commit/bd892f82788251a71c44102736d69d2d148f90db))
+
 # [2.0.0](https://github.com/AlaskaAirlines/auro-select/compare/v1.0.0...v2.0.0) (2022-03-01)
 
 

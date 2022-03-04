@@ -400,57 +400,6 @@ In some cases, where selection of content is optional, you can use a `<auro-menu
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-### Watch for value changes
-
-The following example listens for the `selectOption` custom event from the `<auro-menu>` APi. Once triggered, the custom event will return an object `{value: any}`.
-
-<div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/valueAlert.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/valueAlert.html -->
-  <auro-select id="valueAlert">
-    <auro-menu>
-      <auro-menuoption value="stops">Stops</auro-menuoption>
-      <auro-menuoption value="price">Price</auro-menuoption>
-      <auro-menuoption value="duration">Duration</auro-menuoption>
-      <auro-menuoption value="departure">Departure</auro-menuoption>
-      <auro-menuoption value="arrival">Arrival</auro-menuoption>
-      <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
-    </auro-menu>
-  </auro-select>
-  <!-- AURO-GENERATED-CONTENT:END -->
-</div>
-<auro-accordion lowProfile justifyRight>
-  <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../demo/alertValue.js) -->
-<!-- The below code snippet is automatically added from ./../../demo/alertValue.js -->
-
-```js
-setTimeout(() => {
-  document.querySelector('#valueAlert').addEventListener('selectedOption', (e) => {
-    console.warn(e.detail);
-    alert(JSON.stringify(e.detail));
-  });
-}, 500);
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/valueAlert.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/valueAlert.html -->
-
-```html
-<auro-select id="valueAlert">
-  <auro-menu>
-    <auro-menuoption value="stops">Stops</auro-menuoption>
-    <auro-menuoption value="price">Price</auro-menuoption>
-    <auro-menuoption value="duration">Duration</auro-menuoption>
-    <auro-menuoption value="departure">Departure</auro-menuoption>
-    <auro-menuoption value="arrival">Arrival</auro-menuoption>
-    <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
-  </auro-menu>
-</auro-select>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-</auro-accordion>
-
 ### Extract value
 
 The following example illustrates how a user may query the `.value` of the `auro-menu` element.

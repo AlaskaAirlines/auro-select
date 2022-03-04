@@ -169,27 +169,6 @@ In some cases, where selection of content is optional, you can use a `<auro-menu
 
 </auro-accordion>
 
-### Watch for value changes
-
-The following example listens for the `selectOption` custom event from the `<auro-menu>` APi. Once triggered, the custom event will return an object `{value: any}`.
-
-<div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/valueAlert.html) -->
-  <!-- AURO-GENERATED-CONTENT:END -->
-</div>
-
-<auro-accordion lowProfile justifyRight>
-  <span slot="trigger">See code</span>
-
-
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../demo/alertValue.js) -->
-<!-- AURO-GENERATED-CONTENT:END -->
-
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/valueAlert.html) -->
-<!-- AURO-GENERATED-CONTENT:END -->
-
-</auro-accordion>
-
 ### Extract value
 
 The following example illustrates how a user may query the `.value` of the `auro-menu` element.

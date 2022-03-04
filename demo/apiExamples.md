@@ -426,7 +426,7 @@ The following example listens for the `selectOption` custom event from the `<aur
 
 ```js
 setTimeout(() => {
-  document.querySelector('#valueAlert').addEventListener('selectOption', (e) => {
+  document.querySelector('#valueAlert').addEventListener('selectedOption', (e) => {
     console.warn(e.detail);
     alert(JSON.stringify(e.detail));
   });

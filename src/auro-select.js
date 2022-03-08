@@ -16,6 +16,8 @@ import "focus-visible/dist/focus-visible.min.js";
 import styleCss from "./style-css.js";
 import styleCssFixed from './style-fixed-css.js';
 
+import '@aurodesignsystem/auro-menu';
+
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
  * The auro-select element is a wrapper for auro-dropdown and auro-menu to create a dropdown menu control.
@@ -102,19 +104,8 @@ class AuroSelect extends LitElement {
     this.items = this.querySelectorAll('auro-menuoption');
 
     this.addEventListener('keydown', (evt) => {
-      this.index = this.items.findIndex((item) => item.hasAttribute('selected'));
-
       if (evt.key === 'Escape' || evt.key === 'Enter') {
         this.shadowRoot.querySelector('auro-dropdown').hide();
-      }
-
-      if (evt.key === 'Enter') {
-        if (this.index >= 0) {
-          this.displayValue = this.items[this.index].innerText;
-        }
-
-        this.value = this.querySelector('auro-menu').value;
-        this.shadowRoot.querySelector('#triggerFocus').focus();
       }
     });
 
@@ -150,18 +141,13 @@ class AuroSelect extends LitElement {
     });
 
     // custom event listener from auro-menu fires with both 'click' and keypress events
-    this.addEventListener('selectedOption', (evt) => {
+    this.addEventListener('selectedOption', () => {
+      const menu = this.querySelector('auro-menu');
 
-      // eval index of option to set display value, placeholder has negative index and no display value
-      this.items = Array.from(this.querySelectorAll('auro-menuoption'));
-      this.index = this.items.findIndex((item) => item.hasAttribute('selected'));
-
-      if (this.index >= 0) {
-        this.displayValue = this.items[this.index].innerText;
+      if (menu.optionSelected) {
+        this.displayValue = menu.optionSelected.innerText;
+        this.value = menu.value;
       }
-
-      // set this.value to detail.value from custom event from auro-menu
-      this.value = evt.detail.value;
     });
   }
 

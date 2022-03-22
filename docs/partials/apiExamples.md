@@ -47,23 +47,6 @@ Use the `placeholder` string attribute to inject a custom placeholder option wit
 
 </auro-accordion>
 
-#### `autoselect`
-
-Use the `autoselect` boolean attribute to select the first option in the select menu with the first interaction.
-
-<div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/autoselect.html) -->
-  <!-- AURO-GENERATED-CONTENT:END -->
-</div>
-
-<auro-accordion lowProfile justifyRight>
-  <span slot="trigger">See code</span>
-
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/autoselect.html) -->
-<!-- AURO-GENERATED-CONTENT:END -->
-
-</auro-accordion>
-
 #### `error`
 
 Use the `error` boolean attribute to toggle the error UI.

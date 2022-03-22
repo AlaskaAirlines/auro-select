@@ -16,7 +16,6 @@ The auro-select element is a wrapper for auro-dropdown and auro-menu to create a
 
 | Property      | Attribute     | Type      | Default                | Description                                      |
 |---------------|---------------|-----------|------------------------|--------------------------------------------------|
-| [autoselect](#autoselect)  | `autoselect`  | `Boolean` |                        | Use attribute select first option with first interaction. |
 | [disabled](#disabled)    | `disabled`    | `Boolean` |                        | When attribute is present element shows disabled state. |
 | [error](#error)       | `error`       | `Boolean` |                        | When attribute is present element shows error state. |
 | [placeholder](#placeholder) | `placeholder` | `String`  | "Please select option" | Define placeholder text to display before a value is manually selected. |
@@ -102,45 +101,6 @@ Use the `placeholder` string attribute to inject a custom placeholder option wit
 
 ```html
 <auro-select placeholder="Please select your preferred option">
-  <auro-menu>
-    <auro-menuoption value="stops">Stops</auro-menuoption>
-    <auro-menuoption value="price">Price</auro-menuoption>
-    <auro-menuoption value="duration">Duration</auro-menuoption>
-    <auro-menuoption value="departure">Departure</auro-menuoption>
-    <auro-menuoption value="arrival">Arrival</auro-menuoption>
-    <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
-  </auro-menu>
-</auro-select>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-</auro-accordion>
-
-#### <a name="autoselect"></a>`autoselect`
-
-Use the `autoselect` boolean attribute to select the first option in the select menu with the first interaction.
-
-<div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/autoselect.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/autoselect.html -->
-  <auro-select autoselect>
-    <auro-menu>
-      <auro-menuoption value="stops">Stops</auro-menuoption>
-      <auro-menuoption value="price">Price</auro-menuoption>
-      <auro-menuoption value="duration">Duration</auro-menuoption>
-      <auro-menuoption value="departure">Departure</auro-menuoption>
-      <auro-menuoption value="arrival">Arrival</auro-menuoption>
-      <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
-    </auro-menu>
-  </auro-select>
-  <!-- AURO-GENERATED-CONTENT:END -->
-</div>
-<auro-accordion lowProfile justifyRight>
-  <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/autoselect.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/autoselect.html -->
-
-```html
-<auro-select autoselect>
   <auro-menu>
     <auro-menuoption value="stops">Stops</auro-menuoption>
     <auro-menuoption value="price">Price</auro-menuoption>
@@ -364,7 +324,7 @@ In some cases, where selection of content is optional, you can use a `<auro-menu
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/presetOption.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/presetOption.html -->
-  <auro-select autoselect>
+  <auro-select>
     <auro-menu>
       <auro-menuoption value="Please select an option" selected>Please select an option</auro-menuoption>
       <hr>
@@ -384,7 +344,7 @@ In some cases, where selection of content is optional, you can use a `<auro-menu
 <!-- The below code snippet is automatically added from ./../../apiExamples/presetOption.html -->
 
 ```html
-<auro-select autoselect>
+<auro-select>
   <auro-menu>
     <auro-menuoption value="Please select an option" selected>Please select an option</auro-menuoption>
     <hr>

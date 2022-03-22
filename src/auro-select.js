@@ -16,7 +16,7 @@ import "focus-visible/dist/focus-visible.min.js";
 import styleCss from "./style-css.js";
 import styleCssFixed from './style-fixed-css.js';
 
-import '@aurodesignsystem/auro-menu';
+import '@aurodesignsystem/auro-dropdown';
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
@@ -26,7 +26,6 @@ import '@aurodesignsystem/auro-menu';
  * @prop {String} value - Value selected for the dropdown menu.
  * @prop {Boolean} error - When attribute is present element shows error state.
  * @prop {Boolean} disabled - When attribute is present element shows disabled state.
- * @prop {Boolean} autoselect - Use attribute select first option with first interaction.
  * @slot - Default slot for the menu content.
  * @slot label - Defines the content of the label.
  * @slot helpText - Defines the content of the helpText.
@@ -64,7 +63,6 @@ class AuroSelect extends LitElement {
         type: Boolean,
         reflect: true
       },
-      autoselect: { type: Boolean },
       placeholder: { type: String }
     };
   }
@@ -102,51 +100,39 @@ class AuroSelect extends LitElement {
   // lifecycle runs only after the element's DOM has been updated the first time
   firstUpdated() {
     this.items = this.querySelectorAll('auro-menuoption');
+    this.dropdown = this.shadowRoot.querySelector('auro-dropdown');
+    this.menu = this.querySelector('auro-menu');
 
     this.addEventListener('keydown', (evt) => {
-      if (evt.key === 'Escape' || evt.key === 'Enter') {
-        this.shadowRoot.querySelector('auro-dropdown').hide();
-      }
-    });
-
-
-    // event listener fires with both pointerType 'mouse' and keypress events
-    this.addEventListener('click', (evt) => {
-      let focusIndex = 0;
-
-      // Run .hide() if selection by mouse click
-      if (evt.pointerType === 'mouse' && evt.target.selected) {
-        this.shadowRoot.querySelector('auro-dropdown').hide();
+      if (evt.key === 'ArrowUp') {
+        evt.preventDefault();
+        this.menu.selectNextItem('up');
       }
 
-      // set tab focus on selected menuoption element
-      for (let optionsIndex = 0; optionsIndex < this.items.length; optionsIndex += 1) {
-        if (this.items[optionsIndex].hasAttribute('selected')) {
-          focusIndex = optionsIndex;
+      if (evt.key === 'ArrowDown') {
+        evt.preventDefault();
+        this.menu.selectNextItem('down');
+      }
+
+      if (evt.key === 'Enter') {
+        if (!this.dropdown.isPopoverVisible) {
+          evt.preventDefault();
+          this.menu.makeSelection();
         }
       }
 
-      const currentFocus = this.items[focusIndex];
-
-      currentFocus.focus();
-
-      // Being consistent with a HTML select menu,
-      // wth the first interaction, the fist option
-      // is auto selected
-      if (this.autoselect) {
-        currentFocus.setAttribute('selected', '');
-        this.value = currentFocus.value;
-        this.displayValue = currentFocus.innerText;
+      if (evt.key === 'Tab') {
+        this.dropdown.hide();
       }
     });
 
     // custom event listener from auro-menu fires with both 'click' and keypress events
-    this.addEventListener('selectedOption', () => {
-      const menu = this.querySelector('auro-menu');
+    this.addEventListener('selectedOption', (evt) => {
+      this.displayValue = evt.target.optionSelected.innerText;
+      this.value = evt.target.optionSelected.value;
 
-      if (menu.optionSelected) {
-        this.displayValue = menu.optionSelected.innerText;
-        this.value = menu.value;
+      if (this.dropdown.isPopoverVisible) {
+        this.dropdown.hide();
       }
     });
   }
@@ -165,9 +151,9 @@ class AuroSelect extends LitElement {
           bordered
           rounded
           chevron>
-          <button slot="trigger" aria-haspopup="true" id="triggerFocus">
+          <span slot="trigger" aria-haspopup="true" id="triggerFocus">
             ${this.value ? this.displayValue : html`<span class="placeholder">${this.placeholder}</span>`}
-          </button>
+          </span>
           <div class="menuWrapper">
             <slot></slot>
           </div>

@@ -6,7 +6,6 @@ The auro-select element is a wrapper for auro-dropdown and auro-menu to create a
 
 | Property      | Attribute     | Type      | Default                | Description                                      |
 |---------------|---------------|-----------|------------------------|--------------------------------------------------|
-| `autoselect`  | `autoselect`  | `Boolean` |                        | Use attribute select first option with first interaction. |
 | `disabled`    | `disabled`    | `Boolean` |                        | When attribute is present element shows disabled state. |
 | `error`       | `error`       | `Boolean` |                        | When attribute is present element shows error state. |
 | `placeholder` | `placeholder` | `String`  | "Please select option" | Define placeholder text to display before a value is manually selected. |

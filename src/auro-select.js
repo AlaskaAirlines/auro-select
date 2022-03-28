@@ -16,8 +16,6 @@ import "focus-visible/dist/focus-visible.min.js";
 import styleCss from "./style-css.js";
 import styleCssFixed from './style-fixed-css.js';
 
-import '@aurodesignsystem/auro-dropdown';
-
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
  * The auro-select element is a wrapper for auro-dropdown and auro-menu to create a dropdown menu control.

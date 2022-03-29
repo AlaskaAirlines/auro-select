@@ -390,10 +390,15 @@ The following example illustrates how a user may query the `.value` of the `auro
  * @param {string} Selector for auro-select to retrieve the value from.
  */
 const getValue = (selector) => {
-  const el = document.querySelector(selector);
+  const menu = document.querySelector(`${selector} auro-menu`);
 
-  console.warn(el.value);
-  alert(el.value);
+  if (menu.optionSelected) {
+    console.warn('Value selected:', menu.optionSelected.value);
+    alert(`Value selected: ${menu.optionSelected.value}`);
+  } else {
+    console.warn('Value selected:', null);
+    alert(`Value selected: ${null}`);
+  }
 }
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
@@ -412,6 +417,58 @@ const getValue = (selector) => {
   </auro-menu>
 </auro-select>
 <auro-button onclick="getValue('#valueExtraction');">Get current value</auro-button>
+```
+<!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
+
+### Watch for value changes
+
+The following example listens for the `selectOption` custom event from the `<auro-menu>` APi. Once triggered, the custom event will return an object `{value: any}`.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/valueAlert.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/valueAlert.html -->
+  <auro-select id="valueAlert">
+    <auro-menu>
+      <auro-menuoption value="stops">Stops</auro-menuoption>
+      <auro-menuoption value="price">Price</auro-menuoption>
+      <auro-menuoption value="duration">Duration</auro-menuoption>
+      <auro-menuoption value="departure">Departure</auro-menuoption>
+      <auro-menuoption value="arrival">Arrival</auro-menuoption>
+      <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
+    </auro-menu>
+  </auro-select>
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion lowProfile justifyRight>
+  <span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../demo/alertValue.js) -->
+<!-- The below code snippet is automatically added from ./../../demo/alertValue.js -->
+
+```js
+setTimeout(() => {
+  document.querySelector('#valueAlert').addEventListener('selectedOption', () => {
+    const menu = document.querySelector('#valueAlert auro-menu');
+    console.warn('Value selected:', menu.optionSelected.value);
+    alert(`Value selected: ${menu.optionSelected.value}`);
+  });
+}, 500);
+```
+<!-- AURO-GENERATED-CONTENT:END -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/valueAlert.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/valueAlert.html -->
+
+```html
+<auro-select id="valueAlert">
+  <auro-menu>
+    <auro-menuoption value="stops">Stops</auro-menuoption>
+    <auro-menuoption value="price">Price</auro-menuoption>
+    <auro-menuoption value="duration">Duration</auro-menuoption>
+    <auro-menuoption value="departure">Departure</auro-menuoption>
+    <auro-menuoption value="arrival">Arrival</auro-menuoption>
+    <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
+  </auro-menu>
+</auro-select>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>

@@ -1,6 +1,10 @@
 setTimeout(() => {
-  document.querySelector('#valueAlert').addEventListener('selectedOption', (evt) => {
-    console.warn('Value selected:', evt.target.optionSelected.value);
-    alert(`Value selected: ${evt.target.optionSelected.value}`);
-  });
+  let selectValueAlertEl = document.querySelector('auro-select#valueAlert');
+
+  if (selectValueAlertEl) {
+    selectValueAlertEl.addEventListener('selectedOption', () => {
+      console.warn('Value selected:', selectValueAlertEl.optionSelected.value);
+      alert(`Value selected: ${selectValueAlertEl.optionSelected.value}`);
+    });
+  }
 }, 500);

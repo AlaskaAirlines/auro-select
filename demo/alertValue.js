@@ -1,7 +1,6 @@
 setTimeout(() => {
-  document.querySelector('#valueAlert').addEventListener('selectedOption', () => {
-    const menu = document.querySelector('#valueAlert auro-menu');
-    console.warn('Value selected:', menu.optionSelected.value);
-    alert(`Value selected: ${menu.optionSelected.value}`);
+  document.querySelector('#valueAlert').addEventListener('selectedOption', (evt) => {
+    console.warn('Value selected:', evt.target.optionSelected.value);
+    alert(`Value selected: ${evt.target.optionSelected.value}`);
   });
 }, 500);

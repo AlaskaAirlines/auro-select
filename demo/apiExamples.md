@@ -14,12 +14,13 @@ The auro-select element is a wrapper for auro-dropdown and auro-menu to create a
 
 ## Properties
 
-| Property      | Attribute     | Type      | Default                | Description                                      |
-|---------------|---------------|-----------|------------------------|--------------------------------------------------|
-| [disabled](#disabled)    | `disabled`    | `Boolean` |                        | When attribute is present element shows disabled state. |
-| [error](#error)       | `error`       | `Boolean` |                        | When attribute is present element shows error state. |
-| [placeholder](#placeholder) | `placeholder` | `String`  | "Please select option" | Define placeholder text to display before a value is manually selected. |
-| [value](#value)       | `value`       | `String`  |                        | Value selected for the dropdown menu.            |
+| Property         | Attribute        | Type      | Default                | Description                                      |
+|------------------|------------------|-----------|------------------------|--------------------------------------------------|
+| [disabled](#disabled)       | `disabled`       | `Boolean` |                        | When attribute is present element shows disabled state. |
+| [error](#error)          | `error`          | `Boolean` |                        | When attribute is present element shows error state. |
+| [optionSelected](#optionSelected) | `optionSelected` | `Object`  | "undefined"            | Specifies the current selected menuOption.       |
+| [placeholder](#placeholder)    | `placeholder`    | `String`  | "Please select option" | Define placeholder text to display before a value is manually selected. |
+| [value](#value)          | `value`          | `String`  |                        | Value selected for the dropdown menu.            |
 
 ## Slots
 
@@ -390,11 +391,11 @@ The following example illustrates how a user may query the `.value` of the `auro
  * @param {string} Selector for auro-select to retrieve the value from.
  */
 const getValue = (selector) => {
-  const menu = document.querySelector(`${selector} auro-menu`);
+  const select = document.querySelector(`${selector}`);
 
-  if (menu.optionSelected) {
-    console.warn('Value selected:', menu.optionSelected.value);
-    alert(`Value selected: ${menu.optionSelected.value}`);
+  if (select.optionSelected) {
+    console.warn('Value selected:', select.optionSelected.value);
+    alert(`Value selected: ${select.optionSelected.value}`);
   } else {
     console.warn('Value selected:', null);
     alert(`Value selected: ${null}`);
@@ -447,10 +448,9 @@ The following example listens for the `selectOption` custom event from the `<aur
 
 ```js
 setTimeout(() => {
-  document.querySelector('#valueAlert').addEventListener('selectedOption', () => {
-    const menu = document.querySelector('#valueAlert auro-menu');
-    console.warn('Value selected:', menu.optionSelected.value);
-    alert(`Value selected: ${menu.optionSelected.value}`);
+  document.querySelector('#valueAlert').addEventListener('selectedOption', (evt) => {
+    console.warn('Value selected:', evt.target.optionSelected.value);
+    alert(`Value selected: ${evt.target.optionSelected.value}`);
   });
 }, 500);
 ```

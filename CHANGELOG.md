@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [2.2.0](https://github.com/AlaskaAirlines/auro-select/compare/v2.1.0...v2.2.0) (2022-03-29)
+
+
+### Features
+
+* **optionSelected:** store selected menu option object directly in select ([01ef6ee](https://github.com/AlaskaAirlines/auro-select/commit/01ef6ee61edbab3fc2387caa06f44f30a0aedecd))
+
 # [2.1.0](https://github.com/AlaskaAirlines/auro-select/compare/v2.0.2...v2.1.0) (2022-03-28)
 
 

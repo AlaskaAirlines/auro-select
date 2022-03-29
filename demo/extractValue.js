@@ -2,11 +2,11 @@
  * @param {string} Selector for auro-select to retrieve the value from.
  */
 const getValue = (selector) => {
-  const menu = document.querySelector(`${selector} auro-menu`);
+  const select = document.querySelector(`${selector}`);
 
-  if (menu.optionSelected) {
-    console.warn('Value selected:', menu.optionSelected.value);
-    alert(`Value selected: ${menu.optionSelected.value}`);
+  if (select.optionSelected) {
+    console.warn('Value selected:', select.optionSelected.value);
+    alert(`Value selected: ${select.optionSelected.value}`);
   } else {
     console.warn('Value selected:', null);
     alert(`Value selected: ${null}`);

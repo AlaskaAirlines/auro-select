@@ -24,6 +24,7 @@ import styleCssFixed from './style-fixed-css.js';
  * @prop {String} value - Value selected for the dropdown menu.
  * @prop {Boolean} error - When attribute is present element shows error state.
  * @prop {Boolean} disabled - When attribute is present element shows disabled state.
+ * @attr {Object} optionSelected - Specifies the current selected menuOption.
  * @slot - Default slot for the menu content.
  * @slot label - Defines the content of the label.
  * @slot helpText - Defines the content of the helpText.
@@ -36,6 +37,7 @@ class AuroSelect extends LitElement {
 
     this.placeholder = 'Please select option';
     this.items = Array.from(this.querySelectorAll('auro-menuoption'));
+    this.optionSelected = undefined;
   }
 
   // This function is to define props used within the scope of this component
@@ -49,6 +51,9 @@ class AuroSelect extends LitElement {
        */
       items: { type: Array },
 
+      optionSelected: {
+        type: Object
+      },
       value: {
         type: String,
         reflect: true
@@ -128,6 +133,7 @@ class AuroSelect extends LitElement {
     this.addEventListener('selectedOption', (evt) => {
       this.displayValue = evt.target.optionSelected.innerText;
       this.value = evt.target.optionSelected.value;
+      this.optionSelected = evt.target.optionSelected;
 
       if (this.dropdown.isPopoverVisible) {
         this.dropdown.hide();

@@ -31,7 +31,25 @@ A baseline `<auro-select>` using `<auro-menu>` and `<auro-menuoption>` elements.
 
 ### Property Examples
 
-#### `placeholder`
+#### value
+
+Use the `value` property to define a preset value on the `auro-select` element. The `value` of `auro-select` must match the `value` defined of a single `auro-menuoption`. Upon initially rendering the component, if the `value` does not match an `auro-menuoption`, the `value` of `auro-select` will be set to `undefined`.
+
+To pre-set the value of auro-select on load, use the `value` property. The `selected` attribute on auro-menuoption is designed to illustrate state in the DOM.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/presetValue.html) -->
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion lowProfile justifyRight>
+  <span slot="trigger">See code</span>
+
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/presetValue.html) -->
+<!-- AURO-GENERATED-CONTENT:END -->
+
+</auro-accordion>
+
+#### placeholder
 
 Use the `placeholder` string attribute to inject a custom placeholder option with the select element.
 
@@ -47,7 +65,7 @@ Use the `placeholder` string attribute to inject a custom placeholder option wit
 
 </auro-accordion>
 
-#### `error`
+#### error
 
 Use the `error` boolean attribute to toggle the error UI.
 
@@ -64,7 +82,7 @@ Use the `error` boolean attribute to toggle the error UI.
 
 </auro-accordion>
 
-#### `disabled`
+#### disabled
 
 Use the `disabled` boolean attribute to toggle the disabled UI.
 
@@ -84,7 +102,7 @@ Use the `disabled` boolean attribute to toggle the disabled UI.
 
 ### Slot Examples
 
-#### `label`
+#### label
 
 Use the `label` slot to give your users contextual information about their selection options. This `label` content is also helpful for assistive devices.
 
@@ -100,7 +118,7 @@ Use the `label` slot to give your users contextual information about their selec
 
 </auro-accordion>
 
-#### `helpText`
+#### helpText
 
 Use the `helptext` slot to provide additional information back to your user about their selection option(s).
 
@@ -117,23 +135,6 @@ Use the `helptext` slot to provide additional information back to your user abou
 </auro-accordion>
 
 ## Functional Examples
-
-## Pre-selected option
-
-Use the `selected` attribute on the `auro-menuoption` element to pre-select an option within a user's experience. This is from the [auro-menu](https://auro.alaskaair.com/components/auro/menu/api) API.
-
-<div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/presetValue.html) -->
-  <!-- AURO-GENERATED-CONTENT:END -->
-</div>
-
-<auro-accordion lowProfile justifyRight>
-  <span slot="trigger">See code</span>
-
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/presetValue.html) -->
-<!-- AURO-GENERATED-CONTENT:END -->
-
-</auro-accordion>
 
 ## Use option for placeholder
 

@@ -139,6 +139,27 @@ class AuroSelect extends LitElement {
         this.dropdown.hide();
       }
     });
+
+    /**
+     * When this.value is preset auro-menu.selectByValue(this.value) is called.
+     * However, if this.value does not match one of the menu options,
+     * auro-menu will notify via event. In this case, clear out this.value
+     * so that it is not storing an invalid value which can then later be returned
+     * with `auro-select.value`.
+     */
+    this.addEventListener('auroMenuSelectValueFailure', () => {
+      this.value = undefined;
+      this.removeAttribute('value');
+    });
+  }
+
+  updated() {
+
+    /** Check for preset value attribute.
+     * Have auro-menu attempt a selection of that value */
+    if (this.value !== this.displayValue) {
+      this.menu.selectByValue(this.value);
+    }
   }
 
   // When using auroElement, use the following attribute and function when hiding content from screen readers.

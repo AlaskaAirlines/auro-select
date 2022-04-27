@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.2.2](https://github.com/AlaskaAirlines/auro-select/compare/v2.2.1...v2.2.2) (2022-04-27)
+
+
+### Bug Fixes
+
+* **API:** change logic for when to run menu.selectByValue [#67](https://github.com/AlaskaAirlines/auro-select/issues/67) ([710a8d9](https://github.com/AlaskaAirlines/auro-select/commit/710a8d94073541fd0caa342c1915a5ef83938b7c))
+
 ## [2.2.1](https://github.com/AlaskaAirlines/auro-select/compare/v2.2.0...v2.2.1) (2022-04-19)
 
 

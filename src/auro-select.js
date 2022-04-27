@@ -153,12 +153,11 @@ class AuroSelect extends LitElement {
     });
   }
 
-  updated() {
-
-    /** Check for preset value attribute.
-     * Have auro-menu attempt a selection of that value */
-    if (this.value !== this.displayValue) {
-      this.menu.selectByValue(this.value);
+  updated(changedProperties) {
+    if (changedProperties.has('value')) {
+      if (this.value && (!this.optionSelected || this.value !== this.optionSelected.value)) {
+        this.menu.selectByValue(this.value);
+      }
     }
   }
 

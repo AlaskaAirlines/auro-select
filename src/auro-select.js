@@ -21,7 +21,7 @@ import styleCssFixed from './style-fixed-css.js';
  * The auro-select element is a wrapper for auro-dropdown and auro-menu to create a dropdown menu control.
  *
  * @prop {String} placeholder - Define placeholder text to display before a value is manually selected.
- * @prop {String} value - Value selected for the dropdown menu.
+ * @prop {String} value - Value selected for the component.
  * @prop {Boolean} error - When attribute is present element shows error state.
  * @prop {Boolean} disabled - When attribute is present element shows disabled state.
  * @attr {Object} optionSelected - Specifies the current selected menuOption.
@@ -155,9 +155,7 @@ class AuroSelect extends LitElement {
 
   updated(changedProperties) {
     if (changedProperties.has('value')) {
-      if (this.value && (!this.optionSelected || this.value !== this.optionSelected.value)) {
-        this.menu.selectByValue(this.value);
-      }
+      this.menu.value = this.value;
     }
   }
 

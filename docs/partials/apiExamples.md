@@ -15,12 +15,10 @@ This file is generated based on a template fetched from `./docs/partials/apiExam
 
 A baseline `<auro-select>` using `<auro-menu>` and `<auro-menuoption>` elements. Notice a default `Please select option` placeholder in the trigger.
 
-<div>
-  <div>
-    <div class="exampleWrapper">
-      <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
-      <!-- AURO-GENERATED-CONTENT:END -->
-    </div>
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
 
@@ -135,23 +133,6 @@ Use the `helptext` slot to provide additional information back to your user abou
 </auro-accordion>
 
 ## Functional Examples
-
-## Use option for placeholder
-
-In some cases, where selection of content is optional, you can use a `<auro-menuoption>` as a pre-selected option as a placeholder in the menu.
-
-<div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/presetOption.html) -->
-  <!-- AURO-GENERATED-CONTENT:END -->
-</div>
-
-<auro-accordion lowProfile justifyRight>
-  <span slot="trigger">See code</span>
-
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/presetOption.html) -->
-<!-- AURO-GENERATED-CONTENT:END -->
-
-</auro-accordion>
 
 ### Extract value
 

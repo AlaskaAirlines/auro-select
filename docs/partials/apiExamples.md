@@ -121,13 +121,13 @@ Use the `label` slot to give your users contextual information about their selec
 Use the `helptext` slot to provide additional information back to your user about their selection option(s).
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/helperText.html) -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/helpText.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/helperText.html) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/helpText.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>

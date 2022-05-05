@@ -280,10 +280,10 @@ Use the `label` slot to give your users contextual information about their selec
 Use the `helptext` slot to provide additional information back to your user about their selection option(s).
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/helperText.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/helperText.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/helpText.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/helpText.html -->
   <auro-select>
-    <span slot="helperText">Please select an option</span>
+    <span slot="helpText">Custom help text message.</span>
     <auro-menu>
       <auro-menuoption value="stops">Stops</auro-menuoption>
       <auro-menuoption value="price">Price</auro-menuoption>
@@ -297,12 +297,12 @@ Use the `helptext` slot to provide additional information back to your user abou
 </div>
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/helperText.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/helperText.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/helpText.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/helpText.html -->
 
 ```html
 <auro-select>
-  <span slot="helperText">Please select an option</span>
+  <span slot="helpText">Custom help text message.</span>
   <auro-menu>
     <auro-menuoption value="stops">Stops</auro-menuoption>
     <auro-menuoption value="price">Price</auro-menuoption>

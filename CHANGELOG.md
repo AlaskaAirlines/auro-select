@@ -1,5 +1,13 @@
 # Semantic Release Automated Changelog
 
+## [2.2.3](https://github.com/AlaskaAirlines/auro-select/compare/v2.2.2...v2.2.3) (2022-05-10)
+
+
+### Bug Fixes
+
+* **API:** update how pre-set value is handled [#69](https://github.com/AlaskaAirlines/auro-select/issues/69) ([fb47b4a](https://github.com/AlaskaAirlines/auro-select/commit/fb47b4ab6efac077b6c686fa8bd4b1ecf3bf5c23))
+* **demo:** correct attribute for broken example ([c640803](https://github.com/AlaskaAirlines/auro-select/commit/c64080310b9f10a4613d9f7755643c3efff0bf2f))
+
 ## [2.2.2](https://github.com/AlaskaAirlines/auro-select/compare/v2.2.1...v2.2.2) (2022-04-27)
 
 

@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [2.3.0](https://github.com/AlaskaAirlines/auro-select/compare/v2.2.3...v2.3.0) (2022-06-01)
+
+
+### Features
+
+* **icons:** support icons in option content [#64](https://github.com/AlaskaAirlines/auro-select/issues/64) ([bcc4bd7](https://github.com/AlaskaAirlines/auro-select/commit/bcc4bd780ca958f4741383c18ba771203be2ae03))
+
 ## [2.2.3](https://github.com/AlaskaAirlines/auro-select/compare/v2.2.2...v2.2.3) (2022-05-10)
 
 

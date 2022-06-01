@@ -131,7 +131,10 @@ class AuroSelect extends LitElement {
 
     // custom event listener from auro-menu fires with both 'click' and keypress events
     this.addEventListener('selectedOption', (evt) => {
-      this.displayValue = evt.target.optionSelected.innerText;
+      const dropdown = this.shadowRoot.querySelector('auro-dropdown');
+      const triggerContentEl = dropdown.querySelector('#triggerFocus');
+
+      triggerContentEl.innerHTML = evt.target.optionSelected.innerHTML;
       this.value = evt.target.optionSelected.value;
       this.optionSelected = evt.target.optionSelected;
 

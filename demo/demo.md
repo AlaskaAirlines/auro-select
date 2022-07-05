@@ -81,10 +81,10 @@ A baseline `<auro-select>` using `<auro-menu>` and `<auro-menuoption>` elements.
         <auro-icon label customColor category="health" name="covid-test">Covid Test</auro-icon>
       </auro-menuoption>
       <auro-menuoption value="health">
-        <auro-icon label customColor category="health" name="Health">Health</auro-icon>
+        <auro-icon label customColor category="health" name="health">Health</auro-icon>
       </auro-menuoption>
       <auro-menuoption value="mask">
-        <auro-icon label customColor category="health" name="Mask">Mask</auro-icon>
+        <auro-icon label customColor category="health" name="mask">Mask</auro-icon>
       </auro-menuoption>
       <auro-menuoption value="spraybottle">
         <auro-icon label customColor category="health" name="spraybottle">Spray Bottle</auro-icon>
@@ -108,10 +108,10 @@ A baseline `<auro-select>` using `<auro-menu>` and `<auro-menuoption>` elements.
       <auro-icon label customColor category="health" name="covid-test">Covid Test</auro-icon>
     </auro-menuoption>
     <auro-menuoption value="health">
-      <auro-icon label customColor category="health" name="Health">Health</auro-icon>
+      <auro-icon label customColor category="health" name="health">Health</auro-icon>
     </auro-menuoption>
     <auro-menuoption value="mask">
-      <auro-icon label customColor category="health" name="Mask">Mask</auro-icon>
+      <auro-icon label customColor category="health" name="mask">Mask</auro-icon>
     </auro-menuoption>
     <auro-menuoption value="spraybottle">
       <auro-icon label customColor category="health" name="spraybottle">Spray Bottle</auro-icon>

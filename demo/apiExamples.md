@@ -22,6 +22,12 @@ The auro-select element is a wrapper for auro-dropdown and auro-menu to create a
 | [placeholder](#placeholder)    | `placeholder`    | `String`  | "Please select option" | Define placeholder text to display before a value is manually selected. |
 | [value](#value)          | `value`          | `String`  |                        | Value selected for the component.                |
 
+## Events
+
+| Event              | Type               | Description                                      |
+|--------------------|--------------------|--------------------------------------------------|
+| `auroSelect-ready` | `CustomEvent<any>` | Notifies that the component has finished initializing. |
+
 ## Slots
 
 | Name       | Description                          |

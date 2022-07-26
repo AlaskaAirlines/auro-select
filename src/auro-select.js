@@ -6,6 +6,8 @@
 // If using litElement base class
 import { LitElement, html } from "lit-element";
 
+import '@aurodesignsystem/auro-dropdown';
+
 // If using auroElement base class
 // See instructions for importing auroElement base class https://git.io/JULq4
 // import { html, css } from "lit-element";
@@ -28,6 +30,7 @@ import styleCssFixed from './style-fixed-css.js';
  * @slot - Default slot for the menu content.
  * @slot label - Defines the content of the label.
  * @slot helpText - Defines the content of the helpText.
+ * @fires auroSelect-ready - Notifies that the component has finished initializing.
  */
 
 // build the component class
@@ -78,7 +81,153 @@ class AuroSelect extends LitElement {
   }
 
   /**
+   * Binds all behavior needed to the dropdown after rendering.
    * @private
+   * @returns {void}
+   */
+  configureDropdown() {
+    this.dropdown = this.shadowRoot.querySelector('auro-dropdown');
+
+    this.dropdown.addEventListener('auroDropdown-ready', () => {
+      this.auroDropdownReady = true;
+    });
+  }
+
+  /**
+   * Binds all behavior needed to the menu after rendering.
+   * @private
+   * @returns {void}
+   */
+  configureMenu() {
+    this.items = this.querySelectorAll('auro-menuoption');
+
+    this.menu = this.querySelector('auro-menu');
+
+    this.menu.addEventListener('auroMenu-ready', () => {
+      this.auroMenuReady = true;
+    });
+
+    this.addEventListener('auroMenu-activatedOption', (evt) => {
+      this.optionActive = evt.detail;
+    });
+
+    this.addEventListener('selectedOption', (evt) => {
+      const dropdown = this.shadowRoot.querySelector('auro-dropdown');
+      const triggerContentEl = dropdown.querySelector('#triggerFocus');
+
+      triggerContentEl.innerHTML = evt.target.optionSelected.innerHTML;
+      this.value = evt.target.optionSelected.value;
+      this.optionSelected = evt.target.optionSelected;
+
+      if (this.dropdown.isPopoverVisible) {
+        this.dropdown.hide();
+      }
+    });
+
+    /**
+     * When this.value is preset auro-menu.selectByValue(this.value) is called.
+     * However, if this.value does not match one of the menu options,
+     * auro-menu will notify via event. In this case, clear out this.value
+     * so that it is not storing an invalid value which can then later be returned
+     * with `auro-select.value`.
+     */
+    this.addEventListener('auroMenu-selectValueFailure', () => {
+      this.value = undefined;
+      this.removeAttribute('value');
+    });
+  }
+
+  /**
+   * Binds all behavior needed to the component after rendering.
+   * @private
+   * @returns {void}
+   */
+  configureSelect() {
+    this.addEventListener('keydown', (evt) => {
+      if (evt.key === 'ArrowUp') {
+        evt.preventDefault();
+        this.menu.selectNextItem('up');
+      }
+
+      if (evt.key === 'ArrowDown') {
+        evt.preventDefault();
+        this.menu.selectNextItem('down');
+      }
+
+      if (evt.key === 'Enter') {
+        if (!this.dropdown.isPopoverVisible) {
+          evt.preventDefault();
+          this.menu.makeSelection();
+        }
+      }
+
+      if (evt.key === 'Tab') {
+        this.dropdown.hide();
+      }
+    });
+  }
+
+  /**
+   * Marks the component as ready and sends event.
+   * @private
+   * @returns {void}
+   */
+  notifyReady() {
+    this.ready = true;
+
+    this.dispatchEvent(new CustomEvent('auroSelect-ready', {
+      bubbles: true,
+      cancelable: false,
+      composed: true,
+    }));
+  }
+
+  /**
+   * Monitors readiness of peer dependencies and begins work that should only start when ready.
+   * @private
+   * @returns {void}
+   */
+  async checkReadiness() {
+    if (this.auroDropdownReady && this.auroMenuReady) {
+      this.readyActions();
+      this.notifyReady();
+    } else {
+      // Start a retry counter to limit the retry count
+      if (!this.readyRetryCount && this.readyRetryCount !== 0) {
+        this.readyRetryCount = 0;
+      } else {
+        this.readyRetryCount += 1;
+      }
+
+      const readyTimer = 0;
+      const readyRetryLimit = 200;
+
+      if (this.readyRetryCount <= readyRetryLimit) {
+
+        const sleep = (time) => new Promise((resolve) => setTimeout(resolve, time));
+
+        await sleep(readyTimer);
+        this.checkReadiness();
+      }
+    }
+  }
+
+  /**
+   * Functionality that should not be performed until the combobox is in a ready state.
+   * @private
+   * @returns {void}
+   */
+  readyActions() {
+    // Set the initial value in auro-menu if defined
+    if (this.hasAttribute('value') && this.getAttribute('value').length > 0) {
+      this.menu.value = this.value;
+    }
+  }
+
+  /**
+   * Handle element attributes on update
+   * @private
+   * @returns {void}
    */
   performUpdate() {
     super.performUpdate();
@@ -102,58 +251,12 @@ class AuroSelect extends LitElement {
 
   // lifecycle runs only after the element's DOM has been updated the first time
   firstUpdated() {
-    this.items = this.querySelectorAll('auro-menuoption');
-    this.dropdown = this.shadowRoot.querySelector('auro-dropdown');
-    this.menu = this.querySelector('auro-menu');
+    this.configureDropdown();
+    this.configureMenu();
+    this.configureSelect();
 
-    this.addEventListener('keydown', (evt) => {
-      if (evt.key === 'ArrowUp') {
-        evt.preventDefault();
-        this.menu.selectNextItem('up');
-      }
+    this.checkReadiness();
 
-      if (evt.key === 'ArrowDown') {
-        evt.preventDefault();
-        this.menu.selectNextItem('down');
-      }
-
-      if (evt.key === 'Enter') {
-        if (!this.dropdown.isPopoverVisible) {
-          evt.preventDefault();
-          this.menu.makeSelection();
-        }
-      }
-
-      if (evt.key === 'Tab') {
-        this.dropdown.hide();
-      }
-    });
-
-    // custom event listener from auro-menu fires with both 'click' and keypress events
-    this.addEventListener('selectedOption', (evt) => {
-      const dropdown = this.shadowRoot.querySelector('auro-dropdown');
-      const triggerContentEl = dropdown.querySelector('#triggerFocus');
-
-      triggerContentEl.innerHTML = evt.target.optionSelected.innerHTML;
-      this.value = evt.target.optionSelected.value;
-      this.optionSelected = evt.target.optionSelected;
-
-      if (this.dropdown.isPopoverVisible) {
-        this.dropdown.hide();
-      }
-    });
-
-    /**
-     * When this.value is preset auro-menu.selectByValue(this.value) is called.
-     * However, if this.value does not match one of the menu options,
-     * auro-menu will notify via event. In this case, clear out this.value
-     * so that it is not storing an invalid value which can then later be returned
-     * with `auro-select.value`.
-     */
-    this.addEventListener('auroMenuSelectValueFailure', () => {
-      this.value = undefined;
-      this.removeAttribute('value');
-    });
   }
 
   updated(changedProperties) {

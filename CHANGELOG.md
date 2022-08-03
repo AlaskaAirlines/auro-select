@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [2.4.0](https://github.com/AlaskaAirlines/auro-select/compare/v2.3.0...v2.4.0) (2022-08-03)
+
+
+### Features
+
+* **API:** add ready state checks and all automated tests [#38](https://github.com/AlaskaAirlines/auro-select/issues/38) [#75](https://github.com/AlaskaAirlines/auro-select/issues/75) ([97169e9](https://github.com/AlaskaAirlines/auro-select/commit/97169e94c3c24f755051151838efded5091f434d))
+
 # [2.3.0](https://github.com/AlaskaAirlines/auro-select/compare/v2.2.3...v2.3.0) (2022-06-01)
 
 

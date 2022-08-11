@@ -225,7 +225,7 @@ class AuroSelect extends LitElement {
   }
 
   /**
-   * Handle element attributes on update
+   * Handle element attributes on update.
    * @private
    * @returns {void}
    */
@@ -275,6 +275,8 @@ class AuroSelect extends LitElement {
         <auro-dropdown
           for="selectmenu"
           toggle
+          matchWidth
+          nocheckmark
           common>
           <span slot="trigger" aria-haspopup="true" id="triggerFocus">
             ${this.value ? this.displayValue : html`<span class="placeholder">${this.placeholder}</span>`}

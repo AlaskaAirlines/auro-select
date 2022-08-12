@@ -261,12 +261,6 @@ class AuroSelect extends LitElement {
       }
     }
 
-    if (this.checkmark) {
-      this.querySelectorAll('auro-menu').forEach((menu) => menu.removeAttribute('nocheckmark'));
-    } else {
-      this.querySelectorAll('auro-menu').forEach((menu) => menu.setAttribute('nocheckmark', ''));
-    }
-
     if (this.required && this.value) {
       this.shadowRoot.querySelector('auro-dropdown').removeAttribute('error');
     }

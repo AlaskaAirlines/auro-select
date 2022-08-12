@@ -8,6 +8,8 @@ import { LitElement, html } from "lit-element";
 
 import '@aurodesignsystem/auro-dropdown';
 
+/* eslint-disable max-lines */
+
 // If using auroElement base class
 // See instructions for importing auroElement base class https://git.io/JULq4
 // import { html, css } from "lit-element";
@@ -26,6 +28,7 @@ import styleCssFixed from './style-fixed-css.js';
  * @prop {String} value - Value selected for the component.
  * @prop {Boolean} error - When attribute is present element shows error state.
  * @prop {Boolean} disabled - When attribute is present element shows disabled state.
+ * @prop {Boolean} checkmark - When attribute is present auro-menu will apply checkmarks to selected options.
  * @attr {Object} optionSelected - Specifies the current selected menuOption.
  * @slot - Default slot for the menu content.
  * @slot label - Defines the content of the label.
@@ -66,6 +69,10 @@ class AuroSelect extends LitElement {
         reflect: true
       },
       disabled: {
+        type: Boolean,
+        reflect: true
+      },
+      checkmark: {
         type: Boolean,
         reflect: true
       },
@@ -244,6 +251,22 @@ class AuroSelect extends LitElement {
       this.shadowRoot.querySelector('auro-dropdown').removeAttribute('disabled');
     }
 
+    this.menus = [...this.querySelectorAll('auro-menu')];
+
+    for (let index = 0; index < this.menus.length; index += 1) {
+      if (this.checkmark) {
+        this.menus[index].removeAttribute('nocheckmark');
+      } else {
+        this.menus[index].setAttribute('nocheckmark', '');
+      }
+    }
+
+    if (this.checkmark) {
+      this.querySelectorAll('auro-menu').forEach((menu) => menu.removeAttribute('nocheckmark'));
+    } else {
+      this.querySelectorAll('auro-menu').forEach((menu) => menu.setAttribute('nocheckmark', ''));
+    }
+
     if (this.required && this.value) {
       this.shadowRoot.querySelector('auro-dropdown').removeAttribute('error');
     }
@@ -276,7 +299,6 @@ class AuroSelect extends LitElement {
           for="selectmenu"
           toggle
           matchWidth
-          nocheckmark
           common>
           <span slot="trigger" aria-haspopup="true" id="triggerFocus">
             ${this.value ? this.displayValue : html`<span class="placeholder">${this.placeholder}</span>`}

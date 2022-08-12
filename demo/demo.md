@@ -128,6 +128,105 @@ A baseline `<auro-select>` using `<auro-menu>` and `<auro-menuoption>` elements.
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/withSubmenus.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/withSubmenus.html -->
   <auro-select>
+    <auro-menu nocheckmark id="root">
+      <auro-menuoption value="stops">Stops</auro-menuoption>
+      <auro-menuoption value="price">Price</auro-menuoption>
+      <auro-menuoption value="duration">Duration</auro-menuoption>
+      <hr>
+      <auro-menu id="alpha-one">
+        <auro-menuoption value="apples">Apples</auro-menuoption>
+        <auro-menuoption value="oranges">Oranges</auro-menuoption>
+        <auro-menuoption value="pears">Pears</auro-menuoption>
+        <auro-menuoption value="grapes">Grapes</auro-menuoption>
+        <auro-menuoption value="kiwi">Kiwi</auro-menuoption>
+        <hr>
+        <auro-menu id="beta-one">
+          <auro-menuoption value="person">Person</auro-menuoption>
+          <auro-menuoption value="woman">Woman</auro-menuoption>
+          <auro-menuoption value="man">Man</auro-menuoption>
+          <auro-menuoption value="camera">Camera</auro-menuoption>
+          <auro-menuoption value="tv">TV</auro-menuoption>
+        </auro-menu>
+      </auro-menu>
+      <hr>
+      <auro-menuoption value="departure">Departure</auro-menuoption>
+      <auro-menuoption value="arrival">Arrival</auro-menuoption>
+      <hr>
+      <auro-menu id="alpha-two">
+        <auro-menuoption value="cars">Cars</auro-menuoption>
+        <auro-menuoption value="trucks">Trucks</auro-menuoption>
+        <auro-menuoption value="boats">Boats</auro-menuoption>
+        <auro-menuoption value="planes">Planes</auro-menuoption>
+        <auro-menuoption value="motorcycles">Motorcycles</auro-menuoption>
+        <auro-menu id="beta-two">
+          <auro-menuoption value="person">Person</auro-menuoption>
+          <auro-menuoption value="woman">Woman</auro-menuoption>
+          <auro-menuoption value="man">Man</auro-menuoption>
+          <auro-menuoption value="camera">Camera</auro-menuoption>
+          <auro-menuoption value="tv">TV</auro-menuoption>
+        </auro-menu>
+      </auro-menu>
+    </auro-menu>
+  </auro-select>
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion lowProfile justifyRight>
+  <span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/withSubmenus.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/withSubmenus.html -->
+
+```html
+<auro-select>
+  <auro-menu nocheckmark id="root">
+    <auro-menuoption value="stops">Stops</auro-menuoption>
+    <auro-menuoption value="price">Price</auro-menuoption>
+    <auro-menuoption value="duration">Duration</auro-menuoption>
+    <hr>
+    <auro-menu id="alpha-one">
+      <auro-menuoption value="apples">Apples</auro-menuoption>
+      <auro-menuoption value="oranges">Oranges</auro-menuoption>
+      <auro-menuoption value="pears">Pears</auro-menuoption>
+      <auro-menuoption value="grapes">Grapes</auro-menuoption>
+      <auro-menuoption value="kiwi">Kiwi</auro-menuoption>
+      <hr>
+      <auro-menu id="beta-one">
+        <auro-menuoption value="person">Person</auro-menuoption>
+        <auro-menuoption value="woman">Woman</auro-menuoption>
+        <auro-menuoption value="man">Man</auro-menuoption>
+        <auro-menuoption value="camera">Camera</auro-menuoption>
+        <auro-menuoption value="tv">TV</auro-menuoption>
+      </auro-menu>
+    </auro-menu>
+    <hr>
+    <auro-menuoption value="departure">Departure</auro-menuoption>
+    <auro-menuoption value="arrival">Arrival</auro-menuoption>
+    <hr>
+    <auro-menu id="alpha-two">
+      <auro-menuoption value="cars">Cars</auro-menuoption>
+      <auro-menuoption value="trucks">Trucks</auro-menuoption>
+      <auro-menuoption value="boats">Boats</auro-menuoption>
+      <auro-menuoption value="planes">Planes</auro-menuoption>
+      <auro-menuoption value="motorcycles">Motorcycles</auro-menuoption>
+      <auro-menu id="beta-two">
+        <auro-menuoption value="person">Person</auro-menuoption>
+        <auro-menuoption value="woman">Woman</auro-menuoption>
+        <auro-menuoption value="man">Man</auro-menuoption>
+        <auro-menuoption value="camera">Camera</auro-menuoption>
+        <auro-menuoption value="tv">TV</auro-menuoption>
+      </auro-menu>
+    </auro-menu>
+  </auro-menu>
+</auro-select>
+```
+<!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
+
+### Example with checkmark for selected option
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/withCheckmark.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/withCheckmark.html -->
+  <auro-select checkmark>
     <auro-menu>
       <auro-menuoption value="stops">Stops</auro-menuoption>
       <auro-menuoption value="price">Price</auro-menuoption>
@@ -165,11 +264,11 @@ A baseline `<auro-select>` using `<auro-menu>` and `<auro-menuoption>` elements.
 </div>
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/withSubmenus.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/withSubmenus.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/withCheckmark.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/withCheckmark.html -->
 
 ```html
-<auro-select>
+<auro-select checkmark>
   <auro-menu>
     <auro-menuoption value="stops">Stops</auro-menuoption>
     <auro-menuoption value="price">Price</auro-menuoption>

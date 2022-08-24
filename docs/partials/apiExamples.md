@@ -36,13 +36,13 @@ Use the `value` property to define a preset value on the `auro-select` element. 
 To pre-set the value of auro-select on load, use the `value` property. The `selected` attribute on auro-menuoption is designed to illustrate state in the DOM.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/presetValue.html) -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/value.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/presetValue.html) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/value.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>

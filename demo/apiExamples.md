@@ -87,34 +87,44 @@ Use the `value` property to define a preset value on the `auro-select` element. 
 To pre-set the value of auro-select on load, use the `value` property. The `selected` attribute on auro-menuoption is designed to illustrate state in the DOM.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/presetValue.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/presetValue.html -->
-  <auro-select value="price">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/value.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/value.html -->
+  <auro-button id="validValueExampleBtn">Set Value to Valid Option</auro-button>
+  <auro-button id="invalidValueExampleBtn">Set Value to Invalid Option</auro-button>
+  <auro-button id="undefinedValueExampleBtn">Set Value to Undefined</auro-button>
+  <br/><br/>
+  <auro-select id="valueExample" value="price">
+    <span slot="label">Name</span>
     <auro-menu>
-      <auro-menuoption value="stops">Stops</auro-menuoption>
-      <auro-menuoption value="price">Price</auro-menuoption>
-      <auro-menuoption value="duration">Duration</auro-menuoption>
-      <auro-menuoption value="departure">Departure</auro-menuoption>
-      <auro-menuoption value="arrival">Arrival</auro-menuoption>
-      <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
+      <auro-menuoption id="option-0" value="stops">Stops</auro-menuoption>
+      <auro-menuoption id="option-1" value="price">Price</auro-menuoption>
+      <auro-menuoption id="option-2" value="duration">Duration</auro-menuoption>
+      <auro-menuoption id="option-3" value="departure">Departure</auro-menuoption>
+      <auro-menuoption id="option-4" value="arrival">Arrival</auro-menuoption>
+      <auro-menuoption id="option-5" value="prefer alaska">Prefer Alaska</auro-menuoption>
     </auro-menu>
   </auro-select>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/presetValue.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/presetValue.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/value.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/value.html -->
 
 ```html
-<auro-select value="price">
+<auro-button id="validValueExampleBtn">Set Value to Valid Option</auro-button>
+<auro-button id="invalidValueExampleBtn">Set Value to Invalid Option</auro-button>
+<auro-button id="undefinedValueExampleBtn">Set Value to Undefined</auro-button>
+<br/><br/>
+<auro-select id="valueExample" value="price">
+  <span slot="label">Name</span>
   <auro-menu>
-    <auro-menuoption value="stops">Stops</auro-menuoption>
-    <auro-menuoption value="price">Price</auro-menuoption>
-    <auro-menuoption value="duration">Duration</auro-menuoption>
-    <auro-menuoption value="departure">Departure</auro-menuoption>
-    <auro-menuoption value="arrival">Arrival</auro-menuoption>
-    <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
+    <auro-menuoption id="option-0" value="stops">Stops</auro-menuoption>
+    <auro-menuoption id="option-1" value="price">Price</auro-menuoption>
+    <auro-menuoption id="option-2" value="duration">Duration</auro-menuoption>
+    <auro-menuoption id="option-3" value="departure">Departure</auro-menuoption>
+    <auro-menuoption id="option-4" value="arrival">Arrival</auro-menuoption>
+    <auro-menuoption id="option-5" value="prefer alaska">Prefer Alaska</auro-menuoption>
   </auro-menu>
 </auro-select>
 ```

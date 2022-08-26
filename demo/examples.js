@@ -40,3 +40,14 @@ import { getValue } from './extractValue';
     getValue(elem);
   });
 }());
+
+/**
+ * Programmatically show the dropdown
+ */
+ import { setValue } from './../apiExamples/value';
+
+ (function(){
+   initializeExample('#valueExample', function(elem) {
+    setValue(elem);
+   });
+ }());

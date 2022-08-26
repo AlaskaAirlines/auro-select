@@ -129,6 +129,25 @@ To pre-set the value of auro-select on load, use the `value` property. The `sele
 </auro-select>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/value.js) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/value.js -->
+
+```js
+export function setValue(elem) {
+  document.querySelector('#validValueExampleBtn').addEventListener('click', () => {
+    elem.value = 'arrival';
+  })
+
+  document.querySelector('#invalidValueExampleBtn').addEventListener('click', () => {
+    elem.value = 'flight course';
+  })
+
+  document.querySelector('#undefinedValueExampleBtn').addEventListener('click', () => {
+    elem.value = undefined;
+  })
+}
+```
+<!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
 #### placeholder

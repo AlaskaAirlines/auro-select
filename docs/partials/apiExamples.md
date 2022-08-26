@@ -45,6 +45,9 @@ To pre-set the value of auro-select on load, use the `value` property. The `sele
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/value.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/value.js) -->
+<!-- AURO-GENERATED-CONTENT:END -->
+
 </auro-accordion>
 
 #### placeholder

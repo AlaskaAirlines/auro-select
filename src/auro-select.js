@@ -225,7 +225,7 @@ class AuroSelect extends LitElement {
   }
 
   /**
-   * Handle element attributes on update
+   * Handle element attributes on update.
    * @private
    * @returns {void}
    */

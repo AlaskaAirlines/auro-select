@@ -1,10 +1,6 @@
-setTimeout(() => {
-  let selectValueAlertEl = document.querySelector('auro-select#valueAlert');
-
-  if (selectValueAlertEl) {
-    selectValueAlertEl.addEventListener('selectedOption', () => {
-      console.warn('Value selected:', selectValueAlertEl.optionSelected.value);
-      alert(`Value selected: ${selectValueAlertEl.optionSelected.value}`);
-    });
-  }
-}, 500);
+export function valueAlert(elem) {
+  elem.addEventListener('selectedOption', () => {
+    console.warn('Select value changed to:', elem.value);
+    console.warn('Select optionSelected changed to:', elem.optionSelected);
+  })
+}

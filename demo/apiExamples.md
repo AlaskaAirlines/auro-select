@@ -326,7 +326,7 @@ Use the `helptext` slot to provide additional information back to your user abou
 
 ### Extract value
 
-The following example illustrates how a user may query the `.value` of the `auro-menu` element.
+The following example illustrates how a user may query the `element.value` or `element.optionSelected` for the current value or complete option object that is selected.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/valueExtraction.html) -->
@@ -341,7 +341,7 @@ The following example illustrates how a user may query the `.value` of the `auro
       <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
     </auro-menu>
   </auro-select>
-  <auro-button onclick="getValue('#valueExtraction');">Get current value</auro-button>
+  <auro-button id="valueExtractionBtn">Get current value</auro-button>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion lowProfile justifyRight>
@@ -350,19 +350,13 @@ The following example illustrates how a user may query the `.value` of the `auro
 <!-- The below code snippet is automatically added from ./../../demo/extractValue.js -->
 
 ```js
-/**
- * @param {string} Selector for auro-select to retrieve the value from.
- */
-const getValue = (selector) => {
-  const select = document.querySelector(`${selector}`);
+export function getValue(elem) {
+  const btn = document.querySelector('#valueExtractionBtn');
 
-  if (select.optionSelected) {
-    console.warn('Value selected:', select.optionSelected.value);
-    alert(`Value selected: ${select.optionSelected.value}`);
-  } else {
-    console.warn('Value selected:', null);
-    alert(`Value selected: ${null}`);
-  }
+  btn.addEventListener('click', () => {
+    console.warn('Value selected:', elem.value);
+    console.warn('Option selected:', elem.optionSelected);
+  })
 }
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
@@ -380,14 +374,14 @@ const getValue = (selector) => {
     <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
   </auro-menu>
 </auro-select>
-<auro-button onclick="getValue('#valueExtraction');">Get current value</auro-button>
+<auro-button id="valueExtractionBtn">Get current value</auro-button>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
 ### Watch for value changes
 
-The following example listens for the `selectOption` custom event from the `<auro-menu>` APi. Once triggered, the custom event will return an object `{value: any}`.
+The following example listens for the `selectedOption` event. Once triggered, `element.value` or `element.optionSelected` may be queried for the new value or complete option object.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/valueAlert.html) -->
@@ -410,16 +404,12 @@ The following example listens for the `selectOption` custom event from the `<aur
 <!-- The below code snippet is automatically added from ./../../demo/alertValue.js -->
 
 ```js
-setTimeout(() => {
-  let selectValueAlertEl = document.querySelector('auro-select#valueAlert');
-
-  if (selectValueAlertEl) {
-    selectValueAlertEl.addEventListener('selectedOption', () => {
-      console.warn('Value selected:', selectValueAlertEl.optionSelected.value);
-      alert(`Value selected: ${selectValueAlertEl.optionSelected.value}`);
-    });
-  }
-}, 500);
+export function valueAlert(elem) {
+  elem.addEventListener('selectedOption', () => {
+    console.warn('Select value changed to:', elem.value);
+    console.warn('Select optionSelected changed to:', elem.optionSelected);
+  })
+}
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/valueAlert.html) -->

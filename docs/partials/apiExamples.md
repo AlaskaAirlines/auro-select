@@ -136,7 +136,7 @@ Use the `helptext` slot to provide additional information back to your user abou
 
 ### Extract value
 
-The following example illustrates how a user may query the `.value` of the `auro-menu` element.
+The following example illustrates how a user may query the `element.value` or `element.optionSelected` for the current value or complete option object that is selected.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/valueExtraction.html) -->
@@ -157,7 +157,7 @@ The following example illustrates how a user may query the `.value` of the `auro
 
 ### Watch for value changes
 
-The following example listens for the `selectOption` custom event from the `<auro-menu>` APi. Once triggered, the custom event will return an object `{value: any}`.
+The following example listens for the `selectedOption` event. Once triggered, `element.value` or `element.optionSelected` may be queried for the new value or complete option object.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/valueAlert.html) -->

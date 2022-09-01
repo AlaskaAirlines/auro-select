@@ -6,7 +6,7 @@ The auro-select element is a wrapper for auro-dropdown and auro-menu to create a
 
 | Property         | Attribute        | Type      | Default                | Description                                      |
 |------------------|------------------|-----------|------------------------|--------------------------------------------------|
-| `checkmark`      | `checkmark`      | `Boolean` |                        | When attribute is present auro-menu will apply checkmarks to selected options. |
+| `checkmark`      | `checkmark`      | `Boolean` | true                   | When attribute is present auro-menu will apply checkmarks to selected options. |
 | `disabled`       | `disabled`       | `Boolean` |                        | When attribute is present element shows disabled state. |
 | `error`          | `error`          | `Boolean` |                        | When attribute is present element shows error state. |
 | `optionSelected` | `optionSelected` | `Object`  | "undefined"            | Specifies the current selected menuOption.       |

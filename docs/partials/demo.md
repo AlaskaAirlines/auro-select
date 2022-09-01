@@ -58,17 +58,17 @@ A baseline `<auro-select>` using `<auro-menu>` and `<auro-menuoption>` elements.
 
 </auro-accordion>
 
-### Example with checkmark for selected option
+### Example with no checkmark
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/withCheckmark.html) -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/withoutCheckmark.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/withCheckmark.html) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/withoutCheckmark.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>

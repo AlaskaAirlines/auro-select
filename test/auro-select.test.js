@@ -85,18 +85,18 @@ describe('auro-select', () => {
     await expect(el.hasAttribute('value')).to.be.false;
   });
 
-  it('default to nocheckmark on selected option', async () => {
+  it('default to checkmark on selected option', async () => {
     const el = await defaultFixture();
 
     const menu = el.querySelector('auro-menu');
-    await expect(menu.hasAttribute('nocheckmark')).to.be.true;
+    await expect(menu.hasAttribute('nocheckmark')).to.be.false;
   });
 
-  it('selected options have checkmark when checkmark attribute is present', async () => {
-    const el = await checkmarkFixture();
+  it('selected options have nocheckmark when nocheckmark attribute is present', async () => {
+    const el = await noCheckmarkFixture();
 
     const menu = el.querySelector('auro-menu');
-    await expect(menu.hasAttribute('nocheckmark')).to.be.false;
+    await expect(menu.hasAttribute('nocheckmark')).to.be.true;
   });
 });
 
@@ -124,11 +124,11 @@ async function presetValueFixture() {
   `);
 }
 
-async function checkmarkFixture() {
+async function noCheckmarkFixture() {
   return await fixture(html`
-  <auro-select checkmark>
+  <auro-select>
     <span slot="label">Name</span>
-    <auro-menu>
+    <auro-menu nocheckmark>
       <auro-menuoption value="Apples" id="option-0">Apples</auro-menuoption>
       <auro-menuoption value="Oranges" id="option-1">Oranges</auro-menuoption>
     </auro-menu>

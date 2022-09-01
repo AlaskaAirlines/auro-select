@@ -44,6 +44,7 @@ class AuroSelect extends LitElement {
     this.placeholder = 'Please select option';
     this.items = Array.from(this.querySelectorAll('auro-menuoption'));
     this.optionSelected = undefined;
+    this.checkmark = true;
   }
 
   // This function is to define props used within the scope of this component
@@ -254,10 +255,8 @@ class AuroSelect extends LitElement {
     this.menus = [...this.querySelectorAll('auro-menu')];
 
     for (let index = 0; index < this.menus.length; index += 1) {
-      if (this.checkmark) {
-        this.menus[index].removeAttribute('nocheckmark');
-      } else {
-        this.menus[index].setAttribute('nocheckmark', '');
+      if (this.menus[index].hasAttribute('nocheckmark')) {
+        this.checkmark = false;
       }
     }
 

@@ -274,10 +274,7 @@ class AuroSelect extends LitElement {
       <div>
         <auro-dropdown
           for="selectmenu"
-          toggle
-          inset
-          bordered
-          rounded
+          common
           chevron>
           <span slot="trigger" aria-haspopup="true" id="triggerFocus">
             ${this.value ? this.displayValue : html`<span class="placeholder">${this.placeholder}</span>`}

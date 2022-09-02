@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.4.2](https://github.com/AlaskaAirlines/auro-select/compare/v2.4.1...v2.4.2) (2022-09-02)
+
+
+### Bug Fixes
+
+* **example:** add additional functionality to value example [#89](https://github.com/AlaskaAirlines/auro-select/issues/89) ([3d72fe0](https://github.com/AlaskaAirlines/auro-select/commit/3d72fe07a526bb98bf8659cf462a590db9e0d197))
+
 ## [2.4.1](https://github.com/AlaskaAirlines/auro-select/compare/v2.4.0...v2.4.1) (2022-09-02)
 
 

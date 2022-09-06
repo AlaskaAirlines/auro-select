@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.4.3](https://github.com/AlaskaAirlines/auro-select/compare/v2.4.2...v2.4.3) (2022-09-06)
+
+
+### Bug Fixes
+
+* **value:** correct value stored when selecting from menu [#95](https://github.com/AlaskaAirlines/auro-select/issues/95) ([191fbf9](https://github.com/AlaskaAirlines/auro-select/commit/191fbf95dfc90d6bbee661a337f18e6a6bde7f9e))
+
 ## [2.4.2](https://github.com/AlaskaAirlines/auro-select/compare/v2.4.1...v2.4.2) (2022-09-02)
 
 

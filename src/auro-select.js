@@ -116,6 +116,7 @@ class AuroSelect extends LitElement {
       const triggerContentEl = dropdown.querySelector('#triggerFocus');
 
       this.optionSelected = this.menu.optionSelected;
+      this.value = this.optionSelected.value;
       triggerContentEl.innerHTML = this.optionSelected.innerHTML;
 
       this.removeAttribute('error');

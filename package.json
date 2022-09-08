@@ -26,7 +26,7 @@
   "peerDependencies": {
     "@alaskaairux/design-tokens": "^3.5.0",
     "@alaskaairux/webcorestylesheets": "^3.7.3",
-    "@aurodesignsystem/auro-dropdown": "^2.8.0",
+    "@aurodesignsystem/auro-dropdown": "^2.9.0",
     "@aurodesignsystem/auro-menu": "^3.9.0",
     "focus-visible": "^5.2.0"
   },

@@ -13,6 +13,17 @@
   text-align: left;
 }
 
+:host {
+  auro-dropdown {
+    --trigger-height: 40px;
+
+    &::part(trigger) {
+      min-height: var(--trigger-height);
+      max-height: var(--trigger-height);
+    }
+  }
+}
+
 :host([disabled]) {
   * {
     opacity: .7;

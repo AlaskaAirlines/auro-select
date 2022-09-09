@@ -88,36 +88,65 @@ Use the `value` property to define a preset value on the `auro-select` element. 
 To pre-set the value of auro-select on load, use the `value` property. The `selected` attribute on auro-menuoption is designed to illustrate state in the DOM.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/presetValue.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/presetValue.html -->
-  <auro-select value="price">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/value.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/value.html -->
+  <auro-button id="validValueExampleBtn">Set Value to Valid Option</auro-button>
+  <auro-button id="invalidValueExampleBtn">Set Value to Invalid Option</auro-button>
+  <auro-button id="undefinedValueExampleBtn">Set Value to Undefined</auro-button>
+  <br/><br/>
+  <auro-select id="valueExample" value="price">
+    <span slot="label">Name</span>
     <auro-menu>
-      <auro-menuoption value="stops">Stops</auro-menuoption>
-      <auro-menuoption value="price">Price</auro-menuoption>
-      <auro-menuoption value="duration">Duration</auro-menuoption>
-      <auro-menuoption value="departure">Departure</auro-menuoption>
-      <auro-menuoption value="arrival">Arrival</auro-menuoption>
-      <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
+      <auro-menuoption id="option-0" value="stops">Stops</auro-menuoption>
+      <auro-menuoption id="option-1" value="price">Price</auro-menuoption>
+      <auro-menuoption id="option-2" value="duration">Duration</auro-menuoption>
+      <auro-menuoption id="option-3" value="departure">Departure</auro-menuoption>
+      <auro-menuoption id="option-4" value="arrival">Arrival</auro-menuoption>
+      <auro-menuoption id="option-5" value="prefer alaska">Prefer Alaska</auro-menuoption>
     </auro-menu>
   </auro-select>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/presetValue.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/presetValue.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/value.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/value.html -->
 
 ```html
-<auro-select value="price">
+<auro-button id="validValueExampleBtn">Set Value to Valid Option</auro-button>
+<auro-button id="invalidValueExampleBtn">Set Value to Invalid Option</auro-button>
+<auro-button id="undefinedValueExampleBtn">Set Value to Undefined</auro-button>
+<br/><br/>
+<auro-select id="valueExample" value="price">
+  <span slot="label">Name</span>
   <auro-menu>
-    <auro-menuoption value="stops">Stops</auro-menuoption>
-    <auro-menuoption value="price">Price</auro-menuoption>
-    <auro-menuoption value="duration">Duration</auro-menuoption>
-    <auro-menuoption value="departure">Departure</auro-menuoption>
-    <auro-menuoption value="arrival">Arrival</auro-menuoption>
-    <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
+    <auro-menuoption id="option-0" value="stops">Stops</auro-menuoption>
+    <auro-menuoption id="option-1" value="price">Price</auro-menuoption>
+    <auro-menuoption id="option-2" value="duration">Duration</auro-menuoption>
+    <auro-menuoption id="option-3" value="departure">Departure</auro-menuoption>
+    <auro-menuoption id="option-4" value="arrival">Arrival</auro-menuoption>
+    <auro-menuoption id="option-5" value="prefer alaska">Prefer Alaska</auro-menuoption>
   </auro-menu>
 </auro-select>
+```
+<!-- AURO-GENERATED-CONTENT:END -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/value.js) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/value.js -->
+
+```js
+export function setValue(elem) {
+  document.querySelector('#validValueExampleBtn').addEventListener('click', () => {
+    elem.value = 'arrival';
+  })
+
+  document.querySelector('#invalidValueExampleBtn').addEventListener('click', () => {
+    elem.value = 'flight course';
+  })
+
+  document.querySelector('#undefinedValueExampleBtn').addEventListener('click', () => {
+    elem.value = undefined;
+  })
+}
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
@@ -327,7 +356,7 @@ Use the `helptext` slot to provide additional information back to your user abou
 
 ### Extract value
 
-The following example illustrates how a user may query the `.value` of the `auro-menu` element.
+The following example illustrates how a user may query the `element.value` or `element.optionSelected` for the current value or complete option object that is selected.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/valueExtraction.html) -->
@@ -342,7 +371,7 @@ The following example illustrates how a user may query the `.value` of the `auro
       <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
     </auro-menu>
   </auro-select>
-  <auro-button onclick="getValue('#valueExtraction');">Get current value</auro-button>
+  <auro-button id="valueExtractionBtn">Get current value</auro-button>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion lowProfile justifyRight>
@@ -351,19 +380,13 @@ The following example illustrates how a user may query the `.value` of the `auro
 <!-- The below code snippet is automatically added from ./../../demo/extractValue.js -->
 
 ```js
-/**
- * @param {string} Selector for auro-select to retrieve the value from.
- */
-const getValue = (selector) => {
-  const select = document.querySelector(`${selector}`);
+export function getValue(elem) {
+  const btn = document.querySelector('#valueExtractionBtn');
 
-  if (select.optionSelected) {
-    console.warn('Value selected:', select.optionSelected.value);
-    alert(`Value selected: ${select.optionSelected.value}`);
-  } else {
-    console.warn('Value selected:', null);
-    alert(`Value selected: ${null}`);
-  }
+  btn.addEventListener('click', () => {
+    console.warn('Value selected:', elem.value);
+    console.warn('Option selected:', elem.optionSelected);
+  })
 }
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
@@ -381,14 +404,14 @@ const getValue = (selector) => {
     <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
   </auro-menu>
 </auro-select>
-<auro-button onclick="getValue('#valueExtraction');">Get current value</auro-button>
+<auro-button id="valueExtractionBtn">Get current value</auro-button>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
 ### Watch for value changes
 
-The following example listens for the `selectOption` custom event from the `<auro-menu>` APi. Once triggered, the custom event will return an object `{value: any}`.
+The following example listens for the `selectedOption` event. Once triggered, `element.value` or `element.optionSelected` may be queried for the new value or complete option object.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/valueAlert.html) -->
@@ -411,16 +434,12 @@ The following example listens for the `selectOption` custom event from the `<aur
 <!-- The below code snippet is automatically added from ./../../demo/alertValue.js -->
 
 ```js
-setTimeout(() => {
-  let selectValueAlertEl = document.querySelector('auro-select#valueAlert');
-
-  if (selectValueAlertEl) {
-    selectValueAlertEl.addEventListener('selectedOption', () => {
-      console.warn('Value selected:', selectValueAlertEl.optionSelected.value);
-      alert(`Value selected: ${selectValueAlertEl.optionSelected.value}`);
-    });
-  }
-}, 500);
+export function valueAlert(elem) {
+  elem.addEventListener('selectedOption', () => {
+    console.warn('Select value changed to:', elem.value);
+    console.warn('Select optionSelected changed to:', elem.optionSelected);
+  })
+}
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/valueAlert.html) -->

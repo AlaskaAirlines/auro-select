@@ -6,14 +6,12 @@
 // If using litElement base class
 import { LitElement, html } from "lit-element";
 
-import '@aurodesignsystem/auro-dropdown';
-
-/* eslint-disable max-lines */
-
 // If using auroElement base class
 // See instructions for importing auroElement base class https://git.io/JULq4
 // import { html, css } from "lit-element";
 // import AuroElement from '@alaskaairux/webcorestylesheets/dist/auroElement/auroElement';
+
+/* eslint-disable max-lines, prefer-named-capture-group */
 
 // Import touch detection lib
 import "focus-visible/dist/focus-visible.min.js";
@@ -119,13 +117,15 @@ class AuroSelect extends LitElement {
       this.optionActive = evt.detail;
     });
 
-    this.addEventListener('selectedOption', (evt) => {
+    this.menu.addEventListener('selectedOption', () => {
       const dropdown = this.shadowRoot.querySelector('auro-dropdown');
       const triggerContentEl = dropdown.querySelector('#triggerFocus');
 
-      triggerContentEl.innerHTML = evt.target.optionSelected.innerHTML;
-      this.value = evt.target.optionSelected.value;
-      this.optionSelected = evt.target.optionSelected;
+      this.optionSelected = this.menu.optionSelected;
+      this.value = this.optionSelected.value;
+      triggerContentEl.innerHTML = this.optionSelected.innerHTML;
+
+      this.removeAttribute('error');
 
       if (this.dropdown.isPopoverVisible) {
         this.dropdown.hide();
@@ -139,9 +139,27 @@ class AuroSelect extends LitElement {
      * so that it is not storing an invalid value which can then later be returned
      * with `auro-select.value`.
      */
-    this.addEventListener('auroMenu-selectValueFailure', () => {
-      this.value = undefined;
-      this.removeAttribute('value');
+    this.menu.addEventListener('auroMenu-selectValueFailure', () => {
+      this.menu.optionSelected = undefined;
+      this.optionSelected = this.menu.optionSelected;
+
+      const dropdown = this.shadowRoot.querySelector('auro-dropdown');
+      const triggerContentEl = dropdown.querySelector('#triggerFocus');
+
+      // Capitilizes the first letter of each word in this.value string
+      triggerContentEl.innerHTML = this.value.replace(/(^\w{1})|(\s+\w{1})/gu, (letter) => letter.toUpperCase());
+
+      this.setAttribute('error', '');
+    });
+
+    this.menu.addEventListener('auroMenu-selectValueReset', () => {
+      const dropdown = this.shadowRoot.querySelector('auro-dropdown');
+      const triggerContentEl = dropdown.querySelector('#triggerFocus');
+
+      triggerContentEl.innerHTML = this.placeholder;
+
+      this.optionSelected = undefined;
+      this.removeAttribute('error');
     });
   }
 

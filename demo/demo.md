@@ -122,6 +122,89 @@ A baseline `<auro-select>` using `<auro-menu>` and `<auro-menuoption>` elements.
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
+### Example with nested menus
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/withSubmenus.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/withSubmenus.html -->
+  <auro-select>
+    <auro-menu>
+      <auro-menuoption value="stops">Stops</auro-menuoption>
+      <auro-menuoption value="price">Price</auro-menuoption>
+      <auro-menuoption value="duration">Duration</auro-menuoption>
+      <hr>
+      <auro-menu>
+        <auro-menuoption value="apples">Apples</auro-menuoption>
+        <auro-menuoption value="oranges">Oranges</auro-menuoption>
+        <auro-menuoption value="pears">Pears</auro-menuoption>
+        <auro-menuoption value="grapes">Grapes</auro-menuoption>
+        <auro-menuoption value="kiwi">Kiwi</auro-menuoption>
+        <hr>
+        <auro-menu>
+          <auro-menuoption value="person">Person</auro-menuoption>
+          <auro-menuoption value="woman">Woman</auro-menuoption>
+          <auro-menuoption value="man">Man</auro-menuoption>
+          <auro-menuoption value="camera">Camera</auro-menuoption>
+          <auro-menuoption value="tv">TV</auro-menuoption>
+        </auro-menu>
+      </auro-menu>
+      <hr>
+      <auro-menuoption value="departure">Departure</auro-menuoption>
+      <auro-menuoption value="arrival">Arrival</auro-menuoption>
+      <hr>
+      <auro-menu>
+        <auro-menuoption value="cars">Cars</auro-menuoption>
+        <auro-menuoption value="trucks">Trucks</auro-menuoption>
+        <auro-menuoption value="boats">Boats</auro-menuoption>
+        <auro-menuoption value="planes">Planes</auro-menuoption>
+        <auro-menuoption value="motorcycles">Motorcycles</auro-menuoption>
+    </auro-menu>
+  </auro-select>
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion lowProfile justifyRight>
+  <span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/withSubmenus.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/withSubmenus.html -->
+
+```html
+<auro-select>
+  <auro-menu>
+    <auro-menuoption value="stops">Stops</auro-menuoption>
+    <auro-menuoption value="price">Price</auro-menuoption>
+    <auro-menuoption value="duration">Duration</auro-menuoption>
+    <hr>
+    <auro-menu>
+      <auro-menuoption value="apples">Apples</auro-menuoption>
+      <auro-menuoption value="oranges">Oranges</auro-menuoption>
+      <auro-menuoption value="pears">Pears</auro-menuoption>
+      <auro-menuoption value="grapes">Grapes</auro-menuoption>
+      <auro-menuoption value="kiwi">Kiwi</auro-menuoption>
+      <hr>
+      <auro-menu>
+        <auro-menuoption value="person">Person</auro-menuoption>
+        <auro-menuoption value="woman">Woman</auro-menuoption>
+        <auro-menuoption value="man">Man</auro-menuoption>
+        <auro-menuoption value="camera">Camera</auro-menuoption>
+        <auro-menuoption value="tv">TV</auro-menuoption>
+      </auro-menu>
+    </auro-menu>
+    <hr>
+    <auro-menuoption value="departure">Departure</auro-menuoption>
+    <auro-menuoption value="arrival">Arrival</auro-menuoption>
+    <hr>
+    <auro-menu>
+      <auro-menuoption value="cars">Cars</auro-menuoption>
+      <auro-menuoption value="trucks">Trucks</auro-menuoption>
+      <auro-menuoption value="boats">Boats</auro-menuoption>
+      <auro-menuoption value="planes">Planes</auro-menuoption>
+      <auro-menuoption value="motorcycles">Motorcycles</auro-menuoption>
+  </auro-menu>
+</auro-select>
+```
+<!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
+
 ## Label and help text slots
 
 The following example illustrates the use of the `label` and `helptext` slots for additional placement of content around the select menu.

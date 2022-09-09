@@ -125,6 +125,21 @@ describe('auro-select', () => {
   });
 });
 
+
+it('default to checkmark on selected option', async () => {
+  const el = await defaultFixture();
+
+  const menu = el.querySelector('auro-menu');
+  await expect(menu.hasAttribute('nocheckmark')).to.be.false;
+});
+
+it('selected options have nocheckmark when nocheckmark attribute is present in menu', async () => {
+  const el = await noCheckmarkFixture();
+
+  const menu = el.querySelector('auro-menu');
+  await expect(menu.hasAttribute('nocheckmark')).to.be.true;
+});
+
 async function defaultFixture() {
   return await fixture(html`
   <auro-select>
@@ -148,6 +163,18 @@ async function presetValueFixture() {
       <auro-menuoption value="departure">Departure</auro-menuoption>
       <auro-menuoption value="arrival">Arrival</auro-menuoption>
       <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
+    </auro-menu>
+  </auro-select>
+  `);
+}
+
+async function noCheckmarkFixture() {
+  return await fixture(html`
+  <auro-select>
+    <span slot="label">Name</span>
+    <auro-menu nocheckmark>
+      <auro-menuoption value="Apples" id="option-0">Apples</auro-menuoption>
+      <auro-menuoption value="Oranges" id="option-1">Oranges</auro-menuoption>
     </auro-menu>
   </auro-select>
   `);

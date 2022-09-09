@@ -43,6 +43,19 @@ A baseline `<auro-select>` using `<auro-menu>` and `<auro-menuoption>` elements.
 
 </auro-accordion>
 
+### Example with no checkmark
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/noCheckmark.html) -->
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+
+<auro-accordion lowProfile justifyRight>
+  <span slot="trigger">See code</span>
+
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/noCheckmark.html) -->
+<!-- AURO-GENERATED-CONTENT:END -->
+
 ## Label and help text slots
 
 The following example illustrates the use of the `label` and `helptext` slots for additional placement of content around the select menu.

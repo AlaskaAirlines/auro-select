@@ -8,6 +8,7 @@ The auro-select element is a wrapper for auro-dropdown and auro-menu to create a
 |------------------|------------------|-----------|------------------------|--------------------------------------------------|
 | `disabled`       | `disabled`       | `Boolean` |                        | When attribute is present element shows disabled state. |
 | `error`          | `error`          | `Boolean` |                        | When attribute is present element shows error state. |
+| `nocheckmark`    | `nocheckmark`    | `Boolean` |                        | When true, checkmark on selected option will no longer be present. |
 | `optionSelected` | `optionSelected` | `Object`  | "undefined"            | Specifies the current selected menuOption.       |
 | `placeholder`    | `placeholder`    | `String`  | "Please select option" | Define placeholder text to display before a value is manually selected. |
 | `value`          | `value`          | `String`  |                        | Value selected for the component.                |

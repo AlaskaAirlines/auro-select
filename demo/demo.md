@@ -205,6 +205,43 @@ A baseline `<auro-select>` using `<auro-menu>` and `<auro-menuoption>` elements.
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
+### Example with no checkmark
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/noCheckmark.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/noCheckmark.html -->
+  <auro-select nocheckmark>
+      <auro-menu>
+          <auro-menuoption value="stops">Stops</auro-menuoption>
+          <auro-menuoption value="price">Price</auro-menuoption>
+          <auro-menuoption value="duration">Duration</auro-menuoption>
+          <auro-menuoption value="departure">Departure</auro-menuoption>
+          <auro-menuoption value="arrival">Arrival</auro-menuoption>
+          <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
+      </auro-menu>
+  </auro-select>
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion lowProfile justifyRight>
+  <span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/noCheckmark.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/noCheckmark.html -->
+
+```html
+<auro-select nocheckmark>
+    <auro-menu>
+        <auro-menuoption value="stops">Stops</auro-menuoption>
+        <auro-menuoption value="price">Price</auro-menuoption>
+        <auro-menuoption value="duration">Duration</auro-menuoption>
+        <auro-menuoption value="departure">Departure</auro-menuoption>
+        <auro-menuoption value="arrival">Arrival</auro-menuoption>
+        <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
+    </auro-menu>
+</auro-select>
+```
+<!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
+
 ## Label and help text slots
 
 The following example illustrates the use of the `label` and `helptext` slots for additional placement of content around the select menu.

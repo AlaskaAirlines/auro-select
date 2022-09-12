@@ -26,7 +26,7 @@ import styleCssFixed from './style-fixed-css.js';
  * @prop {String} value - Value selected for the component.
  * @prop {Boolean} error - When attribute is present element shows error state.
  * @prop {Boolean} disabled - When attribute is present element shows disabled state.
- * @prop {Boolean} nocheckmark - When true, checkmark on selected option will no longer be present.
+ * @prop {Boolean} noCheckmark - When true, checkmark on selected option will no longer be present.
  * @attr {Object} optionSelected - Specifies the current selected menuOption.
  * @slot - Default slot for the menu content.
  * @slot label - Defines the content of the label.
@@ -70,7 +70,7 @@ class AuroSelect extends LitElement {
         type: Boolean,
         reflect: true
       },
-      nocheckmark: {
+      noCheckmark: {
         type: Boolean,
         reflect: true
       },
@@ -273,7 +273,7 @@ class AuroSelect extends LitElement {
       this.shadowRoot.querySelector('auro-dropdown').removeAttribute('error');
     }
 
-    if (this.nocheckmark) {
+    if (this.noCheckmark) {
       this.menu.setAttribute('nocheckmark', '');
     }
   }

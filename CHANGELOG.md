@@ -1,5 +1,19 @@
 # Semantic Release Automated Changelog
 
+# [2.5.0](https://github.com/AlaskaAirlines/auro-select/compare/v2.4.3...v2.5.0) (2022-09-13)
+
+
+### Bug Fixes
+
+* **casing:** follow attribute camel case consistency [#88](https://github.com/AlaskaAirlines/auro-select/issues/88) ([252778f](https://github.com/AlaskaAirlines/auro-select/commit/252778f6cbc90a90f8ad699535ca26fba67e123f))
+* **height:** adjust to be consistent with other form elements [#81](https://github.com/AlaskaAirlines/auro-select/issues/81) ([125fef4](https://github.com/AlaskaAirlines/auro-select/commit/125fef45fc89b577fb9c3c44afa3680452690559))
+
+
+### Features
+
+* **matchwidth:** set attribute in template by default [#86](https://github.com/AlaskaAirlines/auro-select/issues/86) ([a5d6a23](https://github.com/AlaskaAirlines/auro-select/commit/a5d6a23b7b70e28db26ec708487a1271ee671d4e))
+* **nocheckmark:** implement 'nocheckmark' attribute [#88](https://github.com/AlaskaAirlines/auro-select/issues/88) ([097a49c](https://github.com/AlaskaAirlines/auro-select/commit/097a49cffa094eadda224a0a3b56a47716436dd9))
+
 ## [2.4.3](https://github.com/AlaskaAirlines/auro-select/compare/v2.4.2...v2.4.3) (2022-09-06)
 
 

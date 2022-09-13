@@ -69,6 +69,8 @@ A baseline `<auro-select>` using `<auro-menu>` and `<auro-menuoption>` elements.
 
 ### Example with auro-icons in options
 
+Displays an `<auro-select>` element with `<auro-icon>` elements in each option.
+
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/withIcons.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/withIcons.html -->
@@ -123,6 +125,8 @@ A baseline `<auro-select>` using `<auro-menu>` and `<auro-menuoption>` elements.
 </auro-accordion>
 
 ### Example with nested menus
+
+This example shows nesting `<auro-menu>` elements to create submenus.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/withSubmenus.html) -->
@@ -206,6 +210,8 @@ A baseline `<auro-select>` using `<auro-menu>` and `<auro-menuoption>` elements.
 </auro-accordion>
 
 ### Example with no checkmark
+
+Applying the `noCheckmark` attribute will prevent the checkmark icon from being shown on the selected option. The left padding to reserve space for the checkmark will not be shown.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/noCheckmark.html) -->

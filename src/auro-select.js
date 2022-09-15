@@ -40,8 +40,16 @@ class AuroSelect extends LitElement {
     super();
 
     this.placeholder = 'Please select option';
-    this.items = Array.from(this.querySelectorAll('auro-menuoption'));
     this.optionSelected = undefined;
+  }
+
+  /**
+   * @private
+   * @returns {void} Internal defaults.
+   */
+  privateDefaults() {
+    this.options = [];
+    this.optionActive = null;
   }
 
   // This function is to define props used within the scope of this component
@@ -50,11 +58,6 @@ class AuroSelect extends LitElement {
   static get properties() {
     return {
       // ...super.properties,
-      /**
-       * @private
-       */
-      items: { type: Array },
-
       optionSelected: {
         type: Object
       },
@@ -74,7 +77,17 @@ class AuroSelect extends LitElement {
         type: Boolean,
         reflect: true
       },
-      placeholder: { type: String }
+      placeholder: { type: String },
+
+      /**
+       * @private
+       */
+      options: { type: Array },
+
+      /**
+       * @private
+       */
+      optionActive: { type: Object },
     };
   }
 
@@ -104,9 +117,9 @@ class AuroSelect extends LitElement {
    * @returns {void}
    */
   configureMenu() {
-    this.items = this.querySelectorAll('auro-menuoption');
-
     this.menu = this.querySelector('auro-menu');
+
+    this.generateOptionsArray();
 
     this.menu.addEventListener('auroMenu-ready', () => {
       this.auroMenuReady = true;
@@ -238,6 +251,19 @@ class AuroSelect extends LitElement {
   }
 
   /**
+   * Determines the element error state based on the `required` attribute and input value.
+   * @private
+   * @returns {void}
+   */
+  generateOptionsArray() {
+    if (this.menu) {
+      this.options = [...this.menu.querySelectorAll('auro-menuoption')];
+    } else {
+      this.options = [];
+    }
+  }
+
+  /**
    * Functionality that should not be performed until the combobox is in a ready state.
    * @private
    * @returns {void}
@@ -280,12 +306,11 @@ class AuroSelect extends LitElement {
 
   // lifecycle runs only after the element's DOM has been updated the first time
   firstUpdated() {
-    this.configureDropdown();
     this.configureMenu();
+    this.configureDropdown();
     this.configureSelect();
 
     this.checkReadiness();
-
   }
 
   updated(changedProperties) {
@@ -301,6 +326,21 @@ class AuroSelect extends LitElement {
   render() {
     return html`
       <div>
+        <div aria-live="polite" class="util_displayHiddenVisually">
+          ${this.optionActive && this.options.length > 0
+            ? html`
+              ${`${this.optionActive.innerText}, selected, ${this.options.indexOf(this.optionActive) + 1} of ${this.options.length}`}
+            `
+            : undefined
+          };
+
+          ${this.optionSelected && this.options.length > 0
+            ? html`
+            ${`${this.optionSelected.innerText} is the selected option`}
+            `
+            : undefined
+          };
+        </div>
         <auro-dropdown
           for="selectmenu"
           common

@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.5.1](https://github.com/AlaskaAirlines/auro-select/compare/v2.5.0...v2.5.1) (2022-09-16)
+
+
+### Bug Fixes
+
+* **accessibility:** read menu options with screenreader when navigating with keyboard [#97](https://github.com/AlaskaAirlines/auro-select/issues/97) ([6c09e8e](https://github.com/AlaskaAirlines/auro-select/commit/6c09e8edddebcb71f53ccc2bd07a1b3e4396d49f))
+
 # [2.5.0](https://github.com/AlaskaAirlines/auro-select/compare/v2.4.3...v2.5.0) (2022-09-13)
 
 

@@ -329,14 +329,14 @@ class AuroSelect extends LitElement {
         <div aria-live="polite" class="util_displayHiddenVisually">
           ${this.optionActive && this.options.length > 0
             ? html`
-              ${`${this.optionActive.innerText}, selected, ${this.options.indexOf(this.optionActive) + 1} of ${this.options.length}`}
+              ${`${this.optionActive.innerText}, option ${this.options.indexOf(this.optionActive) + 1} of ${this.options.length}`}
             `
             : undefined
           };
 
           ${this.optionSelected && this.options.length > 0
             ? html`
-            ${`${this.optionSelected.innerText} is the selected option`}
+            ${`${this.optionSelected.innerText} selected`}
             `
             : undefined
           };

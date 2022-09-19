@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.5.2](https://github.com/AlaskaAirlines/auro-select/compare/v2.5.1...v2.5.2) (2022-09-19)
+
+
+### Bug Fixes
+
+* **screenreader:** distinguish active/selected options for screenreader [#109](https://github.com/AlaskaAirlines/auro-select/issues/109) ([09146cb](https://github.com/AlaskaAirlines/auro-select/commit/09146cbd1ac95bf2a863238ff123032e49c098d6))
+
 ## [2.5.1](https://github.com/AlaskaAirlines/auro-select/compare/v2.5.0...v2.5.1) (2022-09-16)
 
 

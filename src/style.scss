@@ -21,6 +21,12 @@
     &::part(trigger) {
       min-height: var(--trigger-height);
       max-height: var(--trigger-height);
+
+      /* stylelint-disable */
+      &:hover {
+        background-color: var(--auro-color-ui-bkg-hover-on-light);
+      }
+      /* stylelint-enable */
     }
   }
 }

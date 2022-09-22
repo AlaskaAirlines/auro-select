@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.5.3](https://github.com/AlaskaAirlines/auro-select/compare/v2.5.2...v2.5.3) (2022-09-22)
+
+
+### Bug Fixes
+
+* **hover:** make background color change on hover [#102](https://github.com/AlaskaAirlines/auro-select/issues/102) ([7cd017d](https://github.com/AlaskaAirlines/auro-select/commit/7cd017d408ce0f19c50405428323f850213f39af))
+
 ## [2.5.2](https://github.com/AlaskaAirlines/auro-select/compare/v2.5.1...v2.5.2) (2022-09-19)
 
 

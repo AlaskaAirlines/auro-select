@@ -16,11 +16,10 @@
 
 :host {
   auro-dropdown {
-    --trigger-height: 40px;
-
     &::part(trigger) {
-      min-height: var(--trigger-height);
-      max-height: var(--trigger-height);
+      /* 2.5rem if --auro-size-500 not defined */
+      min-height: var(--auro-size-500, 2.5rem);
+      max-height: var(--auro-size-500, 2.5rem);
 
       /* stylelint-disable */
       &:hover {

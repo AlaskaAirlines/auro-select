@@ -119,6 +119,8 @@ class AuroSelect extends LitElement {
   configureMenu() {
     this.menu = this.querySelector('auro-menu');
 
+    this.menu.setAttribute('aria-hidden', 'true');
+
     this.generateOptionsArray();
 
     this.menu.addEventListener('auroMenu-ready', () => {

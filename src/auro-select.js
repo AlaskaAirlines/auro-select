@@ -205,6 +205,8 @@ class AuroSelect extends LitElement {
         this.dropdown.hide();
       }
     });
+
+    this.labelForSr();
   }
 
   /**
@@ -319,6 +321,34 @@ class AuroSelect extends LitElement {
     if (changedProperties.has('value')) {
       this.menu.value = this.value;
     }
+  }
+
+  /**
+   * Handles reading of auro-select by screenreaders.
+   * @private
+   * @returns {void}
+   */
+  labelForSr() {
+    const placeholderLabel = document.createElement("div");
+    const textId = "label";
+
+    placeholderLabel.setAttribute("id", textId);
+    placeholderLabel.setAttribute("aria-live", "polite");
+    placeholderLabel.classList.add("util_displayHiddenVisually");
+
+    this.addEventListener('focus', () => {
+      document.body.appendChild(placeholderLabel);
+
+      if (!this.optionSelected) {
+        document.getElementById(textId).innerHTML = this.placeholder;
+      } else {
+        document.getElementById(textId).innerHTML = `${this.optionSelected.innerText}, ${this.placeholder}`;
+      }
+    });
+
+    this.addEventListener('blur', () => {
+      document.body.removeChild(document.getElementById(textId));
+    });
   }
 
   // When using auroElement, use the following attribute and function when hiding content from screen readers.

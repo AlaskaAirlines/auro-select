@@ -1,5 +1,13 @@
 # Semantic Release Automated Changelog
 
+## [2.5.4](https://github.com/AlaskaAirlines/auro-select/compare/v2.5.3...v2.5.4) (2022-10-14)
+
+
+### Bug Fixes
+
+* **menu:** stop all menu options from being read [#111](https://github.com/AlaskaAirlines/auro-select/issues/111) ([81b67a1](https://github.com/AlaskaAirlines/auro-select/commit/81b67a15b76eb7866a2e160da9ebf36216484097))
+* **placeholder:** follow HTML5 select screenreader workflow [#111](https://github.com/AlaskaAirlines/auro-select/issues/111) ([3abffea](https://github.com/AlaskaAirlines/auro-select/commit/3abffeac9b141230c256d15c37db5111979a4a4a))
+
 ## [2.5.3](https://github.com/AlaskaAirlines/auro-select/compare/v2.5.2...v2.5.3) (2022-09-22)
 
 

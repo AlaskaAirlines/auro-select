@@ -5,9 +5,9 @@ apiExamples.md is created by running `npm run build:markdownDocs`.
 
 This file is generated based on a template fetched from `./docs/partials/apiExamples.md`
 -->
-
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../api.md) -->
 <!-- The below content is automatically added from ./../api.md -->
+
 # auro-select
 
 The auro-select element is a wrapper for auro-dropdown and auro-menu to create a dropdown menu control.
@@ -16,12 +16,12 @@ The auro-select element is a wrapper for auro-dropdown and auro-menu to create a
 
 | Property         | Attribute        | Type      | Default                | Description                                      |
 |------------------|------------------|-----------|------------------------|--------------------------------------------------|
-| `disabled`       | `disabled`       | `Boolean` |                        | When attribute is present element shows disabled state. |
-| `error`          | `error`          | `Boolean` |                        | When attribute is present element shows error state. |
-| `noCheckmark`    | `noCheckmark`    | `Boolean` |                        | When true, checkmark on selected option will no longer be present. |
-| `optionSelected` | `optionSelected` | `Object`  | "undefined"            | Specifies the current selected menuOption.       |
-| `placeholder`    | `placeholder`    | `String`  | "Please select option" | Define placeholder text to display before a value is manually selected. |
-| `value`          | `value`          | `String`  |                        | Value selected for the component.                |
+| [disabled](#disabled)       | `disabled`       | `Boolean` |                        | When attribute is present element shows disabled state. |
+| [error](#error)          | `error`          | `Boolean` |                        | When attribute is present element shows error state. |
+| [noCheckmark](#noCheckmark)    | `noCheckmark`    | `Boolean` |                        | When true, checkmark on selected option will no longer be present. |
+| [optionSelected](#optionSelected) | `optionSelected` | `Object`  | "undefined"            | Specifies the current selected menuOption.       |
+| [placeholder](#placeholder)    | `placeholder`    | `String`  | "Please select option" | Define placeholder text to display before a value is manually selected. |
+| [value](#value)          | `value`          | `String`  |                        | Value selected for the component.                |
 
 ## Events
 
@@ -34,8 +34,8 @@ The auro-select element is a wrapper for auro-dropdown and auro-menu to create a
 | Name       | Description                          |
 |------------|--------------------------------------|
 |            | Default slot for the menu content.   |
-| `helpText` | Defines the content of the helpText. |
-| `label`    | Defines the content of the label.    |
+| [helpText](#helpText) | Defines the content of the helpText. |
+| [label](#label)    | Defines the content of the label.    |
 <!-- AURO-GENERATED-CONTENT:END -->
 
 ## API Examples
@@ -61,9 +61,9 @@ A baseline `<auro-select>` using `<auro-menu>` and `<auro-menuoption>` elements.
 </div>
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basic.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
+
 ```html
 <auro-select>
   <auro-menu>
@@ -77,7 +77,6 @@ A baseline `<auro-select>` using `<auro-menu>` and `<auro-menuoption>` elements.
 </auro-select>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
-
 </auro-accordion>
 
 ### Property Examples
@@ -110,9 +109,9 @@ To pre-set the value of auro-select on load, use the `value` property. The `sele
 </div>
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/value.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/value.html -->
+
 ```html
 <auro-button id="validValueExampleBtn">Set Value to Valid Option</auro-button>
 <auro-button id="invalidValueExampleBtn">Set Value to Invalid Option</auro-button>
@@ -131,9 +130,9 @@ To pre-set the value of auro-select on load, use the `value` property. The `sele
 </auro-select>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
-
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/value.js) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/value.js -->
+
 ```js
 export function setValue(elem) {
   document.querySelector('#validValueExampleBtn').addEventListener('click', () => {
@@ -150,7 +149,6 @@ export function setValue(elem) {
 }
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
-
 </auro-accordion>
 
 #### placeholder
@@ -174,9 +172,9 @@ Use the `placeholder` string attribute to inject a custom placeholder option wit
 </div>
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/customPlaceholder.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/customPlaceholder.html -->
+
 ```html
 <auro-select placeholder="Please select your preferred option">
   <auro-menu>
@@ -190,7 +188,6 @@ Use the `placeholder` string attribute to inject a custom placeholder option wit
 </auro-select>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
-
 </auro-accordion>
 
 #### error
@@ -212,12 +209,11 @@ Use the `error` boolean attribute to toggle the error UI.
   </auro-select>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/error.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/error.html -->
+
 ```html
 <auro-select error>
   <auro-menu>
@@ -231,7 +227,6 @@ Use the `error` boolean attribute to toggle the error UI.
 </auro-select>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
-
 </auro-accordion>
 
 #### disabled
@@ -253,12 +248,11 @@ Use the `disabled` boolean attribute to toggle the disabled UI.
   </auro-select>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/disabled.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/disabled.html -->
+
 ```html
 <auro-select disabled>
   <auro-menu>
@@ -272,9 +266,7 @@ Use the `disabled` boolean attribute to toggle the disabled UI.
 </auro-select>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
-
 </auro-accordion>
-
 
 ### Slot Examples
 
@@ -300,9 +292,9 @@ Use the `label` slot to give your users contextual information about their selec
 </div>
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/label.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/label.html -->
+
 ```html
 <auro-select>
   <span slot="label">Please select a preference</span>
@@ -317,7 +309,6 @@ Use the `label` slot to give your users contextual information about their selec
 </auro-select>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
-
 </auro-accordion>
 
 #### helpText
@@ -342,9 +333,9 @@ Use the `helptext` slot to provide additional information back to your user abou
 </div>
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/helpText.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/helpText.html -->
+
 ```html
 <auro-select>
   <span slot="helpText">Custom help text message.</span>
@@ -359,7 +350,6 @@ Use the `helptext` slot to provide additional information back to your user abou
 </auro-select>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
-
 </auro-accordion>
 
 ## Functional Examples
@@ -381,17 +371,14 @@ The following example illustrates how a user may query the `element.value` or `e
       <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
     </auro-menu>
   </auro-select>
-  
   <auro-button id="valueExtractionBtn">Get current value</auro-button>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-
-
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../demo/extractValue.js) -->
 <!-- The below code snippet is automatically added from ./../../demo/extractValue.js -->
+
 ```js
 export function getValue(elem) {
   const btn = document.querySelector('#valueExtractionBtn');
@@ -403,9 +390,9 @@ export function getValue(elem) {
 }
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
-
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/valueExtraction.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/valueExtraction.html -->
+
 ```html
 <auro-select id="valueExtraction">
   <auro-menu>
@@ -417,11 +404,9 @@ export function getValue(elem) {
     <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
   </auro-menu>
 </auro-select>
-
 <auro-button id="valueExtractionBtn">Get current value</auro-button>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
-
 </auro-accordion>
 
 ### Watch for value changes
@@ -443,13 +428,11 @@ The following example listens for the `selectedOption` event. Once triggered, `e
   </auro-select>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-
-
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../demo/alertValue.js) -->
 <!-- The below code snippet is automatically added from ./../../demo/alertValue.js -->
+
 ```js
 export function valueAlert(elem) {
   elem.addEventListener('selectedOption', () => {
@@ -459,9 +442,9 @@ export function valueAlert(elem) {
 }
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
-
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/valueAlert.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/valueAlert.html -->
+
 ```html
 <auro-select id="valueAlert">
   <auro-menu>
@@ -475,5 +458,4 @@ export function valueAlert(elem) {
 </auro-select>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
-
 </auro-accordion>

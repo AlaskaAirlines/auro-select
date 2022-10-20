@@ -32,7 +32,7 @@
     <script type="module">
       import 'https://unpkg.com/marked@3.0.8/marked.min.js';
       import 'https://unpkg.com/prismjs@latest/prism.js';
-      fetch('/demo/apiExamples.md')
+      fetch('/demo/api.md')
         .then((response) => response.text())
         .then((text) => {
           const rawHtml = marked(text);
@@ -46,6 +46,7 @@
     <script src="https://unpkg.com/@aurodesignsystem/auro-menu@latest/dist/auro-menu__bundled.js" type="module"></script>
     <script src="https://unpkg.com/@alaskaairux/auro-icon@latest/dist/auro-icon__bundled.js" type="module"></script>
     <script src="https://unpkg.com/@alaskaairux/auro-button@latest/dist/auro-button__bundled.js" type="module"></script>
-    <script type="module" src="../demo/examples.js"></script>
+    <script type="module" src="../src/auro-select.js"></script>
+    <script type="module" src="../demo/api.js"></script>
   </body>
 </html>

@@ -334,7 +334,18 @@ class AuroSelect extends LitElement {
 
     placeholderLabel.setAttribute("id", textId);
     placeholderLabel.setAttribute("aria-live", "polite");
-    placeholderLabel.classList.add("util_displayHiddenVisually");
+
+    const styles = {
+      position: 'absolute',
+      overflow: 'hidden',
+      clipPath: 'inset(1px, 1px, 1px, 1px)',
+      width: '1px',
+      height: '1px',
+      padding: '0',
+      border: '0'
+    };
+
+    Object.assign(placeholderLabel.style, styles);
 
     this.addEventListener('focus', () => {
       document.body.appendChild(placeholderLabel);

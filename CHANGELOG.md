@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.5.5](https://github.com/AlaskaAirlines/auro-select/compare/v2.5.4...v2.5.5) (2022-10-31)
+
+
+### Bug Fixes
+
+* **label:** visibily hide label created for screenreaders [#119](https://github.com/AlaskaAirlines/auro-select/issues/119) ([97cc680](https://github.com/AlaskaAirlines/auro-select/commit/97cc68024680f2b4e699a6ee52589fc45f81f5a1))
+
 ## [2.5.4](https://github.com/AlaskaAirlines/auro-select/compare/v2.5.3...v2.5.4) (2022-10-14)
 
 

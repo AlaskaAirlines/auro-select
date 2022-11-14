@@ -66,6 +66,24 @@ Use the `placeholder` string attribute to inject a custom placeholder option wit
 
 </auro-accordion>
 
+#### required
+
+When present, the `required` attribute specifies that a select field must be filled out before submitting the form.
+
+When the validity check fails the validityState equals `valueMissing`. The error message for the `valueMissing` validityState can be set to a custom string using the `setCustomValidityValueMissing`. There is no default error message defined.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/required.html) -->
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion lowProfile justifyRight>
+  <span slot="trigger">See code</span>
+
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/required.html) -->
+<!-- AURO-GENERATED-CONTENT:END -->
+
+</auro-accordion>
+
 #### error
 
 Use the `error` boolean attribute to toggle the error UI.

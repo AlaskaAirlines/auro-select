@@ -14,14 +14,20 @@ The auro-select element is a wrapper for auro-dropdown and auro-menu to create a
 
 ## Properties
 
-| Property         | Attribute        | Type      | Default                | Description                                      |
-|------------------|------------------|-----------|------------------------|--------------------------------------------------|
-| `disabled`       | `disabled`       | `Boolean` |                        | When attribute is present element shows disabled state. |
-| `error`          | `error`          | `Boolean` |                        | When attribute is present element shows error state. |
-| `noCheckmark`    | `noCheckmark`    | `Boolean` |                        | When true, checkmark on selected option will no longer be present. |
-| `optionSelected` | `optionSelected` | `Object`  | "undefined"            | Specifies the current selected menuOption.       |
-| `placeholder`    | `placeholder`    | `String`  | "Please select option" | Define placeholder text to display before a value is manually selected. |
-| `value`          | `value`          | `String`  |                        | Value selected for the component.                |
+| Property                        | Attribute                       | Type      | Default                | Description                                      |
+|---------------------------------|---------------------------------|-----------|------------------------|--------------------------------------------------|
+| `disabled`                      | `disabled`                      | `Boolean` |                        | When attribute is present element shows disabled state. |
+| `error`                         | `error`                         | `String`  |                        | When defined, sets persistent validity to `customError` and sets `setCustomValidity` = attribute value. |
+| `noCheckmark`                   | `noCheckmark`                   | `Boolean` |                        | When true, checkmark on selected option will no longer be present. |
+| `noValidate`                    | `noValidate`                    | `Boolean` |                        | If set, disables auto-validation on blur.        |
+| `optionSelected`                | `optionSelected`                | `Object`  | "undefined"            | Specifies the current selected menuOption.       |
+| `placeholder`                   | `placeholder`                   | `String`  | "Please select option" | Define placeholder text to display before a value is manually selected. |
+| `required`                      | `required`                      | `Boolean` |                        | Populates the `required` attribute on the element. Used for client-side validation. |
+| `setCustomValidity`             | `setCustomValidity`             | `String`  |                        | Sets a custom help text message to display for all validityStates. |
+| `setCustomValidityCustomError`  | `setCustomValidityCustomError`  | `String`  |                        | Custom help text message to display when validity = `customError`. |
+| `setCustomValidityValueMissing` | `setCustomValidityValueMissing` | `String`  |                        | Custom help text message to display when validity = `valueMissing`. |
+| `validity`                      | `validity`                      | `String`  | "undefined"            | Specifies the `validityState` this element is in. |
+| `value`                         | `value`                         | `String`  |                        | Value selected for the component.                |
 
 ## Events
 
@@ -193,6 +199,48 @@ Use the `placeholder` string attribute to inject a custom placeholder option wit
 
 </auro-accordion>
 
+#### required
+
+When present, the `required` attribute specifies that a select field must be filled out before submitting the form.
+
+When the validity check fails the validityState equals `valueMissing`. The error message for the `valueMissing` validityState can be set to a custom string using the `setCustomValidityValueMissing`. There is no default error message defined.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/required.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/required.html -->
+  <auro-select required setCustomValidityValueMissing="Custom required validation error message.">
+    <auro-menu>
+      <auro-menuoption value="stops">Stops</auro-menuoption>
+      <auro-menuoption value="price">Price</auro-menuoption>
+      <auro-menuoption value="duration">Duration</auro-menuoption>
+      <auro-menuoption value="departure">Departure</auro-menuoption>
+      <auro-menuoption value="arrival">Arrival</auro-menuoption>
+      <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
+    </auro-menu>
+  </auro-select>
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion lowProfile justifyRight>
+  <span slot="trigger">See code</span>
+
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/required.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/required.html -->
+```html
+<auro-select required setCustomValidityValueMissing="Custom required validation error message.">
+  <auro-menu>
+    <auro-menuoption value="stops">Stops</auro-menuoption>
+    <auro-menuoption value="price">Price</auro-menuoption>
+    <auro-menuoption value="duration">Duration</auro-menuoption>
+    <auro-menuoption value="departure">Departure</auro-menuoption>
+    <auro-menuoption value="arrival">Arrival</auro-menuoption>
+    <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
+  </auro-menu>
+</auro-select>
+```
+<!-- AURO-GENERATED-CONTENT:END -->
+
+</auro-accordion>
+
 #### error
 
 Use the `error` boolean attribute to toggle the error UI.
@@ -200,7 +248,7 @@ Use the `error` boolean attribute to toggle the error UI.
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/error.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/error.html -->
-  <auro-select error>
+  <auro-select error="Custom error message">
     <auro-menu>
       <auro-menuoption value="stops">Stops</auro-menuoption>
       <auro-menuoption value="price">Price</auro-menuoption>
@@ -219,7 +267,7 @@ Use the `error` boolean attribute to toggle the error UI.
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/error.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/error.html -->
 ```html
-<auro-select error>
+<auro-select error="Custom error message">
   <auro-menu>
     <auro-menuoption value="stops">Stops</auro-menuoption>
     <auro-menuoption value="price">Price</auro-menuoption>

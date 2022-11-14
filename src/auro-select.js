@@ -22,9 +22,15 @@ import styleCssFixed from './style-fixed-css.js';
 /**
  * The auro-select element is a wrapper for auro-dropdown and auro-menu to create a dropdown menu control.
  *
+ * @attr {String} validity - Specifies the `validityState` this element is in.
+ * @attr {String} setCustomValidity - Sets a custom help text message to display for all validityStates.
+ * @attr {String} setCustomValidityCustomError - Custom help text message to display when validity = `customError`.
+ * @attr {String} setCustomValidityValueMissing - Custom help text message to display when validity = `valueMissing`.
+ * @attr {String} error - When defined, sets persistent validity to `customError` and sets `setCustomValidity` = attribute value.
+ * @attr {Boolean} noValidate - If set, disables auto-validation on blur.
+ * @attr {Boolean} required - Populates the `required` attribute on the element. Used for client-side validation.
  * @prop {String} placeholder - Define placeholder text to display before a value is manually selected.
  * @prop {String} value - Value selected for the component.
- * @prop {Boolean} error - When attribute is present element shows error state.
  * @prop {Boolean} disabled - When attribute is present element shows disabled state.
  * @prop {Boolean} noCheckmark - When true, checkmark on selected option will no longer be present.
  * @attr {Object} optionSelected - Specifies the current selected menuOption.
@@ -41,6 +47,18 @@ class AuroSelect extends LitElement {
 
     this.placeholder = 'Please select option';
     this.optionSelected = undefined;
+    this.validity = undefined;
+
+    const idLength = 36;
+    const idSubstrEnd = 8;
+    const idSubstrStart = 2;
+
+    /**
+     * @private
+     */
+    this.uniqueId = Math.random().
+      toString(idLength).
+      substring(idSubstrStart, idSubstrEnd);
   }
 
   /**
@@ -65,8 +83,29 @@ class AuroSelect extends LitElement {
         type: String,
         reflect: true
       },
-      error: {
+      noValidate: {
         type: Boolean,
+        reflect: true
+      },
+      required: {
+        type: Boolean,
+        reflect: true
+      },
+      error: {
+        type: String,
+        reflect: true
+      },
+      setCustomValidity: {
+        type: String
+      },
+      setCustomValidityCustomError: {
+        type: String
+      },
+      setCustomValidityValueMissing: {
+        type: String
+      },
+      validity: {
+        type: String,
         reflect: true
       },
       disabled: {
@@ -96,6 +135,44 @@ class AuroSelect extends LitElement {
       styleCss,
       styleCssFixed
     ];
+  }
+
+  /**
+   * Determines the validity state of the element.
+   * @private
+   * @returns {void}
+   */
+  validate() {
+    // Validate only if noValidate is not true and the input does not have focus
+    if (this.hasAttribute('error')) {
+      this.validity = 'customError';
+      this.setCustomValidity = this.error;
+    } else if (this.value !== undefined && !this.noValidate) {
+      this.validity = 'valid';
+      this.setCustomValidity = '';
+
+      /**
+       * Only validate once we interact with the datepicker
+       * this.value === undefined is the initial state pre-interaction.
+       *
+       * The validityState definitions are located at https://developer.mozilla.org/en-US/docs/Web/API/ValidityState.
+       */
+      if ((!this.value || this.value.length === 0) && this.required) {
+        this.validity = 'valueMissing';
+        this.setCustomValidity = this.setCustomValidityValueMissing;
+      }
+    }
+
+    if (this.validity && this.validity !== 'valid') {
+      this.isValid = false;
+
+      // Use the validity message override if it is declared
+      if (this.ValidityMessageOverride) {
+        this.setCustomValidity = this.ValidityMessageOverride;
+      }
+    } else {
+      this.isValid = true;
+    }
   }
 
   /**
@@ -139,8 +216,6 @@ class AuroSelect extends LitElement {
       this.value = this.optionSelected.value;
       triggerContentEl.innerHTML = this.optionSelected.innerHTML;
 
-      this.removeAttribute('error');
-
       if (this.dropdown.isPopoverVisible) {
         this.dropdown.hide();
       }
@@ -160,10 +235,10 @@ class AuroSelect extends LitElement {
       const dropdown = this.shadowRoot.querySelector('auro-dropdown');
       const triggerContentEl = dropdown.querySelector('#triggerFocus');
 
+      this.validity = 'badInput';
+
       // Capitilizes the first letter of each word in this.value string
       triggerContentEl.innerHTML = this.value.replace(/(^\w{1})|(\s+\w{1})/gu, (letter) => letter.toUpperCase());
-
-      this.setAttribute('error', '');
     });
 
     this.menu.addEventListener('auroMenu-selectValueReset', () => {
@@ -173,7 +248,9 @@ class AuroSelect extends LitElement {
       triggerContentEl.innerHTML = this.placeholder;
 
       this.optionSelected = undefined;
-      this.removeAttribute('error');
+      this.value = undefined;
+      this.validity = undefined;
+      this.validate();
     });
   }
 
@@ -206,7 +283,32 @@ class AuroSelect extends LitElement {
       }
     });
 
+    this.addEventListener('focusin', this.handleFocusin);
+
+    this.addEventListener('blur', () => {
+      this.validate();
+    });
+
     this.labelForSr();
+  }
+
+  /**
+   * Function to support @focusin event.
+   * @private
+   * @return {void}
+   */
+  handleFocusin() {
+
+    /**
+     * The input is considered to be in it's initial state based on
+     * if this.value === undefined. The first time we interact with the
+     * input manually, by applying focusin, we need to flag the
+     * input as no longer in the initial state.
+     */
+    if (this.value === undefined) {
+      this.value = '';
+      this.removeEventListener('focusin', this.handleFocusin);
+    }
   }
 
   /**
@@ -287,9 +389,9 @@ class AuroSelect extends LitElement {
   performUpdate() {
     super.performUpdate();
 
-    if (this.error) {
+    if (this.validity !== undefined && this.validity !== 'valid') {
       this.shadowRoot.querySelector('auro-dropdown').setAttribute('error', '');
-    } else if (!this.error) {
+    } else {
       this.shadowRoot.querySelector('auro-dropdown').removeAttribute('error');
     }
 
@@ -318,8 +420,19 @@ class AuroSelect extends LitElement {
   }
 
   updated(changedProperties) {
-    if (changedProperties.has('value')) {
-      this.menu.value = this.value;
+    // After the component is ready, send direct value changes to auro-menu.
+    if (this.ready && changedProperties.has('value')) {
+      if (this.value) {
+        this.menu.value = this.value;
+      } else {
+        this.menu.value = undefined;
+      }
+
+      this.validate();
+    }
+
+    if (changedProperties.has('error')) {
+      this.validate();
     }
   }
 
@@ -386,6 +499,7 @@ class AuroSelect extends LitElement {
         </div>
         <auro-dropdown
           for="selectmenu"
+          ?error="${this.validity !== undefined && this.validity !== 'valid'}"
           common
           matchWidth
           chevron>
@@ -396,8 +510,18 @@ class AuroSelect extends LitElement {
             <slot></slot>
           </div>
           <slot name="label" slot="label"></slot>
-          <slot name="helpText" slot="helpText"></slot>
         </auro-dropdown>
+        <!-- Help text and error message template -->
+        ${!this.validity || this.validity === undefined || this.validity === 'valid'
+          ? html`
+            <p class="selectElement-helpText" id="${this.uniqueId}" part="helpText">
+              <slot name="helpText"></slot>
+            </p>`
+          : html`
+            <p class="selectElement-helpText" id="${this.uniqueId}" role="alert" aria-live="assertive" part="helpText">
+              ${this.setCustomValidity}
+            </p>`
+        }
       </div>
     `;
   }

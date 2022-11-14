@@ -3,6 +3,8 @@
 @import './../node_modules/@alaskaairux/webcorestylesheets/dist/core';
 @import './../node_modules/@aurodesignsystem/webcorestylesheets/dist/utilityClasses/displayProperties';
 
+/* stylelint-disable selector-class-pattern */
+
 [slot='trigger'] {
   width: 100%;
   padding: 0;
@@ -39,4 +41,17 @@
 
 .menuWrapper {
   padding: var(--auro-size-xxs) 0;
+}
+
+.selectElement-helpText {
+  margin: var(--auro-size-50, .25rem) 0;
+  color: var(--auro-color-text-secondary-on-light);
+  font-size: var(--auro-text-body-size-xs);
+  line-height: 1rem;
+}
+
+:host([validity]:not([validity='valid'])) {
+  .selectElement-helpText {
+    color: var(--auro-color-alert-error-on-light);
+  }
 }

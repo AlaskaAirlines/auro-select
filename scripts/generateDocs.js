@@ -81,7 +81,7 @@ function formatApiTableContents(content, destination) {
 
   fs.writeFileSync(destination, result, { encoding: 'utf8'});
 
-  fs.readFile('./demo/api.md', 'utf8', function(err, data) {
+  fs.readFile('./demo/apiExamples.md', 'utf8', function(err, data) {
     formatTemplateFileContents(data, './demo/api.md');
   });
 }

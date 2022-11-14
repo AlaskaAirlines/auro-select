@@ -95,7 +95,7 @@ describe('auro-select', () => {
     await expect(el.optionSelected).to.be.equal(selectedOptions[0]);
   });
 
-  it('make invalid selection with programmatically results in error ui', async () => {
+  it('make invalid selection programmatically results in error ui', async () => {
     const el = await presetValueFixture();
     await waitUntil(() => el.ready);
 
@@ -110,7 +110,7 @@ describe('auro-select', () => {
 
     await expect(el.optionSelected).to.be.equal(undefined);
     await expect(triggerContentHTML).to.be.equal('Flight Course');
-    await expect(el.hasAttribute('error')).to.be.true;
+    await expect(el.getAttribute('validity')).to.equal('badInput');
   });
 
   it('reset selection value programmatically', async () => {
@@ -126,14 +126,14 @@ describe('auro-select', () => {
 
   it('default to checkmark on selected option', async () => {
     const el = await defaultFixture();
-  
+
     const menu = el.querySelector('auro-menu');
     await expect(menu.hasAttribute('nocheckmark')).to.be.false;
   });
-  
+
   it('selected options have nocheckmark when nocheckmark attribute is present', async () => {
     const el = await noCheckmarkFixture();
-  
+
     const menu = el.querySelector('auro-menu');
     await expect(menu.hasAttribute('nocheckmark')).to.be.true;
   });

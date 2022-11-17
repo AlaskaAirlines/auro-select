@@ -8,7 +8,7 @@ function initializeExample(element, callback, retryCount) {
       } else {
         retryCount += 1;
       }
-  
+
       if (retryCount < 10) {
         setTimeout(initializeExample, 500, element, callback, retryCount);
       } else {
@@ -20,7 +20,7 @@ function initializeExample(element, callback, retryCount) {
   }
   
   /**
-   * Programmatically show the dropdown
+   * Send alert to user when an option is selected
    */
   import { valueAlert } from './alertValue';
   
@@ -31,7 +31,7 @@ function initializeExample(element, callback, retryCount) {
   }());
   
   /**
-   * Programmatically show the dropdown
+   * Extract the value from auro-select element
    */
   import { getValue } from './extractValue';
   
@@ -42,7 +42,7 @@ function initializeExample(element, callback, retryCount) {
   }());
   
   /**
-   * Programmatically show the dropdown
+   * Programmatically set value of auro-select
    */
    import { setValue } from './../apiExamples/value';
   
@@ -51,6 +51,17 @@ function initializeExample(element, callback, retryCount) {
       setValue(elem);
      });
    }());
+
+   /**
+   * Show auro-select overflow when nested inside another element
+   */
+  import { openDialog } from './../apiExamples/nestedSelect';
+
+  (function(){
+    initializeExample('#nestedSelect', function() {
+      openDialog();
+    });
+  }());
 
    /**
    * Programmatically set error attribute

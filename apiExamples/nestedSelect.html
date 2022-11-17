@@ -1,0 +1,25 @@
+<auro-button id="dialogButton">Open Dialog</auro-button>
+<auro-dialog id="outerDialog">
+  <span slot="header">Default Dialog</span>
+  <div slot="content">
+    <auro-select id="nestedSelect">
+      <auro-menu>
+        <auro-menuoption value="stops">Stops</auro-menuoption>
+        <auro-menuoption value="price">Price</auro-menuoption>
+        <auro-menuoption value="duration">Duration</auro-menuoption>
+        <auro-menuoption value="departure">Departure</auro-menuoption>
+        <auro-menuoption value="arrival">Arrival</auro-menuoption>
+        <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
+      </auro-menu>
+    </auro-select>
+  </div> 
+  <div slot="footer" className="auro_containedButtons">
+    <auro-button secondary id="closeButton">Close</auro-button>
+  </div>
+</auro-dialog>
+<!-- Style to allow the dropdown menu to overflow -->
+<style>
+  #outerDialog::part(dialog) { 
+    overflow: visible;
+  }
+</style>

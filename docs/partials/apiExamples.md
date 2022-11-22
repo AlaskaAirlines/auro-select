@@ -13,7 +13,7 @@ This file is generated based on a template fetched from `./docs/partials/apiExam
 
 ### Default example
 
-A baseline `<auro-select>` using `<auro-menu>` and `<auro-menuoption>` elements. Notice a default `Please select option` placeholder in the trigger.
+A baseline `auro-select` using `auro-menu` and `auro-menuoption` elements. Notice a default `Please select option` placeholder in the trigger.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
@@ -27,13 +27,13 @@ A baseline `<auro-select>` using `<auro-menu>` and `<auro-menuoption>` elements.
 
 </auro-accordion>
 
-### Nested example
+### The auro-select nested inside an auro-dialog example
 
-An example using an `<auro-select>` nested inside of an `<auro-dialog>`. The purpose of this example is to show what a nested `<auro-select>` looks like when
-it's parent container has it's CSS code set to `overflow: visible` in order to allow for the dropdown menu of `<auro-select>` to be visible, even when the height
+An example using an `auro-select` nested inside of a container that is smaller than the `auro-select` element when the popover bib is open. In this case, the parent container of this `auro-select` is an `auro-dialog` element. The purpose of this example is to show what a nested `auro-select` looks like when
+it's parent container has it's CSS code set to `overflow: visible` in order to allow for the dropdown menu of `auro-select` to be visible, even when the height
 of the dropdown may exceed the borders of the parent container.
 
-**IMPORTANT:** You must be careful when using `overflow: visible` in order to obtain a UI experience that reflects this example. While `<auro-select>`'s dropdown menu
+**IMPORTANT:** You must be careful when using `overflow: visible` in order to obtain a UI experience that reflects this example. While `auro-select`'s dropdown menu
 will overflow over the parent container's borders, so will all other elements within the container, which may lead to UI issues.
 
 <div class="exampleWrapper">
@@ -42,9 +42,6 @@ will overflow over the parent container's borders, so will all other elements wi
 </div>
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/nestedSelect.js) -->
-<!-- AURO-GENERATED-CONTENT:END -->
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/nestedSelect.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->

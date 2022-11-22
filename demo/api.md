@@ -49,7 +49,7 @@ The auro-select element is a wrapper for auro-dropdown and auro-menu to create a
 
 ### Default example
 
-A baseline `<auro-select>` using `<auro-menu>` and `<auro-menuoption>` elements. Notice a default `Please select option` placeholder in the trigger.
+A baseline `auro-select` using `auro-menu` and `auro-menuoption` elements. Notice a default `Please select option` placeholder in the trigger.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
@@ -86,21 +86,30 @@ A baseline `<auro-select>` using `<auro-menu>` and `<auro-menuoption>` elements.
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-### Nested example
+### The auro-select nested inside an auro-dialog example
 
-An example using an `<auro-select>` nested inside of an `<auro-dialog>`. The purpose of this example is to show what a nested `<auro-select>` looks like when
-it's parent container has it's CSS code set to `overflow: visible` in order to allow for the dropdown menu of `<auro-select>` to be visible, even when the height
+An example using an `auro-select` nested inside of a container that is smaller than the `auro-select` element when the popover bib is open. In this case, the parent container of this `auro-select` is an `auro-dialog` element. The purpose of this example is to show what a nested `auro-select` looks like when
+it's parent container has it's CSS code set to `overflow: visible` in order to allow for the dropdown menu of `auro-select` to be visible, even when the height
 of the dropdown may exceed the borders of the parent container.
 
-**IMPORTANT:** You must be careful when using `overflow: visible` in order to obtain a UI experience that reflects this example. While `<auro-select>`'s dropdown menu
+**IMPORTANT:** You must be careful when using `overflow: visible` in order to obtain a UI experience that reflects this example. While `auro-select`'s dropdown menu
 will overflow over the parent container's borders, so will all other elements within the container, which may lead to UI issues.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/nestedSelect.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/nestedSelect.html -->
-  <auro-button id="dialogButton">Open Dialog</auro-button>
-  <auro-dialog id="outerDialog">
-    <span slot="header">Default Dialog</span>
+  <!-- Style to allow the dropdown menu to overflow -->
+  <style>
+    #visibleOverflowDialog::part(dialog) { 
+      overflow: visible;
+      max-height: 400px;
+    }
+  </style>
+  <auro-button id="overflowVisibleButton">Open Visible Overflow Dialog</auro-button>
+  <auro-button id="overflowHiddenButton">Open Hidden Overflow Dialog</auro-button>
+  <!-- Example showing the overflow of auro-select's popover bib with overflow: visible -->
+  <auro-dialog id="visibleOverflowDialog">
+    <span slot="header">Visible Overflow Dialog</span>
     <div slot="content">
       <auro-select id="nestedSelect">
         <auro-menu>
@@ -114,45 +123,48 @@ will overflow over the parent container's borders, so will all other elements wi
       </auro-select>
     </div> 
     <div slot="footer" className="auro_containedButtons">
-      <auro-button secondary id="closeButton">Close</auro-button>
+      <auro-button secondary id="closeVisButton">Close</auro-button>
     </div>
   </auro-dialog>
-  <!-- Style to allow the dropdown menu to overflow -->
-  <style>
-    #outerDialog::part(dialog) { 
-      overflow: visible;
-    }
-  </style>
+  <!-- Example showing the overflow of auro-select's popover bib with the default behavior, overflow: hidden -->
+  <auro-dialog id="hiddenOverflowDialog">
+    <span slot="header">Hidden Overflow Dialog</span>
+    <div slot="content">
+      <auro-select id="nestedSelect">
+        <auro-menu>
+          <auro-menuoption value="stops">Stops</auro-menuoption>
+          <auro-menuoption value="price">Price</auro-menuoption>
+          <auro-menuoption value="duration">Duration</auro-menuoption>
+          <auro-menuoption value="departure">Departure</auro-menuoption>
+          <auro-menuoption value="arrival">Arrival</auro-menuoption>
+          <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
+        </auro-menu>
+      </auro-select>
+    </div> 
+    <div slot="footer" className="auro_containedButtons">
+      <auro-button secondary id="closeHidButton">Close</auro-button>
+    </div>
+  </auro-dialog>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/nestedSelect.js) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/nestedSelect.js -->
-
-```js
-export function openDialog() {
-  let openButtonElem = document.getElementById('dialogButton');
-  let closeButtonElem = document.getElementById('closeButton');
-  let dialogElem = document.getElementById('outerDialog');
-
-  openButtonElem.addEventListener('click', () => {
-    dialogElem.setAttribute('open', 'true');
-  });
-
-  closeButtonElem.addEventListener('click', () => {
-    dialogElem.removeAttribute('open');
-  });
-}
-```
-<!-- AURO-GENERATED-CONTENT:END -->
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/nestedSelect.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/nestedSelect.html -->
 
 ```html
-<auro-button id="dialogButton">Open Dialog</auro-button>
-<auro-dialog id="outerDialog">
-  <span slot="header">Default Dialog</span>
+<!-- Style to allow the dropdown menu to overflow -->
+<style>
+  #visibleOverflowDialog::part(dialog) { 
+    overflow: visible;
+    max-height: 400px;
+  }
+</style>
+<auro-button id="overflowVisibleButton">Open Visible Overflow Dialog</auro-button>
+<auro-button id="overflowHiddenButton">Open Hidden Overflow Dialog</auro-button>
+<!-- Example showing the overflow of auro-select's popover bib with overflow: visible -->
+<auro-dialog id="visibleOverflowDialog">
+  <span slot="header">Visible Overflow Dialog</span>
   <div slot="content">
     <auro-select id="nestedSelect">
       <auro-menu>
@@ -166,15 +178,28 @@ export function openDialog() {
     </auro-select>
   </div> 
   <div slot="footer" className="auro_containedButtons">
-    <auro-button secondary id="closeButton">Close</auro-button>
+    <auro-button secondary id="closeVisButton">Close</auro-button>
   </div>
 </auro-dialog>
-<!-- Style to allow the dropdown menu to overflow -->
-<style>
-  #outerDialog::part(dialog) { 
-    overflow: visible;
-  }
-</style>
+<!-- Example showing the overflow of auro-select's popover bib with the default behavior, overflow: hidden -->
+<auro-dialog id="hiddenOverflowDialog">
+  <span slot="header">Hidden Overflow Dialog</span>
+  <div slot="content">
+    <auro-select id="nestedSelect">
+      <auro-menu>
+        <auro-menuoption value="stops">Stops</auro-menuoption>
+        <auro-menuoption value="price">Price</auro-menuoption>
+        <auro-menuoption value="duration">Duration</auro-menuoption>
+        <auro-menuoption value="departure">Departure</auro-menuoption>
+        <auro-menuoption value="arrival">Arrival</auro-menuoption>
+        <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
+      </auro-menu>
+    </auro-select>
+  </div> 
+  <div slot="footer" className="auro_containedButtons">
+    <auro-button secondary id="closeHidButton">Close</auro-button>
+  </div>
+</auro-dialog>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>

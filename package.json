@@ -19,6 +19,7 @@
     "node": ">=16.13.0"
   },
   "dependencies": {
+    "@aurodesignsystem/auro-menu": "^3.9.2",
     "@aurodesignsystem/webcorestylesheets": "^4.1.2",
     "chalk": "^4.1.2",
     "lit-element": "^2.5.1",

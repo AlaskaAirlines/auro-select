@@ -1,6 +1,17 @@
-<auro-button id="dialogButton">Open Dialog</auro-button>
-<auro-dialog id="outerDialog">
-  <span slot="header">Default Dialog</span>
+<!-- Style to allow the dropdown menu to overflow -->
+<style>
+  #visibleOverflowDialog::part(dialog) { 
+    overflow: visible;
+    max-height: 400px;
+  }
+</style>
+
+<auro-button id="overflowVisibleButton">Open Visible Overflow Dialog</auro-button>
+<auro-button id="overflowHiddenButton">Open Hidden Overflow Dialog</auro-button>
+
+<!-- Example showing the overflow of auro-select's popover bib with overflow: visible -->
+<auro-dialog id="visibleOverflowDialog">
+  <span slot="header">Visible Overflow Dialog</span>
   <div slot="content">
     <auro-select id="nestedSelect">
       <auro-menu>
@@ -14,12 +25,27 @@
     </auro-select>
   </div> 
   <div slot="footer" className="auro_containedButtons">
-    <auro-button secondary id="closeButton">Close</auro-button>
+    <auro-button secondary id="closeVisButton">Close</auro-button>
   </div>
 </auro-dialog>
-<!-- Style to allow the dropdown menu to overflow -->
-<style>
-  #outerDialog::part(dialog) { 
-    overflow: visible;
-  }
-</style>
+
+<!-- Example showing the overflow of auro-select's popover bib with the default behavior, overflow: hidden -->
+<auro-dialog id="hiddenOverflowDialog">
+  <span slot="header">Hidden Overflow Dialog</span>
+  <div slot="content">
+    <auro-select id="nestedSelect">
+      <auro-menu>
+        <auro-menuoption value="stops">Stops</auro-menuoption>
+        <auro-menuoption value="price">Price</auro-menuoption>
+        <auro-menuoption value="duration">Duration</auro-menuoption>
+        <auro-menuoption value="departure">Departure</auro-menuoption>
+        <auro-menuoption value="arrival">Arrival</auro-menuoption>
+        <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
+      </auro-menu>
+    </auro-select>
+  </div> 
+  <div slot="footer" className="auro_containedButtons">
+    <auro-button secondary id="closeHidButton">Close</auro-button>
+  </div>
+</auro-dialog>
+

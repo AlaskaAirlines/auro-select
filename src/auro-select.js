@@ -6,6 +6,8 @@
 // If using litElement base class
 import { LitElement, html } from "lit-element";
 
+import '@aurodesignsystem/auro-menu';
+
 // If using auroElement base class
 // See instructions for importing auroElement base class https://git.io/JULq4
 // import { html, css } from "lit-element";

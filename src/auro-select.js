@@ -38,6 +38,7 @@ import styleCssFixed from './style-fixed-css.js';
  * @slot label - Defines the content of the label.
  * @slot helpText - Defines the content of the helpText.
  * @fires auroSelect-ready - Notifies that the component has finished initializing.
+ * @fires auroSelect-valueSet - Notifies that the component has a new value set.
  */
 
 // build the component class
@@ -429,6 +430,14 @@ class AuroSelect extends LitElement {
       }
 
       this.validate();
+    }
+
+    if (changedProperties.has('value')) {
+      this.dispatchEvent(new CustomEvent('auroSelect-valueSet', {
+        bubbles: true,
+        cancelable: false,
+        composed: true,
+      }));
     }
 
     if (changedProperties.has('error')) {

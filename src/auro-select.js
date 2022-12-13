@@ -147,19 +147,16 @@ class AuroSelect extends LitElement {
     if (this.hasAttribute('error')) {
       this.validity = 'customError';
       this.setCustomValidity = this.error;
-    } else if (this.value !== undefined && !this.noValidate) {
+    } else if (this.value !== undefined && this.value.length !== 0 && !this.noValidate) {
       this.validity = 'valid';
       this.setCustomValidity = '';
-
-      /**
-       * Only validate once we interact with the datepicker
-       * this.value === undefined is the initial state pre-interaction.
-       *
-       * The validityState definitions are located at https://developer.mozilla.org/en-US/docs/Web/API/ValidityState.
-       */
-      if ((!this.value || this.value.length === 0) && this.required) {
+    } else if (!this.value || this.value.length === 0) {
+      if (this.required) {
         this.validity = 'valueMissing';
         this.setCustomValidity = this.setCustomValidityValueMissing;
+      } else {
+        this.validity = 'valid';
+        this.setCustomValidity = '';
       }
     }
 

@@ -137,6 +137,20 @@ describe('auro-select', () => {
     const menu = el.querySelector('auro-menu');
     await expect(menu.hasAttribute('nocheckmark')).to.be.true;
   });
+
+  it('removing error attribute reruns validity even when value is undefined', async () => {
+    const el = await errorFixture();
+
+    await waitUntil(() => el.ready);
+
+    await expect(el.getAttribute('validity')).to.be.equal('customError');
+
+    el.removeAttribute('error');
+
+    await elementUpdated(el);
+
+    await expect(el.getAttribute('validity')).to.equal('valid');
+  });
 });
 
 async function defaultFixture() {
@@ -170,6 +184,18 @@ async function presetValueFixture() {
 async function noCheckmarkFixture() {
   return await fixture(html`
   <auro-select nocheckmark>
+    <span slot="label">Name</span>
+    <auro-menu>
+      <auro-menuoption value="Apples" id="option-0">Apples</auro-menuoption>
+      <auro-menuoption value="Oranges" id="option-1">Oranges</auro-menuoption>
+    </auro-menu>
+  </auro-select>
+  `);
+}
+
+async function errorFixture() {
+  return await fixture(html`
+  <auro-select error="Custom error message">
     <span slot="label">Name</span>
     <auro-menu>
       <auro-menuoption value="Apples" id="option-0">Apples</auro-menuoption>

@@ -426,7 +426,9 @@ class AuroSelect extends LitElement {
       } else {
         this.menu.value = undefined;
       }
+    }
 
+    if (changedProperties.has('value')) {
       this.validate();
     }
 

@@ -144,12 +144,18 @@ class AuroSelect extends LitElement {
    * @returns {void}
    */
   validate() {
+    // Handle error attribute change regardless of focus
+    if (this.hasAttribute('error')) {
+      this.validity = 'customError';
+      this.setCustomValidity = this.error;
+    } else {
+      this.validity = undefined;
+      this.removeAttribute('validity');
+      this.setCustomValidity = '';
+    }
     // Validate only if noValidate is not true and the input does not have focus
     if (!this.contains(document.activeElement)) {
-      if (this.hasAttribute('error')) {
-        this.validity = 'customError';
-        this.setCustomValidity = this.error;
-      } else if (this.value !== undefined && !this.noValidate) {
+      if (this.value !== undefined && !this.noValidate) {
         this.validity = 'valid';
         this.setCustomValidity = '';
 
@@ -163,12 +169,13 @@ class AuroSelect extends LitElement {
           this.validity = 'valueMissing';
           this.setCustomValidity = this.setCustomValidityValueMissing;
         }
+      } else if (!this.hasAttribute('error')) {
+        this.validity = undefined;
+        this.setCustomValidity = '';
       }
     }
-
     if (this.validity && this.validity !== 'valid') {
       this.isValid = false;
-
       // Use the validity message override if it is declared
       if (this.ValidityMessageOverride) {
         this.setCustomValidity = this.ValidityMessageOverride;

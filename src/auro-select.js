@@ -404,10 +404,6 @@ class AuroSelect extends LitElement {
       this.shadowRoot.querySelector('auro-dropdown').removeAttribute('disabled');
     }
 
-    if (this.required && this.value) {
-      this.shadowRoot.querySelector('auro-dropdown').removeAttribute('error');
-    }
-
     if (this.noCheckmark) {
       this.menu.setAttribute('nocheckmark', '');
     }

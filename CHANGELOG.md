@@ -1,5 +1,14 @@
 # Semantic Release Automated Changelog
 
+## [2.7.1](https://github.com/AlaskaAirlines/auro-select/compare/v2.7.0...v2.7.1) (2022-12-16)
+
+
+### Bug Fixes
+
+* **error:** run validity when error attribute is removed [#137](https://github.com/AlaskaAirlines/auro-select/issues/137) ([c875205](https://github.com/AlaskaAirlines/auro-select/commit/c875205431daf2920c186573f48bbd482b83bbb4))
+* validate preset values ([f9a39ea](https://github.com/AlaskaAirlines/auro-select/commit/f9a39ea9f8a3687284c9425a6c4025cb9a00cb99))
+* **validity:** validate when auro-select loses focus ([ac77c63](https://github.com/AlaskaAirlines/auro-select/commit/ac77c633504455b217ba61a99cfa12008f207e73))
+
 # [2.7.0](https://github.com/AlaskaAirlines/auro-select/compare/v2.6.0...v2.7.0) (2022-12-13)
 
 

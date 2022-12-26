@@ -275,12 +275,22 @@ class AuroSelect extends LitElement {
     this.addEventListener('keydown', (evt) => {
       if (evt.key === 'ArrowUp') {
         evt.preventDefault();
-        this.menu.selectNextItem('up');
+
+        this.dropdown.show();
+
+        if (this.dropdown.isPopoverVisible) {
+          this.menu.selectNextItem('up');
+        }
       }
 
       if (evt.key === 'ArrowDown') {
         evt.preventDefault();
-        this.menu.selectNextItem('down');
+
+        this.dropdown.show();
+
+        if (this.dropdown.isPopoverVisible) {
+          this.menu.selectNextItem('down');
+        }
       }
 
       if (evt.key === 'Enter') {

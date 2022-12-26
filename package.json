@@ -20,14 +20,13 @@
   },
   "dependencies": {
     "@aurodesignsystem/auro-menu": "^3.9.2",
-    "@aurodesignsystem/webcorestylesheets": "^4.1.2",
+    "@aurodesignsystem/webcorestylesheets": "^4.2.0",
     "chalk": "^4.1.2",
     "lit-element": "^2.5.1",
     "lit-html": "^1.4.1"
   },
   "peerDependencies": {
     "@alaskaairux/design-tokens": "^3.11.0",
-    "@aurodesignsystem/webcorestylesheets": "^4.1.2",
     "@aurodesignsystem/auro-dropdown": "^2.9.0",
     "@aurodesignsystem/auro-menu": "^3.9.2",
     "focus-visible": "^5.2.0"

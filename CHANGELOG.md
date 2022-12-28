@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.7.2](https://github.com/AlaskaAirlines/auro-select/compare/v2.7.1...v2.7.2) (2022-12-28)
+
+
+### Bug Fixes
+
+* **runtime:** stop auro-menu from loading before auro-select ([bdc6857](https://github.com/AlaskaAirlines/auro-select/commit/bdc68578f3093151a50e9905f632bd075cdc89eb))
+
 ## [2.7.1](https://github.com/AlaskaAirlines/auro-select/compare/v2.7.0...v2.7.1) (2022-12-16)
 
 

@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [2.8.0](https://github.com/AlaskaAirlines/auro-select/compare/v2.7.2...v2.8.0) (2023-01-02)
+
+
+### Features
+
+* **ux:** open bib when using arrow keys [#142](https://github.com/AlaskaAirlines/auro-select/issues/142) ([e4c38bb](https://github.com/AlaskaAirlines/auro-select/commit/e4c38bbb3326f48c7676156d2966393b66f8733a))
+
 ## [2.7.2](https://github.com/AlaskaAirlines/auro-select/compare/v2.7.1...v2.7.2) (2022-12-28)
 
 

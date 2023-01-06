@@ -141,6 +141,56 @@ class AuroSelect extends LitElement {
   }
 
   /**
+   * Handles setting the validity and setCustomValidity attributes.
+   * @private
+   * @returns {void}
+   */
+  handleValidity() {
+    this.validity = undefined;
+    this.removeAttribute('validity');
+    this.setCustomValidity = '';
+
+    // Validate only if noValidate is not true and the input does not have focus
+    if (!this.contains(document.activeElement)) {
+      if (this.value !== undefined && !this.noValidate) {
+        this.validity = 'valid';
+        this.setCustomValidity = '';
+
+        /**
+         * Only validate once we interact with the datepicker
+         * this.value === undefined is the initial state pre-interaction.
+         *
+         * The validityState definitions are located at https://developer.mozilla.org/en-US/docs/Web/API/ValidityState.
+         */
+        if ((!this.value || this.value.length === 0) && this.required) {
+          this.validity = 'valueMissing';
+          this.setCustomValidity = this.setCustomValidityValueMissing;
+        }
+      } else if (!this.hasAttribute('error')) {
+        this.validity = undefined;
+        this.setCustomValidity = '';
+      }
+    }
+  }
+
+  /**
+   * Handles overriding the setCustom validity attribute when the ValidityMessageOverride attribute is present.
+   * @private
+   * @returns {void}
+   */
+  handleValidityMessage() {
+    if (this.validity && this.validity !== 'valid') {
+      this.isValid = false;
+      // Use the validity message override if it is declared
+      if (this.ValidityMessageOverride) {
+        this.setCustomValidity = this.ValidityMessageOverride;
+      }
+    } else {
+      this.isValid = true;
+    }
+  }
+
+  /**
    * Determines the validity state of the element.
    * @private
    * @returns {void}
@@ -151,42 +201,10 @@ class AuroSelect extends LitElement {
       this.validity = 'customError';
       this.setCustomValidity = this.error;
     } else {
-      this.validity = undefined;
-      this.removeAttribute('validity');
-      this.setCustomValidity = '';
-
-      // Validate only if noValidate is not true and the input does not have focus
-      if (!this.contains(document.activeElement)) {
-        if (this.value !== undefined && !this.noValidate) {
-          this.validity = 'valid';
-          this.setCustomValidity = '';
-
-          /**
-           * Only validate once we interact with the datepicker
-           * this.value === undefined is the initial state pre-interaction.
-           *
-           * The validityState definitions are located at https://developer.mozilla.org/en-US/docs/Web/API/ValidityState.
-           */
-          if ((!this.value || this.value.length === 0) && this.required) {
-            this.validity = 'valueMissing';
-            this.setCustomValidity = this.setCustomValidityValueMissing;
-          }
-        } else if (!this.hasAttribute('error')) {
-          this.validity = undefined;
-          this.setCustomValidity = '';
-        }
-      }
+      this.handleValidity();
     }
 
-    if (this.validity && this.validity !== 'valid') {
-      this.isValid = false;
-      // Use the validity message override if it is declared
-      if (this.ValidityMessageOverride) {
-        this.setCustomValidity = this.ValidityMessageOverride;
-      }
-    } else {
-      this.isValid = true;
-    }
+    this.handleValidityMessage();
   }
 
   /**

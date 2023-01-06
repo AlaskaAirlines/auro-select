@@ -66,10 +66,21 @@ function initializeExample(element, callback, retryCount) {
    /**
    * Programmatically set error attribute
    */
-   import { setError } from './../apiExamples/error';
+   import { setError } from '../apiExamples/errorApi';
   
    (function(){
      initializeExample('#errorExample', function(elem) {
       setError(elem);
      });
    }());
+
+    /**
+   * Programmatically set error attribute based on specific condition
+   */
+    import { setErrorOnValueChange } from './../apiExamples/customErrorValidity';
+  
+    (function(){
+      initializeExample('#primaryError', function(elem) {
+        setErrorOnValueChange(elem);
+      });
+    }());

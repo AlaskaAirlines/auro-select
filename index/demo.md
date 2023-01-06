@@ -302,17 +302,14 @@ The following example illustrates the use of the `label` and `helptext` slots fo
 
 </auro-accordion>
 
-## Error state
+## Error State
 
 Use the `error` boolean attribute to toggle the error UI.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/error.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/error.html -->
-  <auro-button id="undefinedValueExampleBtnAddError">Set Error</auro-button>
-  <auro-button id="undefinedValueExampleBtnRemoveError">Remove Error</auro-button>
-  <br /><br />
-  <auro-select id="errorExample" error="Custom error message">
+  <auro-select error="Custom error message">
     <auro-menu>
       <auro-menuoption value="stops">Stops</auro-menuoption>
       <auro-menuoption value="price">Price</auro-menuoption>
@@ -331,10 +328,7 @@ Use the `error` boolean attribute to toggle the error UI.
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/error.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/error.html -->
 ```html
-<auro-button id="undefinedValueExampleBtnAddError">Set Error</auro-button>
-<auro-button id="undefinedValueExampleBtnRemoveError">Remove Error</auro-button>
-<br /><br />
-<auro-select id="errorExample" error="Custom error message">
+<auro-select error="Custom error message">
   <auro-menu>
     <auro-menuoption value="stops">Stops</auro-menuoption>
     <auro-menuoption value="price">Price</auro-menuoption>
@@ -348,6 +342,7 @@ Use the `error` boolean attribute to toggle the error UI.
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
+
 
 ## Disabled state
 

@@ -97,7 +97,7 @@ The following example illustrates the use of the `label` and `helptext` slots fo
 
 </auro-accordion>
 
-## Error state
+## Error State
 
 Use the `error` boolean attribute to toggle the error UI.
 
@@ -113,6 +113,7 @@ Use the `error` boolean attribute to toggle the error UI.
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
+
 
 ## Disabled state
 

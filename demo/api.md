@@ -361,8 +361,8 @@ When the validity check fails the validityState equals `valueMissing`. The error
 Use the `error` boolean attribute to toggle the error UI.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/error.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/error.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/errorApi.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/errorApi.html -->
   <auro-button id="undefinedValueExampleBtnAddError">Set Error</auro-button>
   <auro-button id="undefinedValueExampleBtnRemoveError">Remove Error</auro-button>
   <br /><br />
@@ -380,8 +380,8 @@ Use the `error` boolean attribute to toggle the error UI.
 </div>
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/error.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/error.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/errorApi.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/errorApi.html -->
 
 ```html
 <auro-button id="undefinedValueExampleBtnAddError">Set Error</auro-button>
@@ -577,6 +577,60 @@ export function getValue(elem) {
   </auro-menu>
 </auro-select>
 <auro-button id="valueExtractionBtn">Get current value</auro-button>
+```
+<!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
+
+### Custom Validity with Error State
+
+This example programmatically adds the `error` state when a user selects an option that is greater than `2`.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/customErrorValidity.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/customErrorValidity.html -->
+  <auro-select id="primaryError">
+    <auro-menu>
+      <auro-menuoption value="1">1</auro-menuoption>
+      <auro-menuoption value="2">2</auro-menuoption>
+      <auro-menuoption value="3">3</auro-menuoption>
+      <auro-menuoption value="4">4</auro-menuoption>
+      <auro-menuoption value="5">5</auro-menuoption>
+      <auro-menuoption value="6">6</auro-menuoption>
+    </auro-menu>
+  </auro-select>
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion lowProfile justifyRight>
+  <span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/customErrorValidity.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/customErrorValidity.html -->
+
+```html
+<auro-select id="primaryError">
+  <auro-menu>
+    <auro-menuoption value="1">1</auro-menuoption>
+    <auro-menuoption value="2">2</auro-menuoption>
+    <auro-menuoption value="3">3</auro-menuoption>
+    <auro-menuoption value="4">4</auro-menuoption>
+    <auro-menuoption value="5">5</auro-menuoption>
+    <auro-menuoption value="6">6</auro-menuoption>
+  </auro-menu>
+</auro-select>
+```
+<!-- AURO-GENERATED-CONTENT:END -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/customErrorValidity.js) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/customErrorValidity.js -->
+
+```js
+export function setErrorOnValueChange(elem) {
+  elem.addEventListener('auroSelect-valueSet', () => {
+    if (+elem.value > 2) {
+      elem.setAttribute('error', 'Quantity Exceeded');
+    } else if (elem.hasAttribute('error')) {
+      elem.removeAttribute('error');
+    }
+  })
+};
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>

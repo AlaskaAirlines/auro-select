@@ -154,28 +154,30 @@ class AuroSelect extends LitElement {
       this.validity = undefined;
       this.removeAttribute('validity');
       this.setCustomValidity = '';
-    }
-    // Validate only if noValidate is not true and the input does not have focus
-    if (!this.contains(document.activeElement)) {
-      if (this.value !== undefined && !this.noValidate) {
-        this.validity = 'valid';
-        this.setCustomValidity = '';
 
-        /**
-         * Only validate once we interact with the datepicker
-         * this.value === undefined is the initial state pre-interaction.
-         *
-         * The validityState definitions are located at https://developer.mozilla.org/en-US/docs/Web/API/ValidityState.
-         */
-        if ((!this.value || this.value.length === 0) && this.required) {
-          this.validity = 'valueMissing';
-          this.setCustomValidity = this.setCustomValidityValueMissing;
+      // Validate only if noValidate is not true and the input does not have focus
+      if (!this.contains(document.activeElement)) {
+        if (this.value !== undefined && !this.noValidate) {
+          this.validity = 'valid';
+          this.setCustomValidity = '';
+
+          /**
+           * Only validate once we interact with the datepicker
+           * this.value === undefined is the initial state pre-interaction.
+           *
+           * The validityState definitions are located at https://developer.mozilla.org/en-US/docs/Web/API/ValidityState.
+           */
+          if ((!this.value || this.value.length === 0) && this.required) {
+            this.validity = 'valueMissing';
+            this.setCustomValidity = this.setCustomValidityValueMissing;
+          }
+        } else if (!this.hasAttribute('error')) {
+          this.validity = undefined;
+          this.setCustomValidity = '';
         }
-      } else if (!this.hasAttribute('error')) {
-        this.validity = undefined;
-        this.setCustomValidity = '';
       }
     }
+
     if (this.validity && this.validity !== 'valid') {
       this.isValid = false;
       // Use the validity message override if it is declared

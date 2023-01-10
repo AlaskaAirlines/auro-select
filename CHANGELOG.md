@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.8.1](https://github.com/AlaskaAirlines/auro-select/compare/v2.8.0...v2.8.1) (2023-01-10)
+
+
+### Bug Fixes
+
+* **error:** stop error state from dropping upon value change [#120](https://github.com/AlaskaAirlines/auro-select/issues/120) ([7bdc492](https://github.com/AlaskaAirlines/auro-select/commit/7bdc49249af3663bd01bec90ce570b7e06f84a2b))
+
 # [2.8.0](https://github.com/AlaskaAirlines/auro-select/compare/v2.7.2...v2.8.0) (2023-01-02)
 
 

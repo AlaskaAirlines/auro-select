@@ -1,5 +1,18 @@
 # Semantic Release Automated Changelog
 
+## [2.8.2](https://github.com/AlaskaAirlines/auro-select/compare/v2.8.1...v2.8.2) (2023-02-15)
+
+
+### Bug Fixes
+
+* **placeholder:** add gray color for placeholder text [#150](https://github.com/AlaskaAirlines/auro-select/issues/150) ([f1e83c1](https://github.com/AlaskaAirlines/auro-select/commit/f1e83c1494f3f0f821305c20db1004a48e810e67))
+* **placeholder:** placeholder text is now the right color [#150](https://github.com/AlaskaAirlines/auro-select/issues/150) ([054cf56](https://github.com/AlaskaAirlines/auro-select/commit/054cf568c47632d040a7e3dd57b121aa60831110))
+
+
+### Performance Improvements
+
+* **deps:** update dependencies to latest versions ([61fba46](https://github.com/AlaskaAirlines/auro-select/commit/61fba469d4b121a0861476f161a0efe3e07921d5))
+
 ## [2.8.1](https://github.com/AlaskaAirlines/auro-select/compare/v2.8.0...v2.8.1) (2023-01-10)
 
 

@@ -16,6 +16,9 @@ demo/**/*.scss
 demo/**/*.html
 
 dist/es5.js
+dist/auro-select.js
+dist/style-css.js
+dist/style-fixed-css.js
 
 index.html
 

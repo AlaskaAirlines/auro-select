@@ -259,17 +259,19 @@ To pre-set the value of auro-select on load, use the `value` property. The `sele
 <!-- The below code snippet is automatically added from ./../../apiExamples/value.js -->
 
 ```js
-export function setValue(elem) {
+export function valueExample() {
+  const valueExample = document.querySelector('#valueExample');
+
   document.querySelector('#validValueExampleBtn').addEventListener('click', () => {
-    elem.value = 'arrival';
+    valueExample.value = 'arrival';
   })
 
   document.querySelector('#invalidValueExampleBtn').addEventListener('click', () => {
-    elem.value = 'flight course';
+    valueExample.value = 'flight course';
   })
 
   document.querySelector('#undefinedValueExampleBtn').addEventListener('click', () => {
-    elem.value = undefined;
+    valueExample.value = undefined;
   })
 }
 ```
@@ -548,16 +550,19 @@ The following example illustrates how a user may query the `element.value` or `e
 </div>
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../demo/extractValue.js) -->
-<!-- The below code snippet is automatically added from ./../../demo/extractValue.js -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/valueExtraction.js) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/valueExtraction.js -->
 
 ```js
-export function getValue(elem) {
-  const btn = document.querySelector('#valueExtractionBtn');
+export function valueExtractionExample() {
+  const valueExtractionExample = document.querySelector('#valueExtraction');
+  const valueExtractionBtn = document.querySelector('#valueExtractionBtn');
 
-  btn.addEventListener('click', () => {
-    console.warn('Value selected:', elem.value);
-    console.warn('Option selected:', elem.optionSelected);
+  valueExtractionBtn.addEventListener('click', () => {
+    console.warn('Value selected:', valueExtractionExample.value);
+    console.warn('Option selected:', valueExtractionExample.optionSelected);
+
+    alert(`Value selected: ${valueExtractionExample.value}`);
   })
 }
 ```
@@ -622,12 +627,14 @@ This example programmatically adds the `error` state when a user selects an opti
 <!-- The below code snippet is automatically added from ./../../apiExamples/customErrorValidity.js -->
 
 ```js
-export function setErrorOnValueChange(elem) {
-  elem.addEventListener('auroSelect-valueSet', () => {
-    if (+elem.value > 2) {
-      elem.setAttribute('error', 'Quantity Exceeded');
-    } else if (elem.hasAttribute('error')) {
-      elem.removeAttribute('error');
+export function customErrorValidityExample(elem) {
+  const customErrorValidityExample = document.querySelector('#primaryError');
+
+  customErrorValidityExample.addEventListener('auroSelect-valueSet', () => {
+    if (+customErrorValidityExample.value > 2) {
+      customErrorValidityExample.setAttribute('error', 'Quantity Exceeded');
+    } else if (customErrorValidityExample.hasAttribute('error')) {
+      customErrorValidityExample.removeAttribute('error');
     }
   })
 };

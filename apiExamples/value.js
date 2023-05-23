@@ -1,13 +1,15 @@
-export function setValue(elem) {
+export function valueExample() {
+  const valueExample = document.querySelector('#valueExample');
+
   document.querySelector('#validValueExampleBtn').addEventListener('click', () => {
-    elem.value = 'arrival';
+    valueExample.value = 'arrival';
   })
 
   document.querySelector('#invalidValueExampleBtn').addEventListener('click', () => {
-    elem.value = 'flight course';
+    valueExample.value = 'flight course';
   })
 
   document.querySelector('#undefinedValueExampleBtn').addEventListener('click', () => {
-    elem.value = undefined;
+    valueExample.value = undefined;
   })
 }

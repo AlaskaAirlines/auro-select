@@ -118,9 +118,9 @@ import "@aurodesignsystem/auro-select";
 ## Install bundled assets from CDN
 
 <!-- AURO-GENERATED-CONTENT:START (REMOTE:url=https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/componentDocs/partials/usage/bundleInstallDescription.md) -->
-In cases where the project is not able to process JS assets, there are pre-processed assets available for use. Two bundles are available -- `auro-select__bundled.js` for modern browsers and `auro-select__bundled.es5.js` for legacy browsers (including IE11).
+In cases where the project is not able to process JS assets, there are pre-processed assets available for use. See -- `auro-select__bundled.js` for modern browsers. Legacy browsers such as IE11 are no longer supported.
 
-Since the legacy bundle includes many polyfills that are not needed by modern browsers, we recommend you load these bundles using [differential serving](https://philipwalton.com/articles/deploying-es2015-code-in-production-today/) so that the browser only loads the bundle it needs. To accomplish this, the script tag for the modern bundle should have `type="module"` and the script tag for the legacy bundle should have the `nomodule` attribute. See the example below.
+We recommend you load these bundles using [differential serving](https://philipwalton.com/articles/deploying-es2015-code-in-production-today/) so that the browser only loads the bundle correctly. To accomplish this, the script tag for the modern bundle should have `type="module"` and the script tag.
 
 <!-- AURO-GENERATED-CONTENT:END -->
 
@@ -130,10 +130,9 @@ Since the legacy bundle includes many polyfills that are not needed by modern br
 
 ```html
 <!-- **NOTE:** Be sure to replace `@latest` in the URL with the version of the asset you want. @latest is NOT aware of any MAJOR releases, use at your own risk. -->
-<link rel="stylesheet" href="https://unpkg.com/@alaskaairux/design-tokens@latest/dist/tokens/CSSCustomProperties.css" />
-<link rel="stylesheet" href="https://unpkg.com/@alaskaairux/webcorestylesheets@latest/dist/bundled/essentials.css" />
-<script src="https://unpkg.com/@aurodesignsystem/auro-select@latest/dist/auro-select__bundled.js" type="module"></script>
-<script src="https://unpkg.com/@aurodesignsystem/auro-select@latest/dist/auro-select__bundled.es5.js" nomodule></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@aurodesignsystem/design-tokens@latest/dist/tokens/CSSCustomProperties.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@aurodesignsystem/webcorestylesheets@latest/dist/bundled/essentials.css" />
+<script src="https://cdn.jsdelivr.net/@aurodesignsystem/auro-select@latest/dist/auro-select__bundled.js" type="module"></script>
 ```
 
 <!-- AURO-GENERATED-CONTENT:END -->

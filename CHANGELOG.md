@@ -1,5 +1,17 @@
 # Semantic Release Automated Changelog
 
+## [2.8.3](https://github.com/AlaskaAirlines/auro-select/compare/v2.8.2...v2.8.3) (2023-05-23)
+
+
+### Bug Fixes
+
+* **screenreader:** update removal of hidden screenreader label ([e7744b1](https://github.com/AlaskaAirlines/auro-select/commit/e7744b1251b50db070c87e85025c98476b7fb312))
+
+
+### Performance Improvements
+
+* **examples:** update example js code for docsite [#154](https://github.com/AlaskaAirlines/auro-select/issues/154) ([c0b7ba5](https://github.com/AlaskaAirlines/auro-select/commit/c0b7ba511102ca7883286ad5ad67d9d2eb9ba1db))
+
 ## [2.8.2](https://github.com/AlaskaAirlines/auro-select/compare/v2.8.1...v2.8.2) (2023-02-15)
 
 

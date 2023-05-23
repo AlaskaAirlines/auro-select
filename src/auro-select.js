@@ -519,7 +519,9 @@ class AuroSelect extends LitElement {
     });
 
     this.addEventListener('blur', () => {
-      document.body.removeChild(document.getElementById(textId));
+      if (document.contains(placeholderLabel)) {
+        document.body.removeChild(placeholderLabel);
+      }
     });
   }
 

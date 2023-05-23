@@ -1,9 +1,11 @@
-export function setError(elem) {
+export function setErrorExample() {
+  const setErrorExample = document.querySelector('#errorExample');
+
   document.querySelector('#undefinedValueExampleBtnAddError').addEventListener('click', () => {
-    elem.setAttribute('error', 'custom error');
+    setErrorExample.setAttribute('error', 'custom error');
   })
   
   document.querySelector('#undefinedValueExampleBtnRemoveError').addEventListener('click', () => {
-    elem.removeAttribute('error');
+    setErrorExample.removeAttribute('error');
   })
 }

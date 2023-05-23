@@ -189,7 +189,7 @@ The following example illustrates how a user may query the `element.value` or `e
   <span slot="trigger">See code</span>
 
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../demo/extractValue.js) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/valueExtraction.js) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/valueExtraction.html) -->

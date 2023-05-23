@@ -1,8 +1,10 @@
-export function openDialog() {
+export function nestedSelectExample() {
   // JavaScript for the overflow: visible dialog
   let visOverflowDialog = document.getElementById('visibleOverflowDialog');
   let visibleOverflowButton = document.getElementById('overflowVisibleButton');
   let closeVisButtonElem = document.getElementById('closeVisButton');
+
+  const elem = document.querySelector('#nestedSelect');
 
   visibleOverflowButton.addEventListener('click', () => {
     visOverflowDialog.setAttribute('open', 'true');

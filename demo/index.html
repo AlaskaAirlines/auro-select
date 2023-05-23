@@ -32,7 +32,7 @@
     <script type="module">
       import 'https://unpkg.com/marked@3.0.8/marked.min.js';
       import 'https://unpkg.com/prismjs@latest/prism.js';
-      fetch('/index/demo.md')
+      fetch('/demo/index.md')
         .then((response) => response.text())
         .then((text) => {
           const rawHtml = marked(text);
@@ -47,5 +47,9 @@
     <script src="https://unpkg.com/@aurodesignsystem/auro-hyperlink@latest/dist/auro-hyperlink__bundled.js" type="module"></script>
     <script src="https://unpkg.com/@aurodesignsystem/auro-menu@latest/dist/auro-menu__bundled.js" type="module"></script>
     <script type="module" src="../src/auro-select.js"></script>
+    <script src="./index.min.js"></script>
+    <script>
+      initSelectIndexExamples();
+    </script>
   </body>
 </html>

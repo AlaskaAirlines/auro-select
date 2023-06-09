@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@aurodesignsystem/auro-menu": "^3.9.5",
-    "@aurodesignsystem/webcorestylesheets": "^4.3.0",
+    "@aurodesignsystem/webcorestylesheets": "^4.4.0",
     "chalk": "^4.1.2",
     "lit-element": "^2.5.1",
     "lit-html": "^1.4.1"

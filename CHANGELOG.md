@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.8.4](https://github.com/AlaskaAirlines/auro-select/compare/v2.8.3...v2.8.4) (2023-06-12)
+
+
+### Bug Fixes
+
+* **npm:** remove src files from npmignore [#157](https://github.com/AlaskaAirlines/auro-select/issues/157) ([1e8b2a5](https://github.com/AlaskaAirlines/auro-select/commit/1e8b2a5c5ac6d025c4550967d988cc88dc5e62a9))
+
 ## [2.8.3](https://github.com/AlaskaAirlines/auro-select/compare/v2.8.2...v2.8.3) (2023-05-23)
 
 

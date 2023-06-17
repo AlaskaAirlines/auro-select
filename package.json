@@ -31,7 +31,7 @@
     "focus-visible": "^5.2.0"
   },
   "devDependencies": {
-    "@alaskaairux/design-tokens": "^3.12.2",
+    "@alaskaairux/design-tokens": "^3.13.0",
     "@alaskaairux/icons": "^4.21.1",
     "@aurodesignsystem/auro-dropdown": "^2.9.6",
     "@aurodesignsystem/auro-menu": "^3.9.5",

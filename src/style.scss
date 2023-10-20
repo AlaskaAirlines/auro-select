@@ -1,7 +1,11 @@
-@import './../node_modules/@alaskaairux/design-tokens/dist/tokens/SCSSVariables';
-@import './../node_modules/@aurodesignsystem/webcorestylesheets/dist/breakpoints';
-@import './../node_modules/@aurodesignsystem/webcorestylesheets/dist/core';
-@import './../node_modules/@aurodesignsystem/webcorestylesheets/dist/utilityClasses/displayProperties';
+@import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
+
+// Support for fallback values
+@import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables.scss';
+
+@import './../node_modules/@aurodesignsystem/webcorestylesheets/src/breakpoints';
+@import './../node_modules/@aurodesignsystem/webcorestylesheets/src/core';
+@import './../node_modules/@aurodesignsystem/webcorestylesheets/src/utilityClasses/displayProperties';
 
 /* stylelint-disable selector-class-pattern */
 
@@ -19,13 +23,12 @@
 :host {
   auro-dropdown {
     &::part(trigger) {
-      /* 2.5rem if --auro-size-500 not defined */
-      min-height: var(--auro-size-500, 2.5rem);
-      max-height: var(--auro-size-500, 2.5rem);
+      min-height: var(--ds-size-500, $ds-size-500);
+      max-height: var(--ds-size-500, $ds-size-500);
 
       /* stylelint-disable */
       &:hover {
-        background-color: var(--auro-color-ui-bkg-hover-on-light);
+        background-color: var(--ds-color-ui-bkg-hover-default);
       }
       /* stylelint-enable */
     }
@@ -40,22 +43,22 @@
 }
 
 .menuWrapper {
-  padding: var(--auro-size-xxs) 0;
+  padding: var(--ds-size-50, $ds-size-50) 0;
 }
 
 .selectElement-helpText {
-  margin: var(--auro-size-50, .25rem) 0;
-  color: var(--auro-color-text-secondary-on-light);
-  font-size: var(--auro-text-body-size-xs);
+  margin: var(--ds-size-50, $ds-size-50) 0;
+  color: var(--ds-color-text-secondary-default, $ds-color-text-secondary-default);
+  font-size: var(--ds-text-body-size-xs, $ds-text-body-size-xs);
   line-height: 1rem;
 }
 
 :host([validity]:not([validity='valid'])) {
   .selectElement-helpText {
-    color: var(--auro-color-alert-error-on-light);
+    color: var(--ds-color-alert-error-default, $ds-color-alert-error-default);
   }
 }
 
 .placeholder {
-  color: var(--auro-color-text-secondary-on-light);
+  color: var(--ds-color-text-secondary-default, $ds-color-text-secondary-default);
 }

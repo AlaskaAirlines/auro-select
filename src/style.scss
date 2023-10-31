@@ -28,7 +28,7 @@
 
       /* stylelint-disable */
       &:hover {
-        background-color: var(--ds-color-ui-bkg-hover-default);
+        background-color: var(--ds-color-ui-bkg-hover-default, $ds-color-ui-bkg-hover-default);
       }
       /* stylelint-enable */
     }

@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.8.5](https://github.com/AlaskaAirlines/auro-select/compare/v2.8.4...v2.8.5) (2023-11-02)
+
+
+### Performance Improvements
+
+* **token:** update token per new theming [#163](https://github.com/AlaskaAirlines/auro-select/issues/163) ([4ee97cd](https://github.com/AlaskaAirlines/auro-select/commit/4ee97cd5b73a10fa44c7bd43b92a28a5e393902d))
+
 ## [2.8.4](https://github.com/AlaskaAirlines/auro-select/compare/v2.8.3...v2.8.4) (2023-06-12)
 
 

@@ -1,7 +1,7 @@
 <!--
 The README.md file is a compiled document. No edits should be made directly to this file.
 
-README.md is created by running `npm run build:markdownDocs`.
+README.md is created by running `npm run build:docs`.
 
 This file is generated based on a template fetched from
 `https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/componentDocs/README.md`
@@ -19,8 +19,6 @@ The following sections are editable by making changes to the following files:
 
 # Select
 
-<!-- AUROLABS-GENERATED-CONTENT:START (REMOTE:url=https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/componentDocs/partials/labsDisclaimer.md) -->
-<!-- AUROLABS-GENERATED-CONTENT:END -->
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/partials/description.md) -->
 <!-- The below content is automatically added from ./../docs/partials/description.md -->
 `<auro-select>` is a combination [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) that consists of a pre-defined trigger element, `<auro-menu>` for the panel content. See the <auro-hyperlink href="https://auro.alaskaair.com/components/auro/menu/api">auro-menu API docs</auro-hyperlink> for additional information.
@@ -212,12 +210,5 @@ Automated tests are required for every Auro component. See `.\test\auro-select.t
 
 <!-- AURO-GENERATED-CONTENT:START (REMOTE:url=https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/componentDocs/partials/development/bundles.md) -->
 Bundled assets are only generated in the remote and not merged back to this repo. To review and/or test a bundled asset locally, run `$ npm run bundler` to generate assets.
-
-<!-- AURO-GENERATED-CONTENT:END -->
-
-### Demo deployment
-
-<!-- AURO-GENERATED-CONTENT:START (REMOTE:url=https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/componentDocs/partials/development/deploymentDemo.md) -->
-To deploy a demo version of the component for review, run `npm run build:demo` to create a `./build` directory that can be pushed to any static server.
 
 <!-- AURO-GENERATED-CONTENT:END -->

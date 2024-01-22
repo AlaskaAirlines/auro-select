@@ -47,12 +47,11 @@ A baseline `<auro-select>` using `<auro-menu>` and `<auro-menuoption>` elements.
   </auro-select>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basic.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
+
 ```html
 <auro-select>
   <auro-menu>
@@ -66,7 +65,6 @@ A baseline `<auro-select>` using `<auro-menu>` and `<auro-menuoption>` elements.
 </auro-select>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
-
 </auro-accordion>
 
 ## Example with auro-icons in options
@@ -97,12 +95,11 @@ Displays an `<auro-select>` element with `<auro-icon>` elements in each option.
   </auro-select>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/withIcons.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/withIcons.html -->
+
 ```html
 <auro-select>
   <auro-menu>
@@ -125,7 +122,6 @@ Displays an `<auro-select>` element with `<auro-icon>` elements in each option.
 </auro-select>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
-
 </auro-accordion>
 
 ## Example with nested menus
@@ -170,13 +166,11 @@ This example shows nesting `<auro-menu>` elements to create submenus.
   </auro-select>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-
-
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/withSubmenus.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/withSubmenus.html -->
+
 ```html
 <auro-select>
   <auro-menu>
@@ -213,7 +207,6 @@ This example shows nesting `<auro-menu>` elements to create submenus.
 </auro-select>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
-
 </auro-accordion>
 
 ## Example with no checkmark
@@ -235,12 +228,11 @@ Applying the `noCheckmark` attribute will prevent the checkmark icon from being 
   </auro-select>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/noCheckmark.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/noCheckmark.html -->
+
 ```html
 <auro-select nocheckmark>
     <auro-menu>
@@ -254,7 +246,6 @@ Applying the `noCheckmark` attribute will prevent the checkmark icon from being 
 </auro-select>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
-
 </auro-accordion>
 
 ## Label and help text slots
@@ -278,12 +269,11 @@ The following example illustrates the use of the `label` and `helptext` slots fo
   </auro-select>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/slots.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/slots.html -->
+
 ```html
 <auro-select>
   <span slot="label">Please choose a preference</span>
@@ -299,7 +289,6 @@ The following example illustrates the use of the `label` and `helptext` slots fo
 </auro-select>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
-
 </auro-accordion>
 
 ## Error State
@@ -321,12 +310,11 @@ Use the `error` boolean attribute to toggle the error UI.
   </auro-select>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/error.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/error.html -->
+
 ```html
 <auro-select error="Custom error message">
   <auro-menu>
@@ -340,9 +328,7 @@ Use the `error` boolean attribute to toggle the error UI.
 </auro-select>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
-
 </auro-accordion>
-
 
 ## Disabled state
 
@@ -363,12 +349,11 @@ Use the `disabled` boolean attribute to toggle the disabled UI.
   </auro-select>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/disabled.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/disabled.html -->
+
 ```html
 <auro-select disabled>
   <auro-menu>
@@ -382,5 +367,4 @@ Use the `disabled` boolean attribute to toggle the disabled UI.
 </auro-select>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
-
 </auro-accordion>

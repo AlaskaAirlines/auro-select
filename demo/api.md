@@ -5,29 +5,44 @@ apiExamples.md is created by running `npm run build:markdownDocs`.
 
 This file is generated based on a template fetched from `./docs/partials/apiExamples.md`
 -->
-<!-- AURO-GENERATED-CONTENT:START (FILE:src=./../api.md) -->
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:START (FILE:src=./../api.md) -->
 <!-- The below content is automatically added from ./../api.md -->
 
-# auro-select
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a># auro-select
 
 The auro-select element is a wrapper for auro-dropdown and auro-menu to create a dropdown menu control.
 
-## Properties
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>## Properties
 
 | Property                        | Attribute                       | Type      | Default                | Description                                      |
 |---------------------------------|---------------------------------|-----------|------------------------|--------------------------------------------------|
-| `disabled`                      | `disabled`                      | `Boolean` |                        | When attribute is present element shows disabled state. |
-| `error`                         | `error`                         | `String`  |                        | When defined, sets persistent validity to `customError` and sets `setCustomValidity` = attribute value. |
-| `noCheckmark`                   | `noCheckmark`                   | `Boolean` |                        | When true, checkmark on selected option will no longer be present. |
-| `noValidate`                    | `noValidate`                    | `Boolean` |                        | If set, disables auto-validation on blur.        |
-| `optionSelected`                | `optionSelected`                | `Object`  | "undefined"            | Specifies the current selected menuOption.       |
-| `placeholder`                   | `placeholder`                   | `String`  | "Please select option" | Define placeholder text to display before a value is manually selected. |
-| `required`                      | `required`                      | `Boolean` |                        | Populates the `required` attribute on the element. Used for client-side validation. |
-| `setCustomValidity`             | `setCustomValidity`             | `String`  |                        | Sets a custom help text message to display for all validityStates. |
-| `setCustomValidityCustomError`  | `setCustomValidityCustomError`  | `String`  |                        | Custom help text message to display when validity = `customError`. |
-| `setCustomValidityValueMissing` | `setCustomValidityValueMissing` | `String`  |                        | Custom help text message to display when validity = `valueMissing`. |
-| `validity`                      | `validity`                      | `String`  | "undefined"            | Specifies the `validityState` this element is in. |
-| `value`                         | `value`                         | `String`  |                        | Value selected for the component.                |
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>| [disabled](#disabled)                      | `disabled`                      | `Boolean` |                        | When attribute is present element shows disabled state. |
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>| [error](#error)                         | `error`                         | `String`  |                        | When defined, sets persistent validity to `customError` and sets `setCustomValidity` = attribute value. |
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>| [noCheckmark](#noCheckmark)                   | `noCheckmark`                   | `Boolean` |                        | When true, checkmark on selected option will no longer be present. |
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>| [noValidate](#noValidate)                    | `noValidate`                    | `Boolean` |                        | If set, disables auto-validation on blur.        |
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>| [optionSelected](#optionSelected)                | `optionSelected`                | `Object`  | "undefined"            | Specifies the current selected menuOption.       |
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>| [placeholder](#placeholder)                   | `placeholder`                   | `String`  | "Please select option" | Define placeholder text to display before a value is manually selected. |
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>| [required](#required)                      | `required`                      | `Boolean` |                        | Populates the `required` attribute on the element. Used for client-side validation. |
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>| [setCustomValidity](#setCustomValidity)             | `setCustomValidity`             | `String`  |                        | Sets a custom help text message to display for all validityStates. |
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>| [setCustomValidityCustomError](#setCustomValidityCustomError)  | `setCustomValidityCustomError`  | `String`  |                        | Custom help text message to display when validity = `customError`. |
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>| [setCustomValidityValueMissing](#setCustomValidityValueMissing) | `setCustomValidityValueMissing` | `String`  |                        | Custom help text message to display when validity = `valueMissing`. |
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>| [validity](#validity)                      | `validity`                      | `String`  | "undefined"            | Specifies the `validityState` this element is in. |
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>| [value](#value)                         | `value`                         | `String`  |                        | Value selected for the component.                |
 
 ## Events
 
@@ -41,13 +56,25 @@ The auro-select element is a wrapper for auro-dropdown and auro-menu to create a
 | Name       | Description                          |
 |------------|--------------------------------------|
 |            | Default slot for the menu content.   |
-| `helpText` | Defines the content of the helpText. |
-| `label`    | Defines the content of the label.    |
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>| [helpText](#helpText) | Defines the content of the helpText. |
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>| [label](#label)    | Defines the content of the label.    |
 <!-- AURO-GENERATED-CONTENT:END -->
 
-## API Examples
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
 
-### Default example
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>## API Examples
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>### Default example
 
 A baseline `auro-select` using `auro-menu` and `auro-menuoption` elements. Notice a default `Please select option` placeholder in the trigger.
 
@@ -68,10 +95,19 @@ A baseline `auro-select` using `auro-menu` and `auro-menuoption` elements. Notic
 </div>
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basic.html) -->
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basic.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
 
-```html
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```html
 <auro-select>
   <auro-menu>
     <auro-menuoption value="stops">Stops</auro-menuoption>
@@ -82,11 +118,26 @@ A baseline `auro-select` using `auro-menu` and `auro-menuoption` elements. Notic
     <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
   </auro-menu>
 </auro-select>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-</auro-accordion>
 
-### The auro-select nested inside an auro-dialog example
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:END -->
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a></auro-accordion>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>### The auro-select nested inside an auro-dialog example
 
 An example using an `auro-select` nested inside of a container that is smaller than the `auro-select` element when the popover bib is open. In this case, the parent container of this `auro-select` is an `auro-dialog` element. The purpose of this example is to show what a nested `auro-select` looks like when
 it's parent container has it's CSS code set to `overflow: visible` in order to allow for the dropdown menu of `auro-select` to be visible, even when the height
@@ -105,9 +156,15 @@ will overflow over the parent container's borders, so will all other elements wi
       max-height: 400px;
     }
   </style>
-  <auro-button id="overflowVisibleButton">Open Visible Overflow Dialog</auro-button>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>  <auro-button id="overflowVisibleButton">Open Visible Overflow Dialog</auro-button>
   <auro-button id="overflowHiddenButton">Open Hidden Overflow Dialog</auro-button>
-  <!-- Example showing the overflow of auro-select's popover bib with overflow: visible -->
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>  <!-- Example showing the overflow of auro-select's popover bib with overflow: visible -->
   <auro-dialog id="visibleOverflowDialog">
     <span slot="header">Visible Overflow Dialog</span>
     <div slot="content">
@@ -126,7 +183,10 @@ will overflow over the parent container's borders, so will all other elements wi
       <auro-button secondary id="closeVisButton">Close</auro-button>
     </div>
   </auro-dialog>
-  <!-- Example showing the overflow of auro-select's popover bib with the default behavior, overflow: hidden -->
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>  <!-- Example showing the overflow of auro-select's popover bib with the default behavior, overflow: hidden -->
   <auro-dialog id="hiddenOverflowDialog">
     <span slot="header">Hidden Overflow Dialog</span>
     <div slot="content">
@@ -149,10 +209,19 @@ will overflow over the parent container's borders, so will all other elements wi
 </div>
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/nestedSelect.html) -->
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/nestedSelect.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/nestedSelect.html -->
 
-```html
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```html
 <!-- Style to allow the dropdown menu to overflow -->
 <style>
   #visibleOverflowDialog::part(dialog) { 
@@ -160,9 +229,15 @@ will overflow over the parent container's borders, so will all other elements wi
     max-height: 400px;
   }
 </style>
-<auro-button id="overflowVisibleButton">Open Visible Overflow Dialog</auro-button>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><auro-button id="overflowVisibleButton">Open Visible Overflow Dialog</auro-button>
 <auro-button id="overflowHiddenButton">Open Hidden Overflow Dialog</auro-button>
-<!-- Example showing the overflow of auro-select's popover bib with overflow: visible -->
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- Example showing the overflow of auro-select's popover bib with overflow: visible -->
 <auro-dialog id="visibleOverflowDialog">
   <span slot="header">Visible Overflow Dialog</span>
   <div slot="content">
@@ -181,7 +256,10 @@ will overflow over the parent container's borders, so will all other elements wi
     <auro-button secondary id="closeVisButton">Close</auro-button>
   </div>
 </auro-dialog>
-<!-- Example showing the overflow of auro-select's popover bib with the default behavior, overflow: hidden -->
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- Example showing the overflow of auro-select's popover bib with the default behavior, overflow: hidden -->
 <auro-dialog id="hiddenOverflowDialog">
   <span slot="header">Hidden Overflow Dialog</span>
   <div slot="content">
@@ -200,13 +278,34 @@ will overflow over the parent container's borders, so will all other elements wi
     <auro-button secondary id="closeHidButton">Close</auro-button>
   </div>
 </auro-dialog>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-</auro-accordion>
 
-### Property Examples
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
 
-#### value
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:END -->
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a></auro-accordion>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>### Property Examples
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### value
 
 Use the `value` property to define a preset value on the `auro-select` element. The `value` of `auro-select` must match the `value` defined of a single `auro-menuoption`. Upon initially rendering the component, if the `value` does not match an `auro-menuoption`, the `value` of `auro-select` will be set to `undefined`.
 
@@ -234,10 +333,19 @@ To pre-set the value of auro-select on load, use the `value` property. The `sele
 </div>
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/value.html) -->
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/value.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/value.html -->
 
-```html
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```html
 <auro-button id="validValueExampleBtn">Set Value to Valid Option</auro-button>
 <auro-button id="invalidValueExampleBtn">Set Value to Invalid Option</auro-button>
 <auro-button id="undefinedValueExampleBtn">Set Value to Undefined</auro-button>
@@ -253,12 +361,27 @@ To pre-set the value of auro-select on load, use the `value` property. The `sele
     <auro-menuoption id="option-5" value="prefer alaska">Prefer Alaska</auro-menuoption>
   </auro-menu>
 </auro-select>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/value.js) -->
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:END -->
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/value.js) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/value.js -->
 
-```js
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```js
 export function valueExample() {
   const valueExample = document.querySelector('#valueExample');
 
@@ -276,9 +399,18 @@ export function valueExample() {
 }
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
-</auro-accordion>
 
-#### placeholder
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a></auro-accordion>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### placeholder
 
 Use the `placeholder` string attribute to inject a custom placeholder option with the select element.
 
@@ -299,10 +431,19 @@ Use the `placeholder` string attribute to inject a custom placeholder option wit
 </div>
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/customPlaceholder.html) -->
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/customPlaceholder.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/customPlaceholder.html -->
 
-```html
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```html
 <auro-select placeholder="Please select your preferred option">
   <auro-menu>
     <auro-menuoption value="stops">Stops</auro-menuoption>
@@ -313,11 +454,26 @@ Use the `placeholder` string attribute to inject a custom placeholder option wit
     <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
   </auro-menu>
 </auro-select>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-</auro-accordion>
 
-#### required
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:END -->
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a></auro-accordion>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### required
 
 When present, the `required` attribute specifies that a select field must be filled out before submitting the form.
 
@@ -340,10 +496,19 @@ When the validity check fails the validityState equals `valueMissing`. The error
 </div>
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/required.html) -->
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/required.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/required.html -->
 
-```html
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```html
 <auro-select required setCustomValidityValueMissing="Custom required validation error message.">
   <auro-menu>
     <auro-menuoption value="stops">Stops</auro-menuoption>
@@ -354,11 +519,26 @@ When the validity check fails the validityState equals `valueMissing`. The error
     <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
   </auro-menu>
 </auro-select>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-</auro-accordion>
 
-#### error
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:END -->
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a></auro-accordion>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### error
 
 Use the `error` boolean attribute to toggle the error UI.
 
@@ -380,12 +560,24 @@ Use the `error` boolean attribute to toggle the error UI.
   </auro-select>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/errorApi.html) -->
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/errorApi.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/errorApi.html -->
 
-```html
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```html
 <auro-button id="undefinedValueExampleBtnAddError">Set Error</auro-button>
 <auro-button id="undefinedValueExampleBtnRemoveError">Remove Error</auro-button>
 <br /><br />
@@ -399,11 +591,26 @@ Use the `error` boolean attribute to toggle the error UI.
     <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
   </auro-menu>
 </auro-select>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-</auro-accordion>
 
-#### disabled
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:END -->
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a></auro-accordion>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### disabled
 
 Use the `disabled` boolean attribute to toggle the disabled UI.
 
@@ -422,12 +629,24 @@ Use the `disabled` boolean attribute to toggle the disabled UI.
   </auro-select>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/disabled.html) -->
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/disabled.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/disabled.html -->
 
-```html
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```html
 <auro-select disabled>
   <auro-menu>
     <auro-menuoption value="stops">Stops</auro-menuoption>
@@ -438,13 +657,34 @@ Use the `disabled` boolean attribute to toggle the disabled UI.
     <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
   </auro-menu>
 </auro-select>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-</auro-accordion>
 
-### Slot Examples
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
 
-#### label
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:END -->
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a></auro-accordion>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>### Slot Examples
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### label
 
 Use the `label` slot to give your users contextual information about their selection options. This `label` content is also helpful for assistive devices.
 
@@ -466,10 +706,19 @@ Use the `label` slot to give your users contextual information about their selec
 </div>
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/label.html) -->
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/label.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/label.html -->
 
-```html
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```html
 <auro-select>
   <span slot="label">Please select a preference</span>
   <auro-menu>
@@ -481,11 +730,26 @@ Use the `label` slot to give your users contextual information about their selec
     <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
   </auro-menu>
 </auro-select>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-</auro-accordion>
 
-#### helpText
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:END -->
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a></auro-accordion>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### helpText
 
 Use the `helptext` slot to provide additional information back to your user about their selection option(s).
 
@@ -507,10 +771,19 @@ Use the `helptext` slot to provide additional information back to your user abou
 </div>
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/helpText.html) -->
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/helpText.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/helpText.html -->
 
-```html
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```html
 <auro-select>
   <span slot="helpText">Custom help text message.</span>
   <auro-menu>
@@ -522,13 +795,34 @@ Use the `helptext` slot to provide additional information back to your user abou
     <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
   </auro-menu>
 </auro-select>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-</auro-accordion>
 
-## Functional Examples
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
 
-### Extract value
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:END -->
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a></auro-accordion>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>## Functional Examples
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>### Extract value
 
 The following example illustrates how a user may query the `element.value` or `element.optionSelected` for the current value or complete option object that is selected.
 
@@ -545,15 +839,30 @@ The following example illustrates how a user may query the `element.value` or `e
       <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
     </auro-menu>
   </auro-select>
-  <auro-button id="valueExtractionBtn">Get current value</auro-button>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>  <auro-button id="valueExtractionBtn">Get current value</auro-button>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/valueExtraction.js) -->
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/valueExtraction.js) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/valueExtraction.js -->
 
-```js
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```js
 export function valueExtractionExample() {
   const valueExtractionExample = document.querySelector('#valueExtraction');
   const valueExtractionBtn = document.querySelector('#valueExtractionBtn');
@@ -567,10 +876,19 @@ export function valueExtractionExample() {
 }
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/valueExtraction.html) -->
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/valueExtraction.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/valueExtraction.html -->
 
-```html
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```html
 <auro-select id="valueExtraction">
   <auro-menu>
     <auro-menuoption value="stops">Stops</auro-menuoption>
@@ -581,12 +899,30 @@ export function valueExtractionExample() {
     <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
   </auro-menu>
 </auro-select>
-<auro-button id="valueExtractionBtn">Get current value</auro-button>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-</auro-accordion>
 
-### Custom Validity with Error State
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><auro-button id="valueExtractionBtn">Get current value</auro-button>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:END -->
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a></auro-accordion>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>### Custom Validity with Error State
 
 This example programmatically adds the `error` state when a user selects an option that is greater than `2`.
 
@@ -605,12 +941,24 @@ This example programmatically adds the `error` state when a user selects an opti
   </auro-select>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/customErrorValidity.html) -->
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/customErrorValidity.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/customErrorValidity.html -->
 
-```html
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```html
 <auro-select id="primaryError">
   <auro-menu>
     <auro-menuoption value="1">1</auro-menuoption>
@@ -621,12 +969,27 @@ This example programmatically adds the `error` state when a user selects an opti
     <auro-menuoption value="6">6</auro-menuoption>
   </auro-menu>
 </auro-select>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/customErrorValidity.js) -->
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:END -->
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/customErrorValidity.js) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/customErrorValidity.js -->
 
-```js
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```js
 export function customErrorValidityExample(elem) {
   const customErrorValidityExample = document.querySelector('#primaryError');
 
@@ -640,9 +1003,18 @@ export function customErrorValidityExample(elem) {
 };
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
-</auro-accordion>
 
-### Watch for value changes
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a></auro-accordion>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>### Watch for value changes
 
 The following example listens for the `selectedOption` event. Once triggered, `element.value` or `element.optionSelected` may be queried for the new value or complete option object.
 
@@ -661,12 +1033,24 @@ The following example listens for the `selectedOption` event. Once triggered, `e
   </auro-select>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../demo/alertValue.js) -->
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../demo/alertValue.js) -->
 <!-- The below code snippet is automatically added from ./../../demo/alertValue.js -->
 
-```js
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```js
 export function valueAlert(elem) {
   elem.addEventListener('selectedOption', () => {
     console.warn('Select value changed to:', elem.value);
@@ -675,10 +1059,19 @@ export function valueAlert(elem) {
 }
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/valueAlert.html) -->
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/valueAlert.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/valueAlert.html -->
 
-```html
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```html
 <auro-select id="valueAlert">
   <auro-menu>
     <auro-menuoption value="stops">Stops</auro-menuoption>
@@ -689,6 +1082,15 @@ export function valueAlert(elem) {
     <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
   </auro-menu>
 </auro-select>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-</auro-accordion>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:END -->
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-select" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a></auro-accordion>

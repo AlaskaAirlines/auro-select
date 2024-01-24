@@ -1,8 +1,9 @@
-const path = require('path');
-const chalk = require('chalk');
-const markdownMagic = require('markdown-magic');
-const fs = require('fs');
-const https = require('https');
+import path from 'path';
+import markdownMagic from 'markdown-magic';
+import fs from 'fs';
+import https from 'https';
+
+const __dirname = new URL('.', import.meta.url).pathname;
 
 const readmeTemplateUrl = 'https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/componentDocs/README.md';
 const dirDocTemplates = './docTemplates';
@@ -15,11 +16,11 @@ const readmeFilePath = dirDocTemplates + '/README.md';
  function nameExtraction() {
   const packageJson = fs.readFileSync('package.json', 'utf8', function(err, data) {
     if (err) {
-      console.log(chalk.red('ERROR: Unable to read package.json file', err));
+      console.log('ERROR: Unable to read package.json file', err);
     }
   })
 
-  pName = JSON.parse(packageJson).name;
+  let pName = JSON.parse(packageJson).name;
 
   let npmStart = pName.indexOf('@');
   let namespaceStart = pName.indexOf('/');
@@ -48,8 +49,8 @@ function formatTemplateFileContents(content, destination) {
    * Replace placeholder strings
    */
   result = result.replace(/\[npm]/g, nameExtractionData.npm);
-  result = result.replace(/\[name]/g, nameExtractionData.name);
-  result = result.replace(/\[Name]/g, nameExtractionData.nameCap);
+  result = result.replace(/\[name](?!\()/g, nameExtractionData.name);
+  result = result.replace(/\[Name](?!\()/g, nameExtractionData.nameCap);
   result = result.replace(/\[namespace]/g, nameExtractionData.namespace);
   result = result.replace(/\[Namespace]/g, nameExtractionData.namespaceCap);
 
@@ -75,37 +76,15 @@ function formatApiTableContents(content, destination) {
   let result = content;
 
   result = result
-    .replace(/\r\n|\r|\n####\s`([a-zA-Z]*)`/g, `\r\n#### <a name="$1"></a>\`$1\``)
+    .replace(/\r\n|\r|\n####\s`([a-zA-Z]*)`/g, `\r\n#### <a name="$1"></a>\`$1\`<a href="#${wcName}" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>`)
     .replace(/\r\n|\r|\n\|\s`([a-zA-Z]*)`/g, '\r\n| [$1](#$1)')
     .replace(/\| \[\]\(#\)/g, "");
 
   fs.writeFileSync(destination, result, { encoding: 'utf8'});
 
-  fs.readFile('./demo/apiExamples.md', 'utf8', function(err, data) {
+  fs.readFile('./demo/api.md', 'utf8', function(err, data) {
     formatTemplateFileContents(data, './demo/api.md');
   });
-}
-
-/**
- * If auroLabs project, include auroLabs documentation in `./README.md`
- */
-
-function processLabsReadmeContent() {
-  let nameExtractionData = nameExtraction();
-
-  if (nameExtractionData.npm === '@aurolabs') {
-    const callbackAurolabs = function(updatedContent, outputConfig) {
-      console.log(chalk.green('Readme updated to reference AuroLabs content.'));
-    };
-
-    const configAurolabs = {
-      matchWord: 'AUROLABS-GENERATED-CONTENT'
-    };
-
-    const markdownPathAurolabs = path.join(__dirname, '../README.md');
-
-    markdownMagic(markdownPathAurolabs, configAurolabs, callbackAurolabs);
-  }
 }
 
 /**
@@ -114,14 +93,13 @@ function processLabsReadmeContent() {
 
 function processReadme() {
   const callback = function(updatedContent, outputConfig) {
-    processLabsReadmeContent()
 
     if (fs.existsSync('./README.md')) {
       fs.readFile('./README.md', 'utf8', function(err, data) {
         formatTemplateFileContents(data, './README.md');
       });
     } else {
-      console.log(chalk.red('ERROR: ./README.md file is missing'));
+      console.log('ERROR: ./README.md file is missing');
     }
   };
 
@@ -133,12 +111,10 @@ function processReadme() {
   const markdownPath = path.join(__dirname, '../docTemplates/README.md');
 
   markdownMagic(markdownPath, config, callback);
-
-  processLabsReadmeContent();
 }
 
 /**
- * Compiles `./docTemplates/index.md` -> `./demo/index.md`
+ * Compiles `../docs/partials/index.md` -> `./demo/index.md`
  */
 
 function processDemo() {
@@ -148,7 +124,7 @@ function processDemo() {
         formatTemplateFileContents(data, './demo/index.md');
       });
     } else {
-      console.log(chalk.red('ERROR: ./demo/index.md file is missing'));
+      console.log('ERROR: ./demo/index.md file is missing');
     }
   };
 
@@ -157,13 +133,13 @@ function processDemo() {
     outputDir: './demo'
   };
 
-  const markdownPath = path.join(__dirname, '../docs/partials/demo.md');
+  const markdownPath = path.join(__dirname, '../docs/partials/index.md');
 
   markdownMagic(markdownPath, configDemo, callback);
 }
 
 /**
- * Compiles `./docTemplates/api.md` -> `./demo/api.md`
+ * Compiles `../docs/partials/api.md` -> `./demo/api.md`
  */
 
 function processApiExamples() {
@@ -173,7 +149,7 @@ function processApiExamples() {
         formatApiTableContents(data, './demo/api.md');
       });
     } else {
-      console.log(chalk.red('ERROR: ./demo/api.md file is missing'));
+      console.log('ERROR: ./demo/api.md file is missing');
     }
   };
 
@@ -182,7 +158,7 @@ function processApiExamples() {
     outputDir: './demo'
   };
 
-  const markdownPath = path.join(__dirname, '../docs/partials/apiExamples.md');
+  const markdownPath = path.join(__dirname, '../docs/partials/api.md');
 
   markdownMagic(markdownPath, config, callback);
 }
@@ -192,7 +168,29 @@ function processApiExamples() {
  * */
 
 function copyReadmeLocally() {
-  processReadme();
+
+  if (!fs.existsSync(dirDocTemplates)){
+    fs.mkdirSync(dirDocTemplates);
+  }
+
+  if (!fs.existsSync(readmeFilePath)) {
+    fs.writeFile(readmeFilePath, '', function(err) {
+      if(err) {
+        console.log('ERROR: Unable to create README.md file.', err);
+      }
+    });
+  }
+
+  https.get(readmeTemplateUrl, function(response) {
+    let writeTemplate = response.pipe(fs.createWriteStream(readmeFilePath));
+
+    writeTemplate.on('finish', () => {
+      processReadme();
+    });
+
+  }).on('error', (err) => {
+    console.log('ERROR: Unable to fetch README.md file from server.', err);
+  });
 }
 
 /**

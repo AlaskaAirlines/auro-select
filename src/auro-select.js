@@ -4,7 +4,7 @@
 // ---------------------------------------------------------------------
 
 // If using litElement base class
-import { LitElement, html } from "lit-element";
+import { LitElement, html } from "lit";
 
 import '@aurodesignsystem/auro-menu';
 
@@ -16,9 +16,7 @@ import '@aurodesignsystem/auro-menu';
 /* eslint-disable max-lines, prefer-named-capture-group */
 
 // Import touch detection lib
-import "focus-visible/dist/focus-visible.min.js";
 import styleCss from "./style-css.js";
-import styleCssFixed from './style-fixed-css.js';
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
@@ -44,7 +42,7 @@ import styleCssFixed from './style-fixed-css.js';
  */
 
 // build the component class
-class AuroSelect extends LitElement {
+export class AuroSelect extends LitElement {
   constructor() {
     super();
 
@@ -134,10 +132,7 @@ class AuroSelect extends LitElement {
   }
 
   static get styles() {
-    return [
-      styleCss,
-      styleCssFixed
-    ];
+    return [styleCss];
   }
 
   /**

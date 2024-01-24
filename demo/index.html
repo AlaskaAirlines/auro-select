@@ -20,19 +20,19 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="https://unpkg.com/prismjs@1.24.1/themes/prism.css"
+      href="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/themes/prism.css"
     />
-    <link rel="stylesheet" href="https://unpkg.com/@alaskaairux/design-tokens@latest/dist/tokens/CSSCustomProperties.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@alaskaairux/design-tokens@latest/dist/tokens/CSSCustomProperties.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@aurodesignsystem/design-tokens@latest/dist/tokens/CSSCustomProperties.css">
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@aurodesignsystem/webcorestylesheets@latest/dist/demoWrapper.css" />
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@aurodesignsystem/webcorestylesheets@latest/dist/elementDemoStyles.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@aurodesignsystem/webcorestylesheets@latest/dist/demoWrapper.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@aurodesignsystem/webcorestylesheets@latest/dist/elementDemoStyles.css" />
   </head>
   <body class="auro-markdown">
     <main></main>
 
     <script type="module">
-      import 'https://unpkg.com/marked@3.0.8/marked.min.js';
-      import 'https://unpkg.com/prismjs@latest/prism.js';
+      import 'https://cdn.jsdelivr.net/npm/marked@3.0.8/marked.min.js';
+      import 'https://cdn.jsdelivr.net/npm/prismjs@latest/prism.js';
       fetch('/demo/index.md')
         .then((response) => response.text())
         .then((text) => {
@@ -41,16 +41,23 @@
           Prism.highlightAll();
         });
     </script>
-    <script src="https://unpkg.com/@alaskaairux/auro-accordion@latest/dist/auro-accordion__bundled.js" type="module"></script>
-    <script src="https://unpkg.com/@alaskaairux/auro-icon@latest/dist/auro-icon__bundled.js" type="module"></script>
-    <script src="https://unpkg.com/@alaskaairux/auro-button@latest/dist/auro-button__bundled.js" type="module"></script>
-    <script src="https://unpkg.com/@aurodesignsystem/auro-dropdown@latest/dist/auro-dropdown__bundled.js" type="module"></script>
-    <script src="https://unpkg.com/@aurodesignsystem/auro-hyperlink@latest/dist/auro-hyperlink__bundled.js" type="module"></script>
-    <script src="https://unpkg.com/@aurodesignsystem/auro-menu@latest/dist/auro-menu__bundled.js" type="module"></script>
-    <script type="module" src="../src/auro-select.js"></script>
+    <script type="module" data-demo-script="true" src="../index.js"></script>
     <script src="./index.min.js"></script>
     <script>
       initSelectIndexExamples();
     </script>
+
+    <script type="module">
+      import { registerComponent } from '../index.js';
+      
+      registerComponent('custom-select');
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-accordion@latest/dist/auro-accordion__bundled.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-icon@latest/dist/auro-icon__bundled.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-button@latest/dist/auro-button__bundled.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-dropdown@latest/dist/auro-dropdown__bundled.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-hyperlink@latest/dist/auro-hyperlink__bundled.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-menu@latest/dist/auro-menu__bundled.js" type="module"></script>
   </body>
 </html>

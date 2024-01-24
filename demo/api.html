@@ -3,7 +3,7 @@
   See LICENSE in the project root for license information.
 
   HTML in this document is standardized and NOT to be edited.
-  All demo code should be added/edited in ./demo/demo.md
+  All demo code should be added/edited in ./demo/apiExamples.md
 
   With the exception of adding custom elements if needed for the demo.
 
@@ -20,38 +20,39 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="https://unpkg.com/prismjs@1.24.1/themes/prism.css"
+      href="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/themes/prism.css"
     />
-    <link rel="stylesheet" href="https://unpkg.com/@alaskaairux/design-tokens@latest/dist/tokens/CSSCustomProperties.css">
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@alaskaairux/webcorestylesheets@latest/dist/demoWrapper.css" />
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@alaskaairux/webcorestylesheets@latest/dist/elementDemoStyles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@aurodesignsystem/design-tokens@latest/dist/tokens/CSSCustomProperties.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@aurodesignsystem/webcorestylesheets@latest/dist/demoWrapper.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@aurodesignsystem/webcorestylesheets@latest/dist/elementDemoStyles.css" />
   </head>
   <body class="auro-markdown">
     <main></main>
 
     <script type="module">
-      import 'https://unpkg.com/marked@3.0.8/marked.min.js';
-      import 'https://unpkg.com/prismjs@latest/prism.js';
+      import 'https://cdn.jsdelivr.net/npm/marked@latest/marked.min.js';
+      import 'https://cdn.jsdelivr.net/npm/prismjs@latest/prism.js';
       fetch('/demo/api.md')
         .then((response) => response.text())
         .then((text) => {
-          const rawHtml = marked(text);
+          const rawHtml = marked.parse(text);
           document.querySelector('main').innerHTML = rawHtml;
           Prism.highlightAll();
         });
     </script>
-    <script src="https://unpkg.com/@alaskaairux/auro-accordion@latest/dist/auro-accordion__bundled.js" type="module"></script>
-    <script src="https://unpkg.com/@aurodesignsystem/auro-dropdown@latest/dist/auro-dropdown__bundled.js" type="module"></script>
-    <script src="https://unpkg.com/@alaskaairux/auro-icon@latest/dist/auro-icon__bundled.js" type="module"></script>
-    <script src="https://unpkg.com/@alaskaairux/auro-button@latest/dist/auro-button__bundled.js" type="module"></script>
-
-    <!-- Imported auro-dialog script for nested select example -->
-    <script src="https://unpkg.com/@alaskaairux/auro-interruption@latest/dist/auro-dialog__bundled.js" type="module"></script>
-
-    <script type="module" src="../src/auro-select.js"></script>
+    <script type="module" data-demo-script="true" src="../index.js"></script>
     <script src="./api.min.js"></script>
     <script>
       initSelectApiExamples();
     </script>
+
+    <!-- If additional elements are needed for the demo, add them here. -->
+    <script src="https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-accordion@latest/dist/auro-accordion__bundled.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-icon@latest/dist/auro-icon__bundled.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-button@latest/dist/auro-button__bundled.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-dropdown@latest/dist/auro-dropdown__bundled.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-hyperlink@latest/dist/auro-hyperlink__bundled.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-menu@latest/dist/auro-menu__bundled.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-dialog@latest/dist/auro-dialog__bundled.js" type="module"></script>
   </body>
 </html>

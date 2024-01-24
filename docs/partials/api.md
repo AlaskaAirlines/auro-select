@@ -19,7 +19,7 @@ A baseline `auro-select` using `auro-menu` and `auro-menuoption` elements. Notic
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basic.html) -->
@@ -40,7 +40,7 @@ will overflow over the parent container's borders, so will all other elements wi
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/nestedSelect.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/nestedSelect.html) -->
@@ -50,7 +50,7 @@ will overflow over the parent container's borders, so will all other elements wi
 
 ### Property Examples
 
-#### value
+#### value <a name="value"></a>
 
 Use the `value` property to define a preset value on the `auro-select` element. The `value` of `auro-select` must match the `value` defined of a single `auro-menuoption`. Upon initially rendering the component, if the `value` does not match an `auro-menuoption`, the `value` of `auro-select` will be set to `undefined`.
 
@@ -60,7 +60,7 @@ To pre-set the value of auro-select on load, use the `value` property. The `sele
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/value.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/value.html) -->
@@ -71,7 +71,7 @@ To pre-set the value of auro-select on load, use the `value` property. The `sele
 
 </auro-accordion>
 
-#### placeholder
+#### placeholder <a name="placeholder"></a>
 
 Use the `placeholder` string attribute to inject a custom placeholder option with the select element.
 
@@ -79,7 +79,7 @@ Use the `placeholder` string attribute to inject a custom placeholder option wit
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/customPlaceholder.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/customPlaceholder.html) -->
@@ -87,7 +87,7 @@ Use the `placeholder` string attribute to inject a custom placeholder option wit
 
 </auro-accordion>
 
-#### required
+#### required <a name="required"></a>
 
 When present, the `required` attribute specifies that a select field must be filled out before submitting the form.
 
@@ -97,7 +97,7 @@ When the validity check fails the validityState equals `valueMissing`. The error
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/required.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/required.html) -->
@@ -105,7 +105,7 @@ When the validity check fails the validityState equals `valueMissing`. The error
 
 </auro-accordion>
 
-#### error
+#### error <a name="error"></a>
 
 Use the `error` boolean attribute to toggle the error UI.
 
@@ -114,7 +114,7 @@ Use the `error` boolean attribute to toggle the error UI.
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/errorApi.html) -->
@@ -122,7 +122,7 @@ Use the `error` boolean attribute to toggle the error UI.
 
 </auro-accordion>
 
-#### disabled
+#### disabled <a name="disabled"></a>
 
 Use the `disabled` boolean attribute to toggle the disabled UI.
 
@@ -131,7 +131,7 @@ Use the `disabled` boolean attribute to toggle the disabled UI.
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/disabled.html) -->
@@ -142,7 +142,7 @@ Use the `disabled` boolean attribute to toggle the disabled UI.
 
 ### Slot Examples
 
-#### label
+#### label <a name="label"></a>
 
 Use the `label` slot to give your users contextual information about their selection options. This `label` content is also helpful for assistive devices.
 
@@ -150,7 +150,7 @@ Use the `label` slot to give your users contextual information about their selec
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/label.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/label.html) -->
@@ -158,7 +158,7 @@ Use the `label` slot to give your users contextual information about their selec
 
 </auro-accordion>
 
-#### helpText
+#### helpText <a name="helpText"></a>
 
 Use the `helptext` slot to provide additional information back to your user about their selection option(s).
 
@@ -166,7 +166,7 @@ Use the `helptext` slot to provide additional information back to your user abou
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/helpText.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/helpText.html) -->
@@ -185,7 +185,7 @@ The following example illustrates how a user may query the `element.value` or `e
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
 
@@ -206,7 +206,7 @@ This example programmatically adds the `error` state when a user selects an opti
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/customErrorValidity.html) -->
@@ -226,7 +226,7 @@ The following example listens for the `selectedOption` event. Once triggered, `e
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
 

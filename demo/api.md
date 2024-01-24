@@ -16,18 +16,18 @@ The auro-select element is a wrapper for auro-dropdown and auro-menu to create a
 
 | Property                        | Attribute                       | Type      | Default                | Description                                      |
 |---------------------------------|---------------------------------|-----------|------------------------|--------------------------------------------------|
-| `disabled`                      | `disabled`                      | `Boolean` |                        | When attribute is present element shows disabled state. |
-| `error`                         | `error`                         | `String`  |                        | When defined, sets persistent validity to `customError` and sets `setCustomValidity` = attribute value. |
-| `noCheckmark`                   | `noCheckmark`                   | `Boolean` |                        | When true, checkmark on selected option will no longer be present. |
-| `noValidate`                    | `noValidate`                    | `Boolean` |                        | If set, disables auto-validation on blur.        |
-| `optionSelected`                | `optionSelected`                | `Object`  | "undefined"            | Specifies the current selected menuOption.       |
-| `placeholder`                   | `placeholder`                   | `String`  | "Please select option" | Define placeholder text to display before a value is manually selected. |
-| `required`                      | `required`                      | `Boolean` |                        | Populates the `required` attribute on the element. Used for client-side validation. |
-| `setCustomValidity`             | `setCustomValidity`             | `String`  |                        | Sets a custom help text message to display for all validityStates. |
-| `setCustomValidityCustomError`  | `setCustomValidityCustomError`  | `String`  |                        | Custom help text message to display when validity = `customError`. |
-| `setCustomValidityValueMissing` | `setCustomValidityValueMissing` | `String`  |                        | Custom help text message to display when validity = `valueMissing`. |
-| `validity`                      | `validity`                      | `String`  | "undefined"            | Specifies the `validityState` this element is in. |
-| `value`                         | `value`                         | `String`  |                        | Value selected for the component.                |
+| [disabled](#disabled)                      | `disabled`                      | `Boolean` |                        | When attribute is present element shows disabled state. |
+| [error](#error)                         | `error`                         | `String`  |                        | When defined, sets persistent validity to `customError` and sets `setCustomValidity` = attribute value. |
+| [noCheckmark](#noCheckmark)                   | `noCheckmark`                   | `Boolean` |                        | When true, checkmark on selected option will no longer be present. |
+| [noValidate](#noValidate)                    | `noValidate`                    | `Boolean` |                        | If set, disables auto-validation on blur.        |
+| [optionSelected](#optionSelected)                | `optionSelected`                | `Object`  | "undefined"            | Specifies the current selected menuOption.       |
+| [placeholder](#placeholder)                   | `placeholder`                   | `String`  | "Please select option" | Define placeholder text to display before a value is manually selected. |
+| [required](#required)                      | `required`                      | `Boolean` |                        | Populates the `required` attribute on the element. Used for client-side validation. |
+| [setCustomValidity](#setCustomValidity)             | `setCustomValidity`             | `String`  |                        | Sets a custom help text message to display for all validityStates. |
+| [setCustomValidityCustomError](#setCustomValidityCustomError)  | `setCustomValidityCustomError`  | `String`  |                        | Custom help text message to display when validity = `customError`. |
+| [setCustomValidityValueMissing](#setCustomValidityValueMissing) | `setCustomValidityValueMissing` | `String`  |                        | Custom help text message to display when validity = `valueMissing`. |
+| [validity](#validity)                      | `validity`                      | `String`  | "undefined"            | Specifies the `validityState` this element is in. |
+| [value](#value)                         | `value`                         | `String`  |                        | Value selected for the component.                |
 
 ## Events
 
@@ -41,8 +41,8 @@ The auro-select element is a wrapper for auro-dropdown and auro-menu to create a
 | Name       | Description                          |
 |------------|--------------------------------------|
 |            | Default slot for the menu content.   |
-| `helpText` | Defines the content of the helpText. |
-| `label`    | Defines the content of the label.    |
+| [helpText](#helpText) | Defines the content of the helpText. |
+| [label](#label)    | Defines the content of the label.    |
 <!-- AURO-GENERATED-CONTENT:END -->
 
 ## API Examples
@@ -66,7 +66,7 @@ A baseline `auro-select` using `auro-menu` and `auro-menuoption` elements. Notic
   </auro-select>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basic.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
@@ -147,7 +147,7 @@ will overflow over the parent container's borders, so will all other elements wi
   </auro-dialog>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/nestedSelect.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/nestedSelect.html -->
@@ -206,8 +206,7 @@ will overflow over the parent container's borders, so will all other elements wi
 
 ### Property Examples
 
-#### value
-
+#### value <a name="value"></a>
 Use the `value` property to define a preset value on the `auro-select` element. The `value` of `auro-select` must match the `value` defined of a single `auro-menuoption`. Upon initially rendering the component, if the `value` does not match an `auro-menuoption`, the `value` of `auro-select` will be set to `undefined`.
 
 To pre-set the value of auro-select on load, use the `value` property. The `selected` attribute on auro-menuoption is designed to illustrate state in the DOM.
@@ -232,7 +231,7 @@ To pre-set the value of auro-select on load, use the `value` property. The `sele
   </auro-select>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/value.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/value.html -->
@@ -278,8 +277,7 @@ export function valueExample() {
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-#### placeholder
-
+#### placeholder <a name="placeholder"></a>
 Use the `placeholder` string attribute to inject a custom placeholder option with the select element.
 
 <div class="exampleWrapper">
@@ -297,7 +295,7 @@ Use the `placeholder` string attribute to inject a custom placeholder option wit
   </auro-select>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/customPlaceholder.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/customPlaceholder.html -->
@@ -317,8 +315,7 @@ Use the `placeholder` string attribute to inject a custom placeholder option wit
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-#### required
-
+#### required <a name="required"></a>
 When present, the `required` attribute specifies that a select field must be filled out before submitting the form.
 
 When the validity check fails the validityState equals `valueMissing`. The error message for the `valueMissing` validityState can be set to a custom string using the `setCustomValidityValueMissing`. There is no default error message defined.
@@ -338,7 +335,7 @@ When the validity check fails the validityState equals `valueMissing`. The error
   </auro-select>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/required.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/required.html -->
@@ -358,8 +355,7 @@ When the validity check fails the validityState equals `valueMissing`. The error
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-#### error
-
+#### error <a name="error"></a>
 Use the `error` boolean attribute to toggle the error UI.
 
 <div class="exampleWrapper">
@@ -380,7 +376,7 @@ Use the `error` boolean attribute to toggle the error UI.
   </auro-select>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/errorApi.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/errorApi.html -->
@@ -403,8 +399,7 @@ Use the `error` boolean attribute to toggle the error UI.
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-#### disabled
-
+#### disabled <a name="disabled"></a>
 Use the `disabled` boolean attribute to toggle the disabled UI.
 
 <div class="exampleWrapper">
@@ -422,7 +417,7 @@ Use the `disabled` boolean attribute to toggle the disabled UI.
   </auro-select>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/disabled.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/disabled.html -->
@@ -444,8 +439,7 @@ Use the `disabled` boolean attribute to toggle the disabled UI.
 
 ### Slot Examples
 
-#### label
-
+#### label <a name="label"></a>
 Use the `label` slot to give your users contextual information about their selection options. This `label` content is also helpful for assistive devices.
 
 <div class="exampleWrapper">
@@ -464,7 +458,7 @@ Use the `label` slot to give your users contextual information about their selec
   </auro-select>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/label.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/label.html -->
@@ -485,8 +479,7 @@ Use the `label` slot to give your users contextual information about their selec
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-#### helpText
-
+#### helpText <a name="helpText"></a>
 Use the `helptext` slot to provide additional information back to your user about their selection option(s).
 
 <div class="exampleWrapper">
@@ -505,7 +498,7 @@ Use the `helptext` slot to provide additional information back to your user abou
   </auro-select>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/helpText.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/helpText.html -->
@@ -548,7 +541,7 @@ The following example illustrates how a user may query the `element.value` or `e
   <auro-button id="valueExtractionBtn">Get current value</auro-button>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/valueExtraction.js) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/valueExtraction.js -->
@@ -605,7 +598,7 @@ This example programmatically adds the `error` state when a user selects an opti
   </auro-select>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/customErrorValidity.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/customErrorValidity.html -->
@@ -661,7 +654,7 @@ The following example listens for the `selectedOption` event. Once triggered, `e
   </auro-select>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../demo/alertValue.js) -->
 <!-- The below code snippet is automatically added from ./../../demo/alertValue.js -->

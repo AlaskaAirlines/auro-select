@@ -109,7 +109,7 @@ describe('auro-select', () => {
     const triggerContentHTML = dropdown.querySelector('#triggerFocus').innerHTML;
 
     await expect(el.optionSelected).to.be.equal(undefined);
-    await expect(triggerContentHTML).to.be.equal('Flight Course');
+    await expect(triggerContentHTML).to.contain('Flight Course');
     await expect(el.getAttribute('validity')).to.equal('badInput');
   });
 

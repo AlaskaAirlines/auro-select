@@ -216,6 +216,30 @@ export class AuroSelect extends LitElement {
   }
 
   /**
+   * Adds the value string to the trigger.
+   * @param {string} str - The string to display in the trigger.
+   * @private
+   * @returns {void}
+   */
+  updateDisplayedValue(str) {
+    const dropdown = this.shadowRoot.querySelector('auro-dropdown');
+    const triggerContentEl = dropdown.querySelector('#triggerFocus');
+
+    // remove all existing rendered value(s)
+    triggerContentEl.querySelectorAll('[valuestr]').forEach((elm) => {
+      elm.remove();
+    });
+
+    // create a new element with the new value
+    const valueElem = document.createElement('span');
+    valueElem.setAttribute('valuestr', true);
+    valueElem.appendChild(document.createTextNode(str));
+
+    // append the new element into the trigger content
+    triggerContentEl.appendChild(valueElem);
+  }
+
+  /**
    * Binds all behavior needed to the menu after rendering.
    * @private
    * @returns {void}
@@ -236,12 +260,10 @@ export class AuroSelect extends LitElement {
     });
 
     this.menu.addEventListener('selectedOption', () => {
-      const dropdown = this.shadowRoot.querySelector('auro-dropdown');
-      const triggerContentEl = dropdown.querySelector('#triggerFocus');
-
       this.optionSelected = this.menu.optionSelected;
       this.value = this.optionSelected.value;
-      triggerContentEl.innerHTML = this.optionSelected.innerHTML;
+
+      this.updateDisplayedValue(this.optionSelected.innerHTML);
 
       if (this.dropdown.isPopoverVisible) {
         this.dropdown.hide();
@@ -259,20 +281,18 @@ export class AuroSelect extends LitElement {
       this.menu.optionSelected = undefined;
       this.optionSelected = this.menu.optionSelected;
 
-      const dropdown = this.shadowRoot.querySelector('auro-dropdown');
-      const triggerContentEl = dropdown.querySelector('#triggerFocus');
-
       this.validity = 'badInput';
 
       // Capitilizes the first letter of each word in this.value string
-      triggerContentEl.innerHTML = this.value.replace(/(^\w{1})|(\s+\w{1})/gu, (letter) => letter.toUpperCase());
+      const valueStr = this.value.replace(/(^\w{1})|(\s+\w{1})/gu, (letter) => letter.toUpperCase());
+
+      // Pass the new string to the trigger content
+      this.updateDisplayedValue(valueStr);
     });
 
     this.menu.addEventListener('auroMenu-selectValueReset', () => {
-      const dropdown = this.shadowRoot.querySelector('auro-dropdown');
-      const triggerContentEl = dropdown.querySelector('#triggerFocus');
-
-      triggerContentEl.innerHTML = this.placeholder;
+      // set the trigger content back to the placeholder
+      this.updateDisplayedValue(this.placeholder);
 
       this.optionSelected = undefined;
       this.value = undefined;
@@ -480,7 +500,7 @@ export class AuroSelect extends LitElement {
   }
 
   /**
-   * Handles reading of auro-select by screenreaders.
+   * Handles reading of auro-select by screen readers.
    * @private
    * @returns {void}
    */

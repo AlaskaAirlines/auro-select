@@ -1,5 +1,22 @@
 # Semantic Release Automated Changelog
 
+# [2.9.0](https://github.com/AlaskaAirlines/auro-select/compare/v2.8.5...v2.9.0) (2024-01-26)
+
+
+### Bug Fixes
+
+* **value:** remove usage of innerHtml and use createNode instead [#169](https://github.com/AlaskaAirlines/auro-select/issues/169) ([ddeedf8](https://github.com/AlaskaAirlines/auro-select/commit/ddeedf815917e9297ca5544b5029accbfaf68ab8))
+
+
+### Features
+
+* **deps:** update dependencies and add SSR support [#166](https://github.com/AlaskaAirlines/auro-select/issues/166) [#167](https://github.com/AlaskaAirlines/auro-select/issues/167) ([38f02a8](https://github.com/AlaskaAirlines/auro-select/commit/38f02a8033456dc6e01dcb732f195745cea35a78))
+
+
+### Performance Improvements
+
+* update static style template for lit ([d2e3058](https://github.com/AlaskaAirlines/auro-select/commit/d2e30589bc3f5ad001925798089f733ccc024588))
+
 ## [2.8.5](https://github.com/AlaskaAirlines/auro-select/compare/v2.8.4...v2.8.5) (2023-11-02)
 
 

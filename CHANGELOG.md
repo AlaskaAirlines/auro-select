@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.9.1](https://github.com/AlaskaAirlines/auro-select/compare/v2.9.0...v2.9.1) (2024-01-27)
+
+
+### Performance Improvements
+
+* update index per SSR support ([c4f8f2c](https://github.com/AlaskaAirlines/auro-select/commit/c4f8f2cc53e53a093eb05ded0a04a93040fa7fbb))
+
 # [2.9.0](https://github.com/AlaskaAirlines/auro-select/compare/v2.8.5...v2.9.0) (2024-01-26)
 
 

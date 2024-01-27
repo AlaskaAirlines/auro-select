@@ -1,4 +1,4 @@
-import { AuroSelect } from './src/auro-select';
+import { AuroSelect } from './src/auro-select.js';
 
 /**
  * Register Custom Element.

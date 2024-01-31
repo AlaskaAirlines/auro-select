@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.9.2](https://github.com/AlaskaAirlines/auro-select/compare/v2.9.1...v2.9.2) (2024-01-31)
+
+
+### Performance Improvements
+
+* alaskaairux ref updates ([7b00fa4](https://github.com/AlaskaAirlines/auro-select/commit/7b00fa485fe443601875092a58f4b985df9a1158))
+
 ## [2.9.1](https://github.com/AlaskaAirlines/auro-select/compare/v2.9.0...v2.9.1) (2024-01-27)
 
 

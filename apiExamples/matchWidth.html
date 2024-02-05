@@ -1,0 +1,50 @@
+<div class="container">
+  <auro-select placeholder="Wide options" class="twenty-percent" >
+    <auro-menu>
+      <auro-menuoption value="stops">All the stops, so many stops</auro-menuoption>
+      <auro-menuoption value="price">Price, price and more about prices</auro-menuoption>
+      <auro-menuoption value="duration">Duration from here to there is pretty long</auro-menuoption>
+      <auro-menuoption value="departure">Departure time is not for another four hours</auro-menuoption>
+      <auro-menuoption value="arrival">Upon arrival we will be greeted with flowers</auro-menuoption>
+      <auro-menuoption value="prefer alaska">I really prefer Alaska Airlines for my vacation travels</auro-menuoption>
+    </auro-menu>
+  </auro-select>
+
+  <auro-select class="fifty-percent" placeholder="Wide selection trigger">
+    <auro-menu>
+      <auro-menuoption value="stops">Stops</auro-menuoption>
+      <auro-menuoption value="price">Price</auro-menuoption>
+      <auro-menuoption value="duration">Duration</auro-menuoption>
+      <auro-menuoption value="departure">Departure</auro-menuoption>
+      <auro-menuoption value="arrival">Arrival</auro-menuoption>
+      <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
+    </auro-menu>
+  </auro-select>
+
+  <auro-select placeholder="Default menu">
+    <auro-menu>
+      <auro-menuoption value="stops">Stops</auro-menuoption>
+      <auro-menuoption value="price">Price</auro-menuoption>
+      <auro-menuoption value="duration">Duration</auro-menuoption>
+      <auro-menuoption value="departure">Departure</auro-menuoption>
+      <auro-menuoption value="arrival">Arrival</auro-menuoption>
+      <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
+    </auro-menu>
+  </auro-select>
+</div>
+
+<style>
+  @media (min-width: 900px) {
+    .container {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+    .fifty-percent {
+      width: 50%;
+    }
+    .twenty-percent {
+      width: 20%;
+    }
+  }
+</style>

@@ -416,3 +416,118 @@ This will create a new custom element that you can use in your HTML that will fu
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
+
+### Flexible width support
+
+The following example illustrates how multiple `auro-select` elemments can be places within a flexible grid layout.
+Notice that the width of the menu matches the width of the select option trigger. With cases where the selection
+trigger is shorter than the options within the menu, the menu will expand to the full width needed to show content.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/matchWidth.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/matchWidth.html -->
+  <div class="container">
+    <auro-select placeholder="Wide options" class="twenty-percent" >
+      <auro-menu>
+        <auro-menuoption value="stops">All the stops, so many stops</auro-menuoption>
+        <auro-menuoption value="price">Price, price and more about prices</auro-menuoption>
+        <auro-menuoption value="duration">Duration from here to there is pretty long</auro-menuoption>
+        <auro-menuoption value="departure">Departure time is not for another four hours</auro-menuoption>
+        <auro-menuoption value="arrival">Upon arrival we will be greeted with flowers</auro-menuoption>
+        <auro-menuoption value="prefer alaska">I really prefer Alaska Airlines for my vacation travels</auro-menuoption>
+      </auro-menu>
+    </auro-select>
+    <auro-select class="fifty-percent" placeholder="Wide selection trigger">
+      <auro-menu>
+        <auro-menuoption value="stops">Stops</auro-menuoption>
+        <auro-menuoption value="price">Price</auro-menuoption>
+        <auro-menuoption value="duration">Duration</auro-menuoption>
+        <auro-menuoption value="departure">Departure</auro-menuoption>
+        <auro-menuoption value="arrival">Arrival</auro-menuoption>
+        <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
+      </auro-menu>
+    </auro-select>
+    <auro-select placeholder="Default menu">
+      <auro-menu>
+        <auro-menuoption value="stops">Stops</auro-menuoption>
+        <auro-menuoption value="price">Price</auro-menuoption>
+        <auro-menuoption value="duration">Duration</auro-menuoption>
+        <auro-menuoption value="departure">Departure</auro-menuoption>
+        <auro-menuoption value="arrival">Arrival</auro-menuoption>
+        <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
+      </auro-menu>
+    </auro-select>
+  </div>
+  <style>
+    @media (min-width: 900px) {
+      .container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+      }
+      .fifty-percent {
+        width: 50%;
+      }
+      .twenty-percent {
+        width: 20%;
+      }
+    }
+  </style>
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion alignRight>
+  <span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/matchWidth.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/matchWidth.html -->
+
+```html
+<div class="container">
+  <auro-select placeholder="Wide options" class="twenty-percent" >
+    <auro-menu>
+      <auro-menuoption value="stops">All the stops, so many stops</auro-menuoption>
+      <auro-menuoption value="price">Price, price and more about prices</auro-menuoption>
+      <auro-menuoption value="duration">Duration from here to there is pretty long</auro-menuoption>
+      <auro-menuoption value="departure">Departure time is not for another four hours</auro-menuoption>
+      <auro-menuoption value="arrival">Upon arrival we will be greeted with flowers</auro-menuoption>
+      <auro-menuoption value="prefer alaska">I really prefer Alaska Airlines for my vacation travels</auro-menuoption>
+    </auro-menu>
+  </auro-select>
+  <auro-select class="fifty-percent" placeholder="Wide selection trigger">
+    <auro-menu>
+      <auro-menuoption value="stops">Stops</auro-menuoption>
+      <auro-menuoption value="price">Price</auro-menuoption>
+      <auro-menuoption value="duration">Duration</auro-menuoption>
+      <auro-menuoption value="departure">Departure</auro-menuoption>
+      <auro-menuoption value="arrival">Arrival</auro-menuoption>
+      <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
+    </auro-menu>
+  </auro-select>
+  <auro-select placeholder="Default menu">
+    <auro-menu>
+      <auro-menuoption value="stops">Stops</auro-menuoption>
+      <auro-menuoption value="price">Price</auro-menuoption>
+      <auro-menuoption value="duration">Duration</auro-menuoption>
+      <auro-menuoption value="departure">Departure</auro-menuoption>
+      <auro-menuoption value="arrival">Arrival</auro-menuoption>
+      <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
+    </auro-menu>
+  </auro-select>
+</div>
+<style>
+  @media (min-width: 900px) {
+    .container {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+    .fifty-percent {
+      width: 50%;
+    }
+    .twenty-percent {
+      width: 20%;
+    }
+  }
+</style>
+```
+<!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>

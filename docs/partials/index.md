@@ -154,3 +154,22 @@ This will create a new custom element that you can use in your HTML that will fu
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/custom.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
+### Flexible width support
+
+The following example illustrates how multiple `auro-select` elemments can be places within a flexible grid layout.
+Notice that the width of the menu matches the width of the select option trigger. With cases where the selection
+trigger is shorter than the options within the menu, the menu will expand to the full width needed to show content.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/matchWidth.html) -->
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+
+<auro-accordion alignRight>
+  <span slot="trigger">See code</span>
+
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/matchWidth.html) -->
+<!-- AURO-GENERATED-CONTENT:END -->
+
+</auro-accordion>
+

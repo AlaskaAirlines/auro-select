@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.9.3](https://github.com/AlaskaAirlines/auro-select/compare/v2.9.2...v2.9.3) (2024-02-07)
+
+
+### Bug Fixes
+
+* **npm:** update ignore to include src dir [#174](https://github.com/AlaskaAirlines/auro-select/issues/174) ([bdd5995](https://github.com/AlaskaAirlines/auro-select/commit/bdd5995bd6d305e06a8069996ed701fa81048795))
+
 ## [2.9.2](https://github.com/AlaskaAirlines/auro-select/compare/v2.9.1...v2.9.2) (2024-01-31)
 
 

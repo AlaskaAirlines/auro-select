@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.9.5](https://github.com/AlaskaAirlines/auro-select/compare/v2.9.4...v2.9.5) (2024-02-21)
+
+
+### Performance Improvements
+
+* **docs:** add custom registration example ([794be4b](https://github.com/AlaskaAirlines/auro-select/commit/794be4be3bd75c3fba04e3cb92ba8031f0e29f0b))
+
 ## [2.9.4](https://github.com/AlaskaAirlines/auro-select/compare/v2.9.3...v2.9.4) (2024-02-13)
 
 

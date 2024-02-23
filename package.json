@@ -132,8 +132,7 @@
     "web components"
   ],
   "scripts": {
-    "build": "npm-run-all build:sass sass:render scssLint dist:js bundler build:api build:docs postinstall build:demoScripts types",
-    "build:demoScripts": "node scripts/prepExampleFiles.mjs",
+    "build": "npm-run-all build:sass sass:render scssLint dist:js bundler build:api build:docs postinstall types",
     "build:ci": "npm-run-all sweep build",
     "build:api": "wca analyze 'src/auro-select.js' --outFiles docs/api.md",
     "build:dev:assets": "npm-run-all build:sass:component postCss:component sass:render build:docs",

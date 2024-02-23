@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.9.6](https://github.com/AlaskaAirlines/auro-select/compare/v2.9.5...v2.9.6) (2024-02-23)
+
+
+### Performance Improvements
+
+* **examples:** update to latest example syntax ([585656f](https://github.com/AlaskaAirlines/auro-select/commit/585656f264483a22e6288419d21af67961e1b64b))
+
 ## [2.9.5](https://github.com/AlaskaAirlines/auro-select/compare/v2.9.4...v2.9.5) (2024-02-21)
 
 

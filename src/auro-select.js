@@ -3,17 +3,14 @@
 
 // ---------------------------------------------------------------------
 
+/* eslint-disable prefer-named-capture-group, max-lines */
+
 // If using litElement base class
 import { LitElement, html } from "lit";
 
 import '@aurodesignsystem/auro-menu';
 
-// If using auroElement base class
-// See instructions for importing auroElement base class https://git.io/JULq4
-// import { html, css } from "lit-element";
-// import AuroElement from '@aurodesignsystem/webcorestylesheets/dist/auroElement/auroElement';
-
-/* eslint-disable max-lines, prefer-named-capture-group */
+import AuroFormValidation from '@aurodesignsystem/auro-formvalidation/src/validation.js';
 
 // Import touch detection lib
 import styleCss from "./style-css.js";
@@ -37,8 +34,9 @@ import styleCss from "./style-css.js";
  * @slot - Default slot for the menu content.
  * @slot label - Defines the content of the label.
  * @slot helpText - Defines the content of the helpText.
- * @fires auroSelect-ready - Notifies that the component has finished initializing.
- * @fires auroSelect-valueSet - Notifies that the component has a new value set.
+ * @event auroSelect-ready - Notifies that the component has finished initializing.
+ * @event auroSelect-valueSet - Notifies that the component has a new value set.
+ * @event auroSelect-validated - Notifies that the `validity` value has changed.
  */
 
 // build the component class
@@ -60,6 +58,11 @@ export class AuroSelect extends LitElement {
     this.uniqueId = Math.random().
       toString(idLength).
       substring(idSubstrStart, idSubstrEnd);
+
+    /**
+     * @private
+     */
+    this.validation = new AuroFormValidation();
   }
 
   /**
@@ -133,73 +136,6 @@ export class AuroSelect extends LitElement {
 
   static get styles() {
     return [styleCss];
-  }
-
-  /**
-   * Handles setting the validity and setCustomValidity attributes.
-   * @private
-   * @returns {void}
-   */
-  handleValidity() {
-    this.validity = undefined;
-    this.removeAttribute('validity');
-    this.setCustomValidity = '';
-
-    // Validate only if noValidate is not true and the input does not have focus
-    if (!this.contains(document.activeElement)) {
-      if (this.value !== undefined && !this.noValidate) {
-        this.validity = 'valid';
-        this.setCustomValidity = '';
-
-        /**
-         * Only validate once we interact with the datepicker
-         * this.value === undefined is the initial state pre-interaction.
-         *
-         * The validityState definitions are located at https://developer.mozilla.org/en-US/docs/Web/API/ValidityState.
-         */
-        if ((!this.value || this.value.length === 0) && this.required) {
-          this.validity = 'valueMissing';
-          this.setCustomValidity = this.setCustomValidityValueMissing;
-        }
-      } else if (!this.hasAttribute('error')) {
-        this.validity = undefined;
-        this.setCustomValidity = '';
-      }
-    }
-  }
-
-  /**
-   * Handles overriding the setCustom validity attribute when the ValidityMessageOverride attribute is present.
-   * @private
-   * @returns {void}
-   */
-  handleValidityMessage() {
-    if (this.validity && this.validity !== 'valid') {
-      this.isValid = false;
-      // Use the validity message override if it is declared
-      if (this.ValidityMessageOverride) {
-        this.setCustomValidity = this.ValidityMessageOverride;
-      }
-    } else {
-      this.isValid = true;
-    }
-  }
-
-  /**
-   * Determines the validity state of the element.
-   * @private
-   * @returns {void}
-   */
-  validate() {
-    // Handle error attribute change regardless of focus
-    if (this.hasAttribute('error')) {
-      this.validity = 'customError';
-      this.setCustomValidity = this.error;
-    } else {
-      this.handleValidity();
-    }
-
-    this.handleValidityMessage();
   }
 
   /**
@@ -296,8 +232,8 @@ export class AuroSelect extends LitElement {
 
       this.optionSelected = undefined;
       this.value = undefined;
-      this.validity = undefined;
-      this.validate();
+
+      this.validation.validate(this);
     });
   }
 
@@ -343,7 +279,7 @@ export class AuroSelect extends LitElement {
     this.addEventListener('focusin', this.handleFocusin);
 
     this.addEventListener('blur', () => {
-      this.validate();
+      this.validation.validate(this);
     });
 
     this.labelForSr();
@@ -446,7 +382,7 @@ export class AuroSelect extends LitElement {
   performUpdate() {
     super.performUpdate();
 
-    if (this.validity !== undefined && this.validity !== 'valid') {
+    if (this.validity && this.validity !== 'valid') {
       this.shadowRoot.querySelector('auro-dropdown').setAttribute('error', '');
     } else {
       this.shadowRoot.querySelector('auro-dropdown').removeAttribute('error');
@@ -483,7 +419,7 @@ export class AuroSelect extends LitElement {
     }
 
     if (changedProperties.has('value')) {
-      this.validate();
+      this.validation.validate(this);
     }
 
     if (changedProperties.has('value')) {
@@ -495,7 +431,13 @@ export class AuroSelect extends LitElement {
     }
 
     if (changedProperties.has('error')) {
-      this.validate();
+      if (!this.error) {
+        this.setCustomValidity = undefined;
+        this.validity = undefined;
+        this.removeAttribute('validity');
+      }
+
+      this.validation.validate(this);
     }
   }
 

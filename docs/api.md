@@ -21,10 +21,11 @@ The auro-select element is a wrapper for auro-dropdown and auro-menu to create a
 
 ## Events
 
-| Event                 | Type               | Description                                      |
-|-----------------------|--------------------|--------------------------------------------------|
-| `auroSelect-ready`    | `CustomEvent<any>` | Notifies that the component has finished initializing. |
-| `auroSelect-valueSet` | `CustomEvent<any>` | Notifies that the component has a new value set. |
+| Event                  | Type               | Description                                      |
+|------------------------|--------------------|--------------------------------------------------|
+| `auroSelect-ready`     | `CustomEvent<any>` | Notifies that the component has finished initializing. |
+| `auroSelect-validated` |                    | Notifies that the `validity` value has changed.  |
+| `auroSelect-valueSet`  | `CustomEvent<any>` | Notifies that the component has a new value set. |
 
 ## Slots
 

@@ -10,6 +10,13 @@ describe('auro-select', () => {
     await expect(el).to.be.true;
   });
 
+  it('web component is successfully created in the document', async () => {
+    // This test fails when attributes are put onto the component before it is attached to the DOM
+    const el = document.createElement('auro-select');
+
+    await expect(el.localName).to.equal('auro-select');
+  });
+
   it('toggles the bib on click', async () => {
     const el = await defaultFixture();
 

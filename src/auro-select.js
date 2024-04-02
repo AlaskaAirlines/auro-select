@@ -34,9 +34,9 @@ import styleCss from "./style-css.js";
  * @slot - Default slot for the menu content.
  * @slot label - Defines the content of the label.
  * @slot helpText - Defines the content of the helpText.
- * @event auroSelect-ready - Notifies that the component has finished initializing.
- * @event auroSelect-valueSet - Notifies that the component has a new value set.
- * @event auroSelect-validated - Notifies that the `validity` value has changed.
+ * @fires auroSelect-ready - Notifies that the component has finished initializing.
+ * @fires auroSelect-valueSet - Notifies that the component has a new value set.
+ * @fires auroFormElement-validated - Notifies that the `validity` and `errorMessage` values have changed.
  */
 
 // build the component class

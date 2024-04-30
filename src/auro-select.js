@@ -11,6 +11,7 @@ import { LitElement, html } from "lit";
 import '@aurodesignsystem/auro-menu';
 
 import AuroFormValidation from '@aurodesignsystem/auro-formvalidation/src/validation.js';
+import AuroLibraryRuntimeUtils from '@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs';
 
 // Import touch detection lib
 import styleCss from "./style-css.js";
@@ -63,6 +64,11 @@ export class AuroSelect extends LitElement {
      * @private
      */
     this.validation = new AuroFormValidation();
+
+    /**
+     * @private
+     */
+    this.runtimeUtils = new AuroLibraryRuntimeUtils();
   }
 
   /**
@@ -401,6 +407,9 @@ export class AuroSelect extends LitElement {
 
   // lifecycle runs only after the element's DOM has been updated the first time
   firstUpdated() {
+    // Add the tag name as an attribute if it is different than the component name
+    this.runtimeUtils.handleComponentTagRename(this, 'auro-select');
+
     this.configureMenu();
     this.configureDropdown();
     this.configureSelect();

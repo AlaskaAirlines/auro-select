@@ -156,7 +156,7 @@ describe('auro-select', () => {
 
     await elementUpdated(el);
 
-    await expect(el.hasAttribute('validity')).to.be.false;
+    await expect(el.getAttribute('validity')).to.equal('valid');
   });
 });
 

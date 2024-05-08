@@ -1,6 +1,5 @@
 import { customErrorValidityExample } from "../apiExamples/customErrorValidity";
 import { setErrorExample } from "../apiExamples/errorApi";
-import { nestedSelectExample } from "../apiExamples/nestedSelect";
 import { valueExample } from "../apiExamples/value";
 import { valueExtractionExample } from "../apiExamples/valueExtraction";
 
@@ -13,7 +12,6 @@ export function initExamples(initCount) {
     // javascript example function calls to be added here upon creation to test examples
     customErrorValidityExample();
     setErrorExample();
-    nestedSelectExample();
     valueExample();
     valueExtractionExample();
   } catch (err) {

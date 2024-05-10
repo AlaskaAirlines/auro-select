@@ -158,27 +158,37 @@ export class AuroSelect extends LitElement {
   }
 
   /**
-   * Adds the value string to the trigger.
-   * @param {string} str - The string to display in the trigger.
+   * Updates the displayed value in an Auro dropdown component based on the provided option.
+   * @param {string|HTMLElement} option - The option to display. If a string, a new span element with the value string is created. If an HTMLElement, the selected option is cloned and non-styling attributes are removed.
    * @private
    * @returns {void}
    */
-  updateDisplayedValue(str) {
+  updateDisplayedValue(option) {
     const dropdown = this.shadowRoot.querySelector('auro-dropdown');
     const triggerContentEl = dropdown.querySelector('#triggerFocus');
 
     // remove all existing rendered value(s)
-    triggerContentEl.querySelectorAll('[valuestr]').forEach((elm) => {
+    triggerContentEl.querySelectorAll('auro-menuoption, [valuestr]').forEach((elm) => {
       elm.remove();
     });
 
-    // create a new element with the new value
-    const valueElem = document.createElement('span');
-    valueElem.setAttribute('valuestr', true);
-    valueElem.appendChild(document.createTextNode(str));
+    if (typeof option === 'string') {
+      // create a new span element with the value string
+      const valueElem = document.createElement('span');
+      valueElem.setAttribute('valuestr', true);
+      valueElem.textContent = option;
 
-    // append the new element into the trigger content
-    triggerContentEl.appendChild(valueElem);
+      // append the new element into the trigger content
+      triggerContentEl.appendChild(valueElem);
+    } else {
+      // clone the selected option and remove attributes that style it
+      const clone = option.cloneNode(true);
+      clone.removeAttribute('selected');
+      clone.removeAttribute('class');
+
+      // insert the non-styled clone into the trigger
+      triggerContentEl.appendChild(clone);
+    }
   }
 
   /**
@@ -205,7 +215,7 @@ export class AuroSelect extends LitElement {
       this.optionSelected = this.menu.optionSelected;
       this.value = this.optionSelected.value;
 
-      this.updateDisplayedValue(this.optionSelected.innerHTML);
+      this.updateDisplayedValue(this.optionSelected);
 
       if (this.dropdown.isPopoverVisible) {
         this.dropdown.hide();
@@ -225,7 +235,7 @@ export class AuroSelect extends LitElement {
 
       this.validity = 'badInput';
 
-      // Capitilizes the first letter of each word in this.value string
+      // Capitalizes the first letter of each word in this.value string
       const valueStr = this.value.replace(/(^\w{1})|(\s+\w{1})/gu, (letter) => letter.toUpperCase());
 
       // Pass the new string to the trigger content

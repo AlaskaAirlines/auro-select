@@ -1,5 +1,24 @@
 # Semantic Release Automated Changelog
 
+# [2.10.0](https://github.com/AlaskaAirlines/auro-select/compare/v2.9.6...v2.10.0) (2024-05-10)
+
+
+### Bug Fixes
+
+* **nested:** remove broken nested select example ([04d9967](https://github.com/AlaskaAirlines/auro-select/commit/04d9967a4f0c7ec006d41e1d081161bd824cbd8f))
+
+
+### Features
+
+* **validation:** implement auro-formvalidation [#179](https://github.com/AlaskaAirlines/auro-select/issues/179) ([4a0a4ea](https://github.com/AlaskaAirlines/auro-select/commit/4a0a4ea718092283f0bda496743fac336116d7f1))
+
+
+### Performance Improvements
+
+* **attribute:** add attribute for custom component use ([8d68b44](https://github.com/AlaskaAirlines/auro-select/commit/8d68b442a8bb153bd55eedf5db7181d4a19e2ea9))
+* **deps:** update dependencies ([6413431](https://github.com/AlaskaAirlines/auro-select/commit/6413431d9e784f1f658668545309a153d619a2d9))
+* **error:** update test and logic for error state [#179](https://github.com/AlaskaAirlines/auro-select/issues/179) ([dce739a](https://github.com/AlaskaAirlines/auro-select/commit/dce739a489a2cdb855ff805ea69f6f8e3ba7bc3d))
+
 ## [2.9.6](https://github.com/AlaskaAirlines/auro-select/compare/v2.9.5...v2.9.6) (2024-02-23)
 
 

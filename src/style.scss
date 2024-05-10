@@ -48,6 +48,10 @@
   }
 }
 
+auro-menuoption {
+  pointer-events: none;
+}
+
 .menuWrapper {
   padding: var(--ds-size-50, $ds-size-50) 0;
 }

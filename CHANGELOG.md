@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.10.1](https://github.com/AlaskaAirlines/auro-select/compare/v2.10.0...v2.10.1) (2024-05-13)
+
+
+### Bug Fixes
+
+* **menu:** correctly handle dynamic menus [#182](https://github.com/AlaskaAirlines/auro-select/issues/182) ([2cdf964](https://github.com/AlaskaAirlines/auro-select/commit/2cdf9644d1852a99cc96422425b7b078bfd0b1a0))
+
 # [2.10.0](https://github.com/AlaskaAirlines/auro-select/compare/v2.9.6...v2.10.0) (2024-05-10)
 
 

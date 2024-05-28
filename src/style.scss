@@ -43,7 +43,7 @@
 
 :host([disabled]) {
   * {
-    opacity: .7;
+    color: var(--ds-color-text-disabled-default, $ds-color-text-disabled-default);
     user-select: none;
   }
 }

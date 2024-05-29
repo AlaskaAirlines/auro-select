@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.10.2](https://github.com/AlaskaAirlines/auro-select/compare/v2.10.1...v2.10.2) (2024-05-29)
+
+
+### Bug Fixes
+
+* to use disabled design token instead of opacity ([0a6bb30](https://github.com/AlaskaAirlines/auro-select/commit/0a6bb30280c7ea94db540177426f7943d8cb41ac))
+
 ## [2.10.1](https://github.com/AlaskaAirlines/auro-select/compare/v2.10.0...v2.10.1) (2024-05-13)
 
 

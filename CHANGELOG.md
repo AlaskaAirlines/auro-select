@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.10.3](https://github.com/AlaskaAirlines/auro-select/compare/v2.10.2...v2.10.3) (2024-05-30)
+
+
+### Bug Fixes
+
+* handle long value option ([21a1c3f](https://github.com/AlaskaAirlines/auro-select/commit/21a1c3f6eb2e5cc6ff791a2a743491ccd2e3fd90))
+
 ## [2.10.2](https://github.com/AlaskaAirlines/auro-select/compare/v2.10.1...v2.10.2) (2024-05-29)
 
 

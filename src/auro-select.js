@@ -501,7 +501,7 @@ export class AuroSelect extends LitElement {
   // function that renders the HTML and CSS into  the scope of the component
   render() {
     return html`
-      <div>
+      <div class="outerWrapper">
         <div aria-live="polite" class="util_displayHiddenVisually">
           ${this.optionActive && this.options.length > 0
             ? html`

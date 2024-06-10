@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.10.4](https://github.com/AlaskaAirlines/auro-select/compare/v2.10.3...v2.10.4) (2024-06-10)
+
+
+### Bug Fixes
+
+* add relative positioning to div wrapper [#187](https://github.com/AlaskaAirlines/auro-select/issues/187) ([4ec21ac](https://github.com/AlaskaAirlines/auro-select/commit/4ec21acc7a9597bc13f0acb49fcf718a6187a1ed))
+
 ## [2.10.3](https://github.com/AlaskaAirlines/auro-select/compare/v2.10.2...v2.10.3) (2024-05-30)
 
 

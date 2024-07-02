@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.10.6](https://github.com/AlaskaAirlines/auro-select/compare/v2.10.5...v2.10.6) (2024-07-02)
+
+
+### Performance Improvements
+
+* **deps:** update component to use latest version of menu ([a65dfa0](https://github.com/AlaskaAirlines/auro-select/commit/a65dfa053c329b18545fbc4a1a0bcf70d7f0f2c2))
+
 ## [2.10.5](https://github.com/AlaskaAirlines/auro-select/compare/v2.10.4...v2.10.5) (2024-06-27)
 
 

@@ -27,7 +27,7 @@
 }
 
 :host {
-  auro-dropdown {
+  [auro-dropdown] {
     position: relative;
 
     &::part(trigger) {

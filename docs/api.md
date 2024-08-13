@@ -7,7 +7,6 @@ The auro-select element is a wrapper for auro-dropdown and auro-menu to create a
 | Property                        | Attribute                       | Type      | Default                | Description                                      |
 |---------------------------------|---------------------------------|-----------|------------------------|--------------------------------------------------|
 | `disabled`                      | `disabled`                      | `Boolean` |                        | When attribute is present element shows disabled state. |
-| `dropdownTag`                   |                                 | `string`  |                        |                                                  |
 | `error`                         | `error`                         | `String`  |                        | When defined, sets persistent validity to `customError` and sets `setCustomValidity` = attribute value. |
 | `noCheckmark`                   | `noCheckmark`                   | `Boolean` |                        | When true, checkmark on selected option will no longer be present. |
 | `noValidate`                    | `noValidate`                    | `Boolean` |                        | If set, disables auto-validation on blur.        |

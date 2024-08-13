@@ -19,8 +19,9 @@ import dropdownVersion from './dropdownVersion';
 
 import '@aurodesignsystem/auro-menu';
 
-// Import touch detection lib
 import styleCss from "./style-css.js";
+import colorCss from "./color-css.js";
+import tokensCss from "./tokens-css.js";
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
@@ -154,7 +155,11 @@ export class AuroSelect extends LitElement {
   }
 
   static get styles() {
-    return [styleCss];
+    return [
+      styleCss,
+      colorCss,
+      tokensCss
+    ];
   }
 
   /**

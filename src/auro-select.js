@@ -3,15 +3,21 @@
 
 // ---------------------------------------------------------------------
 
-/* eslint-disable prefer-named-capture-group, max-lines */
+/* eslint-disable prefer-named-capture-group, max-lines, no-underscore-dangle, lit/binding-positions, lit/no-invalid-html */
 
 // If using litElement base class
-import { LitElement, html } from "lit";
-
-import '@aurodesignsystem/auro-menu';
+import { LitElement } from "lit";
+import { html } from 'lit/static-html.js';
 
 import AuroFormValidation from '@aurodesignsystem/auro-formvalidation/src/validation.js';
 import AuroLibraryRuntimeUtils from '@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs';
+
+import { AuroDependencyVersioning } from '@aurodesignsystem/auro-library/scripts/runtime/dependencyTagVersioning.mjs';
+
+import { AuroDropdown } from '@aurodesignsystem/auro-dropdown/src/auro-dropdown.js';
+import dropdownVersion from './dropdownVersion';
+
+import '@aurodesignsystem/auro-menu';
 
 // Import touch detection lib
 import styleCss from "./style-css.js";
@@ -69,6 +75,13 @@ export class AuroSelect extends LitElement {
      * @private
      */
     this.runtimeUtils = new AuroLibraryRuntimeUtils();
+
+    /**
+     * Generate unique names for dependency components.
+     */
+    const versioning = new AuroDependencyVersioning();
+
+    this.dropdownTag = versioning.generateTag('auro-dropdown', dropdownVersion, AuroDropdown);
   }
 
   /**
@@ -150,7 +163,7 @@ export class AuroSelect extends LitElement {
    * @returns {void}
    */
   configureDropdown() {
-    this.dropdown = this.shadowRoot.querySelector('auro-dropdown');
+    this.dropdown = this.shadowRoot.querySelector(this.dropdownTag._$litStatic$);
 
     this.dropdown.addEventListener('auroDropdown-ready', () => {
       this.auroDropdownReady = true;
@@ -164,8 +177,7 @@ export class AuroSelect extends LitElement {
    * @returns {void}
    */
   updateDisplayedValue(option) {
-    const dropdown = this.shadowRoot.querySelector('auro-dropdown');
-    const triggerContentEl = dropdown.querySelector('#triggerFocus');
+    const triggerContentEl = this.dropdown.querySelector('#triggerFocus');
 
     // remove all existing rendered value(s)
     triggerContentEl.querySelectorAll('auro-menuoption, [valuestr]').forEach((elm) => {
@@ -399,15 +411,15 @@ export class AuroSelect extends LitElement {
     super.performUpdate();
 
     if (this.validity && this.validity !== 'valid') {
-      this.shadowRoot.querySelector('auro-dropdown').setAttribute('error', '');
+      this.dropdown.setAttribute('error', '');
     } else {
-      this.shadowRoot.querySelector('auro-dropdown').removeAttribute('error');
+      this.dropdown.removeAttribute('error');
     }
 
     if (this.disabled) {
-      this.shadowRoot.querySelector('auro-dropdown').setAttribute('disabled', '');
+      this.dropdown.setAttribute('disabled', '');
     } else if (!this.disabled) {
-      this.shadowRoot.querySelector('auro-dropdown').removeAttribute('disabled');
+      this.dropdown.removeAttribute('disabled');
     }
 
     if (this.noCheckmark) {
@@ -517,7 +529,7 @@ export class AuroSelect extends LitElement {
             : undefined
           };
         </div>
-        <auro-dropdown
+        <${this.dropdownTag}
           for="selectmenu"
           ?error="${this.validity !== undefined && this.validity !== 'valid'}"
           common
@@ -530,7 +542,7 @@ export class AuroSelect extends LitElement {
             <slot></slot>
           </div>
           <slot name="label" slot="label"></slot>
-        </auro-dropdown>
+        </${this.dropdownTag}>
         <!-- Help text and error message template -->
         ${!this.validity || this.validity === undefined || this.validity === 'valid'
           ? html`

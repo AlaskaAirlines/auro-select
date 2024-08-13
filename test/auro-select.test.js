@@ -20,7 +20,7 @@ describe('auro-select', () => {
   it('toggles the bib on click', async () => {
     const el = await defaultFixture();
 
-    const dropdown = el.shadowRoot.querySelector('auro-dropdown');
+    const dropdown = el.shadowRoot.querySelector('[auro-dropdown]');
     const trigger = dropdown.querySelector('[slot="trigger"]');
 
     trigger.click();
@@ -33,7 +33,7 @@ describe('auro-select', () => {
   it('tabbing away from the element closes the bib', async () => {
     const el = await defaultFixture();
 
-    const dropdown = el.shadowRoot.querySelector('auro-dropdown');
+    const dropdown = el.shadowRoot.querySelector('[auro-dropdown]');
     const trigger = dropdown.querySelector('[slot="trigger"]');
 
     trigger.click();
@@ -49,7 +49,7 @@ describe('auro-select', () => {
   it('Navigates the menu with arrow keys', async () => {
     const el = await defaultFixture();
 
-    const dropdown = el.shadowRoot.querySelector('auro-dropdown');
+    const dropdown = el.shadowRoot.querySelector('[auro-dropdown]');
     const trigger = dropdown.querySelector('[slot="trigger"]');
 
     trigger.click();
@@ -112,7 +112,7 @@ describe('auro-select', () => {
 
     await elementUpdated(el);
 
-    const dropdown = el.shadowRoot.querySelector('auro-dropdown');
+    const dropdown = el.shadowRoot.querySelector('[auro-dropdown]');
     const triggerContentHTML = dropdown.querySelector('#triggerFocus').innerHTML;
 
     await expect(el.optionSelected).to.be.equal(undefined);

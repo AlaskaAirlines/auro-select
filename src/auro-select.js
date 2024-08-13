@@ -82,6 +82,9 @@ export class AuroSelect extends LitElement {
      */
     const versioning = new AuroDependencyVersioning();
 
+    /**
+     * @private
+     */
     this.dropdownTag = versioning.generateTag('auro-dropdown', dropdownVersion, AuroDropdown);
   }
 

@@ -13,53 +13,34 @@
 @import './../node_modules/@aurodesignsystem/webcorestylesheets/src/core';
 @import './../node_modules/@aurodesignsystem/webcorestylesheets/src/utilityClasses/displayProperties';
 
-/* stylelint-disable selector-class-pattern */
-
-[slot='trigger'] {
-  width: 100%;
-  padding: 0;
-  border: 0;
-  cursor: pointer;
-  font-family: inherit;
-  font-size: inherit;
-  text-align: left;
-}
+/* stylelint-disable max-nesting-depth, selector-class-pattern */
 
 :host {
   [auro-dropdown] {
-    position: relative;
-
     &::part(trigger) {
-      min-height: var(--ds-size-500, $ds-size-500);
-      max-height: var(--ds-size-500, $ds-size-500);
+      &:hover {
+        --ds-auro-dropdown-trigger-container-color: rgba(0 0 0 / 0.06); // Needs container token
+      }
     }
+  }
 
-    &::part(popover) {
-      max-width: -webkit-fill-available;
-    }
+  .selectElement-helpText {
+    color: var(--ds-auro-select-help-text-color);
   }
 }
 
 :host([disabled]) {
   * {
-    user-select: none;
+    color: var(--ds-color-text-disabled-default, $ds-color-text-disabled-default);
   }
 }
 
-.outerWrapper {
-  position: relative;
+:host([validity]:not([validity='valid'])) {
+  .selectElement-helpText {
+    --ds-auro-select-help-text-color: var(--ds-color-text-error-default, #{$ds-color-text-error-default});
+  }
 }
 
-auro-menuoption {
-  pointer-events: none;
-}
-
-.menuWrapper {
-  padding: var(--ds-size-50, $ds-size-50) 0;
-}
-
-.selectElement-helpText {
-  margin: var(--ds-size-50, $ds-size-50) 0;
-  font-size: var(--ds-text-body-size-xs, $ds-text-body-size-xs);
-  line-height: 1rem;
+.placeholder {
+  color: var(--ds-auro-select-placeholder-text-color);
 }

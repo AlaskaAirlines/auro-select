@@ -17,6 +17,7 @@ The auro-select element is a wrapper for auro-dropdown and auro-menu to create a
 | Property                        | Attribute                       | Type      | Default                | Description                                      |
 |---------------------------------|---------------------------------|-----------|------------------------|--------------------------------------------------|
 | [disabled](#disabled)                      | `disabled`                      | `Boolean` |                        | When attribute is present element shows disabled state. |
+| [dropdownTag](#dropdownTag)                   |                                 | `string`  |                        |                                                  |
 | [error](#error)                         | `error`                         | `String`  |                        | When defined, sets persistent validity to `customError` and sets `setCustomValidity` = attribute value. |
 | [noCheckmark](#noCheckmark)                   | `noCheckmark`                   | `Boolean` |                        | When true, checkmark on selected option will no longer be present. |
 | [noValidate](#noValidate)                    | `noValidate`                    | `Boolean` |                        | If set, disables auto-validation on blur.        |
@@ -568,3 +569,20 @@ export function valueAlert(elem) {
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
+
+### Theme Support
+
+The component may be restyled using the following code sample and changing the values of the following token(s).
+
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../src/tokens.scss) -->
+<!-- The below code snippet is automatically added from ./../../src/tokens.scss -->
+
+```scss
+@import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
+
+:host {
+  --ds-auro-select-help-text-color: var(--ds-color-text-secondary-default, $ds-color-text-secondary-default);
+  --ds-auro-select-placeholder-text-color: var(--ds-color-text-secondary-default, $ds-color-text-secondary-default);
+}
+```
+<!-- AURO-GENERATED-CONTENT:END -->

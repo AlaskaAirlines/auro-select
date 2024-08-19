@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.10.7](https://github.com/AlaskaAirlines/auro-select/compare/v2.10.6...v2.10.7) (2024-08-19)
+
+
+### Bug Fixes
+
+* remove style rule that broke dropdown in firefox and safari ([c2ee8c8](https://github.com/AlaskaAirlines/auro-select/commit/c2ee8c880f604bf4beac7b8fc1863765b7785799))
+
 ## [2.10.6](https://github.com/AlaskaAirlines/auro-select/compare/v2.10.5...v2.10.6) (2024-07-02)
 
 

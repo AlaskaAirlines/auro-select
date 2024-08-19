@@ -28,8 +28,6 @@
 
 :host {
   auro-dropdown {
-    position: relative;
-
     &::part(trigger) {
       min-height: var(--ds-size-500, $ds-size-500);
       max-height: var(--ds-size-500, $ds-size-500);

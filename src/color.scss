@@ -23,21 +23,11 @@
       }
     }
   }
-
-  .selectElement-helpText {
-    color: var(--ds-auro-select-help-text-color);
-  }
 }
 
 :host([disabled]) {
   * {
     color: var(--ds-color-text-disabled-default, $ds-color-text-disabled-default);
-  }
-}
-
-:host([validity]:not([validity='valid'])) {
-  .selectElement-helpText {
-    --ds-auro-select-help-text-color: var(--ds-color-text-error-default, #{$ds-color-text-error-default});
   }
 }
 

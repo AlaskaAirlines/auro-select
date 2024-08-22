@@ -550,18 +550,20 @@ export class AuroSelect extends LitElement {
             <slot></slot>
           </div>
           <slot name="label" slot="label"></slot>
+          <span slot="helpText">
+            ${!this.validity || this.validity === undefined || this.validity === 'valid'
+              ? html`
+                <p class="selectElement-helpText" id="${this.uniqueId}" part="helpText">
+                  <slot name="helpText"></slot>
+                </p>`
+              : html`
+                <p class="selectElement-helpText" id="${this.uniqueId}" role="alert" aria-live="assertive" part="helpText">
+                  ${this.setCustomValidity}
+                </p>`
+            }
+          </span>
         </${this.dropdownTag}>
         <!-- Help text and error message template -->
-        ${!this.validity || this.validity === undefined || this.validity === 'valid'
-          ? html`
-            <p class="selectElement-helpText" id="${this.uniqueId}" part="helpText">
-              <slot name="helpText"></slot>
-            </p>`
-          : html`
-            <p class="selectElement-helpText" id="${this.uniqueId}" role="alert" aria-live="assertive" part="helpText">
-              ${this.setCustomValidity}
-            </p>`
-        }
       </div>
     `;
   }

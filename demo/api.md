@@ -621,7 +621,6 @@ The component may be restyled using the following code sample and changing the v
 @import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
 
 :host {
-  --ds-auro-select-help-text-color: var(--ds-color-text-secondary-default, $ds-color-text-secondary-default);
   --ds-auro-select-placeholder-text-color: var(--ds-color-text-secondary-default, $ds-color-text-secondary-default);
 }
 ```

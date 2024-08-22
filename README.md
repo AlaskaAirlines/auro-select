@@ -21,7 +21,7 @@ The following sections are editable by making changes to the following files:
 
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/partials/description.md) -->
 <!-- The below content is automatically added from ./../docs/partials/description.md -->
-`<auro-select>` is a combination [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) that consists of a pre-defined trigger element, `<auro-menu>` for the panel content. See the <auro-hyperlink href="https://auro.alaskaair.com/components/auro/menu/api">auro-menu API docs</auro-hyperlink> for additional information.
+`<auro-select>` is a combination <auro-hyperlink href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements">HTML custom element</auro-hyperlink> that consists of a pre-defined trigger element, `<auro-menu>` for the panel content. See the <auro-hyperlink href="https://auro.alaskaair.com/components/auro/menu/api">auro-menu API docs</auro-hyperlink> for additional information.
 
 ## About auro-select
 

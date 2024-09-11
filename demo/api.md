@@ -362,6 +362,47 @@ Use the `label` slot to give your users contextual information about their selec
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
+#### label with placeholder
+
+The `label` slot and `placeholder` attribute may be used together.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/labelWithPlaceholder.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/labelWithPlaceholder.html -->
+  <auro-select placeholder="Placeholder Text">
+    <span slot="label">Label Text</span>
+    <auro-menu>
+      <auro-menuoption value="stops">Stops</auro-menuoption>
+      <auro-menuoption value="price">Price</auro-menuoption>
+      <auro-menuoption value="duration">Duration</auro-menuoption>
+      <auro-menuoption value="departure">Departure</auro-menuoption>
+      <auro-menuoption value="arrival">Arrival</auro-menuoption>
+      <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
+    </auro-menu>
+  </auro-select>
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion alignRight>
+  <span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/labelWithPlaceholder.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/labelWithPlaceholder.html -->
+
+```html
+<auro-select placeholder="Placeholder Text">
+  <span slot="label">Label Text</span>
+  <auro-menu>
+    <auro-menuoption value="stops">Stops</auro-menuoption>
+    <auro-menuoption value="price">Price</auro-menuoption>
+    <auro-menuoption value="duration">Duration</auro-menuoption>
+    <auro-menuoption value="departure">Departure</auro-menuoption>
+    <auro-menuoption value="arrival">Arrival</auro-menuoption>
+    <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
+  </auro-menu>
+</auro-select>
+```
+<!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
+
 #### helpText <a name="helpText"></a>
 Use the `helptext` slot to provide additional information back to your user about their selection option(s).
 

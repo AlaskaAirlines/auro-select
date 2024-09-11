@@ -137,6 +137,22 @@ Use the `label` slot to give your users contextual information about their selec
 
 </auro-accordion>
 
+#### label with placeholder
+
+The `label` slot and `placeholder` attribute may be used together.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/labelWithPlaceholder.html) -->
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion alignRight>
+  <span slot="trigger">See code</span>
+
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/labelWithPlaceholder.html) -->
+<!-- AURO-GENERATED-CONTENT:END -->
+
+</auro-accordion>
+
 #### helpText <a name="helpText"></a>
 
 Use the `helptext` slot to provide additional information back to your user about their selection option(s).

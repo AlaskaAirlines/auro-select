@@ -1,15 +1,4 @@
 import { AuroSelect } from './src/auro-select.js';
+import * as RuntimeUtils from '@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs';
 
-/**
- * Register Custom Element.
- * @param {Object} name - Name to use for custom element.
- * @returns {void}
- */
-const registerComponent = (name = 'custom-select') => {
-  // alias definition
-  if (!customElements.get(name)) {
-    customElements.define(name, class extends AuroSelect {});
-  }
-};
-
-export { registerComponent };
+RuntimeUtils.default.prototype.registerComponent('custom-select', AuroSelect);

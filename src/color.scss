@@ -27,7 +27,7 @@
 
 :host([disabled]) {
   * {
-    color: var(--ds-color-text-disabled-default, $ds-color-text-disabled-default);
+    color: var(--ds-color-text-ui-disabled-default, $ds-color-text-ui-disabled-default);
   }
 }
 

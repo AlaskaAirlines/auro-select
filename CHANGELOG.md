@@ -1,5 +1,31 @@
 # Semantic Release Automated Changelog
 
+# [3.0.0-beta.1](https://github.com/AlaskaAirlines/auro-select/compare/v2.10.8...v3.0.0-beta.1) (2024-10-04)
+
+
+### Bug Fixes
+
+* add extension for SSR support ([00c50d1](https://github.com/AlaskaAirlines/auro-select/commit/00c50d1c06369e7bbc88966ad705b4d69503c13c))
+
+
+### Features
+
+* implement tier 3 color tokens [#198](https://github.com/AlaskaAirlines/auro-select/issues/198) ([2a2e43c](https://github.com/AlaskaAirlines/auro-select/commit/2a2e43c8a36807924e7802630fa4b47752b99a6a))
+
+
+### Performance Improvements
+
+* move help text functionality into dropdown slot ([1e60c4a](https://github.com/AlaskaAirlines/auro-select/commit/1e60c4acc4070122726d9cc3b4485696e332024f))
+* refactor custom component registration config ([472d8ac](https://github.com/AlaskaAirlines/auro-select/commit/472d8ac38a674a472b969b3cc6fd6302213c4cf4))
+* update dependencies ([787c64f](https://github.com/AlaskaAirlines/auro-select/commit/787c64f9c472481e0064b5c44f4ad72811c24638))
+* update dependencies and scripts to latest versions ([3441708](https://github.com/AlaskaAirlines/auro-select/commit/3441708bace6e4579b4998a9864d3b6f0475f4e2))
+* use custom version of dropdown ([0377663](https://github.com/AlaskaAirlines/auro-select/commit/03776631d674c96270f308dfa9ff5d3ec5f2f6dd))
+
+
+### BREAKING CHANGES
+
+* trigger major release for color theme support #198
+
 ## [2.10.6](https://github.com/AlaskaAirlines/auro-select/compare/v2.10.5...v2.10.6) (2024-07-02)
 
 

@@ -20,7 +20,7 @@
     "node": "^18.x || ^20.x"
   },
   "dependencies": {
-    "@aurodesignsystem/auro-dropdown": "^3.0.0",
+    "@aurodesignsystem/auro-dropdown": "^3.0.2",
     "@aurodesignsystem/auro-formvalidation": "^1.0.3",
     "@aurodesignsystem/auro-library": "^2.8.0",
     "@aurodesignsystem/auro-menu": "^4.0.0",

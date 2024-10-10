@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [3.0.1](https://github.com/AlaskaAirlines/auro-select/compare/v3.0.0...v3.0.1) (2024-10-10)
+
+
+### Bug Fixes
+
+* **#131:** updated the dropdown package to fix safari outline bug ([378a6a6](https://github.com/AlaskaAirlines/auro-select/commit/378a6a61b37cab0f07c7f62c3c40d86d92bea76c))
+
 # [3.0.0](https://github.com/AlaskaAirlines/auro-select/compare/v2.10.8...v3.0.0) (2024-10-04)
 
 

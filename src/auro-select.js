@@ -17,8 +17,6 @@ import { AuroDependencyVersioning } from '@aurodesignsystem/auro-library/scripts
 import { AuroDropdown } from '@aurodesignsystem/auro-dropdown/src/auro-dropdown.js';
 import dropdownVersion from './dropdownVersion.js';
 
-import '@aurodesignsystem/auro-menu';
-
 import styleCss from "./style-css.js";
 import colorCss from "./color-css.js";
 import tokensCss from "./tokens-css.js";
@@ -229,7 +227,7 @@ export class AuroSelect extends LitElement {
    * @returns {void}
    */
   configureMenu() {
-    this.menu = this.querySelector('auro-menu');
+    this.menu = this.querySelector('auro-menu') || this.querySelector('[auro-menu]');
 
     this.menu.setAttribute('aria-hidden', 'true');
 

@@ -4,6 +4,10 @@ import { valueExample } from "../apiExamples/value";
 import { valueExtractionExample } from "../apiExamples/valueExtraction";
 
 /* eslint-disable jsdoc/require-jsdoc, no-magic-numbers, no-param-reassign */
+import { AuroSelect } from '../src/auro-select.js';
+import '@aurodesignsystem/auro-menu';
+
+AuroSelect.register(); // registering to `auro-select`
 
 export function initExamples(initCount) {
   initCount = initCount || 0;

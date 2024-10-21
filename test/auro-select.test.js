@@ -1,5 +1,5 @@
 import { fixture, html, expect, waitUntil, elementUpdated } from '@open-wc/testing';
-import '../src/auro-select.js';
+import '../index.js';
 import '@aurodesignsystem/auro-dropdown';
 import '@aurodesignsystem/auro-menu';
 

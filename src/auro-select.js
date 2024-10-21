@@ -179,6 +179,18 @@ export class AuroSelect extends LitElement {
   }
 
   /**
+   * This will register this element with the browser.
+   * @param {string} [name="auro-select"] - The name of element that you want to register to.
+   *
+   * @example
+   * AuroSelect.register("custom-select") // this will register this element to <custom-select/>
+   *
+   */
+  static register(name = "auro-select") {
+    AuroLibraryRuntimeUtils.prototype.registerComponent(name, AuroSelect);
+  }
+
+  /**
    * Updates the displayed value in an Auro dropdown component based on the provided option.
    * @param {string|HTMLElement} option - The option to display. If a string, a new span element with the value string is created. If an HTMLElement, the selected option is cloned and non-styling attributes are removed.
    * @private
@@ -567,9 +579,4 @@ export class AuroSelect extends LitElement {
       </div>
     `;
   }
-}
-
-// define the name of the custom component
-if (!customElements.get("auro-select")) {
-  customElements.define("auro-select", AuroSelect);
 }

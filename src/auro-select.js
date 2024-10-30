@@ -198,7 +198,7 @@ export class AuroSelect extends LitElement {
     const triggerContentEl = this.dropdown.querySelector('#triggerFocus');
 
     // remove all existing rendered value(s)
-    triggerContentEl.querySelectorAll('auro-menuoption, [valuestr]').forEach((elm) => {
+    triggerContentEl.querySelectorAll('auro-menuoption, [valuestr], [auro-menuoption]').forEach((elm) => {
       elm.remove();
     });
 
@@ -227,7 +227,14 @@ export class AuroSelect extends LitElement {
    * @returns {void}
    */
   configureMenu() {
-    this.menu = this.querySelector('auro-menu') || this.querySelector('[auro-menu]');
+    this.menu = this.querySelector('auro-menu, [auro-menu]');
+    // racing condition on custom-select with custom-menu
+    if (!this.menu) {
+      setTimeout(() => {
+        this.configureMenu();
+      }, 0);
+      return;
+    }
 
     this.menu.setAttribute('aria-hidden', 'true');
 
@@ -402,7 +409,7 @@ export class AuroSelect extends LitElement {
    */
   generateOptionsArray() {
     if (this.menu) {
-      this.options = [...this.menu.querySelectorAll('auro-menuoption')];
+      this.options = [...this.menu.querySelectorAll('auro-menuoption, [auro-menuoption]')];
     } else {
       this.options = [];
     }

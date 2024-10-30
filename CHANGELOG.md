@@ -1,5 +1,17 @@
 # Semantic Release Automated Changelog
 
+# [3.1.0](https://github.com/AlaskaAirlines/auro-select/compare/v3.0.1...v3.1.0) (2024-10-30)
+
+
+### Features
+
+* **api:** add register static method [#210](https://github.com/AlaskaAirlines/auro-select/issues/210) ([fab6e53](https://github.com/AlaskaAirlines/auro-select/commit/fab6e53e2fb425b92407a05bf90d8b243c52ad9e))
+
+
+### Performance Improvements
+
+* bump up auro-menu version ([c7bcfac](https://github.com/AlaskaAirlines/auro-select/commit/c7bcfac44f93ff7e253c3f7e92c2a30a5f51f5e1))
+
 ## [3.0.1](https://github.com/AlaskaAirlines/auro-select/compare/v3.0.0...v3.0.1) (2024-10-10)
 
 

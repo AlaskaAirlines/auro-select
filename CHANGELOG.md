@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [3.1.2](https://github.com/AlaskaAirlines/auro-select/compare/v3.1.1...v3.1.2) (2024-11-05)
+
+
+### Bug Fixes
+
+* remove extra spacing on nested menu option when selected [#228](https://github.com/AlaskaAirlines/auro-select/issues/228) ([eb79892](https://github.com/AlaskaAirlines/auro-select/commit/eb79892cd2adc82746d599efa4ba26db1b9d9cda))
+
 ## [3.1.1](https://github.com/AlaskaAirlines/auro-select/compare/v3.1.0...v3.1.1) (2024-10-30)
 
 

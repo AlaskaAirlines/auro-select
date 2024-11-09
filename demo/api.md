@@ -5,8 +5,8 @@ apiExamples.md is created by running `npm run build:markdownDocs`.
 
 This file is generated based on a template fetched from `./docs/partials/apiExamples.md`
 -->
-<!-- AURO-GENERATED-CONTENT:START (FILE:src=./../api.md) -->
-<!-- The below content is automatically added from ./../api.md -->
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/api.md) -->
+<!-- The below content is automatically added from ./../docs/api.md -->
 
 # auro-select
 
@@ -60,8 +60,8 @@ The auro-select element is a wrapper for auro-dropdown and auro-menu to create a
 A baseline `auro-select` using `auro-menu` and `auro-menuoption` elements. Notice a default `Please select option` placeholder in the trigger.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/basic.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/basic.html -->
   <auro-select>
     <auro-menu>
       <auro-menuoption value="stops">Stops</auro-menuoption>
@@ -76,8 +76,8 @@ A baseline `auro-select` using `auro-menu` and `auro-menuoption` elements. Notic
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basic.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/basic.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/basic.html -->
 
 ```html
 <auro-select>
@@ -102,8 +102,8 @@ Use the `value` property to define a preset value on the `auro-select` element. 
 To pre-set the value of auro-select on load, use the `value` property. The `selected` attribute on auro-menuoption is designed to illustrate state in the DOM.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/value.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/value.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/value.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/value.html -->
   <auro-button id="validValueExampleBtn">Set Value to Valid Option</auro-button>
   <auro-button id="invalidValueExampleBtn">Set Value to Invalid Option</auro-button>
   <auro-button id="undefinedValueExampleBtn">Set Value to Undefined</auro-button>
@@ -123,8 +123,8 @@ To pre-set the value of auro-select on load, use the `value` property. The `sele
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/value.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/value.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/value.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/value.html -->
 
 ```html
 <auro-button id="validValueExampleBtn">Set Value to Valid Option</auro-button>
@@ -144,8 +144,8 @@ To pre-set the value of auro-select on load, use the `value` property. The `sele
 </auro-select>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/value.js) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/value.js -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/value.js) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/value.js -->
 
 ```js
 export function valueExample() {
@@ -171,8 +171,8 @@ export function valueExample() {
 Use the `placeholder` string attribute to inject a custom placeholder option with the select element.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/customPlaceholder.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/customPlaceholder.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/customPlaceholder.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/customPlaceholder.html -->
   <auro-select placeholder="Please select your preferred option">
     <auro-menu>
       <auro-menuoption value="stops">Stops</auro-menuoption>
@@ -187,8 +187,8 @@ Use the `placeholder` string attribute to inject a custom placeholder option wit
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/customPlaceholder.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/customPlaceholder.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/customPlaceholder.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/customPlaceholder.html -->
 
 ```html
 <auro-select placeholder="Please select your preferred option">
@@ -211,8 +211,8 @@ When present, the `required` attribute specifies that a select field must be fil
 When the validity check fails the validityState equals `valueMissing`. The error message for the `valueMissing` validityState can be set to a custom string using the `setCustomValidityValueMissing`. There is no default error message defined.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/required.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/required.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/required.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/required.html -->
   <auro-select required setCustomValidityValueMissing="Custom required validation error message.">
     <auro-menu>
       <auro-menuoption value="stops">Stops</auro-menuoption>
@@ -227,8 +227,8 @@ When the validity check fails the validityState equals `valueMissing`. The error
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/required.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/required.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/required.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/required.html -->
 
 ```html
 <auro-select required setCustomValidityValueMissing="Custom required validation error message.">
@@ -249,8 +249,8 @@ When the validity check fails the validityState equals `valueMissing`. The error
 Use the `error` boolean attribute to toggle the error UI.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/errorApi.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/errorApi.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/errorApi.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/errorApi.html -->
   <auro-button id="undefinedValueExampleBtnAddError">Set Error</auro-button>
   <auro-button id="undefinedValueExampleBtnRemoveError">Remove Error</auro-button>
   <br /><br />
@@ -268,8 +268,8 @@ Use the `error` boolean attribute to toggle the error UI.
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/errorApi.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/errorApi.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/errorApi.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/errorApi.html -->
 
 ```html
 <auro-button id="undefinedValueExampleBtnAddError">Set Error</auro-button>
@@ -293,8 +293,8 @@ Use the `error` boolean attribute to toggle the error UI.
 Use the `disabled` boolean attribute to toggle the disabled UI.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/disabled.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/disabled.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/disabled.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/disabled.html -->
   <auro-select disabled>
     <auro-menu>
       <auro-menuoption value="stops">Stops</auro-menuoption>
@@ -309,8 +309,8 @@ Use the `disabled` boolean attribute to toggle the disabled UI.
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/disabled.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/disabled.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/disabled.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/disabled.html -->
 
 ```html
 <auro-select disabled>
@@ -331,8 +331,8 @@ Use the `disabled` boolean attribute to toggle the disabled UI.
 Use the `flexMenuWidth` boolean attribute to toggle the width of the `<auro-select>` element to match the width of the bib content, rather than the width of the trigger.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/flexMenuWidth.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/flexMenuWidth.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/flexMenuWidth.html) -->
+  <!-- The below content is automatically added from ../apiExamples/flexMenuWidth.html -->
   <auro-select flexMenuWidth id="flexMenuWidthExample">
     <auro-menu>
       <auro-menuoption value="united states">United States has a country code of (+1)</auro-menuoption>
@@ -351,8 +351,8 @@ Use the `flexMenuWidth` boolean attribute to toggle the width of the `<auro-sele
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/flexMenuWidth.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/flexMenuWidth.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/flexMenuWidth.html) -->
+<!-- The below code snippet is automatically added from ../apiExamples/flexMenuWidth.html -->
 
 ```html
 <auro-select flexMenuWidth id="flexMenuWidthExample">
@@ -379,8 +379,8 @@ Use the `flexMenuWidth` boolean attribute to toggle the width of the `<auro-sele
 Use the `label` slot to give your users contextual information about their selection options. This `label` content is also helpful for assistive devices.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/label.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/label.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/label.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/label.html -->
   <auro-select>
     <span slot="label">Please select a preference</span>
     <auro-menu>
@@ -396,8 +396,8 @@ Use the `label` slot to give your users contextual information about their selec
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/label.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/label.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/label.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/label.html -->
 
 ```html
 <auro-select>
@@ -420,8 +420,8 @@ Use the `label` slot to give your users contextual information about their selec
 The `label` slot and `placeholder` attribute may be used together.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/labelWithPlaceholder.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/labelWithPlaceholder.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/labelWithPlaceholder.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/labelWithPlaceholder.html -->
   <auro-select placeholder="Placeholder Text">
     <span slot="label">Label Text</span>
     <auro-menu>
@@ -437,8 +437,8 @@ The `label` slot and `placeholder` attribute may be used together.
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/labelWithPlaceholder.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/labelWithPlaceholder.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/labelWithPlaceholder.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/labelWithPlaceholder.html -->
 
 ```html
 <auro-select placeholder="Placeholder Text">
@@ -460,8 +460,8 @@ The `label` slot and `placeholder` attribute may be used together.
 Use the `helptext` slot to provide additional information back to your user about their selection option(s).
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/helpText.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/helpText.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/helpText.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/helpText.html -->
   <auro-select>
     <span slot="helpText">Custom help text message.</span>
     <auro-menu>
@@ -477,8 +477,8 @@ Use the `helptext` slot to provide additional information back to your user abou
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/helpText.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/helpText.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/helpText.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/helpText.html -->
 
 ```html
 <auro-select>
@@ -503,8 +503,8 @@ Use the `helptext` slot to provide additional information back to your user abou
 The following example illustrates how a user may query the `element.value` or `element.optionSelected` for the current value or complete option object that is selected.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/valueExtraction.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/valueExtraction.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/valueExtraction.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/valueExtraction.html -->
   <auro-select id="valueExtraction">
     <auro-menu>
       <auro-menuoption value="stops">Stops</auro-menuoption>
@@ -520,8 +520,8 @@ The following example illustrates how a user may query the `element.value` or `e
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/valueExtraction.js) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/valueExtraction.js -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/valueExtraction.js) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/valueExtraction.js -->
 
 ```js
 export function valueExtractionExample() {
@@ -537,8 +537,8 @@ export function valueExtractionExample() {
 }
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/valueExtraction.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/valueExtraction.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/valueExtraction.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/valueExtraction.html -->
 
 ```html
 <auro-select id="valueExtraction">
@@ -561,8 +561,8 @@ export function valueExtractionExample() {
 This example programmatically adds the `error` state when a user selects an option that is greater than `2`.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/customErrorValidity.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/customErrorValidity.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/customErrorValidity.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/customErrorValidity.html -->
   <auro-select id="primaryError">
     <auro-menu>
       <auro-menuoption value="1">1</auro-menuoption>
@@ -577,8 +577,8 @@ This example programmatically adds the `error` state when a user selects an opti
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/customErrorValidity.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/customErrorValidity.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/customErrorValidity.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/customErrorValidity.html -->
 
 ```html
 <auro-select id="primaryError">
@@ -593,8 +593,8 @@ This example programmatically adds the `error` state when a user selects an opti
 </auro-select>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/customErrorValidity.js) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/customErrorValidity.js -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/customErrorValidity.js) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/customErrorValidity.js -->
 
 ```js
 export function customErrorValidityExample(elem) {
@@ -617,8 +617,8 @@ export function customErrorValidityExample(elem) {
 The following example listens for the `selectedOption` event. Once triggered, `element.value` or `element.optionSelected` may be queried for the new value or complete option object.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/valueAlert.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/valueAlert.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/valueAlert.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/valueAlert.html -->
   <auro-select id="valueAlert">
     <auro-menu>
       <auro-menuoption value="stops">Stops</auro-menuoption>
@@ -633,8 +633,8 @@ The following example listens for the `selectedOption` event. Once triggered, `e
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../demo/alertValue.js) -->
-<!-- The below code snippet is automatically added from ./../../demo/alertValue.js -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./alertValue.js) -->
+<!-- The below code snippet is automatically added from ./alertValue.js -->
 
 ```js
 export function valueAlert(elem) {
@@ -645,8 +645,8 @@ export function valueAlert(elem) {
 }
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/valueAlert.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/valueAlert.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/valueAlert.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/valueAlert.html -->
 
 ```html
 <auro-select id="valueAlert">
@@ -667,8 +667,8 @@ export function valueAlert(elem) {
 
 The component may be restyled using the following code sample and changing the values of the following token(s).
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../src/tokens.scss) -->
-<!-- The below code snippet is automatically added from ./../../src/tokens.scss -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../src/tokens.scss) -->
+<!-- The below code snippet is automatically added from ./../src/tokens.scss -->
 
 ```scss
 @import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';

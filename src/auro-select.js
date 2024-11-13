@@ -32,6 +32,7 @@ import tokensCss from "./tokens-css.js";
  * @attr {String} error - When defined, sets persistent validity to `customError` and sets `setCustomValidity` = attribute value.
  * @attr {Boolean} noValidate - If set, disables auto-validation on blur.
  * @attr {Boolean} required - Populates the `required` attribute on the element. Used for client-side validation.
+ * @attr {Boolean} flexMenuWidth - If set, makes dropdown bib width match the size of the content, rather than the width of the trigger.
  * @prop {String} placeholder - Define placeholder text to display before a value is manually selected.
  * @prop {String} value - Value selected for the component.
  * @prop {Boolean} disabled - When attribute is present element shows disabled state.
@@ -142,6 +143,10 @@ export class AuroSelect extends LitElement {
         type: Boolean,
         reflect: true
       },
+      flexMenuWidth: {
+        type: Boolean,
+        reflect: true
+      },
       placeholder: { type: String },
 
       /**
@@ -171,6 +176,10 @@ export class AuroSelect extends LitElement {
    */
   configureDropdown() {
     this.dropdown = this.shadowRoot.querySelector(this.dropdownTag._$litStatic$);
+
+    if (this.customBibWidth) {
+      this.dropdown.dropdownWidth = this.customBibWidth;
+    }
 
     // Exposes the CSS parts from the dropdown for styling
     this.dropdown.exposeCssParts();
@@ -562,7 +571,7 @@ export class AuroSelect extends LitElement {
           for="selectmenu"
           ?error="${this.validity !== undefined && this.validity !== 'valid'}"
           common
-          matchWidth
+          ?matchWidth="${!this.flexMenuWidth}"
           chevron
           part="dropdown">
           <span slot="trigger" aria-haspopup="true" id="triggerFocus">

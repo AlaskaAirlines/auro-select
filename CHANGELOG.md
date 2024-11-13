@@ -1,5 +1,20 @@
 # Semantic Release Automated Changelog
 
+# [3.2.0](https://github.com/AlaskaAirlines/auro-select/compare/v3.1.2...v3.2.0) (2024-11-13)
+
+
+### Features
+
+* add attribute to have bib width match content width [#216](https://github.com/AlaskaAirlines/auro-select/issues/216) ([f84293c](https://github.com/AlaskaAirlines/auro-select/commit/f84293c871a37d79e4f8eee7847ac7e4d8e2f302))
+
+
+### Performance Improvements
+
+* demonstrate how to set custom bib height [#134](https://github.com/AlaskaAirlines/auro-select/issues/134) [#216](https://github.com/AlaskaAirlines/auro-select/issues/216) ([c8079af](https://github.com/AlaskaAirlines/auro-select/commit/c8079af02bd89694aca005c22105be811c547db3))
+* update dependencies ([e334ca0](https://github.com/AlaskaAirlines/auro-select/commit/e334ca00b3472362bcee90bfaffc217525dc91c5))
+* update rollup config ([ec5b33f](https://github.com/AlaskaAirlines/auro-select/commit/ec5b33f85f81e17172164437742c0f685cace387))
+* update to use restructured WCA doc build ([2600537](https://github.com/AlaskaAirlines/auro-select/commit/2600537eb5887e529f950bd9b0473902af201624))
+
 ## [3.1.2](https://github.com/AlaskaAirlines/auro-select/compare/v3.1.1...v3.1.2) (2024-11-05)
 
 

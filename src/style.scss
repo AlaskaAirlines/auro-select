@@ -37,6 +37,7 @@
 
     &::part(popover) {
       max-width: -webkit-fill-available;
+      overflow-y: scroll;
     }
   }
 }

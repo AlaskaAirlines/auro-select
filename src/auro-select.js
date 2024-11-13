@@ -172,6 +172,9 @@ export class AuroSelect extends LitElement {
   configureDropdown() {
     this.dropdown = this.shadowRoot.querySelector(this.dropdownTag._$litStatic$);
 
+    // Exposes the CSS parts from the dropdown for styling
+    this.dropdown.exposeCssParts();
+
     this.dropdown.addEventListener('auroDropdown-ready', () => {
       this.auroDropdownReady = true;
     });

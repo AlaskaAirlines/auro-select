@@ -248,6 +248,57 @@ Applying the `noCheckmark` attribute will prevent the checkmark icon from being 
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
+## Example with custom bib height
+
+This example shows how to set a custom height for the bib from `<auro-dropdown>`. 
+
+Custom height dimensions are set by using the `dropdownPopover` CSS Part and then applying a `max-height` rule and value.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/customBibHeight.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/customBibHeight.html -->
+  <auro-select id="customBibHeightExample">
+    <auro-menu>
+      <auro-menuoption value="stops">Stops</auro-menuoption>
+      <auro-menuoption value="price">Price</auro-menuoption>
+      <auro-menuoption value="duration">Duration</auro-menuoption>
+      <auro-menuoption value="departure">Departure</auro-menuoption>
+      <auro-menuoption value="arrival">Arrival</auro-menuoption>
+      <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
+    </auro-menu>
+  </auro-select>
+  <style>
+    #customBibHeightExample::part(dropdownPopover) {
+      max-height: 100px;
+    }
+  </style>
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion alignRight>
+  <span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/customBibHeight.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/customBibHeight.html -->
+
+```html
+<auro-select id="customBibHeightExample">
+  <auro-menu>
+    <auro-menuoption value="stops">Stops</auro-menuoption>
+    <auro-menuoption value="price">Price</auro-menuoption>
+    <auro-menuoption value="duration">Duration</auro-menuoption>
+    <auro-menuoption value="departure">Departure</auro-menuoption>
+    <auro-menuoption value="arrival">Arrival</auro-menuoption>
+    <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
+  </auro-menu>
+</auro-select>
+<style>
+  #customBibHeightExample::part(dropdownPopover) {
+    max-height: 100px;
+  }
+</style>
+```
+<!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
+
 ## Label and help text slots
 
 The following example illustrates the use of the `label` and `helptext` slots for additional placement of content around the select menu.

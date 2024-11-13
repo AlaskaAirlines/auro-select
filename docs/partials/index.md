@@ -80,6 +80,25 @@ Applying the `noCheckmark` attribute will prevent the checkmark icon from being 
 
 </auro-accordion>
 
+## Example with custom bib height
+
+This example shows how to set a custom height for the bib from `<auro-dropdown>`. 
+
+Custom height dimensions are set by using the `dropdownPopover` CSS Part and then applying a `max-height` rule and value.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/customBibHeight.html) -->
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+
+<auro-accordion alignRight>
+  <span slot="trigger">See code</span>
+
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/customBibHeight.html) -->
+<!-- AURO-GENERATED-CONTENT:END -->
+
+</auro-accordion>
+
 ## Label and help text slots
 
 The following example illustrates the use of the `label` and `helptext` slots for additional placement of content around the select menu.

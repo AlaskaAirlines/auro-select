@@ -34,3 +34,9 @@ The auro-select element is a wrapper for auro-dropdown and auro-menu to create a
 |            | Default slot for the menu content.   |
 | `helpText` | Defines the content of the helpText. |
 | `label`    | Defines the content of the label.    |
+
+## CSS Shadow Parts
+
+| Part       | Description                 |
+|------------|-----------------------------|
+| `helpText` | Apply CSS to the help text. |

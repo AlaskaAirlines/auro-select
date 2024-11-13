@@ -43,6 +43,7 @@ import tokensCss from "./tokens-css.js";
  * @event auroSelect-ready - Notifies that the component has finished initializing.
  * @event auroSelect-valueSet - Notifies that the component has a new value set.
  * @event auroFormElement-validated - Notifies that the `validity` and `errorMessage` values have changed.
+ * @csspart helpText - Apply CSS to the help text.
  */
 
 // build the component class
@@ -559,7 +560,8 @@ export class AuroSelect extends LitElement {
           ?error="${this.validity !== undefined && this.validity !== 'valid'}"
           common
           matchWidth
-          chevron>
+          chevron
+          part="dropdown">
           <span slot="trigger" aria-haspopup="true" id="triggerFocus">
             ${this.value ? this.displayValue : html`<span class="placeholder">${this.placeholder}</span>`}
           </span>

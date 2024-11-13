@@ -8,6 +8,7 @@ The auro-select element is a wrapper for auro-dropdown and auro-menu to create a
 |---------------------------------|---------------------------------|-----------|------------------------|--------------------------------------------------|
 | `disabled`                      | `disabled`                      | `Boolean` |                        | When attribute is present element shows disabled state. |
 | `error`                         | `error`                         | `String`  |                        | When defined, sets persistent validity to `customError` and sets `setCustomValidity` = attribute value. |
+| `flexMenuWidth`                 | `flexMenuWidth`                 | `Boolean` |                        | If set, makes dropdown bib width match the size of the content, rather than the width of the trigger. |
 | `noCheckmark`                   | `noCheckmark`                   | `Boolean` |                        | When true, checkmark on selected option will no longer be present. |
 | `noValidate`                    | `noValidate`                    | `Boolean` |                        | If set, disables auto-validation on blur.        |
 | `optionSelected`                | `optionSelected`                | `Object`  | "undefined"            | Specifies the current selected menuOption.       |

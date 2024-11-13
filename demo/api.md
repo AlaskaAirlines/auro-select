@@ -18,6 +18,7 @@ The auro-select element is a wrapper for auro-dropdown and auro-menu to create a
 |---------------------------------|---------------------------------|-----------|------------------------|--------------------------------------------------|
 | [disabled](#disabled)                      | `disabled`                      | `Boolean` |                        | When attribute is present element shows disabled state. |
 | [error](#error)                         | `error`                         | `String`  |                        | When defined, sets persistent validity to `customError` and sets `setCustomValidity` = attribute value. |
+| [flexMenuWidth](#flexMenuWidth)                 | `flexMenuWidth`                 | `Boolean` |                        | If set, makes dropdown bib width match the size of the content, rather than the width of the trigger. |
 | [noCheckmark](#noCheckmark)                   | `noCheckmark`                   | `Boolean` |                        | When true, checkmark on selected option will no longer be present. |
 | [noValidate](#noValidate)                    | `noValidate`                    | `Boolean` |                        | If set, disables auto-validation on blur.        |
 | [optionSelected](#optionSelected)                | `optionSelected`                | `Object`  | "undefined"            | Specifies the current selected menuOption.       |
@@ -322,6 +323,52 @@ Use the `disabled` boolean attribute to toggle the disabled UI.
     <auro-menuoption value="prefer alaska">Prefer Alaska</auro-menuoption>
   </auro-menu>
 </auro-select>
+```
+<!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
+
+#### flexMenuWidth <a name="flexMenuWidth"></a>
+Use the `flexMenuWidth` boolean attribute to toggle the width of the `<auro-select>` element to match the width of the bib content, rather than the width of the trigger.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/flexMenuWidth.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/flexMenuWidth.html -->
+  <auro-select flexMenuWidth id="flexMenuWidthExample">
+    <auro-menu>
+      <auro-menuoption value="united states">United States has a country code of (+1)</auro-menuoption>
+      <auro-menuoption value="costa rica">Costa Rica has a country code of (+506)</auro-menuoption>
+      <auro-menuoption value="mexico">Mexico has a country code of (+52)</auro-menuoption>
+      <auro-menuoption value="afghanistan">Afghanistan has a country code of (+93)</auro-menuoption>
+      <auro-menuoption value="albania">Albania has a country code of (+355)</auro-menuoption>
+    </auro-menu>
+  </auro-select>
+  <style>
+    #flexMenuWidthExample::part(dropdownTrigger) {
+      width: 25%;
+    }
+  </style>
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion alignRight>
+  <span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/flexMenuWidth.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/flexMenuWidth.html -->
+
+```html
+<auro-select flexMenuWidth id="flexMenuWidthExample">
+  <auro-menu>
+    <auro-menuoption value="united states">United States has a country code of (+1)</auro-menuoption>
+    <auro-menuoption value="costa rica">Costa Rica has a country code of (+506)</auro-menuoption>
+    <auro-menuoption value="mexico">Mexico has a country code of (+52)</auro-menuoption>
+    <auro-menuoption value="afghanistan">Afghanistan has a country code of (+93)</auro-menuoption>
+    <auro-menuoption value="albania">Albania has a country code of (+355)</auro-menuoption>
+  </auro-menu>
+</auro-select>
+<style>
+  #flexMenuWidthExample::part(dropdownTrigger) {
+    width: 25%;
+  }
+</style>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>

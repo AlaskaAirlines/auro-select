@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [3.3.0](https://github.com/AlaskaAirlines/auro-select/compare/v3.2.0...v3.3.0) (2024-11-15)
+
+
+### Features
+
+* update auro-library to 3.0.2 ([622ac30](https://github.com/AlaskaAirlines/auro-select/commit/622ac30c7b3e6f224453844ee38ed6c793be3f15))
+
 # [3.2.0](https://github.com/AlaskaAirlines/auro-select/compare/v3.1.2...v3.2.0) (2024-11-13)
 
 

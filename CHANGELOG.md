@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [3.3.1](https://github.com/AlaskaAirlines/auro-select/compare/v3.3.0...v3.3.1) (2024-12-06)
+
+
+### Performance Improvements
+
+* use updated dropdown fix [#222](https://github.com/AlaskaAirlines/auro-select/issues/222) ([53ee1b5](https://github.com/AlaskaAirlines/auro-select/commit/53ee1b53f5c7ae40536f737d5f5b52a46c5a722d))
+
 # [3.3.0](https://github.com/AlaskaAirlines/auro-select/compare/v3.2.0...v3.3.0) (2024-11-15)
 
 

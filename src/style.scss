@@ -10,7 +10,7 @@
 @import './../node_modules/@aurodesignsystem/webcorestylesheets/src/core';
 @import './../node_modules/@aurodesignsystem/webcorestylesheets/src/utilityClasses/displayProperties';
 
-/* stylelint-disable selector-class-pattern */
+/* stylelint-disable selector-class-pattern, declaration-no-important */
 
 [slot='trigger'] {
   width: 100%;
@@ -36,6 +36,7 @@
     }
 
     &::part(popover) {
+      min-width: 100% !important;
       max-width: -webkit-fill-available;
       overflow-y: scroll;
     }

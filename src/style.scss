@@ -38,7 +38,7 @@
     &::part(popover) {
       min-width: 100% !important;
       max-width: -webkit-fill-available;
-      overflow-y: scroll;
+      overflow-y: auto;
     }
   }
 }

@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [3.3.3](https://github.com/AlaskaAirlines/auro-select/compare/v3.3.2...v3.3.3) (2024-12-19)
+
+
+### Performance Improvements
+
+* update dropdown to latest for bib position fix ([3559978](https://github.com/AlaskaAirlines/auro-select/commit/3559978d9d58adbeec4ca33fdec97f244fd84cc6))
+
 ## [3.3.2](https://github.com/AlaskaAirlines/auro-select/compare/v3.3.1...v3.3.2) (2024-12-19)
 
 

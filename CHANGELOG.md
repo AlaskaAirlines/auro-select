@@ -1,5 +1,13 @@
 # Semantic Release Automated Changelog
 
+## [3.3.2](https://github.com/AlaskaAirlines/auro-select/compare/v3.3.1...v3.3.2) (2024-12-19)
+
+
+### Bug Fixes
+
+* force dropdown bib min-width to not expand outside container [#225](https://github.com/AlaskaAirlines/auro-select/issues/225) ([b59abbe](https://github.com/AlaskaAirlines/auro-select/commit/b59abbec1afbdf14acf5e3aa59feccb55b1ea3f6))
+* update overflow property ([6f0939c](https://github.com/AlaskaAirlines/auro-select/commit/6f0939c7f944fd269559828c2914c00691c8f2ba))
+
 ## [3.3.1](https://github.com/AlaskaAirlines/auro-select/compare/v3.3.0...v3.3.1) (2024-12-06)
 
 

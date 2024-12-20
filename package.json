@@ -17,7 +17,7 @@
   "main": "index.js",
   "license": "Apache-2.0",
   "engines": {
-    "node": "^18.x || ^20.x"
+    "node": "^20.x || ^22.x "
   },
   "dependencies": {
     "@aurodesignsystem/auro-dropdown": "^3.2.2",

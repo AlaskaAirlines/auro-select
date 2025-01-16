@@ -37,6 +37,7 @@ import tokensCss from "./tokens-css.js";
  * @prop {String} value - Value selected for the component.
  * @prop {Boolean} disabled - When attribute is present element shows disabled state.
  * @prop {Boolean} noCheckmark - When true, checkmark on selected option will no longer be present.
+ * @prop {Boolean} displayValueProp - When true, `value` property in selected option will display in the `trigger` slot instead of default inner text of option elememnt.
  * @attr {Object} optionSelected - Specifies the current selected menuOption.
  * @slot - Default slot for the menu content.
  * @slot label - Defines the content of the label.
@@ -147,7 +148,13 @@ export class AuroSelect extends LitElement {
         type: Boolean,
         reflect: true
       },
-      placeholder: { type: String },
+      placeholder: {
+        type: String
+      },
+      displayValueProp: {
+        type: Boolean,
+        reflect: true
+      },
 
       /**
        * @private
@@ -228,6 +235,10 @@ export class AuroSelect extends LitElement {
       const clone = option.cloneNode(true);
       clone.removeAttribute('selected');
       clone.removeAttribute('class');
+
+      clone.textContent = this.displayValueProp
+        ? option.getAttribute("value") || option.innerText
+        : option.innerText;
 
       // insert the non-styled clone into the trigger
       triggerContentEl.appendChild(clone);

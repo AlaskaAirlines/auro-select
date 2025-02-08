@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [3.3.5](https://github.com/AlaskaAirlines/auro-select/compare/v3.3.4...v3.3.5) (2025-02-08)
+
+
+### Performance Improvements
+
+* update dependencies ([cd64123](https://github.com/AlaskaAirlines/auro-select/commit/cd64123c68974dfc27d37158b37129f2e3ac31c3))
+
 ## [3.3.4](https://github.com/AlaskaAirlines/auro-select/compare/v3.3.3...v3.3.4) (2024-12-23)
 
 
